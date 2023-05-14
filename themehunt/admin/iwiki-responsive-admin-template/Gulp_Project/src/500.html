@@ -1,0 +1,20 @@
+@@include('./src/include/head.html', { "title": "Internal Server Error" })
+
+@@include('./src/include/head_end.html')
+
+
+<body class="decor-danger pagenotfound">
+ <a class="gohome" href="index.html"><i class="fa fa-home"></i> Go to Home Page</a>
+  <div class="table-wrapper-a">
+    <div class="table-row">
+      <div class="table-cell text-center text-light">
+        <h1 class="form-title f-100">500</h1>
+        <p class="h1">Internal Server Error!</p>
+        <p class="h4 f-100">The server encountered something unexpected that didn't allow it to complete the request</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  @@include('./src/include/footer_end.html')

@@ -1,0 +1,84 @@
+@@include('./src/include/head.html', {
+  "title": "Dialog notification"
+})
+
+<link rel="stylesheet" href="css/dialogs/dialog-sandra.css">
+
+@@include('./src/include/head_end.html')
+
+<body>
+  <div id="wrap-content" class="wrap-content">
+      @@include('./src/include/top_menu.html',{
+        "name": "Dialog notification"
+      })
+    <div class="content container-fluid">
+      <div class="row row-broken">
+        <div class="col-md-12">
+          <ol class="breadcrumb">
+            <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+            <li>Ui Kits</li>
+            <li class="active">Dialog notification</li>
+          </ol>
+        </div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="decor-default p-full-md text-center">
+            <div class="button-wrap">
+              <button type="button" data-dialog="somedialog" class="trigger btn btn-danger">Launch</button>
+            </div>
+
+            <div class="menu-dialog">
+              <a href="dialog-notification.html">New Email</a>
+              <a href="dialog-notification/timeout.html">Timeout</a>
+              <a href="dialog-notification/overload.html">Overload</a>
+              <a href="dialog-notification/error.html">Error</a>
+              <a href="dialog-notification/restart.html">Restart</a>
+              <a href="dialog-notification/space.html">Space</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+    @@include('./src/include/footer-container.html')
+  </div>
+
+
+
+  @@include('./src/include/menu.html')
+
+  <div id="somedialog" class="dialog">
+    <div class="dialog__overlay"></div>
+    <div class="dialog__content">
+     <i class="fa fa-envelope color-info f-s-28"></i>
+      <h2 class="p-0 m-b-20">You have a new letter <br><small>Please read it</small></h2>
+
+      <button class="action btn btn-round btn-info" data-dialog-close>Read</button>
+      <button class="action btn btn-round btn-default" data-dialog-close>Ok</button>
+    </div>
+  </div>
+
+  @@include('./src/include/footer.html')
+
+  <script src="js/dialogFx.js"></script>
+  <script>
+    (function () {
+
+      var dlgTrigger = document.querySelectorAll('[data-dialog]');
+      var someDialog, dlg;
+      for (i = 0; i < dlgTrigger.length; i++)
+      {
+      someDialog = document.getElementById( dlgTrigger[i].getAttribute( 'data-dialog' ) );
+      dlg	= new DialogFx(someDialog);
+      dlgTrigger[i].addEventListener( 'click', dlg.toggle.bind(dlg) );
+      }
+
+    })();
+  </script>
+@@include('./src/include/footer_end.html')

@@ -1,0 +1,94 @@
+@@include('./src/include/head.html', { "title": "Boxed Layout" })
+
+  <link rel="stylesheet" href="js/google-code-prettify/prettify.css" />
+
+@@include('./src/include/head_end.html')
+
+
+<body class="boxed">
+  <div id="wrap-content" class="wrap-content">
+
+   @@include('./src/include/top_menu.html',{
+      "name": "Boxed Layout"
+    })
+
+    <div class="content container-fluid">
+      <div class="row row-broken">
+        <div class="col-md-12">
+          <ol class="breadcrumb">
+            <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+            <li>Layouts</li>
+            <li class="active">Boxed Layout</li>
+          </ol>
+        </div>
+      </div>
+      <div class="row row-broken">
+        <div class="col-lg-12">
+          <pre class="prettyprint linenums">
+&lt;body class="boxed"&gt;
+  &lt;div id="wrap-content" class="wrap-content"&gt;
+
+    &lt;div class="preloader"&gt;
+      &lt;div class="preloader-anim la-animate"&gt;&lt;/div&gt;
+      &lt;div class="loading-anim"&gt;Loading&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="aside"&gt;
+      &lt;a href="index.html" class="btn-logo"&gt;&lt;/a&gt;
+      &lt;span class="menu-btn-open" id="menu-btn-open"&gt;Menu&lt;/span&gt;
+      &lt;a class="btn-profile" href="profile.html"&gt;&lt;/a&gt;
+      &lt;span class="toggle-fixed fa fa-thumb-tack" data-toggle="tooltip" data-placement="top" title="Fixed top"&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="header"&gt;
+      &lt;!-- Header content goes here... --&gt;
+    &lt;/div&gt;
+
+    &lt;div class="content container-fluid"&gt;
+      &lt;div class="row row-broken"&gt;
+        &lt;div class="col-md-12"&gt;
+          &lt;ol class="breadcrumb"&gt;
+            &lt;li&gt;&lt;a href="index.html"&gt;&lt;i class="fa fa-home"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="active"&gt;Both nosidebars&lt;/li&gt;
+          &lt;/ol&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="row row-broken"&gt;
+        &lt;div class="col-lg-12"&gt;
+          &lt;!-- Content goes here... --&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="footer"&gt;
+      &lt;!-- Footer content goes here... --&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+  &lt;div id="wrap-menu" class="wrap-menu"&gt;
+    &lt;!-- Menu content goes here... --&gt;
+  &lt;/div&gt;
+
+  &lt;div id="overlay" class="overlay"&gt;&lt;/div&gt;
+
+&lt;/body&gt;
+       </pre>
+        </div>
+      </div>
+    </div>
+    @@include('./src/include/footer-container.html')
+  </div>
+
+  @@include('./src/include/menu.html')
+
+  @@include('./src/include/footer.html')
+
+<script src="js/google-code-prettify/prettify.js"></script>
+
+  <script src="js/ui.js"></script>
+
+  <script>
+    $(function () {
+      window.prettyPrint && prettyPrint();
+    })
+  </script>
+
+  @@include('./src/include/footer_end.html')

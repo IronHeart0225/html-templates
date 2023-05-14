@@ -1,0 +1,39 @@
+@@include('./src/include/head.html', {
+  "title": "Wysiwyg"
+})
+
+
+@@include('./src/include/head_end.html')
+
+<body>
+  <div id="wrap-content" class="wrap-content">
+
+    @@include('./src/include/top_menu.html',{
+      "name": "Wysiwyg"
+    })
+
+    <div class="content container-fluid">
+     <div class="row row-broken">
+        <div class="col-md-12">
+          <ol class="breadcrumb">
+            <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+            <li>Editors</li>
+            <li class="active">Wysiwyg</li>
+          </ol>
+        </div>
+      </div>
+      <div class="row decor-default">
+        <div class="col-lg-12">
+            <textarea></textarea>
+        </div>
+      </div>
+    </div>
+    @@include('./src/include/footer-container.html')
+  </div>
+
+  @@include('./src/include/menu.html')
+
+  @@include('./src/include/footer.html')
+  <script src="js/tinymce/tinymce.min.js"></script>
+  <script>tinymce.init({ selector:'textarea', height: '400px' });</script>
+  @@include('./src/include/footer_end.html')

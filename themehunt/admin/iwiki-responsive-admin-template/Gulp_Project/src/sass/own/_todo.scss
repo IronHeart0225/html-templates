@@ -1,0 +1,119 @@
+.todo {
+
+  ol {
+    line-height: 52px !important;
+    font-size: 16px !important;
+    color: $brand-primary !important;
+  }
+
+  &-new {
+    padding: 0 52px 0 0;
+    position: relative;
+
+    &:after {
+      content: '';
+      width: 52px;
+      height: 52px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: url('../img/icon-99.png') 50% 50% no-repeat;
+    }
+
+    .input,
+    .input__field--kaede {
+      background: inherit;
+    }
+
+    .input__label-content--kaede {
+      color: $brand-default;
+      text-indent: 24px;
+      font-size: 14px;
+    }
+  }
+
+  &-unit {
+    border: 1px solid $brand-primary;
+    position: relative;
+
+    > div {
+      @media(max-width: 768px){
+        text-align: right;
+      }
+    }
+
+    label {
+
+      span {
+        font-size: 14px;
+        color: $text-dark;
+        @media(max-width: 480px){
+          font-size: 11px;
+        }
+      }
+    }
+
+    svg path {
+      stroke: $brand-info !important;
+    }
+
+    .date {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 12px;
+      font-size: 14px;
+      line-height: 52px;
+      font-weight: normal;
+      color: $text-dark;
+      padding: 0 0 0 32px;
+      pointer-events: none;
+      text-indent: 0;
+      @media(max-width: 768px){
+        position: relative;
+        display: inline-block;
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 32px;
+        height: 52px;
+        background: url('../img/icon-100.png') 0 50% no-repeat;
+      }
+    }
+  }
+
+
+  &-controls {
+    text-align: center;
+
+    .control {
+      display: inline-block;
+      width: 52px;
+      height: 52px;
+      overflow: hidden;
+      text-indent: 60px;
+      margin: 20px 32px 0;
+
+      &-fav {
+        background: url('../img/icon-95.png') no-repeat 50% 50%;
+      }
+
+      &-folder {
+        background: url('../img/icon-96.png') no-repeat 50% 50%;
+      }
+
+      &-write {
+        background: url('../img/icon-97.png') no-repeat 50% 50%;
+      }
+
+      &-delete {
+        background: url('../img/icon-98.png') no-repeat 50% 50%;
+      }
+    }
+  }
+}

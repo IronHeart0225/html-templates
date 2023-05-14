@@ -1,0 +1,153 @@
+@@include('./src/include/head.html', { "title": "Checkboxes v2" })
+
+@@include('./src/include/head_end.html')
+
+
+<body>
+  <div id="wrap-content" class="wrap-content">
+
+   @@include('./src/include/top_menu.html',{
+      "name": "Checkboxes v2"
+    })
+
+    <div class="content container-fluid">
+      <div class="row row-broken">
+        <div class="col-md-12">
+          <ol class="breadcrumb">
+            <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+            <li>UI Kits</li>
+            <li class="active">Checkboxes v2</li>
+          </ol>
+        </div>
+      </div>
+      <div class="row row-broken decor-default p-full-md">
+        <div class="col-md-12">
+            <h5>Checkboxes and Radio</h5>
+        </div>
+        <div class="col-md-4">
+          <p>Checkboxes</p>
+          <input id='check-1' class="custom-chr" type="checkbox" name='check-1'/>
+          <label for="check-1">Apple</label>
+          <br>
+          <p class="m-t-10 m-b-5">
+            Add <code>checked</code> attribute to check this element <br>
+          </p>
+          <input id='check-2' class="custom-chr" type="checkbox" name='check-1' checked/>
+          <label for="check-2">Orange</label>
+          <br>
+          <p class="m-t-10 m-b-5">
+            Add <code>disabled</code> attribute to disable this checkbox <br>
+          </p>
+          <input id='check-3' class="custom-chr" type="checkbox" name='check-1' disabled/>
+          <label for="check-3">Lemon</label>
+          <br>
+          <p class="m-t-10 m-b-5">
+            Add <code>chr-success</code> class to get success checkbox<br>
+          </p>
+          <input id='check-4' class="custom-chr chr-success" type="checkbox" name='check-1'/>
+          <label for="check-4">Banana</label>
+          <br>
+          <p class="m-t-10 m-b-5">
+            Add <code>chr-warning</code> class to get warning checkbox<br>
+          </p>
+          <input id='check-5' class="custom-chr chr-warning" type="checkbox" name='check-1'/>
+          <label for="check-5">Cherry</label>
+          <br>
+          <p class="m-t-10 m-b-5">
+            Add <code>chr-danger</code> class to get danger checkbox<br>
+          </p>
+          <input id='check-6' class="custom-chr chr-danger" type="checkbox" name='check-1'/>
+          <label for="check-6">Olive</label>
+          <br>
+          <p class="m-t-10 m-b-5">
+            Add <code>chr-info</code> class to get info checkbox<br>
+          </p>
+          <input id='check-7' class="custom-chr chr-info" type="checkbox" name='check-1'/>
+          <label for="check-7">Watermelon</label>
+          <br>
+          <br>
+
+        </div>
+        <div class="col-md-4">
+          <p>Radios</p>
+          <input id='radio-1' class="custom-chr" type="radio" name='r-group-1' />
+          <label for="radio-1">Day</label>
+          <br>
+          <p class="m-t-10 m-b-5">
+            Add <code>checked</code> attribute to check this element <br>
+          </p>
+          <input id='radio-2' class="custom-chr" type="radio" name='r-group-1' checked />
+          <label for="radio-2">Night</label>
+          <br>
+          <p class="m-t-10 m-b-5">
+            Add <code>disabled</code> attribute to disable this radio <br>
+          </p>
+          <input id='radio-3' class="custom-chr" type="radio" name='r-group-1' disabled />
+          <label for="radio-3">Morning</label>
+          <br>
+          <p class="m-t-10 m-b-5">
+            Add <code>chr-success</code> class to get success radio<br>
+          </p>
+          <input id='radio-4' class="custom-chr chr-success" type="radio" name='r-group-1' />
+          <label for="radio-4">Evening</label>
+          <br>
+          <p class="m-t-10 m-b-5">
+            Add <code>chr-warning</code> class to get warning radio<br>
+          </p>
+          <input id='radio-5' class="custom-chr chr-warning" type="radio" name='r-group-1' />
+          <label for="radio-5">Midnight</label>
+          <br>
+          <p class="m-t-10 m-b-5">
+            Add <code>chr-danger</code> class to get danger radio<br>
+          </p>
+          <input id='radio-6' class="custom-chr chr-danger" type="radio" name='r-group-1' />
+          <label for="radio-6">Sunset</label>
+          <br>
+          <p class="m-t-10 m-b-5">
+            Add <code>chr-info</code> class to get info radio<br>
+          </p>
+          <input id='radio-7' class="custom-chr chr-info" type="radio" name='r-group-1' />
+          <label for="radio-7">Sunrise</label>
+          <br>
+          <br>
+        </div>
+        <div class="col-md-4">
+          <p>Toggles</p>
+          <input class='toggle' type="checkbox" name='check-3' />
+          <p class="m-0">
+            Add <code>checked</code> attribute to check this element <br>
+          </p>
+          <input class='toggle' type="checkbox" name='check-4' checked />
+          <p class="m-0">
+            Add <code>disabled</code> attribute to disable this toggle <br>
+          </p>
+          <input class='toggle' type="checkbox" name='check-4' disabled/>
+          <p class="m-0">
+            Add <code>toggle-success</code> class to get success toggle<br>
+          </p>
+          <input class='toggle toggle-success' type="checkbox" name='check-4' />
+          <p class="m-0">
+            Add <code>toggle-warning</code> class to get warning toggle<br>
+          </p>
+          <input class='toggle toggle-warning' type="checkbox" name='check-4' />
+          <p class="m-0">
+            Add <code>toggle-danger</code> class to get danger toggle<br>
+          </p>
+          <input class='toggle toggle-danger' type="checkbox" name='check-4' />
+          <p class="m-0">
+            Add <code>toggle-info</code> class to get info toggle<br>
+          </p>
+          <input class='toggle toggle-info' type="checkbox" name='check-4' />
+          <br>
+
+        </div>
+      </div>
+    </div>
+    @@include('./src/include/footer-container.html')
+  </div>
+
+  @@include('./src/include/menu.html')
+
+  @@include('./src/include/footer.html')
+
+@@include('./src/include/footer_end.html')

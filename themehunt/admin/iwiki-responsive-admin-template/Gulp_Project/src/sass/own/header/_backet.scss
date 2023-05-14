@@ -1,0 +1,338 @@
+.backet {
+
+  .backet-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90px;
+    height: 90px;
+    background: url('../img/header.png') -90px -90px no-repeat $brand-info;
+    cursor: pointer;
+    z-index: 450;
+    @media(max-width: 480px) {
+      width: 64px;
+      height: 64px;
+      background-position: -103px -103px;
+    }
+  }
+
+  .backet-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    z-index: 400;
+    background-color: $brand-info;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 90px;
+    text-indent: 28px;
+    color: $text-light;
+    @include translate3d(100%, 0, 0);
+    @include transition(translate3d, 0.4s, $bezie-1);
+    @media(max-width: 480px) {
+      height: 64px;
+      line-height: 64px;
+    }
+  }
+
+  .backet-content {
+    position: absolute;
+    top: 90px;
+    right: 0;;
+    width: 100%;
+    z-index: 350;
+    box-shadow: 0 0 20px rgba(0,0,0,0);
+    visibility: hidden;
+    @include transition-property(box-shadow);
+    @include transition-timing-function(easy);
+    @include transition-duration(0.1s);
+    @include transition-delay(0s);
+
+    @include media('md') {
+      padding: 90px 0 0;
+    }
+
+    @media(max-width: 480px) {
+      top: 64px;
+    }
+
+    > .unit {
+      width: 20%;
+      height: 200px;
+      border-right: 1px solid $brand-info;
+      border-bottom: 1px solid $brand-info;
+      float: right;
+      position: relative;
+      overflow: hidden;
+      background-color: $brand-primary;
+      @include transition(translate3d, 0.4s, $bezie-1);
+
+      @include media('lg') {
+        height: 150px;
+      }
+
+      &:nth-child(1) {
+        @include translate3d(100%*1, -100%, 0);
+      }
+      &:nth-child(2) {
+        @include translate3d(100%*2, -100%, 0);
+      }
+      &:nth-child(3) {
+        @include translate3d(100%*3, -100%, 0);
+      }
+      &:nth-child(4) {
+        @include translate3d(100%*4, -100%, 0);
+      }
+      &:nth-child(5) {
+        @include translate3d(100%*5, -100%, 0);
+      }
+      &:nth-child(6) {
+        @include translate3d(100%*1, -200%, 0);
+      }
+      &:nth-child(7) {
+        @include translate3d(100%*2, -200%, 0);
+      }
+      &:nth-child(8) {
+        @include translate3d(100%*3, -200%, 0);
+      }
+      &:nth-child(9) {
+        @include translate3d(100%*4, -200%, 0);
+      }
+      &:nth-child(10) {
+        @include translate3d(100%*5, -200%, 0);
+      }
+
+      @include media('md') {
+        height: 90px;
+        width: 100%;
+        float: none;
+
+        @for $i from 1 through 10 {
+          &:nth-child(#{$i}) {
+            @include translate3d(100%, 0, 0);
+          }
+        }
+      }
+
+      .unit-bg {
+        background: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        bottom: 0;
+        z-index: 450;
+        height: 36px;
+        width: 100%;
+        @include media('md') {
+          background: transparent;
+        }
+      }
+
+      .btn-close {
+        z-index: 450;
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        width: 28px;
+        height: 28px;
+        cursor: pointer;
+
+        svg {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 28px;
+          height: 28px;
+          @include transform-origin(100%, 0);
+          @include transform(scale(0.5));
+          stroke: $brand-primary-hue;
+          stroke-width: 4px;
+          @include transition(transform, stroke, 0.3s, $bezie-1);
+
+          @include media('md') {
+            @include transform(scale(1));
+            top: 18px;
+          }
+        }
+
+        &:hover {
+          svg {
+            stroke: $brand-info-hue;
+            @include transform(scale(1));
+          }
+        }
+      }
+
+      .name {
+        z-index: 450;
+        position: absolute;
+        bottom: 0;
+        left: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 36px;
+
+        @include media('md') {
+          left: 28px;
+          font-size: 26px;
+          line-height: 90px;
+        }
+      }
+
+      .price {
+        z-index: 450;
+        position: absolute;
+        bottom: 0;
+        right: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 36px;
+
+        @include media('md') {
+          right: 72px;
+          font-size: 26px;
+          line-height: 90px;
+        }
+      }
+
+      .img {
+        width: 150%;
+        height: 150%;
+        position: absolute;
+        top: 0;
+        left: -25%;
+        z-index: 400;
+
+        @include media('md') {
+          display: none;
+        }
+
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+
+      &.text-color-black {
+        color: $text-dark;
+      }
+
+      &.text-color-white {
+        color: $text-light;
+      }
+      &.total {
+        text-align: center;
+        color: $text-light;
+
+        @include media('md') {
+          position: absolute;
+          top: 0;
+          left: 0;
+          text-align: left;
+        }
+
+        .btn-close {
+          svg {
+            stroke: $text-light;
+            stroke-width: 6px;
+            @include transform(scale(0.75));
+
+            @include media('md') {
+              @include transform(scale(1));
+            }
+          }
+
+          &:hover {
+            svg {
+              @include transform(scale(1));
+            }
+          }
+        }
+
+        .total-title {
+          font-size: 20px;
+          font-weight: bold;
+          line-height: 36px;
+          padding: 36px 0 0;
+
+          @include media('lg') {
+            padding: 0;
+          }
+
+          @include media('md') {
+            display: none;
+          }
+        }
+
+        .total-price {
+          font-size: 26px;
+          font-weight: bold;
+          line-height: 36px;
+
+          @include media('md') {
+            line-height: 90px;
+            padding: 0 0 0 28px;
+          }
+        }
+
+        .total-buy {
+          display: inline-block;
+          padding: 0 46px;
+          font-size: 16px;
+          font-weight: bold;
+          line-height: 36px;
+          border: 3px solid $brand-default;
+          background: none;
+          outline: none;
+          margin: 6px 0;
+          @include media('md') {
+            position: absolute;
+            top: 20px;
+            right: 10px;
+          }
+        }
+
+        .total-continue {
+          font-size: 16px;
+          font-weight: normal;
+          line-height: 24px;
+          display: block;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &.active {
+    z-index: 500;
+
+
+    .backet-title {
+      @include translate3d(0, 0, 0);
+    }
+
+    .backet-content {
+      visibility: visible;
+      @include transition-delay(0.4s);
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      background: #fff;
+
+      > .unit {
+        @include translate3d(0, 0, 0);
+        float: right;
+      }
+    }
+  }
+}
+
+
+.backet .qw-cart span{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  @include transform(scale(0));
+}
+
+.backet .qw-cart.items-added span{
+  @include transform(scale(1));
+}

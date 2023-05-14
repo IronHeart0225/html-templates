@@ -1,0 +1,85 @@
+@@include('./src/include/head.html', {
+  "title": "Typography"
+})
+
+@@include('./src/include/head_end.html')
+<body>
+    <div id="wrap-content" class="wrap-content">
+
+          @@include('./src/include/top_menu.html',{
+            "name": "Typography"
+          })
+
+           <div class="content container-fluid">
+           <div class="row row-broken">
+              <div class="col-md-12">
+                <ol class="breadcrumb">
+                  <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+                  <li class="active">Typography</li>
+                </ol>
+              </div>
+            </div>
+            <div class="row decor-default">
+                <div class="col-lg-12"><h5>Font-weight</h5>
+                <p class="m-0">Add <code>.f-w-*</code> class for different font weight. For example <code>.f-w-600</code></p>
+                </div>
+
+                <div class="col-lg-4 h4 f-w-200">154626-821+f55=7*76</div>
+                <div class="col-lg-2 f-w-200">Extralight <small>200</small></div>
+                <div class="col-lg-4 h4 f-w-300">Lorem ipsum dolor</div>
+                <div class="col-lg-2 f-w-300">Light <small>300</small></div>
+                <div class="col-lg-4 h4 f-w-400">Lorem ipsum dolor</div>
+                <div class="col-lg-2 f-w-400">Regular <small>400</small></div>
+                <div class="col-lg-4 h4 f-w-500">Lorem ipsum dolor</div>
+                <div class="col-lg-2 f-w-500">Medium <small>500</small></div>
+                <div class="col-lg-4 h4 f-w-600">Lorem ipsum dolor</div>
+                <div class="col-lg-2 f-w-600">SemiBold <small>600</small></div>
+                <div class="col-lg-4 h4 f-w-700">Lorem ipsum dolor</div>
+                <div class="col-lg-2 f-w-700">Bold <small>700</small></div>
+                <div class="col-lg-4 h4 f-w-800">Lorem ipsum dolor</div>
+                <div class="col-lg-2 f-w-800">ExtraBold <small>800</small></div>
+                <div class="col-lg-4 h4 f-w-900">Lorem ipsum dolor</div>
+                <div class="col-lg-2 f-w-900">Heavy <small>900</small></div>
+            </div>
+            <div class="row decor-default">
+                <div class="col-md-12">
+                 <h5>Headers</h5>
+                  <p class="m-0">All HTML headings, <code>h1</code> through <code>h6</code>, are available. <code>.h1</code> through <code>.h6</code> classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline.</p>
+                </div>
+                <div class="col-xs-12"><h1>Heading h1 <small>(48px)</small></h1></div>
+                <div class="col-xs-12"><h2>Heading h2 <small>(40px)</small></h2></div>
+                <div class="col-xs-12"><h3>Heading h3 <small>(36px)</small></h3></div>
+                <div class="col-xs-12"><h4>Heading h4 <small>(30px)</small></h4></div>
+                <div class="col-xs-12"><h5>Heading h5 <small>(24px)</small></h5></div>
+                <div class="col-xs-12"><h6>Heading h6 <small>(18px)</small></h6></div>
+            </div>
+            <div class="row decor-default">
+                <div class="col-lg-12"><h5>BlockQuotes</h5>
+                  <p class="m-0">Wrap <code>blockquote</code> tag around any HTML as the quote. For straight quotes, we recommend a <code>p</code> tag. Add a <code>footer</code> for identifying the source. </p>
+                </div>
+                <div class="col-lg-12">
+                    <blockquote>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                        <footer>Steve Jobs</footer>
+                    </blockquote>
+                </div>
+            </div>
+            <div class="row decor-default">
+                <div class="col-lg-12"><h5>Paragraph</h5>
+                 <p class="m-0">Default <code>font-size</code> is <strong>16px</strong> with a <code>line-height</code> of <strong>1.5</strong>. This is applied to the <code>body</code> tag and all paragraphs</p>
+                </div>
+                <div class="col-lg-12">
+                    <p>This is a paragraph. Paragraphs are preset with a font size, line height and spacing to match the overall vertical rhythm. To show what a paragraph looks like this needs a little more content so, did you know that there are storms occurring on Jupiter that are larger than the Earth? Pretty cool. Wrap strong around type to make it bold!. You can also use em to italicize your words.</p>
+                </div>
+            </div>
+        </div>
+        @@include('./src/include/footer-container.html')
+    </div>
+
+
+
+  @@include('./src/include/menu.html')
+
+  @@include('./src/include/footer.html')
+
+  @@include('./src/include/footer_end.html')

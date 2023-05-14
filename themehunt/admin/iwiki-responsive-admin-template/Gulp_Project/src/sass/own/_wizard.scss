@@ -1,0 +1,72 @@
+.wizard-block{
+  position: relative;
+  .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    background-color: $brand-danger-hue;
+  }
+  .nav-pills > li > a{
+    background-color: $brand-danger;
+    color: #fff;
+    margin: 2% 1%;
+    font: 700 40px/70px "Roboto", sans-serif;
+    border-radius: 8px;
+    padding: 0;
+  }
+
+  .pager li > a, .pager li > span {
+    background-color: $brand-info;
+    border: 1px solid $brand-info-hue;
+    color: #fff;
+  }
+  .tab-content {
+    margin: 20px 1% 0;
+  }
+  .progress{
+    background: $brand-info;
+    height: 16px;
+    border-radius: 8px;
+    .progress-bar{
+      background: $brand-info-hue;
+      border-radius: 8px;
+    }
+  }
+  .alt-pills{
+    background: transparent;
+    position: absolute;
+    top: 0;
+    margin-top: 10px;
+    li{
+      display: table-cell;
+      width: 1%;
+    }
+     > li > a{
+      background-color: $brand-primary-hue;
+      margin: 0 1%;
+      font: 700 40px/50px "Roboto", sans-serif;
+      border-radius: 50%;
+      padding: 0;
+      display: inline-block;
+      width: 50px;
+    }
+    > li.active > a{
+      background: #fff;
+      color: $brand-danger-hue;
+      &:hover,&:focus{
+        background-color: #fff;
+      }
+    }
+
+  }
+  .alt-progress{
+    height: 70px;
+    margin-bottom: 0;
+    background: $brand-primary;
+    border-radius: 35px;
+    border: 0;
+    .progress-bar{
+      background: $brand-danger-hue;
+      @include transition(width, 0.3s);
+      border-radius: 35px;
+    }
+  }
+}
+

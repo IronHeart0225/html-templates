@@ -1,0 +1,934 @@
+<!-- Site Setting Panel -->
+  <section id="settings" data-ng-include=" 'views/settings/settings.html' " style="display:none"></section>
+<!-- Site Setting Panel End -->
+
+<!-- Page Header Start -->
+<div class="pageheader">
+  <h2><i class="fa fa-home"></i> Dashboard </h2>
+  <div class="breadcrumb-wrapper hidden-xs"> <span class="label">You are here:</span>
+    <ol class="breadcrumb">
+      <li> <a href="#"> Home </a> </li>
+      <li class="active"> Dashboard </li>
+    </ol>
+  </div>
+</div>
+<!-- Page Header End -->
+
+<div class="page">
+  <div class="row">
+    <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="col-xs-4">
+            <div class="counter-icon bg-danger"> <i class="fa fa-line-chart"></i> </div>
+          </div>
+          <div class="col-xs-8 text-right">
+            <h3>8500</h3>
+            <p class="text-muted nm">Unique Visitors</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="col-xs-4">
+            <div class="counter-icon bg-success"> <i class="fa fa-users"></i> </div>
+          </div>
+          <div class="col-xs-8 text-right">
+            <h3>745</h3>
+            <p class="text-muted nm">New User</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="col-xs-4">
+            <div class="counter-icon bg-azure"> <i class="fa fa-twitter"></i> </div>
+          </div>
+          <div class="col-xs-8 text-right">
+            <h3>348</h3>
+            <p class="text-muted nm">Tweets</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="col-xs-4">
+            <div class="counter-icon bg-warning"> <i class="fa fa-comments-o"></i> </div>
+          </div>
+          <div class="col-xs-8 text-right">
+            <h3>523</h3>
+            <p class="text-muted nm">Comments</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="panel panel-default">
+        <header class="panel-heading nb">
+          <h4>Sales <strong>Statistics</strong></h4>
+        </header>
+        <div class="panel-body">
+          <div class="col-md-8" data-ng-controller="jvectormapCtrl">
+            <div class="height-280" ui-jvectormap options="Jvworldmap"></div>
+          </div>
+          <div class="col-md-4"> <span class="text-small">In Queue <span class="pull-right"> 45% </span> </span>
+            <progressbar class="progressbar-xs progress-rounded progress-striped" value="68" type="info"></progressbar>
+            <span class="text-small">Shipped Products <span class="pull-right"> 350/500 </span> </span>
+            <progressbar class="progressbar-xs progress-rounded progress-striped" value="68" type="primary"></progressbar>
+            <span class="text-small">Returned Products<span class="pull-right"> 50/500 </span> </span>
+            <progressbar class="progressbar-xs progress-rounded progress-striped" value="68" type="warning"></progressbar>
+            <span class="text-small">Pending Deliveries<span class="pull-right"> 150/500 </span> </span>
+            <progressbar class="progressbar-xs progress-rounded progress-striped" value="68" type="danger"></progressbar>
+            <span class="text-small">Project 2 <span class="pull-right"> 32% </span> </span>
+            <progressbar class="progressbar-xs progress-rounded progress-striped" value="68" type="info"></progressbar>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="panel panel-default np" ng-controller="AccordionDemoCtrl">
+        <header class="panel-heading">
+          <div class="text-center">
+            <h4>Monthly <strong>Statistics</strong></h4>
+            <span>based on the User Activities</span> 
+          </div>
+        </header>
+        <div class="panel-body np">
+          <accordion close-others="oneAtATime">
+            <accordion-group is-open="status.isFirstOpen" class="panel-transparent">
+              <accordion-heading><i class="mr-5 fa" ng-class="{'fa-minus': status.tab1.open, 'fa-plus': !status.tab1.open}"></i> This Month </accordion-heading>
+              <table class="table partition-light-grey nm">
+                <tbody>
+                  <tr>
+                    <td class="center">1</td>
+                    <td>Google Chrome</td>
+                    <td class="center">4909</td>
+                    <td><i class="fa fa-caret-down text-red"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="center">1</td>
+                    <td>Google Chrome</td>
+                    <td class="center">4909</td>
+                    <td><i class="fa fa-caret-down text-red"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="center">1</td>
+                    <td>Google Chrome</td>
+                    <td class="center">4909</td>
+                    <td><i class="fa fa-caret-down text-red"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="center">1</td>
+                    <td>Google Chrome</td>
+                    <td class="center">4909</td>
+                    <td><i class="fa fa-caret-down text-red"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+            </accordion-group>
+            <accordion-group is-open="status.tab2.open" class="panel-transparent">
+              <accordion-heading> <i class="mr-5 fa" ng-class="{'fa-minus': status.tab2.open, 'fa-plus': !status.tab2.open}"></i> Last Month </accordion-heading>
+              <table class="table partition-light-grey nm">
+                <tbody>
+                  <tr>
+                    <td class="center">1</td>
+                    <td>Google Chrome</td>
+                    <td class="center">4909</td>
+                    <td><i class="fa fa-caret-down text-red"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="center">1</td>
+                    <td>Google Chrome</td>
+                    <td class="center">4909</td>
+                    <td><i class="fa fa-caret-down text-red"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="center">1</td>
+                    <td>Google Chrome</td>
+                    <td class="center">4909</td>
+                    <td><i class="fa fa-caret-down text-red"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="center">1</td>
+                    <td>Google Chrome</td>
+                    <td class="center">4909</td>
+                    <td><i class="fa fa-caret-down text-red"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+            </accordion-group>
+            <accordion-group is-open="status.tab3.open" class="panel-transparent">
+              <accordion-heading> <i class="mr-5 fa" ng-class="{'fa-minus': status.tab3.open, 'fa-plus': !status.tab3s.open}"></i> Two Months Ago </accordion-heading>
+              <table class="table partition-light-grey nm">
+                <tbody>
+                  <tr>
+                    <td class="center">1</td>
+                    <td>Google Chrome</td>
+                    <td class="center">4909</td>
+                    <td><i class="fa fa-caret-down text-red"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="center">1</td>
+                    <td>Google Chrome</td>
+                    <td class="center">4909</td>
+                    <td><i class="fa fa-caret-down text-red"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="center">1</td>
+                    <td>Google Chrome</td>
+                    <td class="center">4909</td>
+                    <td><i class="fa fa-caret-down text-red"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="center">1</td>
+                    <td>Google Chrome</td>
+                    <td class="center">4909</td>
+                    <td><i class="fa fa-caret-down text-red"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+            </accordion-group>
+          </accordion>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4"> 
+      <!-- START SLICK SLIDER -->
+      <slick autoplay=true arrows=false pauseOnHover=true responsive=true swipe=true slides-to-show=1 slides-to-scroll=1 class="slider">
+        <div>
+          <div class="panel">
+            <div class="panel-body">
+              <div class="text-bold"> Task in Progress </div>
+              <div class="pv-5"> Navigation Illustration </div>
+              <div class="progress progressbar-xs">
+                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%"> <span class="sr-only">45% Complete</span> </div>
+              </div>
+              <div class="text-dark"> Status : </div>
+              <div class="text-dark text-large pull-left"> Active </div>
+              <div class="text-dark text-large pull-right"> <a href="#" class="btn btn-info btn-sm"> <i class="fa fa-pause"></i> Pause </a> <a href="#" class="btn btn-info btn-sm"> <i class="fa fa-check"></i> Complete </a> </div>
+            </div>
+            <div class="panel-footer height-60">
+              <ul class="list-inline">
+                <li class="text-bold pull-left pv-10"> Assigned to : </li>
+                <li class="avator pull-right"><img src="images/photos/user1.png" class="img-circle img40_40" alt=""></li>
+                <li class="avator pull-right"><img src="images/photos/user2.png" class="img-circle img40_40" alt=""></li>
+                <li class="avator pull-right"><img src="images/photos/user3.png" class="img-circle img40_40" alt=""></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="panel">
+            <div class="panel-body">
+              <div class="text-bold"> Task in Progress </div>
+              <div class="pv-5"> App Usability Testing </div>
+              <div class="progress progressbar-xs">
+                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%"> <span class="sr-only">45% Complete</span> </div>
+              </div>
+              <div class="text-dark"> Status : </div>
+              <div class="text-dark text-large pull-left"> On Hold </div>
+              <div class="text-dark text-large pull-right"> <a href="#" class="btn btn-info btn-sm"> <i class="fa fa-pause"></i> Pause </a> <a href="#" class="btn btn-info btn-sm"> <i class="fa fa-check"></i> Complete </a> </div>
+            </div>
+            <div class="panel-footer height-60">
+              <ul class="list-inline">
+                <li class="text-bold pull-left pv-10"> Assigned to : </li>
+                <li class="avator pull-right"><img src="images/photos/user4.png" class="img-circle img40_40" alt=""></li>
+                <li class="avator pull-right"><img src="images/photos/user5.png" class="img-circle img40_40" alt=""></li>
+                <li class="avator pull-right"><img src="images/photos/user6.png" class="img-circle img40_40" alt=""></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="panel">
+            <div class="panel-body">
+              <div class="text-bold"> Task in Progress </div>
+              <div class="pv-5"> Web Portal Redesign Portal </div>
+              <div class="progress progressbar-xs">
+                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%"> <span class="sr-only">45% Complete</span> </div>
+              </div>
+              <div class="text-dark"> Status : </div>
+              <div class="text-dark text-large pull-left"> Active </div>
+              <div class="text-dark text-large pull-right"> <a href="#" class="btn btn-info btn-sm"> <i class="fa fa-pause"></i> Pause </a> <a href="#" class="btn btn-info btn-sm"> <i class="fa fa-check"></i> Complete </a> </div>
+            </div>
+            <div class="panel-footer height-60">
+              <ul class="list-inline">
+                <li class="text-bold pull-left pv-10"> Assigned to : </li>
+                <li class="avator pull-right"><img src="images/photos/user7.png" class="img-circle img40_40" alt=""></li>
+                <li class="avator pull-right"><img src="images/photos/user4.png" class="img-circle img40_40" alt=""></li>
+                <li class="avator pull-right"><img src="images/photos/user6.png" class="img-circle img40_40" alt=""></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="panel">
+            <div class="panel-body">
+              <div class="text-bold"> Task in Progress </div>
+              <div class="pv-5"> A/B Testing </div>
+              <div class="progress progressbar-xs">
+                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%"> <span class="sr-only">45% Complete</span> </div>
+              </div>
+              <div class="text-dark"> Status : </div>
+              <div class="text-dark text-large pull-left"> Active </div>
+              <div class="text-dark text-large pull-right"> <a href="#" class="btn btn-info btn-sm"> <i class="fa fa-pause"></i> Pause </a> <a href="#" class="btn btn-info btn-sm"> <i class="fa fa-check"></i> Complete </a> </div>
+            </div>
+            <div class="panel-footer height-60">
+              <ul class="list-inline">
+                <li class="text-bold pull-left pv-10"> Assigned to : </li>
+                <li class="avator pull-right"><img src="images/photos/user2.png" class="img-circle img40_40" alt=""></li>
+                <li class="avator pull-right"><img src="images/photos/user4.png" class="img-circle img40_40" alt=""></li>
+                <li class="avator pull-right"><img src="images/photos/user6.png" class="img-circle img40_40" alt=""></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </slick>
+      <!-- END SLICK SLIDER --> 
+    </div>
+    <div class="col-lg-4" data-ng-controller="flotChartCtrl">
+      <div class="panel panel-default">
+          <h4 class="nm pad-10">Sales <strong>Statistics</strong></h4>
+        <div class="panel-body">
+          <div data-flot-chart data-data="line4.data" data-options="line4.options" style="width: 100%; height: 155px;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4" data-ng-controller="flotChartCtrl">
+      <div class="panel panel-default">
+          <h4 class="nm pad-10">Sales <strong>Statistics</strong></h4>
+        <div class="panel-body">
+          <div data-flot-chart data-data="line6.data" data-options="line6.options" style="width: 100%; height: 155px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6" data-ng-controller="TabsDemoCtrl">
+      <div class="panel panel-default">
+        <h4 class="nm pad-15">Order <strong>List</strong></h4>
+        <div class="panel-body">
+          <tabset> 
+           <tab heading="Total Selling">
+            <table class="table table-condensed">
+              <thead>
+                <tr>
+                  <th width="45%">Product</th>
+                  <th>Price</th>
+                  <th>Sold</th>
+                  <th>Report</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="#"> Apple iPhone 4s - 16GB - Black </a></td>
+                  <td>$625.50</td>
+                  <td>809</td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button"> Download <span class="caret"></span> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td><a href="#"> Samsung Galaxy S III SGH-I747 - 16GB </a></td>
+                  <td>$915.50 </td>
+                  <td>6709</td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen1" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button"> Download <span class="caret"></span> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td><a href="#"> Motorola Droid 4 XT894 - 16GB - Black </a></td>
+                  <td>$878.50</td>
+                  <td>784</td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen2" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button"> Download <span class="caret"></span> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td><a href="#"> Regatta Luca 3 in 1 Jacket </a></td>
+                  <td>$25.50</td>
+                  <td>1245</td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen3" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button"> Download <span class="caret"></span> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td><a href="#"> Samsung Galaxy Note 3 </a></td>
+                  <td>$925.50</td>
+                  <td>21245</td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen4" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button"> Download <span class="caret"></span> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td><a href="#"> Inoval Digital Pen </a></td>
+                  <td>$125.50</td>
+                  <td>1245</td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen5" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button"> Download <span class="caret"></span> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+              </tbody>
+            </table>
+            </tab> 
+            <tab heading="New Customers">
+            <table class="table table-condensed">
+              <thead>
+                <tr>
+                  <th> Customer Name </th>
+                  <th>Total Orders</th>
+                  <th>Total Amount</th>
+                  <th> Report </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> David Wilson </td>
+                  <td>3</td>
+                  <td>$625.50</td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen6" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button"> Download <span class="caret"></span> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td> Amanda Nilson </td>
+                  <td>4</td>
+                  <td>$12625.50</td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen7" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button"> Download <span class="caret"></span> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td>Jhon Doe</td>
+                  <td>2</td>
+                  <td>$125.00</td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen8" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button"> Download <span class="caret"></span> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td>Bill Chang</td>
+                  <td>45</td>
+                  <td>$12,125.70</td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen9" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button"> Download <span class="caret"></span> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td>Paul Strong</td>
+                  <td>1</td>
+                  <td>$890.85</td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen10" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button"> Download <span class="caret"></span> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td> Jane Hilson </td>
+                  <td>5</td>
+                  <td>$239.85</td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen11" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button"> Download <span class="caret"></span> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+              </tbody>
+            </table>
+            </tab> 
+            <tab heading="Recent Orders">
+            <table class="table table-condensed">
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th>Date</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th>Report</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> David Wilson </td>
+                  <td>3 Jan, 2013</td>
+                  <td>$625.50</td>
+                  <td><span class="label label-sm label-success"> Dispatch </span></td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen18" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button"> Download <span class="caret"></span> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td> Amanda Nilson </td>
+                  <td>13 Feb, 2013</td>
+                  <td>$12625.50</td>
+                  <td><span class="label label-sm label-danger"> On Hold </span></td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen19" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button"> Download <span class="caret"></span> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td>Jhon Doe</td>
+                  <td>20 Mar, 2013</td>
+                  <td>$125.00</td>
+                  <td><span class="label label-sm label-info"> Pending </span></td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen20" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button"> Download <span class="caret"></span> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td>Bill Chang</td>
+                  <td>29 May, 2013</td>
+                  <td>$12,125.70</td>
+                  <td><span class="label label-sm label-success"> Dispatch </span></td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen21" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button"> Download <span class="caret"></span> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td>Paul Strong</td>
+                  <td>1 Jun, 2013</td>
+                  <td>$890.85</td>
+                  <td><span class="label label-sm label-warning"> On Process </span></td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen22" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button"> Download <span class="caret"></span> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td> Jane Hilson </td>
+                  <td>5 Aug, 2013</td>
+                  <td>$239.85</td>
+                  <td><span class="label label-sm label-info"> Pending </span></td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen23" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button"> Download <span class="caret"></span> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+              </tbody>
+            </table>
+            </tab> 
+           </tabset>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="panel panel-default">
+        <h4 class="nm pad-15">User <strong>Accounts</strong></h4>
+        <div class="panel-body">
+          <div class="table-responsive">
+            <table class="table" style="margin-bottom: 0px;">
+              <thead>
+                <tr>
+                  <th class="hidden-xs"> <label for="toggle-all" class="ui-checkbox">
+                      <input name="checkbox1" type="checkbox" value="option1" id="toggle-all">
+                      <span></span></label>
+                  </th>
+                  <th>Profile</th>
+                  <th>User ID</th>
+                  <th class="hidden-xs">Email Address</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="hidden-xs"><label class="ui-checkbox">
+                      <input name="checkbox1" type="checkbox" value="option1">
+                      <span></span></label></td>
+                  <td><div class="media-object center"><img src="images/photos/user1.png" alt="" class="img-circle"></div></td>
+                  <td>cranston</td>
+                  <td class="hidden-xs">cranstonb@gnail.com</td>
+                  <td><span class="label label-success">Approved</span></td>
+                </tr>
+                <tr>
+                  <td class="hidden-xs"><label class="ui-checkbox">
+                      <input name="checkbox1" type="checkbox" value="option1">
+                      <span></span></label></td>
+                  <td><div class="media-object center"><img src="images/photos/user3.png" alt="" class="img-circle"></div></td>
+                  <td>norris</td>
+                  <td class="hidden-xs">j.norris@gnail.com</td>
+                  <td><span class="label label-warning">Suspended</span></td>
+                </tr>
+                <tr>
+                  <td class="hidden-xs"><label class="ui-checkbox">
+                      <input name="checkbox1" type="checkbox" value="option1">
+                      <span></span></label></td>
+                  <td><div class="media-object center"><img src="images/photos/user4.png" alt="" class="img-circle"></div></td>
+                  <td>gunner</td>
+                  <td class="hidden-xs">gunner@outluk.com</td>
+                  <td><span class="label label-danger">Blocked</span></td>
+                </tr>
+                <tr>
+                  <td class="hidden-xs"><label class="ui-checkbox">
+                      <input name="checkbox1" type="checkbox" value="option1">
+                      <span></span></label></td>
+                  <td><div class="media-object center"><img src="images/photos/user5.png" alt="" class="img-circle"></div></td>
+                  <td>mrford</td>
+                  <td class="hidden-xs">fordm@gnail.com</td>
+                  <td><span class="label label-success">Approved</span></td>
+                </tr>
+                <tr>
+                  <td class="hidden-xs"><label class="ui-checkbox">
+                      <input name="checkbox1" type="checkbox" value="option1">
+                      <span></span></label></td>
+                  <td><div class="media-object center"><img src="images/photos/user7.png" alt="" class="img-circle"></div></td>
+                  <td>kristian</td>
+                  <td class="hidden-xs">mack@outluk.com</td>
+                  <td><span class="label label-info">Pending</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="panel panel-default" ng-controller="TodoCtrl">
+        <header class="panel-heading"> {{remaining()}} of {{todos.length}} remaining
+            <span class="pull-right panel-toolbar"> <button class="btn btn-default" type="button" ng-click="archive()">Clear</button> </span>
+        </header>
+         <div class="todo-list">
+          <ul class="list-group">
+            <li ng-repeat="todo in todos" class="list-group-item">
+              <div class="todo-title">
+                <label class="ui-checkbox">
+                      <input name="checkbox" type="checkbox" ng-model="todo.done"><span class="done-{{todo.done}}">{{todo.text}}</span>
+                      <span></span>
+                </label>
+              </div>
+            </li>
+          </ul>
+         </div>
+        <div class="panel-footer">
+          <div class="row">
+            <div class="col-md-12">
+              <form role="form" ng-submit="addTodo()">
+                <div class="input-group">
+                  <input type="text" placeholder="Enter your ToDo List" ng-model="todoText" class="form-control">
+                  <span class="input-group-btn">
+                  <button class="btn btn-default" type="submit" value="add"> Add </button>
+                  </span> 
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <div class="col-md-3">
+    <div class="panel panel-box">
+        <div class="panel-body bg-facebook pt-30">
+          <i class="fa fa-facebook fa-4x"></i>
+          <div class="divider divider"></div>
+        </div>
+        <div class="panel-footer np">
+          <ul class="nav nav-section nav-justified">
+            <li>
+              <div class="section">
+                <h4>12.5k</h4>
+                <p class="text-muted">Followers</p>
+              </div>
+            </li>
+            <li>
+              <div class="section">
+                <h4>1853</h4>
+                <p class="text-muted">Following</p>
+              </div>
+            </li>
+            <li>
+              <div class="section">
+                <h4>3451</h4>
+                <p class="text-muted">Tweets</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    <div class="panel panel-box">
+        <div class="panel-body bg-twitter pt-30">
+          <i class="fa fa-twitter fa-4x"></i>
+          <div class="divider divider"></div>
+        </div>
+        <div class="panel-footer np">
+          <ul class="nav nav-section nav-justified">
+            <li>
+              <div class="section">
+                <h4>12.5k</h4>
+                <p class="text-muted">Followers</p>
+              </div>
+            </li>
+            <li>
+              <div class="section">
+                <h4>1853</h4>
+                <p class="text-muted">Following</p>
+              </div>
+            </li>
+            <li>
+              <div class="section">
+                <h4>3451</h4>
+                <p class="text-muted">Tweets</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </div>
+    <div class="col-lg-6">
+      <div class="panel panel-default" ng-controller="AccordionDemoCtrl">
+      <div class="panel-heading">
+        <div class="text-center">
+          <h4 class="nm pad-5">Monthly <strong>Statistics</strong></h4>
+          <span class="text-dark">based on the User Activities</span> 
+        </div>
+       </div>
+        <div class="panel-body np">
+          <accordion close-others="oneAtATime">
+            <accordion-group is-open="status.isFirstOpen" class="panel-transparent">
+              <accordion-heading> <i class="fa fa-map-marker pr-5"></i> Top Countries </accordion-heading>
+                 <div class="unseen">
+                     <table class="table partition-light-grey nm">
+                        <thead>
+                           <tr>
+                              <th>Country</th>
+                              <th>Unique User</th>
+                              <th>Pageviews</th>
+                              <th>Changes</th>
+                              <th>New Vs. Return</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>USA</td>
+                              <td>109820</td>
+                              <td>454590</td>
+                              <td>25.85%</td>
+                              <td><progress class="progressbar-sm progress-striped nm">
+                                    <bar value="40" type="success"></bar>
+                                    <bar value="60" type="info"></bar>
+                                  </progress>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>India</td>
+                              <td>85450</td>
+                              <td>350475</td>
+                              <td>15.32%</td>
+                              <td><progress class="progressbar-sm progress-striped nm">
+                                    <bar value="55" type="success"></bar>
+                                    <bar value="45" type="info"></bar>
+                                  </progress>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>Brazil</td>
+                              <td>75480</td>
+                              <td>254780</td>
+                              <td>22.52%</td>
+                              <td><progress class="progressbar-sm progress-striped nm">
+                                    <bar value="85" type="success"></bar>
+                                    <bar value="15" type="info"></bar>
+                                  </progress>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>Russia</td>
+                              <td>65700</td>
+                              <td>211522</td>
+                              <td>10.14%</td>
+                              <td><progress class="progressbar-sm progress-striped nm">
+                                    <bar value="35" type="success"></bar>
+                                    <bar value="65" type="info"></bar>
+                                  </progress>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>Poland</td>
+                              <td>55000</td>
+                              <td>185045</td>
+                              <td>5.15%</td>
+                              <td><progress class="progressbar-sm progress-striped nm">
+                                    <bar value="25" type="success"></bar>
+                                    <bar value="75" type="info"></bar>
+                                  </progress>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+            </accordion-group>
+            <accordion-group is-open="status.tab2.open" class="panel-transparent">
+              <accordion-heading> <i class="fa fa-users pr-5"></i> Age Group </accordion-heading>
+              <table class="table partition-light-grey nm">
+                <tbody>
+                  <tr>
+                    <td class="center text-azure"><i class="fa fa-male"></i></td>
+                    <td>18 to 25 year old</td>
+                    <td class="center">25%</td>
+                    <td><i class="fa fa-caret-up text-green"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="center text-azure"><i class="fa fa-male"></i></td>
+                    <td>26 to 35 year old</td>
+                    <td class="center">65%</td>
+                    <td><i class="fa fa-caret-up text-green"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="center text-azure"><i class="fa fa-male"></i></td>
+                    <td>36 to 45 year old</td>
+                    <td class="center">40%</td>
+                    <td><i class="fa fa-caret-down text-red"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="center text-azure"><i class="fa fa-male"></i></td>
+                    <td>46 to 55 year old</td>
+                    <td class="center">35%</td>
+                    <td><i class="fa fa-caret-down text-red"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="center text-azure"><i class="fa fa-male"></i></td>
+                    <td>56 to 65 year old</td>
+                    <td class="center">15%</td>
+                    <td><i class="fa fa-caret-down text-red"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+            </accordion-group>
+          </accordion>
+        </div>
+      </div>
+    </div>
+   </div>
+ </div>

@@ -1,0 +1,49 @@
+@@include('./src/include/head.html', {
+  "title": "Text Editor"
+})
+<link rel="stylesheet" href="js/dist/summernote.css">
+
+@@include('./src/include/head_end.html')
+
+<body>
+  <div id="wrap-content" class="wrap-content">
+
+    @@include('./src/include/top_menu.html',{
+      "name": "Text Editor"
+    })
+
+    <div class="content container-fluid">
+     <div class="row row-broken">
+        <div class="col-md-12">
+          <ol class="breadcrumb">
+            <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+            <li>Editors</li>
+            <li class="active">Text Editor</li>
+          </ol>
+        </div>
+      </div>
+      <div class="row decor-default">
+        <div class="col-lg-12">
+          <div id="summernote">Hello Summernote</div>
+        </div>
+      </div>
+    </div>
+    @@include('./src/include/footer-container.html')
+  </div>
+
+  @@include('./src/include/menu.html')
+
+  @@include('./src/include/footer.html')
+  <script src="js/dist/summernote.min.js"></script>
+  <script>
+  $(document).ready(function() {
+    $('#summernote').summernote({
+      focus: true,
+      height: 400,
+      minHeight: 200
+    });
+
+    $(".note-editor .btn").addClass("btn-info").remove("btn-default");
+  });
+  </script>
+  @@include('./src/include/footer_end.html')

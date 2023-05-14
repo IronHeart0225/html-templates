@@ -1,0 +1,153 @@
+@@include('./src/include/head.html', {
+  "title": "Todo list"
+})
+    <link rel="stylesheet" href="css/vendors/input.css">
+    <link rel="stylesheet" href="css/vendors/checkboxes.css">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+
+@@include('./src/include/head_end.html')
+<body>
+    <div id="wrap-content" class="wrap-content">
+
+        @@include('./src/include/top_menu.html',{
+          "name": "Todo list"
+        })
+
+         <div class="content container-fluid">
+         <div class="row row-broken">
+            <div class="col-md-12">
+              <ol class="breadcrumb">
+                <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+                <li>Sample pages</li>
+                <li class="active">Todo list</li>
+              </ol>
+            </div>
+          </div>
+          <div class="row decor-default todo">
+            <div class="col-lg-12">
+                    <div class="b-email-search">
+                        <span class="input input--kaede decor-primary">
+                            <input class="input__field input__field--kaede" type="text" id="input-35" />
+                            <label class="input__label input__label--kaede" for="input-35">
+                                <span class="input__label-content input__label-content--kaede">Add new task</span>
+                            </label>
+                        </span>
+                        <span class="btn btn-lg-search"></span>
+                    </div>
+              <form class="ac-custom ac-list" autocomplete="off">
+                <ol>
+                  <li class="todo-unit">
+                    <input id="cb18" name="cb18" type="checkbox" />
+                    <label for="cb18"><span>Quickly incentivize impactful actions</span></label>
+                                <div>
+                                  <span class="date">Today, 3:20 AM</span>
+                                </div>
+                  </li>
+                  <li class="todo-unit">
+                    <input id="cb19" name="cb19" type="checkbox" />
+                    <label for="cb19"><span>Monotonically engage market-driven capital</span></label>
+                                <div>
+                                  <span class="date">Today, 3:20 AM</span>
+                                </div>
+                  </li>
+                            <li class="todo-unit">
+                                <input id="cb20" name="cb20" type="checkbox" />
+                                <label for="cb20"><span>Quickly incentivize impactful actions</span></label>
+                                <div>
+                                  <span class="date">Today, 3:20 AM</span>
+                                </div>
+                            </li>
+                            <li class="todo-unit">
+                                <input id="cb21" name="cb21" type="checkbox" />
+                                <label for="cb21"><span>Quickly incentivize impactful actions</span></label>
+                                <div>
+                                  <span class="date">Today, 3:20 AM</span>
+                                </div>
+                            </li>
+                            <li class="todo-unit">
+                                <input id="cb22" name="cb22" type="checkbox" />
+                                <label for="cb22"><span>Quickly incentivize impactful actions</span></label>
+                                <div>
+                                  <span class="date">Today, 3:20 AM</span>
+                                </div>
+                            </li>
+                            <li class="todo-unit">
+                                <input id="cb28" name="cb22" type="checkbox" />
+                                <label for="cb28"><span>Quickly incentivize impactful actions</span></label>
+                                <div>
+                                  <span class="date">Today, 3:20 AM</span>
+                                </div>
+                            </li>
+                            <li class="todo-unit">
+                                <input id="cb23" name="cb23" type="checkbox" />
+                                <label for="cb23"><span>Quickly incentivize impactful actions</span></label>
+                                <div>
+                                  <span class="date">Today, 3:20 AM</span>
+                                </div>
+                            </li>
+                            <li class="todo-unit">
+                                <input id="cb24" name="cb24" type="checkbox" />
+                                <label for="cb24"><span>Quickly incentivize impactful actions</span></label>
+                                <div>
+                                  <span class="date">Today, 3:20 AM</span>
+                                </div>
+                            </li>
+                            <li class="todo-unit">
+                                <input id="cb25" name="cb25" type="checkbox" />
+                                <label for="cb25"><span>Quickly incentivize impactful actions</span></label>
+                                <div>
+                                  <span class="date">Today, 3:20 AM</span>
+                                </div>
+                            </li>
+                            <li class="todo-unit">
+                                <input id="cb26" name="cb26" type="checkbox" />
+                                <label for="cb26"><span>Quickly incentivize impactful actions</span></label>
+                                <div>
+                                  <span class="date">Today, 3:20 AM</span>
+                                </div>
+                            </li>
+                            <li class="todo-unit">
+                                <input id="cb29" name="cb20" type="checkbox" />
+                                <label for="cb29"><span>Quickly incentivize impactful actions</span></label>
+                                <div>
+                                  <span class="date">Today, 3:20 AM</span>
+                                </div>
+                            </li>
+                            <li class="todo-unit">
+                                <input id="cb27" name="cb27" type="checkbox" />
+                                <label for="cb27"><span>Quickly incentivize impactful actions</span></label>
+                                <div>
+                                  <span class="date">Today, 3:20 AM</span>
+                                </div>
+                            </li>
+                </ol>
+              </form>
+            </div>
+          </div>
+            <div class="m-b-md p-b-md">
+                <div class="todo-controls">
+                    <a href="#" class="control control-fav" data-toggle="tooltip" data-placement="top" title="Favourite">Favorite</a>
+                    <a href="#" class="control control-folder" data-toggle="tooltip" data-placement="top" title="Archive">Folder</a>
+                    <a href="#" class="control control-write" data-toggle="tooltip" data-placement="top" title="New">Write</a>
+                    <a href="#" class="control control-delete" data-toggle="tooltip" data-placement="top" title="Delete">Delete</a>
+                </div>
+            </div>
+        </div>
+        @@include('./src/include/footer-container.html')
+    </div>
+
+
+  @@include('./src/include/menu.html')
+
+  @@include('./src/include/footer.html')
+
+    <script src="js/checkboxes.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/bootstrap-datetimepicker.min.js"></script>
+    <script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+    </script>
+
+@@include('./src/include/footer_end.html')

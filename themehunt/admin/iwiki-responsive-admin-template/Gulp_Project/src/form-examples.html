@@ -1,0 +1,183 @@
+@@include('./src/include/head.html', {
+  "title": "Form Examples"
+})
+
+<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css" />
+<link rel="stylesheet" href="css/bootstrap-select.css" />
+<link href="js/farbtastic/farbtastic.css" rel="stylesheet">
+@@include('./src/include/head_end.html')
+<body>
+    <div id="wrap-content" class="wrap-content">
+
+          @@include('./src/include/top_menu.html',{
+            "name": "Form Examples"
+          })
+
+           <div class="content container-fluid">
+           <div class="row row-broken">
+              <div class="col-md-12">
+                <ol class="breadcrumb">
+                  <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+                  <li>Forms</li>
+                  <li class="active">Form Examples</li>
+                </ol>
+              </div>
+            </div>
+            <div class="row row-broken decor-default p-full-md">
+              <div class="col-md-6">
+                <h5 class="m-b-md">Basic example</h5>
+                <div class="form-group">
+                  <input type="email" class="form-control material" id="email" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control material" id="password" placeholder="Password">
+                </div>
+                <div class="form-group">
+                  <input id='check-1' class="custom-chr" type="checkbox" name='check-1'/>
+                  <label for="check-1">Check me out</label>
+                </div>
+                <div class="form-group">
+                  <button type="button" class="btn btn-info" onClick="window.location.reload()">Submit</button>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <h5 class="m-b-md">Horizontal form</h5>
+                <div class="form-horizontal">
+                  <div class="form-group">
+                    <label for="email2" class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control material" id="email2" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="password2" class="col-sm-2 control-label">Password</label>
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control material" id="password2" placeholder="Password">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <input id='check-2' class="custom-chr" type="checkbox" name='check-1'/>
+                      <label for="check-2">Check me out</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <button type="button" class="btn btn-success" onClick="window.location.reload()">Sign in</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+            </div>
+
+            <div class="row row-broken decor-default p-full-md">
+              <div class="col-md-12">
+                  <h5 class="m-b-md">Form Inline</h5>
+                  <div class="form-inline">
+                    <div class="form-group">
+                      <input type="email" class="form-control material m-r-md" id="email3" placeholder="E-mail">
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="form-control material m-r-md" id="password3" placeholder="Password">
+                    </div>
+                    <div class="form-group m-r-md">
+                      <input id='check-3' class="custom-chr" type="checkbox" name='check-1'/>
+                      <label for="check-3">Check me out</label>
+                    </div>
+
+                    <button type="button" class="btn btn-danger" onClick="window.location.reload()">Sign in</button>
+                  </div>
+                  <br>
+              </div>
+            </div>
+
+            <div class="row row-broken decor-default p-full-md">
+              <div class="col-md-12">
+                  <h5 class="m-b-md">Multi column</h5>
+              </div>
+              <div class="col-md-3 no-mobile-p">
+                <div class="form-group">
+                  <input type="text" class="form-control material" placeholder=".col-md-3">
+                </div>
+              </div>
+              <div class="col-md-3 no-mobile-p">
+                <div class="form-group">
+                  <input type="text" class="form-control material" placeholder=".col-md-3">
+                </div>
+              </div>
+              <div class="col-md-3 no-mobile-p">
+                <div class="form-group">
+                  <input type="text" class="form-control material" placeholder=".col-md-3">
+                </div>
+              </div>
+              <div class="col-md-3 no-p-r">
+                <div class="form-group">
+                  <input type="text" class="form-control material" placeholder=".col-md-3">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <input type="text" class="form-control material" placeholder=".col-md-4">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <input type="text" class="form-control material" placeholder=".col-md-4">
+                </div>
+              </div>
+              <div class="col-md-4 no-p-r">
+                <div class="form-group">
+                  <input type="text" class="form-control material" placeholder=".col-md-4">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" class="form-control material" placeholder=".col-md-6">
+                </div>
+              </div>
+              <div class="col-md-6 no-p-r">
+                <div class="form-group">
+                  <input type="text" class="form-control material" placeholder=".col-md-6">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <input type="text" class="form-control material" placeholder=".col-md-4">
+                </div>
+              </div>
+              <div class="col-md-8 no-p-r">
+                <div class="form-group">
+                  <input type="text" class="form-control material" placeholder=".col-md-8">
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <input type="text" class="form-control material" placeholder=".col-md-12">
+                </div>
+              </div>
+            </div>
+
+
+
+        </div>
+        @@include('./src/include/footer-container.html')
+    </div>
+
+
+
+  @@include('./src/include/menu.html')
+
+  @@include('./src/include/footer.html')
+
+  <script src="js/autosize.min.js"></script>
+
+  <script>
+    autosize(document.getElementById('autosize'));
+  </script>
+
+  @@include('./src/include/footer_end.html')

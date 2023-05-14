@@ -1,0 +1,419 @@
+/*====================================
+  :: Panel
+  ====================================*/
+
+// panel box
+.panel-box {
+    display: table; // ensure always the same height for panel left and right
+    table-layout: fixed; // ensure same width
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: none;
+
+    .panel-item {
+        display: table-cell;
+        padding: 15px;
+        width: 1%;
+        vertical-align: top;
+        border-radius: 0;
+    }
+    .panel-left {
+        @include border-left-radius ($border-radius-base);
+    }
+    .panel-right {
+        @include border-right-radius ($border-radius-base);
+    }
+
+    &.info-box {
+        i {
+            line-height: 70px;
+        }
+    }
+
+    .panel-top,
+    .panel-bottom {
+        display: block;
+    }
+    .panel-top {
+        padding: 30px 20px;
+        @include border-top-radius ($border-radius-base);
+    }
+    .panel-bottom {
+        padding: 10px;
+        @include border-bottom-radius ($border-radius-base);
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .list-justified-container {
+        padding: 15px 0;
+    }
+
+    ul.list-justified {
+        display: table;
+        width: 100%;
+        list-style: none;
+        padding: 0;
+
+        > li {
+            float: none;
+            display: table-cell;
+            padding: 10px;
+            width: 1%;
+            border-right: 1px solid $gray-lighter;
+            &:last-child {
+                border: none;
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    .panel-icon,
+    .panel-img {
+        display: block;
+        margin: -75px auto 0;
+        border-radius: 50%;
+        border: 10px solid $reverse;
+        width: 150px;
+        height: 150px;
+        line-height: 80px;
+        text-align: center;
+        font-size: 58px;
+        text-shadow: -6px 8px 5px rgba(0,0,0,0.3);
+
+    }
+    .panel-icon {
+        padding: 28px 35px 35px;
+    }
+    .panel-img {
+        padding: 0;
+        img {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+
+}
+
+// mini box
+.mini-box {
+    min-height: 120px;
+    padding: 25px;
+    .box-icon {
+        display: block;
+        float: left;
+        margin: 0 15px 10px 0;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 35px;
+        border-radius: $border-radius-base;
+
+        &.rounded {
+            border-radius: 50%;
+        }
+    }
+
+    .btn-icon-lined {
+        float: left;
+        margin: 0 15px 10px 0;
+        font-size: 32px;        
+    }
+
+    .box-info {
+        p {
+            margin: 0;
+        }
+    }
+}
+
+
+.panel-profile {
+    border: none;
+
+    .profile {
+        margin: 6px 10px;
+        border-radius: 50%;
+        padding: 5px;
+        border: 1px solid rgba(0,0,0,.2);
+
+        img {
+            border-radius: 50%;
+        }
+    }
+
+    .list-group > li > i {
+        margin-right: 10px;
+        font-size: 16px;
+        color: $gray-light;
+        table-layout: fixed;
+    }
+
+    .list-justified-container {
+        padding: 15px 0;
+    }
+
+    ul.list-justified {
+        display: table;
+        width: 100%;
+        list-style: none;
+        padding: 0;
+
+        > li {
+            float: none;
+            display: table-cell;
+            padding: 10px;
+            width: 1%;
+            border-right: 1px solid $gray-lighter;
+            &:last-child {
+                border: none;
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
+
+
+
+
+.panel {
+  border: none;
+  border-radius: 0px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.panel {
+  .panel-toolbar {
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    i {
+      font-size: 1.1em;
+      margin: 10px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.panel-heading {
+  border-radius: 0;
+  border: none !important;
+  padding: 10px 20px 0px;
+}
+
+.panel > .panel-heading:after {
+  content: '';
+  display: block;
+  height: 0;
+  left: 30px;
+  right: 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.panel-default > .panel-heading {
+  color: #797979;
+  background-color: #fafafa;
+  border-bottom: none;
+}
+
+.panel-title {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.panel-footer {
+  background: rgba(233, 237, 242, 0.86);
+  border-top: 0px;
+}
+
+.panel-color .panel-title {
+  color: #ffffff;
+}
+
+.panel-primary > .panel-heading {
+  background-color: #1e88e5;
+}
+
+.panel-success > .panel-heading {
+  background-color: #33b86c;
+}
+
+.panel-info > .panel-heading {
+  background-color: #29b6f6;
+}
+
+.panel-warning > .panel-heading {
+  background-color: #ffd740;
+}
+
+.panel-danger > .panel-heading {
+  background-color: #ef5350;
+}
+
+.panel-purple > .panel-heading {
+  background-color: #7e57c2;
+}
+
+.panel-pink > .panel-heading {
+  background-color: #ec407a;
+}
+
+.panel-inverse > .panel-heading {
+  background-color: #212121;
+}
+
+.panel-border {
+  border-radius: 3px;
+  border: 1px solid #CCC;
+  .panel-heading {
+    background-color: #ffffff;
+    padding: 10px 20px 0px;
+  }
+  .panel-body {
+    padding: 15px 20px 20px 20px;
+  }
+  &.panel-primary {
+    .panel-heading {
+      background: #1e88e5 !important;
+      border-color: #1e88e5 !important;
+      color: #ffffff;
+    }
+    .panel-body {
+      border: 1px solid #1e88e5 !important;
+    }
+  }
+  &.panel-success {
+    .panel-heading {
+      border-color: #33b86c !important;
+      background: #33b86c !important;
+      color: #ffffff;
+    }
+    .panel-body {
+      border: 1px solid #33b86c !important;
+    }
+  }
+  &.panel-info {
+    .panel-heading {
+      border-color: #29b6f6 !important;
+      background: #29b6f6 !important;
+      color: #ffffff;
+    }
+    .panel-body {
+      border: 1px solid #29b6f6 !important;
+    }
+  }
+  &.panel-warning {
+    .panel-heading {
+      border-color: #ffd740 !important;
+      background: #ffd740 !important;
+      color: #ffffff;
+    }
+    .panel-body {
+      border: 1px solid #ffd740 !important;
+    }
+  }
+  &.panel-danger {
+    .panel-heading {
+      border-color: #ef5350 !important;
+      background: #ef5350 !important;
+      color: #ffffff;
+    }
+    .panel-body {
+      border: 1px solid #ef5350 !important;
+    }
+  }
+  &.panel-purple {
+    .panel-heading {
+      border-color: #7e57c2 !important;
+      background: #7e57c2 !important;
+      color: #ffffff;
+    }
+    .panel-body {
+      border: 1px solid #7e57c2 !important;
+    }
+  }
+  &.panel-pink {
+    .panel-heading {
+      border-color: #ec407a !important;
+      background: #ec407a !important;
+      color: #ffffff;
+    }
+    .panel-body {
+      border: 1px solid #ec407a !important;
+    }
+  }
+  &.panel-inverse {
+    .panel-heading {
+      border-color: #212121 !important;
+      background: #212121 !important;
+      color: #ffffff;
+    }
+    .panel-body {
+      border: 1px solid #212121 !important;
+    }
+  }
+}
+
+.panel-fill {
+  border-radius: 3px;
+  .panel-heading {
+    background-color: transparent;
+    color: #ffffff;
+  }
+  .panel-body {
+    color: rgba(255, 255, 255, 0.85);
+  }
+  &.panel-default {
+    .panel-body {
+      color: #666;
+    }
+    .panel-heading {
+      background-color: transparent;
+      color: #333;
+    }
+  }
+  &.panel-primary {
+    background-color: #489ce7;
+  }
+  &.panel-success {
+    background-color: #58c386;
+  }
+  &.panel-info {
+    background-color: #50c1f4;
+  }
+  &.panel-warning {
+    background-color: #fcdc63;
+  }
+  &.panel-danger {
+    background-color: #ef7270;
+  }
+  &.panel-purple {
+    background-color: #9475cb;
+  }
+  &.panel-pink {
+    background-color: #ec6391;
+  }
+  &.panel-inverse {
+    background-color: #4a4a4a;
+  }
+}

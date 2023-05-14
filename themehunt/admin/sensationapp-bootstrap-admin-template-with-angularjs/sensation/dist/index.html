@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" ng-app="SensationApp">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Sensation Web Application</title>
+<meta name="description" content="Responsive Admin Web App">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:700,600,400" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+<!-- Needs images, font... therefore can not be part of main.css -->
+<link rel="stylesheet" href="styles/font-awesome.css">
+<link rel="stylesheet" href="styles/weather-icons.css">
+
+<link rel="stylesheet" href="styles/main.css"/>
+
+</head>
+<body ng-controller="AppCtrl">
+<div id="app" class="app" custom-page="" off-canvas-nav="" ng-class=" {'layout-boxed': admin.layout} "> 
+    
+  <header data-ng-controller="HeaderCtrl" data-ng-include=" 'views/header.html' " id="header" class="header-container {{admin.navbarHeaderColor}}" data-ng-class="{'header-fixed': admin.fixedHeader}"> </header>
+
+  <div class="main-container">
+   <aside data-ng-include=" 'views/nav.html' " id="nav-container" class="nav-container {{admin.asideColor}}" ng-class=" {'nav-fixed': admin.fixedSidebar, 'nav-horizontal': admin.menu}">
+   </aside>
+
+    <div id="content" class="content-container animate-fade-up" ng-view=""> </div>
+
+    <div id="config" class="config hidden-xs" ng-include="'views/settings/setting-panel.html'"></div>
+
+    <aside data-ng-include=" 'views/rightsidebar/rightsidebar.html' " id="rsidebar" class="rsidebar hidden-xs"> </aside>
+
+  </div>
+
+</div>
+
+<!-- Google Map -->
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script> 
+
+<script src="scripts/ui.js"></script>
+
+<script src="scripts/app.js"></script>
+</body>
+</html>

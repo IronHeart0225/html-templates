@@ -1,0 +1,59 @@
+<!-- Site Setting Panel -->
+<section id="settings" data-ng-include=" 'views/settings/settings.html' " style="display:none"></section>
+<!-- Site Setting Panel End -->
+
+<!-- Page Header Start -->
+<div class="pageheader">
+  <h2><i class="fa fa-shopping-cart"></i> Order </h2>
+  <div class="breadcrumb-wrapper hidden-xs"> <span class="label">You are here:</span>
+    <ol class="breadcrumb">
+      <li> <a href="#"> Home </a> </li>
+      <li class="active"> Order </li>
+    </ol>
+  </div>
+</div>
+<!-- Page Header End -->
+
+<div class="page">
+
+  <div class="row">
+    <div class="col-lg-12" ng-controller="inlineeditCtrl">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+           <h3 class="panel-title"> <i class="fa fa-shopping-cart"></i> Order Statistics </h3> 
+        </div>
+        <div class="panel-body">
+          <div class="unseen">
+            <table ng-table="tableParams" class="table">
+              <tbody ng-repeat="p in $data">
+                <tr id="tr{{p.id}}" ng-class-odd="'odd'" ng-class-even="'even'">
+                  <td data-title="'Order'" sortable="'id'"><span ng-if="!p.$edit">{{p.id}}</span>
+                    <div ng-if="p.$edit">
+                      <input class="form-control" type="text" ng-model="p.id" />
+                    </div></td>
+                  <td data-title="'Customer'" sortable="'fn'"><span ng-if="!p.$edit">{{p.fn}}</span>
+                    <div ng-if="p.$edit">
+                      <input class="form-control" type="text" ng-model="p.fn" />
+                    </div></td>
+                  <td data-title="'Purchased On'" sortable="'dc'"><span ng-if="!p.$edit">{{p.dc}}</span>
+                    <div ng-if="p.$edit">
+                      <input class="form-control" type="text" ng-model="p.dc" />
+                    </div></td>
+                  <td data-title="'Purchased Price'" sortable="'ph'"><span ng-if="!p.$edit">{{p.ph}}</span>
+                    <div ng-if="p.$edit">
+                      <input class="form-control" type="text" ng-model="p.ph" />
+                    </div></td>
+                  <td data-title="'Status'" sortable="'ac'"><span ng-if="!p.$edit">{{p.ac}}</span>
+                    <div ng-if="p.$edit">
+                      <input class="form-control" type="text" ng-model="p.ac" />
+                    </div></td>
+                  <td data-title="'Actions'"><a ng-if="!p.$edit" href="" class="btn btn-warning btn-sm" ng-click="p.$edit = true">Edit</a> <a ng-if="p.$edit" href="" class="btn btn-danger btn-sm" ng-click="p.$edit = false">Save</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

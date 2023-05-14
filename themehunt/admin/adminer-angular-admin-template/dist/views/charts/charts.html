@@ -1,0 +1,221 @@
+<!-- Site Setting Panel -->
+  <section id="settings" data-ng-include=" 'views/settings/settings.html' " style="display:none"></section>
+<!-- Site Setting Panel End -->
+
+<!-- Page Header Start -->
+<div class="pageheader">
+  <h2><i class="fa fa-line-chart"></i> Charts </h2>
+  <div class="breadcrumb-wrapper hidden-xs"> <span class="label">You are here:</span>
+    <ol class="breadcrumb">
+      <li> <a href="#"> Home </a> </li>
+      <li class="active"> Charts </li>
+    </ol>
+  </div>
+</div>
+<!-- Page Header End -->
+
+<!-- Other Chart Body Start-->
+<div class="page page-charts" >
+  <section data-ng-controller="chartCtrl">
+  <!-- Pie Chart Body Start-->
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+             <h3 class="panel-title"> Easy Pie Chart </h3> 
+          </div>
+          <div class="panel-body text-center">
+            <div easypiechart options="easypiechart.options" percent="easypiechart.percent" class="easypiechart"> <span class="pie-percent" ng-bind="easypiechart.percent"></span> </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+             <h3 class="panel-title"> Easy Pie Chart </h3> 
+          </div>
+          <div class="panel-body text-center">
+            <div easypiechart options="easypiechart2.options" percent="easypiechart2.percent" class="easypiechart"> <span class="pie-percent" ng-bind="easypiechart2.percent"></span> </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+             <h3 class="panel-title"> Easy Pie Chart </h3> 
+          </div>
+          <div class="panel-body text-center">
+            <div easypiechart options="easypiechart3.options" percent="easypiechart3.percent" class="easypiechart"> <span class="pie-percent" ng-bind="easypiechart3.percent"></span> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- Pie Chart Body End-->
+  <!-- Data Graph Body Start-->
+    <div class="row">
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+             <h3 class="panel-title"> Data Graph </h3> 
+          </div>
+          <div class="panel-body bg-twitter text-center">
+            <div class="mbn">
+              <!-- Gauge Chart Start -->
+              <canvas data-gauge-chart
+                                data-data="gaugeChart1.data"
+                                data-options="gaugeChart1.options"
+                                style="width: 220px; height: 110px; "
+                                ></canvas>
+              <!-- Gauge Chart End -->
+            </div>
+          </div>
+          <div class="panel-footer">
+            <ul class="nav nav-section nav-justified">
+              <li>
+                <div class="section">
+                  <p class="text-muted mt-10">Market</p>
+                  <h4>12.5k</h4>
+                </div>
+              </li>
+              <li>
+                <div class="section">
+                  <p class="text-muted mt-10">Referal</p>
+                  <h4>1853</h4>
+                </div>
+              </li>
+              <li>
+                <div class="section">
+                  <p class="text-muted mt-10">Affiliate</p>
+                  <h4>12.5K</h4>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="panel panel-default" data-ng-controller="sparklineCtrl">
+          <div class="panel-heading">
+             <h3 class="panel-title"> Data Graph </h3> 
+          </div>
+          <div class="panel-body bg-twitter text-center">
+          <!-- Sparkline Chart Start -->
+            <div class="mbn">
+              <div data-sparkline data-data="datagraphbar.data" data-options="datagraphbar.options"></div>
+            </div>
+          </div>
+          <!-- Sparkline Chart End -->
+          <div class="panel-footer">
+            <ul class="nav nav-section nav-justified">
+              <li>
+                <div class="section">
+                  <p class="text-muted mt-10">Market</p>
+                  <h4>12.5k</h4>
+                </div>
+              </li>
+              <li>
+                <div class="section">
+                  <p class="text-muted mt-10">Referal</p>
+                  <h4>1853</h4>
+                </div>
+              </li>
+              <li>
+                <div class="section">
+                  <p class="text-muted mt-10">Affiliate</p>
+                  <h4>12.5K</h4>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="panel panel-default" data-ng-controller="sparklineCtrl">
+          <div class="panel-heading">
+             <h3 class="panel-title"> Data Graph </h3> 
+          </div>
+          <div class="panel-body bg-twitter text-center">
+          <!-- Sparkline Chart Start -->
+            <div>
+              <div data-sparkline data-data="datagraph.data" data-options="datagraph.options"></div>
+            </div>
+          <!-- Sparkline Chart End -->
+          </div>
+          <div class="panel-footer">
+            <ul class="nav nav-section nav-justified">
+              <li>
+                <div class="section">
+                  <p class="text-muted mt-10">Market</p>
+                  <h4>12.5k</h4>
+                </div>
+              </li>
+              <li>
+                <div class="section">
+                  <p class="text-muted mt-10">Referal</p>
+                  <h4>1853</h4>
+                </div>
+              </li>
+              <li>
+                <div class="section">
+                  <p class="text-muted mt-10">Affiliate</p>
+                  <h4>12.5K</h4>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- Data Graph Body End -->
+  </section>
+  <section ng-controller="sparklineCtrl">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+             <h3 class="panel-title"> Sparkline Line Chart </h3> 
+          </div>
+          <div class="panel-body">
+          <!-- Sparkline Chart Start -->
+            <div data-sparkline
+                              data-data="largeChart1.data"
+                              data-options="largeChart1.options"
+                              ></div>
+          <!-- Sparkline Chart End -->
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+             <h3 class="panel-title"> Sparkline Bar Chart </h3> 
+          </div>
+          <div class="panel-body text-center">
+          <!-- Sparkline Chart Start -->
+            <div data-sparkline
+                              data-data="largeChart2.data"
+                              data-options="largeChart2.options"
+                              ></div>
+          <!-- Sparkline Chart End -->
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+             <h3 class="panel-title"> Sparkline Pie Chart </h3> 
+          </div>
+          <div class="panel-body text-center">
+          <!-- Sparkline Chart Start -->
+            <div data-sparkline
+                              data-data="largeChart3.data"
+                              data-options="largeChart3.options"
+                              ></div>
+          <!-- Sparkline Chart End -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- Other Chart Body End-->

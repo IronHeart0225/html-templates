@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>MVGroup - Dialogs Ricky</title>
+
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/dialogs/dialog-ricky.css">
+
+  <link rel="stylesheet" href="../css/animate.min.css">
+  <link rel="stylesheet" href="../css/vendors/sweetalert.css">
+  <link rel="stylesheet" href="../css/vendors/loading.css">
+  <link rel="stylesheet" href="../css/vendors/chat.css">
+
+  <script src="../js/modernizr.js"></script>
+</head>
+
+<body>
+  <div class="preloader">
+    <div class="preloader-anim la-animate"></div>
+    <div class="loading-anim">Loading</div>
+  </div>
+  <div id="wrap-content" class="wrap-content">
+    @@include('./src/include/dialogs_top_menu.html',{
+      "name": "Dialogs Ricky"
+    })
+    <div class="content container-fluid">
+
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="decor-default p-full-md text-center">
+            <div class="button-wrap">
+              <button type="button" data-dialog="somedialog" class="trigger btn btn-danger">Launch</button>
+            </div>
+
+            <div class="menu-dialog">
+              <a href="../dialogs.html">Sandra</a>
+              <a href="../dialogs/sally.html">Sally</a>
+              <a href="../dialogs/dean.html">Dean</a>
+              <a href="../dialogs/susan.html">Susan</a>
+              <a href="../dialogs/cathy.html">Cathy</a>
+              <a href="../dialogs/annie.html">Annie</a>
+              <a href="../dialogs/val.html">Val</a>
+              <a href="../dialogs/ricky.html">Ricky</a>
+              <a href="../dialogs/donna.html">Donna</a>
+              <a href="../dialogs/ken.html">Ken</a>
+              <a href="../dialogs/alex.html">Alex</a>
+              <a href="../dialogs/don.html">Don</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    @@include('./src/include/footer-container.html')
+  </div>
+
+  @@include('./src/include/dialogs_menu.html')
+
+  <div id="somedialog" class="dialog">
+    <div class="dialog__overlay"></div>
+    <div class="dialog__content">
+      <h2><strong>Howdy</strong>, I'm a dialog box</h2>
+      <button class="action btn btn-danger" data-dialog-close>Close</button>
+    </div>
+  </div>
+
+  <script src="../js/jquery.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/classie.js"></script>
+  <script src="../js/moment.min.js"></script>
+  <script src="../js/jquery.nicescroll.min.js"></script>
+  <script src="../js/dialogFx.js"></script>
+  <script src="../js/ui.js"></script>
+  <script src="../js/search.js"></script>
+  <script>
+    (function () {
+
+      var dlgtrigger = document.querySelector('[data-dialog]'),
+        somedialog = document.getElementById(dlgtrigger.getAttribute('data-dialog')),
+        dlg = new DialogFx(somedialog);
+
+      dlgtrigger.addEventListener('click', dlg.toggle.bind(dlg));
+
+    })();
+  </script>
+</body>
+
+</html>

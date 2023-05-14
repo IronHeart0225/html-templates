@@ -1,0 +1,694 @@
+<!-- Site Setting Panel -->
+<section id="settings" data-ng-include=" 'views/settings/settings.html' " style="display:none"></section>
+<!-- Site Setting Panel End -->
+
+<div class="pageheader">
+  <h2><i class="fa fa-arrows"></i> Widgets </h2>
+  <div class="breadcrumb-wrapper hidden-xs"> <span class="label">You are here:</span>
+    <ol class="breadcrumb">
+      <li> <a href="index.html"> Home </a> </li>
+      <li class="active"> Widgets </li>
+    </ol>
+  </div>
+</div>
+
+<div class="page">
+  <div class="row">
+    <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="col-xs-4">
+            <div class="counter-icon bg-danger"> <i class="fa fa-line-chart"></i> </div>
+          </div>
+          <div class="col-xs-8 text-right pad-10">
+            <h3 class="nm">8500</h3>
+            <p class="text-muted nm">Unique Visitors</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="col-xs-4">
+            <div class="counter-icon bg-success"> <i class="fa fa-users"></i> </div>
+          </div>
+          <div class="col-xs-8 text-right pad-10">
+            <h3 class="nm">745</h3>
+            <p class="text-muted nm">New User</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="col-xs-4">
+            <div class="counter-icon bg-azure"> <i class="fa fa-twitter"></i> </div>
+          </div>
+          <div class="col-xs-8 text-right pad-10">
+            <h3 class="nm">348</h3>
+            <p class="text-muted nm">Tweets</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="col-xs-4">
+            <div class="counter-icon bg-warning"> <i class="fa fa-comments-o"></i> </div>
+          </div>
+          <div class="col-xs-8 text-right pad-10">
+            <h3 class="nm">523</h3>
+            <p class="text-muted nm">Comments</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12">
+      <div class="widgetbox widgetbox-default widgetbox-item-icon">
+        <div class="widgetbox-item-left widgetbox-icon-danger"> <span class="fa fa-shopping-cart"></span> </div>
+        <div class="widgetbox-data">
+          <div class="widgetbox-int">425</div>
+          <div class="widgetbox-title">Total Orders</div>
+          <div class="widgetbox-subtitle">From our website and app</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12">
+      <div class="widgetbox widgetbox-default widgetbox-item-icon">
+        <div class="widgetbox-item-right widgetbox-icon-warning"> <span class="fa fa-envelope"></span> </div>
+        <div class="widgetbox-data-left">
+          <div class="widgetbox-int">48</div>
+          <div class="widgetbox-title">New Message</div>
+          <div class="widgetbox-subtitle">in your Mailbox</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12">
+      <div class="widgetbox widgetbox-default widgetbox-item-icon">
+        <div class="widgetbox-item-left widgetbox-icon-success"> <span class="fa fa-users"></span> </div>
+        <div class="widgetbox-data">
+          <div class="widgetbox-int">599</div>
+          <div class="widgetbox-title">Registred users</div>
+          <div class="widgetbox-subtitle">On our website and app</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12">
+      <div class="widgetbox widgetbox-default widgetbox-item-icon">
+        <div class="widgetbox-item-right widgetbox-icon-info"> <span class="fa fa-search"></span> </div>
+        <div class="widgetbox-data-left">
+          <div class="widgetbox-int">65%</div>
+          <div class="widgetbox-title">Search Traffic</div>
+          <div class="widgetbox-subtitle">From Google</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4 col-sm-6 col-md-6 col-xs-12">
+      <div class="panel panel-default">
+        <div data-ng-controller="chartCtrl">
+          <ul class="list-inline center">
+            <li class="left-easypiechart-data"> <span class="sell-percent">60%</span> <span>Direct Sell</span> </li>
+            <li>
+              <div easypiechart options="easypiechartxs1.options" percent="easypiechartxs1.percent" class="easypiechart easypiechart-xs"> <span class="pie-percent" ng-bind="easypiechartxs1.percent"></span> </div>
+            </li>
+            <li class="right-easypiechart-data"> <span class="sell-percent">40%</span> <span>Channel Sell</span> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-sm-6 col-md-6 col-xs-12">
+      <div class="panel panel-default">
+        <div data-ng-controller="chartCtrl">
+          <ul class="list-inline center">
+            <li class="left-easypiechart-data"> <span class="sell-percent">65%</span> <span>New Clients</span> </li>
+            <li>
+              <div easypiechart options="easypiechartxs2.options" percent="easypiechartxs2.percent" class="easypiechart easypiechart-xs"> <span class="pie-percent" ng-bind="easypiechartxs2.percent"></span> </div>
+            </li>
+            <li class="right-easypiechart-data np"> <span class="sell-percent">35%</span> <span>Return Clients</span> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-sm-6 col-md-6 col-xs-12">
+      <div class="panel panel-default">
+        <div data-ng-controller="chartCtrl">
+          <ul class="list-inline center">
+            <li class="left-easypiechart-data"> <span class="sell-percent">65%</span> <span>Credit Card</span> </li>
+            <li>
+              <div easypiechart options="easypiechartxs3.options" percent="easypiechartxs3.percent" class="easypiechart easypiechart-xs"> <span class="pie-percent" ng-bind="easypiechartxs3.percent"></span> </div>
+            </li>
+            <li class="right-easypiechart-data"> <span class="sell-percent">35%</span> <span>Paypal</span> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- end stats --> 
+    
+  </div>
+  
+  <!-- Stats -->
+  <div class="row">
+    <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-xs-8">
+              <h3 class="nm">45,000</h3>
+              <p class="text-muted">Unique Visitors</p>
+            </div>
+            <div class="col-xs-4 text-right ph-20"> <i class="fa fa-line-chart fa-3x text-green"></i> </div>
+          </div>
+          <progressbar class="progressbar-xs progress-rounded progress-striped nm" value="55" type="primary"></progressbar>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-xs-8">
+              <h3 class="nm">65%</h3>
+              <p class="text-muted">Search Traffic</p>
+            </div>
+            <div class="col-xs-4 text-right ph-20"> <i class="fa fa-search fa-3x text-red"></i> </div>
+          </div>
+          <progressbar class="progressbar-xs progress-rounded progress-striped nm" value="55" type="danger"></progressbar>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-xs-8">
+              <h3 class="nm">135,000</h3>
+              <p class="text-muted">Pageviews</p>
+            </div>
+            <div class="col-xs-4 text-right ph-20"> <i class="fa fa-users fa-3x text-yellow"></i> </div>
+          </div>
+          <progressbar class="progressbar-xs progress-rounded progress-striped nm" value="55" type="warning"></progressbar>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-xs-8">
+              <h3 class="nm">35,000</h3>
+              <p class="text-muted">Sales</p>
+            </div>
+            <div class="col-xs-4 text-right ph-20"> <i class="fa fa-shopping-cart fa-3x text-green"></i> </div>
+          </div>
+          <progressbar class="progressbar-xs progress-rounded progress-striped nm" value="55" type="primary"></progressbar>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end stats -->
+  
+  <div class="row">
+    <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12">
+      <div class="widgetbox widgetbox-primary widgetbox-item-icon">
+        <div class="widgetbox-item-left"> <span class="fa fa-shopping-cart"></span> </div>
+        <div class="widgetbox-data">
+          <div class="widgetbox-int">425</div>
+          <div class="widgetbox-title">Total Orders</div>
+          <div class="widgetbox-subtitle">From our website and app</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12">
+      <div class="widgetbox widgetbox-warning widgetbox-item-icon">
+        <div class="widgetbox-item-right"> <span class="fa fa-envelope"></span> </div>
+        <div class="widgetbox-data-left">
+          <div class="widgetbox-int">48</div>
+          <div class="widgetbox-title">New Message</div>
+          <div class="widgetbox-subtitle">in your Mailbox</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12">
+      <div class="widgetbox widgetbox-success widgetbox-item-icon">
+        <div class="widgetbox-item-left"> <span class="fa fa-users"></span> </div>
+        <div class="widgetbox-data">
+          <div class="widgetbox-int">599</div>
+          <div class="widgetbox-title">Registred users</div>
+          <div class="widgetbox-subtitle">On our website and app</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12">
+      <div class="widgetbox widgetbox-danger widgetbox-item-icon">
+        <div class="widgetbox-item-right"> <span class="fa fa-search"></span> </div>
+        <div class="widgetbox-data-left">
+          <div class="widgetbox-int">65%</div>
+          <div class="widgetbox-title">Search Traffic</div>
+          <div class="widgetbox-subtitle">From Google</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" ng-controller="flotChartCtrl">
+    <div class="col-lg-4 col-sm-6 col-md-6 col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h4 class="nm pb-10"> Site <strong> Statistics </strong></h4>
+          <div data-flot-chart data-data="line2.data" data-options="line2.options" style="width: 100%; height: 155px;"></div>
+        </div>
+        <div class="panel-footer">
+          <div class="bar-widget">
+            <div class="text-bold"> <i class="fa fa-users"></i> New Visitors <span class="pull-right">50645</span> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-sm-6 col-md-6 col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h4 class="nm pb-10"> Order <strong> Statistics </strong></h4>
+          <div data-flot-chart data-data="line3.data" data-options="line3.options" style="width: 100%; height: 155px;"></div>
+        </div>
+        <div class="panel-footer">
+          <div class="bar-widget">
+            <div class="text-bold"> <i class="fa fa-shopping-cart"></i> New Orders <span class="pull-right">$60547</span> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-sm-6 col-md-6 col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h4 class="nm pb-10"> Sales <strong> Statistics </strong></h4>
+          <div data-flot-chart data-data="line4.data" data-options="line4.options" style="width: 100%; height: 155px;"></div>
+        </div>
+        <div class="panel-footer">
+          <div class="bar-widget">
+            <div class="text-bold"> <i class="fa fa-shopping-cart"></i> Total Sales <span class="pull-right">$60547</span> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-sm-6 col-md-6 col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h4 class="nm pb-10"> Feedback <strong> Statistics </strong></h4>
+          <div data-flot-chart data-data="line5.data" data-options="line5.options" style="width: 100%; height: 155px;"></div>
+        </div>
+        <div class="panel-footer">
+          <div class="bar-widget">
+            <div class="text-bold"> <i class="fa fa-users"></i> Customer Feedback <span class="pull-right">545</span> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-sm-6 col-md-6 col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h4 class="nm pb-10"> Earning <strong> Statistics </strong></h4>
+          <div data-flot-chart data-data="line6.data" data-options="line6.options" style="width: 100%; height: 155px;"></div>
+        </div>
+        <div class="panel-footer">
+          <div class="bar-widget">
+            <div class="text-bold"> <i class="fa fa-dollar"></i> Net Earning <span class="pull-right">$50547</span> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-sm-6 col-md-6 col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h4 class="nm pb-10"> Server <strong> Performance </strong></h4>
+          <div data-flot-chart data-data="line7.data" data-options="line7.options" style="width: 100%; height: 155px;"></div>
+        </div>
+        <div class="panel-footer">
+          <div class="bar-widget">
+            <div class="text-bold"> <i class="fa fa-database"></i> Server Status <span class="pull-right color-success"> <i class="fa fa-circle"></i> Good </span> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-heading np"> 
+          <!-- media -->
+          <div class="media"> 
+            <!--/ indicator --> 
+            <img src="images/assets/600_400-2.jpg" alt="Cover" width="100%" class="unveiled"> </div>
+          <!--/ media --> 
+        </div>
+        <div class="panel-body">
+          <div class="text-center" style="margin-top:-85px; z-index:2;"> 
+            <!-- panel body --> 
+            <img src="images/photos/user2.png" alt="" class="img-thumbnail img-circle">
+            <h4>Jonathan Smith</h4>
+            <span>Web Developer</span> 
+            <!--/ panel body --> 
+          </div>
+        </div>
+        <div class="panel-footer np nb">
+          <ul class="menu-items">
+            <li> <a href="javascript:void(0)" class="clearfix"> <i class="fa fa-bell-o fa-lg"></i> New notifications <span class="label label-danger label-circle pull-right">82</span> </a> </li>
+            <li> <a href="javascript:void(0)" class="clearfix"> <i class="fa fa-user fa-lg"></i> Edit profile <span class="label label-success label-circle pull-right">13</span> </a> </li>
+            <li> <a href="javascript:void(0)" class="clearfix"> <i class="fa fa-calendar fa-lg"></i> Calendar <span class="label label-warning label-circle pull-right">12</span> </a> </li>
+            <li> <a href="javascript:void(0)" class="clearfix"> <i class="fa fa-envelope fa-lg"></i> New message <span class="label label-primary label-circle pull-right">44</span> </a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-heading np"> 
+          <!-- media -->
+          <div class="media"> 
+            <!--/ indicator --> 
+            <img src="images/assets/600_400-2.jpg" alt="Cover" width="100%" class="unveiled"> </div>
+          <!--/ media --> 
+        </div>
+        <div class="panel-body">
+          <div class="text-center" style="margin-top:-85px; z-index:2;"> 
+            <!-- panel body --> 
+            <img src="images/photos/user2.png" alt="" class="img-thumbnail">
+            <h4>Jonathan Smith</h4>
+            <span>Web Developer</span> 
+            <!--/ panel body --> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-sm-12 col-md-6 col-xs-12">
+      <div class="panel panel-default mail-container mail-compose bg-primary">
+        <h4 class="nm pad-10"> Quick <strong> Message </strong></h4>
+        <div class="panel-body" ng-controller="SelectCtrl">
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label for="mail_to"></label>
+              <div class="col-md-12"> 
+                <!-- Angular Select -->
+                <ui-select multiple ng-model="multipleDemo.deSelectedPeople" theme="bootstrap" ng-disabled="disabled" close-on-select="false" style="width: 100%;" title="Choose a person">
+                  <ui-select-match placeholder=" Enter Email ID..">{{$item.name}} &lt;{{$item.email}}&gt;</ui-select-match>
+                  <ui-select-choices group-by="someGroupFn" repeat="person in people | propsFilter: {name: $select.search, age: $select.search}">
+                    <div ng-bind-html="person.name | highlight: $select.search"></div>
+                    <small> email: {{person.email}} age: <span ng-bind-html="''+person.age | highlight: $select.search"></span> </small> </ui-select-choices>
+                </ui-select>
+                <!-- end Angular Select --> 
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="mail_subject"></label>
+              <div class="col-md-12">
+                <input type="text" id="mail_subject" class="form-control" placeholder="Type Subject">
+              </div>
+            </div>
+            <div text-angular ng-model="mailContent" class="ui-editor">
+              <h2>Try me!</h2>
+              <p>textAngular is a super cool WYSIWYG Text Editor directive for AngularJS</p>
+              <p><b>Features:</b></p>
+              <ol>
+                <li>Automatic Seamless Two-Way-Binding</li>
+                <li style="color: blue;">Super Easy <b>Theming</b> Options</li>
+                <li>Simple Editor Instance Creation</li>
+                <li>Safely Parses Html for Custom Toolbar Icons</li>
+                <li>Doesn&apos;t Use an iFrame</li>
+                <li>Works with Firefox, Chrome, and IE8+</li>
+              </ol>
+              <p><b>Code at GitHub:</b> <a href="https://github.com/fraywing/textAngular">Here</a> </p>
+            </div>
+          </form>
+          <div class="mail-actions">
+            <div class="btn btn-sm btn-primary"><i class="fa fa-envelope pr-10"></i> Send</div>
+            <div class="btn btn-sm btn-default"><i class="fa fa-save pr-10"></i> Draft</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-5">
+      <div class="panel panel-default">
+        <div class="panel-body np">
+          <map class="ui-map-250" zoom="11" center="[40.74, -74.18]" scrollwheel="false">
+            <marker position="[40.72, -74.20]" title="marker" animation="Animation.DROP"></marker>
+            <marker position="[40.73, -74.19]" title="drag me" draggable="true"></marker>
+          </map>
+        </div>
+        <div class="panel-footer">
+          <div class="contactus-map">
+            <div class="col-md-5 np">
+              <div class="pull-left">
+                <h4 class="pv-15 nm">Contact <strong>Us!</strong></h4>
+              </div>
+            </div>
+            <div class="col-md-7 np text-right">
+              <div class="map-addressbar">
+                <div class="addressbar-text">
+                  <h4>Envato Studio</h4>
+                  <small class="text-muted"><i class="fa fa-map-marker"></i> San Franciso, California, USA</small> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-body np">
+          <div class="bg-success text-center pad-30"> 
+            <!-- panel body --> 
+            <img src="images/photos/user2.png" alt="" class="img-thumbnail img-circle">
+            <h4 class="text-white text-bold">Jonathan Smith</h4>
+            <span class="text-white text-bold">Web Developer</span> 
+            <!--/ panel body --> 
+          </div>
+        </div>
+        <div class="panel-footer np">
+          <ul class="nav nav-section nav-justified">
+            <li>
+              <div class="section">
+                <h4>12.5k</h4>
+                <p class="text-muted">Followers</p>
+              </div>
+            </li>
+            <li>
+              <div class="section">
+                <h4>1853</h4>
+                <p class="text-muted">Following</p>
+              </div>
+            </li>
+            <li>
+              <div class="section">
+                <h4>3451</h4>
+                <p class="text-muted">Tweets</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="panel panel-default">
+        <div class="panel-heading np"> 
+          <!-- media -->
+          <div class="media"> 
+            <!--/ indicator --> 
+            <img src="images/assets/600_400-2.jpg" alt="Cover" width="100%" class="unveiled"> </div>
+          <!--/ media --> 
+        </div>
+        <div class="panel-profile">
+          <div class="panel-body np"> <a href="" class="pull-left profile"> <img alt="" src="images/photos/user4.png" class="img64_64"> </a>
+            <div class="nm pv-15">
+              <h4 class="text-large text-bold">Jonathan Smith</h4>
+              <span>Web Developer</span> </div>
+          </div>
+          <div class="panel-footer np">
+            <ul class="nav nav-section nav-justified">
+              <li>
+                <div class="section">
+                  <h4>12.5k</h4>
+                  <p class="text-muted">Followers</p>
+                </div>
+              </li>
+              <li>
+                <div class="section">
+                  <h4>1853</h4>
+                  <p class="text-muted">Following</p>
+                </div>
+              </li>
+              <li>
+                <div class="section">
+                  <h4>3451</h4>
+                  <p class="text-muted">Tweets</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <section class="panel panel-box">
+        <div class="panel-body bg-facebook pt-30"> <i class="fa fa-facebook fa-4x"></i>
+          <div class="divider divider"></div>
+        </div>
+        <div class="panel-footer np">
+          <ul class="nav nav-section nav-justified">
+            <li>
+              <div class="section">
+                <h4>12.5k</h4>
+                <p class="text-muted">Followers</p>
+              </div>
+            </li>
+            <li>
+              <div class="section">
+                <h4>1853</h4>
+                <p class="text-muted">Following</p>
+              </div>
+            </li>
+            <li>
+              <div class="section">
+                <h4>3451</h4>
+                <p class="text-muted">Tweets</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <div class="col-md-3">
+      <section class="panel panel-box">
+        <div class="panel-body bg-twitter pt-30"> <i class="fa fa-twitter fa-4x"></i>
+          <div class="divider divider"></div>
+        </div>
+        <div class="panel-footer np">
+          <ul class="nav nav-section nav-justified">
+            <li>
+              <div class="section">
+                <h4>12.5k</h4>
+                <p class="text-muted">Followers</p>
+              </div>
+            </li>
+            <li>
+              <div class="section">
+                <h4>1853</h4>
+                <p class="text-muted">Following</p>
+              </div>
+            </li>
+            <li>
+              <div class="section">
+                <h4>3451</h4>
+                <p class="text-muted">Tweets</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <div class="col-md-3">
+      <section class="panel panel-box">
+        <div class="panel-body bg-warning pt-30"> <i class="fa fa-dollar fa-4x"></i>
+          <div class="divider divider"></div>
+        </div>
+        <div class="panel-footer np">
+          <ul class="nav nav-section nav-justified">
+            <li>
+              <div class="section">
+                <h4>12.5k</h4>
+                <p class="text-muted">Followers</p>
+              </div>
+            </li>
+            <li>
+              <div class="section">
+                <h4>1853</h4>
+                <p class="text-muted">Following</p>
+              </div>
+            </li>
+            <li>
+              <div class="section">
+                <h4>3451</h4>
+                <p class="text-muted">Tweets</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <div class="col-md-3">
+      <section class="panel panel-box">
+        <div class="panel-body bg-info pt-30"> <i class="fa fa-comments-o fa-4x"></i>
+          <div class="divider divider"></div>
+        </div>
+        <div class="panel-footer np">
+          <ul class="nav nav-section nav-justified">
+            <li>
+              <div class="section">
+                <h4>12.5k</h4>
+                <p class="text-muted">Followers</p>
+              </div>
+            </li>
+            <li>
+              <div class="section">
+                <h4>1853</h4>
+                <p class="text-muted">Following</p>
+              </div>
+            </li>
+            <li>
+              <div class="section">
+                <h4>3451</h4>
+                <p class="text-muted">Tweets</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <section class="panel panel-box">
+        <div class="panel-left panel-item bg-reverse">
+          <h3 class="nm">80%</h3>
+          <p class="text-muted nm"><span data-i18n="Growth"></span></p>
+        </div>
+        <div class="panel-right panel-item bg-success"> <i class="fa fa-rocket fa-4x"></i> </div>
+      </section>
+    </div>
+    <div class="col-md-3">
+      <section class="panel panel-box">
+        <div class="panel-left panel-item bg-reverse">
+          <h3 class="nm">132</h3>
+          <p class="text-muted nm"> New Users</p>
+        </div>
+        <div class="panel-right panel-item bg-info"> <i class="fa fa-users fa-4x"></i> </div>
+      </section>
+    </div>
+    <div class="col-md-3">
+      <section class="panel panel-box">
+        <div class="panel-left panel-item bg-warning"> <i class="fa fa-dollar fa-4x"></i> </div>
+        <div class="panel-right panel-item bg-reverse">
+          <h3 class="nm">546</h3>
+          <p class="text-muted nm"> Net Profit </p>
+        </div>
+      </section>
+    </div>
+    <div class="col-md-3">
+      <section class="panel panel-box">
+        <div class="panel-left panel-item bg-danger"> <i class="fa fa-shopping-cart fa-4x"></i> </div>
+        <div class="panel-right panel-item bg-reverse">
+          <h3 class="nm">350</h3>
+          <p class="text-muted nm"> Sales </p>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

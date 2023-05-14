@@ -1,0 +1,179 @@
+<!-- Site Setting Panel -->
+  <section id="settings" data-ng-include=" 'views/settings/settings.html' " style="display:none"></section>
+<!-- Site Setting Panel End -->
+
+<div class="pageheader">
+    <h2><i class="fa fa-css3"></i> CSS3 Animation</h2>
+    <div class="breadcrumb-wrapper hidden-xs">
+      <span class="label">You are here:</span>
+      <ol class="breadcrumb">
+        <li>
+          <a href="index.html">
+            Home
+          </a>
+        </li>
+        <li class="active"> CSS3 Animation </li>
+      </ol>
+    </div>
+  </div>
+
+<div class="page">
+
+  <div class="row" ng-controller="animate-controller">
+   <div class="col-md-4 col-sm-6 col-xs-12">
+    <section class="panel panel-default">
+        <div class="panel-body">
+           <div class="text-center pad-10 overflow">
+              <div class="animated" ng-class="{bounceInUp: animate, bounceInDown: !animate}">
+                 <h4 class="nm pad-15">BounceInUp & Down </h4>
+              </div>
+              <button class="btn btn-default btn-md" ng-click="animate=!animate">Animate It!</button>
+          </div>
+        </div>
+    </section> 
+    </div>
+   <div class="col-md-4 col-sm-6 col-xs-12">
+    <section class="panel panel-default">
+        <div class="panel-body">
+           <div class="text-center pad-10 overflow">
+              <div class="animated" ng-class="{bounceInLeft: animate2, bounceInRight: !animate2}">
+                 <h4 class="nm pad-15"> Bounce In Left & Right </h4>
+              </div>
+              <button class="btn btn-default btn-md" ng-click="animate2=!animate2">Animate It!</button>
+          </div>
+        </div>
+    </section> 
+    </div>
+   <div class="col-md-4 col-sm-6 col-xs-12">
+    <section class="panel panel-default">
+        <div class="panel-body">
+           <div class="text-center pad-10 overflow">
+              <div class="animated" ng-class="{fadeInDown: animate3, fadeInUp: !animate3}">
+                 <h4 class="nm pad-15"> Fade In Down & Up </h4>
+              </div>
+              <button class="btn btn-default btn-md" ng-click="animate3=!animate3">Animate It!</button>
+          </div>
+        </div>
+    </section> 
+    </div>
+   <div class="col-md-4 col-sm-6 col-xs-12">
+    <section class="panel panel-default">
+        <div class="panel-body">
+           <div class="text-center pad-10 overflow">
+              <div class="animated" ng-class="{fadeInLeft: animate4, fadeInRight: !animate4}">
+                 <h4 class="nm pad-15"> Fade In Left & Right </h4>
+              </div>
+              <button class="btn btn-default btn-md" ng-click="animate4=!animate4">Animate It!</button>
+          </div>
+        </div>
+    </section> 
+    </div>
+   <div class="col-md-4 col-sm-6 col-xs-12">
+    <section class="panel panel-default">
+        <div class="panel-body">
+           <div class="text-center pad-10 overflow">
+              <div class="animated" ng-class="{zoomIn: animate5, zoomOut: !animate5}">
+                 <h4 class="nm pad-15"> Zoom In & Out </h4>
+              </div>
+              <button class="btn btn-default btn-md" ng-click="animate5=!animate5">Animate It!</button>
+          </div>
+        </div>
+    </section> 
+    </div>
+   <div class="col-md-4 col-sm-6 col-xs-12">
+    <section class="panel panel-default">
+        <div class="panel-body">
+           <div class="text-center pad-10 overflow">
+              <div class="animated" ng-class="{zoomInUp: animate12, zoomInDown: !animate12}">
+                 <h4 class="nm pad-15"> Zoom In Up & Down </h4>
+              </div>
+              <button class="btn btn-default btn-md" ng-click="animate12=!animate12">Animate It!</button>
+          </div>
+        </div>
+    </section> 
+    </div>
+   <div class="col-md-4 col-sm-6 col-xs-12">
+    <section class="panel panel-default">
+        <div class="panel-body">
+           <div class="text-center pad-10 overflow">
+              <div class="animated" ng-class="{zoomInLeft: animate15, zoomInRight: !animate15}">
+                 <h4 class="nm pad-15"> Zoom In Left & Right </h4>
+              </div>
+              <button class="btn btn-default btn-md" ng-click="animate15=!animate15">Animate It!</button>
+          </div>
+        </div>
+    </section> 
+    </div>
+   <div class="col-md-4 col-sm-6 col-xs-12">
+    <section class="panel panel-default">
+        <div class="panel-body">
+           <div class="text-center pad-10 overflow">
+              <div class="animated" ng-class="{flipInY: animate6, flipInX: !animate6}">
+                 <h4 class="nm pad-15"> Flip In Y & X </h4>
+              </div>
+              <button class="btn btn-default btn-md" ng-click="animate6=!animate6">Animate It!</button>
+          </div>
+        </div>
+    </section> 
+    </div>
+   <div class="col-md-4 col-sm-6 col-xs-12">
+    <section class="panel panel-default">
+        <div class="panel-body">
+           <div class="text-center pad-10 overflow">
+              <div class="animated" ng-class="{rotateIn: animate8, rotateOut: !animate8}">
+                 <h4 class="nm pad-15"> Rotate In & Out </h4>
+              </div>
+              <button class="btn btn-default btn-md" ng-click="animate8=!animate8">Animate It!</button>
+          </div>
+        </div>
+    </section> 
+    </div>
+   <div class="col-md-4 col-sm-6 col-xs-12">
+    <section class="panel panel-default">
+        <div class="panel-body">
+           <div class="text-center pad-10">
+              <div class="animated" ng-class="{hinge: animate9, hinge: !animate9}">
+                 <h4 class="nm pad-15"> Hinge Animation </h4>
+              </div>
+              <button class="btn btn-default btn-md" ng-click="animate9=!animate9">Animate It!</button>
+          </div>
+        </div>
+    </section> 
+    </div>
+   <div class="col-md-4 col-sm-6 col-xs-12">
+    <section class="panel panel-default">
+        <div class="panel-body">
+           <div class="text-center pad-10">
+              <div class="animated" ng-class="{rollIn: animate10, rollOut: !animate10}">
+                 <h4 class="nm pad-15"> Roll In & Out </h4>
+              </div>
+              <button class="btn btn-default btn-md" ng-click="animate10=!animate10">Animate It!</button>
+          </div>
+        </div>
+    </section> 
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12">
+    <section class="panel panel-default">
+        <div class="panel-body">
+           <div class="text-center pad-10 overflow">
+              <div class="animated" ng-class="{rotateInUpLeft: animate13, rotateOutUpRight: !animate13}">
+                 <h4 class="nm pad-15">BounceInUp & Down </h4>
+              </div>
+              <button class="btn btn-default btn-md" ng-click="animate13=!animate13">Animate It!</button>
+          </div>
+        </div>
+    </section> 
+    </div>
+   <div class="col-md-4 col-sm-6 col-xs-12">
+    <section class="panel panel-default">
+        <div class="panel-body">
+           <div class="text-center pad-10 overflow">
+              <div class="animated" ng-class="{lightSpeedIn: animate7, lightSpeedOut: !animate7}">
+                 <h4 class="nm pad-15"> light Speed In & Out </h4>
+              </div>
+              <button class="btn btn-default btn-md" ng-click="animate7=!animate7">Animate It!</button>
+          </div>
+        </div>
+    </section> 
+    </div>
+</div></div>

@@ -1,0 +1,119 @@
+@@include('./src/include/head.html', {
+  "title": "Bootstrap Wysiwyg"
+})
+<link rel="stylesheet" href="css/vendors/crop.css">
+
+@@include('./src/include/head_end.html')
+
+<body>
+  <div id="wrap-content" class="wrap-content">
+
+    @@include('./src/include/top_menu.html',{
+      "name": "Bootstrap Wysiwyg"
+    })
+
+    <div class="content container-fluid">
+     <div class="row row-broken">
+        <div class="col-md-12">
+          <ol class="breadcrumb">
+            <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+            <li>Editors</li>
+            <li class="active">Bootstrap Wysiwyg</li>
+          </ol>
+        </div>
+      </div>
+      <div class="row decor-default">
+        <div class="col-lg-12">
+          <div class="b-email b-email-message">
+              <div id="alerts"></div>
+              <div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor">
+                  <div class="btn-group">
+                      <a class="btn btn-lg dropdown-toggle btn-control-1" data-toggle="dropdown" title="Font"></a>
+                      <ul class="dropdown-menu">
+                      </ul>
+                  </div>
+                  <div class="btn-group">
+                      <a class="btn btn-lg dropdown-toggle btn-control-2" data-toggle="dropdown" title="Font Size"></a>
+                      <ul class="dropdown-menu">
+                          <li><a data-edit="fontSize 5"><span class="h3">Huge</span></a></li>
+                          <li><a data-edit="fontSize 3"><span class="h5">Normal</span></a></li>
+                          <li><a data-edit="fontSize 1"><span class="h6">Small</span></a></li>
+                      </ul>
+                  </div>
+                  <div class="btn-group">
+                      <a class="btn btn-lg btn-control-3" data-edit="bold" title="Bold (Ctrl/Cmd+B)"></a>
+                      <a class="btn btn-lg btn-control-4" data-edit="italic" title="Italic (Ctrl/Cmd+I)"></a>
+                      <a class="btn btn-lg btn-control-5" data-edit="strikethrough" title="Strikethrough"></a>
+                      <a class="btn btn-lg btn-control-6" data-edit="underline" title="Underline (Ctrl/Cmd+U)"></a>
+                  </div>
+                  <div class="btn-group">
+                      <a class="btn btn-lg btn-control-7" data-edit="insertunorderedlist" title="Bullet list"></a>
+                      <a class="btn btn-lg btn-control-8" data-edit="insertorderedlist" title="Number list"></a>
+                      <a class="btn btn-lg btn-control-9" data-edit="outdent" title="Reduce indent (Shift+Tab)"></a>
+                      <a class="btn btn-lg btn-control-10" data-edit="indent" title="Indent (Tab)"></a>
+                  </div>
+                  <div class="btn-group">
+                      <a class="btn btn-lg btn-control-11" data-edit="justifyleft" title="Align Left (Ctrl/Cmd+L)"></a>
+                      <a class="btn btn-lg btn-control-12" data-edit="justifycenter" title="Center (Ctrl/Cmd+E)"></a>
+                      <a class="btn btn-lg btn-control-13" data-edit="justifyright" title="Align Right (Ctrl/Cmd+R)"></a>
+                      <a class="btn btn-lg btn-control-14" data-edit="justifyfull" title="Justify (Ctrl/Cmd+J)"></a>
+                  </div>
+                  <input type="text" data-edit="inserttext" id="voiceBtn" style="display: none;">
+                  <div id="editor">
+                      Go ahead&hellip;
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    @@include('./src/include/footer-container.html')
+  </div>
+
+  @@include('./src/include/menu.html')
+
+  @@include('./src/include/footer.html')
+  <script src="js/bootstrap-wysiwyg.js"></script>
+  <script>
+        // Text Editor
+        $(function(){
+
+            function initToolbarBootstrapBindings() {
+                var fonts = ['Serif', 'Sans', 'Arial', 'Arial Black', 'Courier',
+                            'Courier New', 'Comic Sans MS', 'Helvetica', 'Impact', 'Lucida Grande', 'Lucida Sans', 'Tahoma', 'Times',
+                            'Times New Roman', 'Verdana'],
+                        fontTarget = $('[title=Font]').siblings('.dropdown-menu');
+                $.each(fonts, function (idx, fontName) {
+                    fontTarget.append($('<li><a data-edit="fontName ' + fontName +'" style="font-family:\''+ fontName +'\'">'+fontName + '</a></li>'));
+                });
+                $('a[title]').tooltip({container:'body'});
+                $('.dropdown-menu input').click(function() {return false;})
+                        .change(function () {$(this).parent('.dropdown-menu').siblings('.dropdown-toggle').dropdown('toggle');})
+                        .keydown('esc', function () {this.value='';$(this).change();});
+
+                $('[data-role=magic-overlay]').each(function () {
+                    var overlay = $(this), target = $(overlay.data('target'));
+                    overlay.css('opacity', 0).css('position', 'absolute').offset(target.offset()).width(target.outerWidth()).height(target.outerHeight());
+                });
+                if ("onwebkitspeechchange"  in document.createElement("input")) {
+                    var editorOffset = $('#editor').offset();
+                    $('#voiceBtn').css('position','absolute').offset({top: editorOffset.top, left: editorOffset.left+$('#editor').innerWidth()-35});
+                } else {
+                    $('#voiceBtn').hide();
+                }
+            };
+            function showErrorAlert (reason, detail) {
+                var msg='';
+                if (reason==='unsupported-file-type') { msg = "Unsupported format " +detail; }
+                else {
+                    console.log("error uploading file", reason, detail);
+                }
+                $('<div class="alert"> <button type="button" class="close" data-dismiss="alert">&times;</button>'+
+                        '<strong>File upload error</strong> '+msg+' </div>').prependTo('#alerts');
+            };
+            initToolbarBootstrapBindings();
+            $('#editor').wysiwyg({ fileUploadError: showErrorAlert} );
+            window.prettyPrint && prettyPrint();
+        });
+    </script>
+  @@include('./src/include/footer_end.html')

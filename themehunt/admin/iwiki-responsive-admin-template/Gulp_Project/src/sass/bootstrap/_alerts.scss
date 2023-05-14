@@ -1,0 +1,114 @@
+.alert {
+  padding: $alert-padding;
+  margin-top: $grid-gutter-width / 2;
+  text-align: center;
+
+  // Headings for larger alerts
+  h4 {
+    margin-top: 0;
+    color: inherit;
+  }
+
+  // Provide class for links that match alerts
+  .alert-link {
+    font-weight: $alert-link-font-weight;
+  }
+
+  // Improve alignment and spacing of inner content
+  > p,
+  > ul {
+    margin-bottom: 0;
+  }
+
+  > p + p {
+    margin-top: 5px;
+  }
+}
+
+// Dismissible alerts
+//
+// Expand the right padding and account for the close button's positioning.
+
+.alert-dismissable, // The misspelled .alert-dismissable was deprecated in 3.2.0.
+.alert-dismissible {
+  padding-right: ($alert-padding + 20);
+
+  // Adjust close link position
+  .close {
+    position: relative;
+    top: -2px;
+    right: -21px;
+    color: inherit;
+  }
+}
+
+.alert-success {
+  @include alert-variant($alert-success-bg, $alert-success-text);
+}
+
+.alert-info {
+  @include alert-variant($alert-info-bg, $alert-info-text);
+}
+
+.alert-warning {
+  @include alert-variant($alert-warning-bg, $alert-warning-text);
+}
+
+.alert-danger {
+  @include alert-variant($alert-danger-bg, $alert-danger-text);
+}
+
+
+.alert-icon {
+  position: relative;
+  color: $text-dark;
+  padding: 8px $alert-padding 8px 58px;
+  margin-top: $grid-gutter-width / 2;
+  font-size: $font-size-base;
+  line-height: 24px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -20px;
+    width: 40px;
+    height: 40px;
+    background: url('../img/sprite.svg') no-repeat;
+    @include background-size(300px);
+  }
+
+  a {
+    color: $text-dark;
+    font-weight: 700;
+  }
+
+  &-success {
+    &:before {
+      background-color: $alert-success-bg;
+      background-position: 6px -40px;
+    }
+  }
+
+  &-info {
+    &:before {
+      background-color: $alert-info-bg;
+      background-position: 12px -142px;
+    }
+  }
+
+  &-warning {
+    &:before {
+      background-color: $alert-warning-bg;
+      background-position: 14px -186px;
+    }
+  }
+
+  &-danger {
+    &:before {
+      background-color: $alert-danger-bg;
+      background-position: 9px -240px;
+    }
+  }
+}

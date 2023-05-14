@@ -1,0 +1,34 @@
+@@include('./src/include/head.html', { "title": "Timer" })
+
+@@include('./src/include/head_end.html')
+
+
+<body class="decor-primary timer-page">
+ <a class="gohome" href="index.html"><i class="fa fa-home"></i> Go to Home Page</a>
+  <div class="table-wrapper-a">
+    <div class="table-row">
+      <div class="table-cell text-center text-light">
+        <div class="timer-wrapper center-block">
+          <h1>Some title</h1>
+          <p class="h5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti non similique eveniet optio reprehenderit.</p>
+          <div id="countdown"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.plugin.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+
+  <script>
+    var now = new Date();
+    $("#countdown").countdown({
+      format: 'DHMS',
+      padZeroes: true,
+      since: now
+    });
+  </script>
+
+  @@include('./src/include/footer_end.html')

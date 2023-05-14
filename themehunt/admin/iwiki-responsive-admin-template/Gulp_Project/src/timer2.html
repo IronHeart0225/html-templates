@@ -1,0 +1,97 @@
+@@include('./src/include/head.html', { "title": "Timer 2" })
+
+@@include('./src/include/head_end.html')
+
+
+<body class="decor-info timer-page">
+ <a class="gohome" href="index.html"><i class="fa fa-home"></i> Go to Home Page</a>
+  <div class="table-wrapper-a">
+    <div class="table-row">
+      <div class="table-cell text-center text-light">
+        <div class="timer-wrapper center-block">
+          <h1>Total time spend on project</h1>
+          <p class="h5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti non similique eveniet optio reprehenderit.</p>
+          <div id="countdown"></div>
+          <div class="counter-buttons">
+            <a href="#"><i class="fa fa-pencil"></i>Update</a>
+            <a class="start" href="#"><i class="fa fa-play-circle"></i>Start working</a>
+            <a href="#"><i class="fa fa-star-o"></i>Add to favourites</a>
+          </div>
+          <div class="pause-buttons">
+            <a class="pause" href="#"><i class="fa fa-pause"></i>Pause</a>
+            <a class="stop" href="#"><i class="fa fa-stop"></i>Stop</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.plugin.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+
+  <script>
+    var now = new Date();
+
+    $("#countdown").countdown({
+      format: 'HMS',
+      padZeroes: true,
+      since: now
+    });
+
+    $("#countdown").countdown('pause');
+
+    $(".pause-buttons").hide();
+
+    $(".start").click(function(){
+      var now = new Date();
+      $("#countdown").countdown({
+        format: 'HMS',
+        padZeroes: true,
+        since: now
+      });
+
+      $("#countdown").countdown('resume');
+
+      $(".counter-buttons").hide();
+      $(".pause-buttons").show();
+
+      $("body").removeClass("decor-info");
+      $("body").addClass("decor-success");
+
+    });
+
+    var x = false;
+    $(".pause").on('click', function(){
+     if (!x){
+      $("#countdown").countdown('pause');
+       $(this).html("<i class='fa fa-play-circle'></i> Resume");
+       x = true;
+     }
+     else {
+      $("#countdown").countdown('resume');
+       $(this).html("<i class='fa fa-pause'></i> Pause");
+      x = false;
+     }
+    });
+
+    $(".stop").on('click', function(){
+      $("#countdown").countdown('destroy');
+      $(".counter-buttons").show();
+      $(".pause-buttons").hide();
+      $("body").removeClass("decor-success");
+      $("body").addClass("decor-info");
+      var now = new Date();
+      $("#countdown").countdown({
+        format: 'HMS',
+        padZeroes: true,
+        since: now
+      });
+      $("#countdown").countdown('pause');
+    });
+  </script>
+
+  @@include('./src/include/footer_end.html')
+
+

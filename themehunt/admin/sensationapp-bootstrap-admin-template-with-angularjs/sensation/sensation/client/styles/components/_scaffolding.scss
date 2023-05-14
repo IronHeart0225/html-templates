@@ -1,0 +1,257 @@
+/*=======================================
+  :: scaffolding
+  =======================================*/
+  
+@mixin bg-style ($background, $color) {
+    background-color: $background;
+    color: $color;
+}
+
+@mixin bg-variant-alt ($color) {
+    background-color: $color;
+    color: $white;
+    &:hover {
+        background-color: $color;
+        color: $white;
+    }
+}
+
+html {
+  height: 100%;
+  font-size: 100%;
+}
+
+body {
+  color: #565656;
+  background: $body-bg;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  padding: 0px;
+  margin: 0px;
+  min-height: 100%;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn .fa,
+.btn .glyphicon {
+  font-size: 14px;
+}
+
+a {
+  &:link, &:visited {
+    text-decoration: none;
+    outline: none;
+  }
+  &:hover, &:active {
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+img {
+  max-width: 100%;
+}
+
+::selection, ::-moz-selection {
+  background: #fff7dd;
+}
+
+.no-margin {
+    margin: 0;
+}
+.no-border {
+    border: 0;
+}
+
+// background
+// -----------------
+
+// normal
+
+.bg-facebook { @include bg-style(#335397, $white) };
+.bg-twitter { @include bg-style(#00c7f7, $white) };
+.bg-google-plus { @include bg-style(#df4a32, $white) };
+
+.bg-dark {
+  background-color: #030405  !important;
+  color: $white;
+  a {
+    text-decoration: none;
+    color: $white;
+    &:hover {
+      text-decoration: none;
+      color: $white;
+      background-color: #19212d !important;
+    }
+    &:focus {
+      text-decoration: none;
+      color: $white;
+      background-color: #2e3344 !important;
+    }
+  }
+}
+
+.bg-white {
+  background-color: $white  !important;
+  color: $white;
+  a {
+    text-decoration: none;
+    color: $white;
+    &:hover {
+      text-decoration: none;
+      color: $white;
+      background-color: #f2f2f2 !important;
+    }
+    &:focus {
+      text-decoration: none;
+      color: $white;
+      background-color: #ebebeb !important;
+    }
+  }
+}
+
+.bg-primary {
+  background-color: $brand-primary  !important;
+  color: $white;
+  a {
+    text-decoration: none;
+    color: $white;
+    &:hover {
+      text-decoration: none;
+      color: $white;
+      background-color: #219790 !important;
+    }
+    &:focus {
+      text-decoration: none;
+      color: $white;
+      background-color: #1e8780 !important;
+    }
+  }
+}
+
+.bg-success {
+  background-color: $brand-success  !important;
+  color: $white;
+  a {
+    text-decoration: none;
+    color: $white;
+    &:hover {
+      text-decoration: none;
+      color: $white;
+      background-color: #4cc699 !important;
+    }
+    &:focus {
+      text-decoration: none;
+      color: $white;
+      background-color: #36a97f !important;
+    }
+  }
+}
+
+.bg-info {
+  background-color: $brand-info  !important;
+  color: $white;
+  a {
+    text-decoration: none;
+    color: $white;
+    &:hover {
+      text-decoration: none;
+      color: $white;
+      background-color: #25a4be !important;
+    }
+    &:focus {
+      text-decoration: none;
+      color: $white;
+      background-color: #2192a8 !important;
+    }
+  }
+}
+
+.bg-warning {
+  background-color: $brand-warning  !important;
+  color: $white;
+  a {
+    text-decoration: none;
+    color: $white;
+    &:hover {
+      text-decoration: none;
+      color: $white;
+      background-color: #f9bd39 !important;
+    }
+    &:focus {
+      text-decoration: none;
+      color: $white;
+      background-color: #f9b420 !important;
+    }
+  }
+}
+
+.bg-danger {
+  background-color: $brand-danger  !important;
+  color: $white;
+  a {
+    text-decoration: none;
+    color: $white;
+    &:hover {
+      text-decoration: none;
+      color: $white;
+      background-color: #d92c17 !important;
+    }
+    &:focus {
+      text-decoration: none;
+      color: $white;
+      background-color: #ce2916 !important;
+    }
+  }
+}
+
+.bg-azure {
+  background-color: $brand-azure  !important;
+  color: $white;
+  a {
+    text-decoration: none;
+    color: $white;
+    &:hover {
+      text-decoration: none;
+      color: $white;
+      background-color: #00bdcd !important;
+    }
+    &:focus {
+      text-decoration: none;
+      color: $white;
+      background-color: #00ecff !important;
+    }
+  }
+}
+
+.bg-purple {
+  background-color: $brand-purple  !important;
+  color: $white;
+  a {
+    text-decoration: none;
+    color: $white;
+    &:hover {
+      text-decoration: none;
+      color: $white;
+      background-color: #6051b5 !important;
+    }
+    &:focus {
+      text-decoration: none;
+      color: $white;
+      background-color: #6658b8 !important;
+    }
+  }
+}

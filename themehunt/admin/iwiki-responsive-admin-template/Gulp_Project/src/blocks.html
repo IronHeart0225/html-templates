@@ -1,0 +1,149 @@
+@@include('./src/include/head.html', {
+  "title": "Blocks"
+})
+
+<link href="js/google-code-prettify/prettify.css" rel="stylesheet">
+
+@@include('./src/include/head_end.html')
+
+<body>
+  <div id="wrap-content" class="wrap-content">
+
+    @@include('./src/include/top_menu.html',{
+      "name": "Blocks"
+    })
+
+    <div class="content container-fluid">
+     <div class="row row-broken">
+        <div class="col-md-12">
+          <ol class="breadcrumb">
+            <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+            <li>UI Kits</li>
+            <li class="active">Blocks</li>
+          </ol>
+        </div>
+      </div>
+      <div class="row row-broken" data-height>
+        <div class="col-md-6" data-height-col>
+          <div class="p-20 decor-default content-block">
+            <h6 class="m-b-20 pull-left">
+                Block with settings buttons
+            </h6>
+            <div class="setting pull-right">
+                <span class="refresh-btn"><i class="fa fa-refresh"></i></span>
+                <span class="setting-btn"><i class="fa fa-cog"></i></span>
+                <ul class="setting-popup">
+                    <li>setting 1</li>
+                    <li><a href="#">setting 2</a></li>
+                    <li>setting 3</li>
+                    <li>setting 4</li>
+                    <li>setting 5</li>
+                </ul>
+                <span class="close-block text-center"><i class="fa fa-close"></i></span>
+            </div>
+            <div class="clearfix"></div>
+
+<pre class="prettyprint linenums">
+&lt;div class="col-md-6" data-height-col&gt;
+  &lt;div class="p-20 decor-default content-block"&gt;
+    &lt;h6 class="m-b-20 pull-left"&gt;
+        Block with settings buttons
+    &lt;/h6&gt;
+    &lt;div class="setting pull-right"&gt;
+        &lt;span class="refresh-btn"&gt;&lt;i class="fa fa-refresh"&gt;&lt;/i&gt;&lt;/span&gt;
+        &lt;span class="setting-btn"&gt;&lt;i class="fa fa-cog"&gt;&lt;/i&gt;&lt;/span&gt;
+        &lt;ul class="setting-popup"&gt;
+            &lt;li&gt;setting 1&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;setting 2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;setting 3&lt;/li&gt;
+            &lt;li&gt;setting 4&lt;/li&gt;
+            &lt;li&gt;setting 5&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;span class="close-block text-center"&gt;&lt;i class="fa fa-close"&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="clearfix"&gt;&lt;/div&gt;
+    &lt;!-- Content here --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+          </div>
+        </div>
+
+        <div class="col-md-6" data-height-col>
+          <div class="p-20 decor-default">
+            <h6 class="m-b-20">
+                Block without settings
+            </h6>
+
+<pre class="prettyprint linenums">
+&lt;div class="col-md-6" data-height-col&gt;
+  &lt;div class="p-20 decor-default"&gt;
+    &lt;h6 class="m-b-20"&gt;
+        Block without settings
+    &lt;/h6&gt;
+    &lt;!-- Content here --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="row row-broken" data-height>
+          <div class="col-md-6" data-height-col>
+            <div class="decor-default">
+              <h6 class="p-20">
+                  Content has no padding
+              </h6>
+
+<pre class="prettyprint linenums">
+&lt;div class="col-md-6" data-height-col&gt;
+  &lt;div class="decor-default"&gt;
+    &lt;h6 class="p-20"&gt;
+      Content has no padding
+    &lt;/h6&gt;
+    &lt;!-- Content here --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-height-col>
+            <div class="decor-default">
+              <h6 class="p-20">
+                  Heading with caption <br><small>Lorem ipsum dolor sit amet.</small>
+              </h6>
+
+<pre class="prettyprint linenums">
+&lt;div class="col-md-6" data-height-col&gt;
+  &lt;div class="decor-default"&gt;
+    &lt;h6 class="p-20"&gt;
+      Heading with caption &lt;br&gt;&lt;small&gt;Lorem ipsum dolor sit amet.&lt;/small&gt;
+    &lt;/h6&gt;
+    &lt;!-- Content here --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+            </div>
+          </div>
+        </div>
+    </div>
+    @@include('./src/include/footer-container.html')
+  </div>
+
+  @@include('./src/include/menu.html')
+
+  @@include('./src/include/footer.html')
+
+  <script src="js/google-code-prettify/prettify.js"></script>
+
+  <script>
+    $(function () {
+      window.prettyPrint && prettyPrint();
+    })
+  </script>
+
+  @@include('./src/include/footer_end.html')

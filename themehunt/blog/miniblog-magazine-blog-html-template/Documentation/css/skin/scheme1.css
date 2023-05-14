@@ -1,0 +1,37 @@
+body{ font:13px "RobotoThin", Arial, Helvetica,sans-serif; color:#000; line-height: 24px; }
+
+.skin-font-color1 { color:#1d1d33; }
+.skin-font-color2 { color:#fff; }
+.skin-font-color3 { color:#4e4e4e; }
+.skin-font-color4 { color:#c53d2d; }
+.skin-font-color5 { color:#8d8d8d; }
+.skin-font-color6 { color:#22c26a; }
+
+.skin-background-color1 { background-color:#c53d2d; }
+.skin-background-color2 { background-color:#f3f3f3; }
+.skin-background-color3 { background-color:#3c5a98; }
+.skin-background-color4 { background-color:#1bb2e9; }
+.skin-background-color5 { background-color:#22c26a; }
+
+ .skin-font-color-hover1:hover { color:#c53d2d;
+ -webkit-transition: color 300ms linear;
+ -moz-transition: color 300ms linear;
+-o-transition: color 300ms linear;
+ -ms-transition: color 300ms linear;
+ transition: color 300ms linear;
+ }
+
+ .skin-background-hover1:hover { background-color:#000;
+ -webkit-transition: background-color 300ms linear;
+ -moz-transition: background-color 300ms linear;
+-o-transition: background-color 300ms linear;
+ -ms-transition: background-color 300ms linear;
+ transition: background-color 300ms linear;
+ }
+
+ .content, .documentation, .footer .three-fourth, .documentation img { border-color:#e5e5e5; }
+ 
+.skin-border-color1 { border-color:#c53d2d; }
+
+
+

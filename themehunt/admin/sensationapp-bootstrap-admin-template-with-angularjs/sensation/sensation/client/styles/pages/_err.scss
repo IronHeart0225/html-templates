@@ -1,0 +1,67 @@
+/*================================
+  :: 404 & 500 Error Page
+  ================================*/
+
+.error-full-page {
+  background: $white !important;
+  .page-error {
+    margin-top: 100px;
+  }
+}
+
+.page-error {
+  text-align: center;
+  .error-number {
+    display: block;
+    font-size: 158px;
+    font-weight: 600;
+    letter-spacing: -10px;
+    line-height: 150px;
+    margin-top: 0;
+    text-align: center;
+  }
+  .error-details {
+    display: block;
+    padding-top: 0;
+    text-align: center;
+    .btn-return {
+      margin: 15px 0;
+    }
+    h3 {
+      margin-top: 0;
+    }
+  }
+}
+
+body.error-full-page {
+  overflow: hidden;
+}
+
+.error-full-page {
+  img {
+    display: none;
+  }
+  #canvas {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  #sound {
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    overflow-y: auto;
+    margin-left: 35%;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    opacity: 0.3;
+    margin-top: 5%;
+  }
+  .video {
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    margin-left: 5%;
+    margin-top: 5%;
+  }
+}

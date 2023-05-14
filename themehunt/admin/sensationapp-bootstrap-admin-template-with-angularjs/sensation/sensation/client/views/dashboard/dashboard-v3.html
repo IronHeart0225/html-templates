@@ -1,0 +1,396 @@
+<!-- Site Setting Panel -->
+<section id="settings" data-ng-include=" 'views/settings/settings.html' " style="display:none"></section>
+<!-- Site Setting Panel End -->
+
+<!-- Page Header Start -->
+<div class="pageheader">
+  <h2><i class="fa fa-home"></i> Dashboard </h2>
+  <div class="breadcrumb-wrapper hidden-xs"> <span class="label">You are here:</span>
+    <ol class="breadcrumb">
+      <li> <a href="#"> Home </a> </li>
+      <li class="active"> Dashboard </li>
+    </ol>
+  </div>
+</div>
+<!-- Page Header End -->
+
+<div class="page"> 
+  <!-- Stats -->
+  <div class="row">
+    <div class="col-lg-4 col-sm-6 col-md-6 col-xs-12">
+      <div class="panel panel-default">
+        <div data-ng-controller="chartCtrl">
+          <ul class="list-inline center">
+            <li class="left-easypiechart-data"> <span class="sell-percent">60%</span> <span>Direct Sell</span> </li>
+            <li>
+              <div easypiechart options="easypiechartxs1.options" percent="easypiechartxs1.percent" class="easypiechart easypiechart-xs"> <span class="pie-percent" ng-bind="easypiechartxs1.percent"></span> </div>
+            </li>
+            <li class="right-easypiechart-data"> <span class="sell-percent">40%</span> <span>Channel Sell</span> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-sm-6 col-md-6 col-xs-12">
+      <div class="panel panel-default">
+        <div data-ng-controller="chartCtrl">
+          <ul class="list-inline center">
+            <li class="left-easypiechart-data"> <span class="sell-percent">65%</span> <span>New Clients</span> </li>
+            <li>
+              <div easypiechart options="easypiechartxs2.options" percent="easypiechartxs2.percent" class="easypiechart easypiechart-xs"> <span class="pie-percent" ng-bind="easypiechartxs2.percent"></span> </div>
+            </li>
+            <li class="right-easypiechart-data np"> <span class="sell-percent">35%</span> <span>Return Clients</span> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-sm-6 col-md-6 col-xs-12">
+      <div class="panel panel-default">
+        <div data-ng-controller="chartCtrl">
+          <ul class="list-inline center">
+            <li class="left-easypiechart-data"> <span class="sell-percent">65%</span> <span>Credit Card</span> </li>
+            <li>
+              <div easypiechart options="easypiechartxs3.options" percent="easypiechartxs3.percent" class="easypiechart easypiechart-xs"> <span class="pie-percent" ng-bind="easypiechartxs3.percent"></span> </div>
+            </li>
+            <li class="right-easypiechart-data"> <span class="sell-percent">35%</span> <span>Paypal</span> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- end stats --> 
+    
+  </div>
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="panel panel-default">
+        <h4 class="nm pad-10">Sales <strong>Statistics</strong></h4>
+        <div class="panel-body">
+          <div class="col-md-8" data-ng-controller="jvectormapCtrl">
+            <div class="height-280" ui-jvectormap options="Jvworldmap"></div>
+          </div>
+          <div class="col-md-4"> <span class="text-small">In Queue <span class="pull-right"> 45% </span> </span>
+            <progressbar class="progressbar-xs progress-rounded progress-striped" value="68" type="info"></progressbar>
+            <span class="text-small">Shipped Products <span class="pull-right"> 350/500 </span> </span>
+            <progressbar class="progressbar-xs progress-rounded progress-striped" value="68" type="primary"></progressbar>
+            <span class="text-small">Returned Products<span class="pull-right"> 50/500 </span> </span>
+            <progressbar class="progressbar-xs progress-rounded progress-striped" value="68" type="warning"></progressbar>
+            <span class="text-small">Pending Deliveries<span class="pull-right"> 150/500 </span> </span>
+            <progressbar class="progressbar-xs progress-rounded progress-striped" value="68" type="danger"></progressbar>
+            <span class="text-small">Project 2 <span class="pull-right"> 32% </span> </span>
+            <progressbar class="progressbar-xs progress-rounded progress-striped" value="68" type="info"></progressbar>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="panel panel-default">
+        <h4 class="nm pad-15">User <strong>Accounts</strong></h4>
+        <div class="panel-body">
+          <table class="table" style="margin-bottom: 0px;">
+            <thead>
+              <tr>
+                <th class="hidden-xs"> <label for="toggle-all" class="ui-checkbox">
+                    <input name="checkbox1" type="checkbox" value="option1" id="toggle-all">
+                    <span></span></label>
+                </th>
+                <th>Profile</th>
+                <th>User ID</th>
+                <th class="hidden-xs">Email Address</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="hidden-xs"><label class="ui-checkbox">
+                    <input name="checkbox1" type="checkbox" value="option1">
+                    <span></span></label></td>
+                <td><div class="media-object center"><img src="images/photos/user1.png" alt="" class="img-circle img40_40"></div></td>
+                <td>cranston</td>
+                <td class="hidden-xs">cranstonb@gnail.com</td>
+                <td><span class="label label-success">Approved</span></td>
+              </tr>
+              <tr>
+                <td class="hidden-xs"><label class="ui-checkbox">
+                    <input name="checkbox1" type="checkbox" value="option1">
+                    <span></span></label></td>
+                <td><div class="media-object center"><img src="images/photos/user3.png" alt="" class="img-circle img40_40"></div></td>
+                <td>norris</td>
+                <td class="hidden-xs">j.norris@gnail.com</td>
+                <td><span class="label label-warning">Suspended</span></td>
+              </tr>
+              <tr>
+                <td class="hidden-xs"><label class="ui-checkbox">
+                    <input name="checkbox1" type="checkbox" value="option1">
+                    <span></span></label></td>
+                <td><div class="media-object center"><img src="images/photos/user4.png" alt="" class="img-circle img40_40"></div></td>
+                <td>gunner</td>
+                <td class="hidden-xs">gunner@outluk.com</td>
+                <td><span class="label label-danger">Blocked</span></td>
+              </tr>
+              <tr>
+                <td class="hidden-xs"><label class="ui-checkbox">
+                    <input name="checkbox1" type="checkbox" value="option1">
+                    <span></span></label></td>
+                <td><div class="media-object center"><img src="images/photos/user5.png" alt="" class="img-circle img40_40"></div></td>
+                <td>mrford</td>
+                <td class="hidden-xs">fordm@gnail.com</td>
+                <td><span class="label label-success">Approved</span></td>
+              </tr>
+              <tr>
+                <td class="hidden-xs"><label class="ui-checkbox">
+                    <input name="checkbox1" type="checkbox" value="option1">
+                    <span></span></label></td>
+                <td><div class="media-object center"><img src="images/photos/user7.png" alt="" class="img-circle img40_40"></div></td>
+                <td>kristian</td>
+                <td class="hidden-xs">mack@outluk.com</td>
+                <td><span class="label label-info">Pending</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4" data-ng-controller="flotChartCtrl">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h4 class="nm pb-10">Site <strong>Statistics</strong></h4>
+          <div data-flot-chart data-data="barChart3.data" data-options="barChart3.options" style="width: 100%; height: 155px;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4" data-ng-controller="flotChartCtrl">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h4 class="nm pb-10">Earning <strong>Statistics</strong></h4>
+          <div data-flot-chart data-data="line6.data" data-options="line6.options" style="width: 100%; height: 155px;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4" data-ng-controller="flotChartCtrl">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h4 class="nm pb-10">Sales <strong>Statistics</strong></h4>
+          <div data-flot-chart-realtime data-type="realtime" style="width: 100%; height: 155px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12" data-ng-controller="TabsDemoCtrl">
+      <div class="panel panel-default">
+        <h4 class="nm pad-15">Order <strong>List</strong></h4>
+        <div class="panel-body">
+          <tabset> <tab heading="Total Selling">
+          <div class="unseen">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Project</th>
+                  <th> Project Deadline </th>
+                  <th>Status</th>
+                  <th>Client</th>
+                  <th>Progress</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>IT Help Desk</td>
+                  <td>11 Feb 2015</td>
+                  <td><span class="label label-danger">Critical</span></td>
+                  <td>Amery Lee</td>
+                  <td><progressbar class="progressbar-xs no-margin" value="55"></progressbar></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Product Dev</td>
+                  <td>12 june 2015</td>
+                  <td><span class="label label-warning">High</span></td>
+                  <td>Romayne Carlyn</td>
+                  <td><progressbar class="progressbar-xs no-margin" value="34" type="success"></progressbar></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td> Website Redesign</td>
+                  <td>11 november 2015</td>
+                  <td><span class="label label-success">Normal</span></td>
+                  <td>Marybeth Joanna</td>
+                  <td><progressbar class="progressbar-xs no-margin" value="68" type="info"></progressbar></td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td> Local Ad </td>
+                  <td>15 april 2015</td>
+                  <td><span class="label label-success">Normal</span></td>
+                  <td>Jonah Benny</td>
+                  <td><progressbar class="progressbar-xs no-margin" value="52" type="warning"></progressbar></td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Design new theme</td>
+                  <td>2 May 2015</td>
+                  <td><span class="label label-warning">High</span></td>
+                  <td>Daly Royle</td>
+                  <td><progressbar class="progressbar-xs no-margin" value="77" type="danger"></progressbar></td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Mockup Testing</td>
+                  <td>6 June 2015</td>
+                  <td><span class="label label-info">On Hold</span></td>
+                  <td>Jane Swift</td>
+                  <td><progressbar class="progressbar-xs no-margin" value="55" type="success"></progressbar></td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+            </tab> <tab heading="Most Viewed" ng-controller="inlineeditCtrl">
+          <div class="unseen">
+            <table ng-table="tableParams" class="table">
+              <tbody ng-repeat="p in $data">
+                <tr id="tr{{p.id}}" ng-class-odd="'odd'" ng-class-even="'even'">
+                  <td data-title="'ID'" sortable="'id'"><span ng-if="!p.$edit">{{p.id}}</span>
+                    <div ng-if="p.$edit">
+                      <input class="form-control" type="text" ng-model="p.id" />
+                    </div></td>
+                  <td data-title="'Customer'" sortable="'fn'"><span ng-if="!p.$edit">{{p.fn}}</span>
+                    <div ng-if="p.$edit">
+                      <input class="form-control" type="text" ng-model="p.fn" />
+                    </div></td>
+                  <td data-title="'Purchased On'" sortable="'dc'"><span ng-if="!p.$edit">{{p.dc}}</span>
+                    <div ng-if="p.$edit">
+                      <input class="form-control" type="text" ng-model="p.dc" />
+                    </div></td>
+                  <td data-title="'Purchased Price'" sortable="'ph'"><span ng-if="!p.$edit">{{p.ph}}</span>
+                    <div ng-if="p.$edit">
+                      <input class="form-control" type="text" ng-model="p.ph" />
+                    </div></td>
+                  <td data-title="'Status'" sortable="'ac'"><span ng-if="!p.$edit">{{p.ac}}</span>
+                    <div ng-if="p.$edit">
+                      <input class="form-control" type="text" ng-model="p.ac" />
+                    </div></td>
+                  <td data-title="'Actions'"><a ng-if="!p.$edit" href="" class="btn btn-warning btn-sm" ng-click="p.$edit = true">Edit</a> <a ng-if="p.$edit" href="" class="btn btn-danger btn-sm" ng-click="p.$edit = false">Save</a></td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+            </tab> <tab heading="Recent Orders">
+          <div class="unseen">
+            <table class="table table-condensed">
+              <thead>
+                <tr>
+                  <th>Customer</th>
+                  <th>Date</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th>Report</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> David Wilson </td>
+                  <td>3 Jan, 2013</td>
+                  <td>$625.50</td>
+                  <td><span class="label label-sm label-success"> Dispatch </span></td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen18" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button"> Download <span class="caret"></span> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td> Amanda Nilson </td>
+                  <td>13 Feb, 2013</td>
+                  <td>$12625.50</td>
+                  <td><span class="label label-sm label-danger"> On Hold </span></td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen19" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button"> Download <span class="caret"></span> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td>Jhon Doe</td>
+                  <td>20 Mar, 2013</td>
+                  <td>$125.00</td>
+                  <td><span class="label label-sm label-info"> Pending </span></td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen20" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button"> Download <span class="caret"></span> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td>Bill Chang</td>
+                  <td>29 May, 2013</td>
+                  <td>$12,125.70</td>
+                  <td><span class="label label-sm label-success"> Dispatch </span></td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen21" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button"> Download <span class="caret"></span> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td>Paul Strong</td>
+                  <td>1 Jun, 2013</td>
+                  <td>$890.85</td>
+                  <td><span class="label label-sm label-warning"> On Process </span></td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen22" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button"> Download <span class="caret"></span> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td> Jane Hilson </td>
+                  <td>5 Aug, 2013</td>
+                  <td>$239.85</td>
+                  <td><span class="label label-sm label-info"> Pending </span></td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen23" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button"> Download <span class="caret"></span> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+            </tab> </tabset>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,334 @@
+<!-- Site Setting Panel -->
+  <section id="settings" data-ng-include=" 'views/settings/settings.html' " style="display:none"></section>
+<!-- Site Setting Panel End -->
+
+<!-- Page Header Start -->
+<div class="pageheader">
+  <h2><i class="fa fa-shopping-cart"></i> Order View </h2>
+  <div class="breadcrumb-wrapper hidden-xs"> <span class="label">You are here:</span>
+    <ol class="breadcrumb">
+      <li> <a href="#"> Home </a> </li>
+      <li class="active"> Order View </li>
+    </ol>
+  </div>
+</div>
+<!-- Page Header End -->
+
+<div class="page">
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title"> <i class="fa fa-shopping-cart"></i> ORDER #12313232 </h3> 
+    </div>
+    <div class="panel-body">
+      <div data-ng-controller="TabsDemoCtrl">
+        <tabset> 
+         <tab heading="Detail">
+
+            <div class="col-md-6">
+              <div class="panel panel-default">
+                <h4 class="pad-10"> 
+                  <i class="fa fa-user"></i> Customer <strong>Information</strong>
+                </h4>
+                <div class="panel-body">
+                  <table class="table table-bordered">
+                    <tbody>
+                      <tr>
+                        <td>Customer Name:</td>
+                        <td>Jonathan Smith</td>
+                      </tr>
+                      <tr>
+                        <td>Email:</td>
+                        <td>smith.jonathan@gmail.com</td>
+                      </tr>
+                      <tr>
+                        <td>State:</td>
+                        <td>New York</td>
+                      </tr>
+                      <tr>
+                        <td>Phone Number:</td>
+                        <td>(954) 555-1234</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="panel panel-default">
+                <h4 class="pad-10"> 
+                  <i class="fa fa-shopping-cart"></i> Order <strong>Detail</strong>
+                </h4>
+                <div class="panel-body">
+                  <table class="table table-bordered">
+                    <tbody>
+                      <tr>
+                        <td>Order #:</td>
+                        <td>12313232 </td>
+                      </tr>
+                      <tr>
+                        <td>Order Date & Time:</td>
+                        <td>Dec 27, 2013 7:16:25 PM</td>
+                      </tr>
+                      <tr>
+                        <td>Order Status:</td>
+                        <td><span class="label label-danger label-sm"> Closed </span></td>
+                      </tr>
+                      <tr>
+                        <td>Grand Total:</td>
+                        <td>$175.25</td>
+                      </tr>
+                      <tr>
+                        <td>Payment Information:</td>
+                        <td>Credit Card</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="col-md-6">
+              <div class="panel panel-default">
+                <h4 class="nm pad-10"> 
+                  <i class="fa fa-shopping-cart"></i> Billing <strong>Address</strong>
+                </h4>
+                <div class="panel-body">
+                  <address>
+                  <strong>Jonathan Smith</strong><br />
+                  795 Folsom Ave, Suite 600<br />
+                  San Francisco, CA 94107<br />
+                  <abbr title="Phone">P:</abbr> (123) 456-7890
+                  </address>
+                  <address>
+                  <strong>Full Name</strong><br />
+                  <a href="mailto:#"> first.last@example.com </a>
+                  </address>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="panel panel-default">
+                <h4 class="nm pad-10"> 
+                  <i class="fa fa-user"></i> Shipping <strong>Address</strong>
+                </h4>
+                <div class="panel-body">
+                  <address>
+                  <strong>Jonathan Smith</strong><br />
+                  795 Folsom Ave, Suite 600<br />
+                  San Francisco, CA 94107<br />
+                  <abbr title="Phone">P:</abbr> (123) 456-7890
+                  </address>
+                  <address>
+                  <strong>Full Name</strong><br />
+                  <a href="mailto:#"> first.last@example.com </a>
+                  </address>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-12">
+              <div class="panel panel-default">
+                <h4 class="nm pad-10"> 
+                 <i class="fa fa-shopping-cart"></i> Shopping <strong>Cart</strong>
+                </h4>
+                <div class="panel-body">
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <td><strong>Item</strong></td>
+                          <td class="text-center"><strong>Price</strong></td>
+                          <td class="text-center"><strong>Quantity</strong></td>
+                          <td class="text-right"><strong>Totals</strong></td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>BS-200</td>
+                          <td class="text-center">$10.99</td>
+                          <td class="text-center">1</td>
+                          <td class="text-right">$10.99</td>
+                        </tr>
+                        <tr>
+                          <td>BS-400</td>
+                          <td class="text-center">$20.00</td>
+                          <td class="text-center">3</td>
+                          <td class="text-right">$60.00</td>
+                        </tr>
+                        <tr>
+                          <td>BS-1000</td>
+                          <td class="text-center">$600.00</td>
+                          <td class="text-center">1</td>
+                          <td class="text-right">$600.00</td>
+                        </tr>
+                        <tr>
+                          <td class="thick-line"></td>
+                          <td class="thick-line"></td>
+                          <td class="thick-line text-center"><strong>Subtotal</strong></td>
+                          <td class="thick-line text-right">$670.99</td>
+                        </tr>
+                        <tr>
+                          <td class="no-line"></td>
+                          <td class="no-line"></td>
+                          <td class="no-line text-center"><strong>Shipping</strong></td>
+                          <td class="no-line text-right">$15</td>
+                        </tr>
+                        <tr>
+                          <td class="no-line"></td>
+                          <td class="no-line"></td>
+                          <td class="no-line text-center"><strong>Total</strong></td>
+                          <td class="no-line text-right">$685.99</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </tab> 
+          
+        <tab heading="Invoice">
+          <div ng-controller="ngTableCtrl">
+            <div class="panel-body">
+              <div class="invoice-wrapper">
+                <div class="invoice-container" id="invoice">
+                  <div class="invoice-inner">
+                    <div class="row">
+                      <div class="col-xs-6">
+                        <h3>Invoice</h3>
+                      </div>
+                      <div class="col-xs-6 text-right">
+                        <h3>Order # 12313232 </h3>
+                      </div>
+                    </div>
+                    <hr/>
+                    <div class="row">
+                      <div class="col-xs-6">
+                        <address>
+                        <strong>Billed To:</strong><br />
+                        John Smith<br />
+                        1234 Main<br />
+                        Apt. 4B<br />
+                        Springfield, ST 54321
+                        </address>
+                      </div>
+                      <div class="col-xs-6 text-right">
+                        <address>
+                        <strong>Shipped To:</strong><br />
+                        Jane Smith<br />
+                        1234 Main<br />
+                        Apt. 4B<br />
+                        Springfield, ST 54321
+                        </address>
+                      </div>
+                    </div>
+                    <div class="row pb-15">
+                      <div class="col-xs-6"> <strong>Payment Method:</strong><br />
+                        Visa ending **** 4242<br />
+                        jsmith@email.com </div>
+                      <div class="col-xs-6 text-right"> <strong>Order Date:</strong><br />
+                        March 7, 2014<br />
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h3 class="panel-title"><strong>Order summary</strong></h3>
+                          </div>
+                          <div class="panel-body">
+                            <div class="table-responsive">
+                              <table class="table">
+                                <thead>
+                                  <tr>
+                                    <td><strong>Item</strong></td>
+                                    <td class="text-center"><strong>Price</strong></td>
+                                    <td class="text-center"><strong>Quantity</strong></td>
+                                    <td class="text-right"><strong>Totals</strong></td>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <!-- foreach ($order->
+                              </tbody>
+                              lineItems as $line) or some such thing here -->
+                                  <tr>
+                                    <td>BS-200</td>
+                                    <td class="text-center">$10.99</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-right">$10.99</td>
+                                  </tr>
+                                  <tr>
+                                    <td>BS-400</td>
+                                    <td class="text-center">$20.00</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-right">$60.00</td>
+                                  </tr>
+                                  <tr>
+                                    <td>BS-1000</td>
+                                    <td class="text-center">$600.00</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-right">$600.00</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="thick-line"></td>
+                                    <td class="thick-line"></td>
+                                    <td class="thick-line text-center"><strong>Subtotal</strong></td>
+                                    <td class="thick-line text-right">$670.99</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="no-line"></td>
+                                    <td class="no-line"></td>
+                                    <td class="no-line text-center"><strong>Shipping</strong></td>
+                                    <td class="no-line text-right">$15</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="no-line"></td>
+                                    <td class="no-line"></td>
+                                    <td class="no-line text-center"><strong>Total</strong></td>
+                                    <td class="no-line text-right">$685.99</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </tab> 
+          
+        <tab heading="Credit Memos">
+          <div class="col-lg-12 np" ng-controller="inlineeditCtrl">
+            <div class="panel panel-default np">
+              <div class="panel-body">
+              <div class="unseen">
+                <table ng-table="tableParams" class="table">
+                  <tbody ng-repeat="p in $data">
+                    <tr id="tr{{p.id}}" ng-class-odd="'odd'" ng-class-even="'even'">
+                      <td data-title="'Credit Memo #'" sortable="'id'" width="150">{{p.id}}</td>
+                      <td data-title="'Bill To'" sortable="'fn'" width="150">{{p.fn}}</td>
+                      <td data-title="'Created Date'" sortable="'dc'" width="150">{{p.dc}}</td>
+                      <td data-title="'Status'" sortable="'ac'" width="150">{{p.ac}}</td>
+                      <td data-title="'Actions'" width="150"><button class="btn btn-danger btn-sm" type="button"><i class="fa fa-print"></i> Print</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </tab> 
+      
+      </tabset>
+      </div>
+    </div>
+  </div>
+</div>

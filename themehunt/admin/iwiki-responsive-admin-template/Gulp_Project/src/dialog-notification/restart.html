@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>MVGroup - Dialogs Restart</title>
+
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/dialogs/dialog-sally.css">
+
+  <link rel="stylesheet" href="../css/animate.min.css">
+  <link rel="stylesheet" href="../css/vendors/sweetalert.css">
+  <link rel="stylesheet" href="../css/vendors/loading.css">
+  <link rel="stylesheet" href="../css/vendors/chat.css">
+
+  <script src="../js/modernizr.js"></script>
+</head>
+
+<body>
+  <div class="preloader">
+    <div class="preloader-anim la-animate"></div>
+    <div class="loading-anim">Loading</div>
+  </div>
+  <div id="wrap-content" class="wrap-content">
+   @@include('./src/include/dialogs_top_menu.html',{
+      "name": "Dialogs Restart"
+    })
+    <div class="content container-fluid">
+
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="decor-default p-full-md text-center">
+            <div class="button-wrap">
+              <button type="button" data-dialog="somedialog" class="trigger btn btn-danger">Launch</button>
+            </div>
+
+            <div class="menu-dialog">
+              <a href="../dialog-notification.html">New Email</a>
+              <a href="../dialog-notification/timeout.html">Timeout</a>
+              <a href="../dialog-notification/overload.html">Overload</a>
+              <a href="../dialog-notification/error.html">Error</a>
+              <a href="../dialog-notification/restart.html">Restart</a>
+              <a href="../dialog-notification/space.html">Space</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    @@include('./src/include/footer-container.html')
+  </div>
+
+  @@include('./src/include/dialogs_menu.html')
+
+  <div id="somedialog" class="dialog">
+    <div class="dialog__overlay"></div>
+    <div class="dialog__content decor-danger color-default">
+      <h2 class="p-0"><i class="fa fa-refresh m-r-10"></i>The server will restart in:</h2>
+      <div id="countdown"></div>
+      <button class="action btn btn-lg btn-round btn-primary m-t-20" data-dialog-close>Restart now</button>
+    </div>
+  </div>
+
+  <script src="../js/jquery.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/classie.js"></script>
+  <script src="../js/moment.min.js"></script>
+  <script src="../js/jquery.nicescroll.min.js"></script>
+  <script src="../js/dialogFx.js"></script>
+  <script src="../js/ui.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/jquery.plugin.min.js"></script>
+  <script src="../js/jquery.countdown.min.js"></script>
+   <script>
+    (function () {
+
+      var dlgTrigger = document.querySelectorAll('[data-dialog]');
+      var someDialog, dlg;
+      for (i = 0; i < dlgTrigger.length; i++)
+      {
+      someDialog = document.getElementById( dlgTrigger[i].getAttribute( 'data-dialog' ) );
+      dlg	= new DialogFx(someDialog);
+      dlgTrigger[i].addEventListener( 'click', dlg.toggle.bind(dlg) );
+      }
+
+    })();
+
+
+
+    $("#countdown").countdown({
+      format: 'MS',
+      padZeroes: true,
+      until: "+0m +15s",
+      onExpiry: function(){
+        $("[data-dialog-close]").trigger("click");
+      }
+    });
+  </script>
+</body>
+
+</html>

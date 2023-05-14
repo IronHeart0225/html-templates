@@ -1,0 +1,188 @@
+@import '../own/variables';
+@import '../own/mixin';
+@import "compass/css3";
+
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cd-timeline {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  @include clearfix;
+
+  @include media('lg') {
+    width: 100%;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin: -20px 0 0 -35px;
+    height: 100%;
+    width: 70px;
+    background: $brand-default;
+    border-left: 35px solid $brand-primary;
+    border-right: 34px solid $brand-primary;
+    border-radius: 0 0 34px 35px;
+
+    @include media('md') {
+      left: 0;
+      margin-left: 0;
+    }
+  }
+
+  &-img {
+
+    &:before {
+      content: '';
+      z-index: 2;
+      position: absolute;
+      top: $grid-padding*2;
+      left: 50%;
+      width: 51px;
+      height: 51px;
+      margin: -10px 0 0 -25px;
+      border-radius: 50%;
+
+      @include media('md') {
+        left: 0;
+        margin-left: 8px;
+      }
+    }
+
+    &.img-default:before {
+      background: $brand-default;
+    }
+
+    &.img-warning:before {
+      background: $brand-warning;
+    }
+
+    &.img-success:before {
+      background: $brand-success;
+    }
+
+    &.img-info:before {
+      background: $brand-info;
+    }
+  }
+
+  &-block {
+    position: relative;
+    margin: 0 0 $grid-padding;
+    padding: $grid-padding*2 0 0;
+    overflow: hidden;
+    @include clearfix;
+    @include t(transform);
+    @include transition(all, .5s);
+    @include media('md') {
+      padding-left: 80px;
+    }
+
+    .cd-timeline-date , .cd-timeline-content {
+      width: 45%;
+
+
+      @include media('md') {
+        width: 100%;
+        float: none !important;
+        text-align: left !important;
+      }
+    }
+
+    &:nth-child(odd) {
+
+      .cd-timeline-date {
+        float: left;
+        text-align: right;
+      }
+
+      .cd-timeline-content {
+        float: right;
+      }
+
+      &.is-hidden {
+        @include transform(translateY(-20%));
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      &.bounce-in {
+        @include transform(translateY(0));
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    &:nth-child(even) {
+
+      .cd-timeline-date {
+        float: right;
+      }
+
+      .cd-timeline-content {
+        float: left;
+        text-align: right;
+      }
+
+      &.is-hidden {
+        @include transform(translateY(-20%));
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      &.bounce-in {
+        @include transform(translateY(0));
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    .cd-timeline-date {
+
+      .date {
+        display: inline-block;
+        padding: 0 0 0 30px;
+        background: url('../../img/icon-37.png') no-repeat 0 50%;
+         margin-top: 5px;
+      }
+    }
+
+    h2 {
+      color: $text-dark;
+      font-size: 20px;
+      line-height: 36px;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .scope {
+      font-size: 16px;
+      line-height: 24px;
+      display: inline-block;
+      padding: 0 8px 0 30px;
+
+      &.likes {
+        background: url('../../img/icon-38.png') no-repeat 0 50%;
+        cursor: pointer;
+        &.active{
+          background: url('../../img/icon-38-active.png') no-repeat 0 50%;
+        }
+      }
+
+      &.comments {
+        background: url('../../img/icon-39.png') no-repeat 0 50%;
+        cursor: pointer;
+      }
+    }
+  }
+}

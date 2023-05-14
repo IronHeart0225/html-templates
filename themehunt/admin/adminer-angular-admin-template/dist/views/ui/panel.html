@@ -1,0 +1,406 @@
+<!-- Site Setting Panel -->
+<section id="settings" data-ng-include=" 'views/settings/settings.html' " style="display:none"></section>
+<!-- Site Setting Panel End -->
+
+<div class="pageheader">
+  <h2><i class="fa fa-home"></i> Dashboard </h2>
+  <div class="breadcrumb-wrapper hidden-xs"> <span class="label">You are here:</span>
+    <ol class="breadcrumb">
+      <li> <a href="index.html"> Home </a> </li>
+      <li class="active"> Dashboard </li>
+    </ol>
+  </div>
+</div>
+<div class="page">
+
+<!-- Simple Panel -->
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading"> 
+        <h3 class="panel-title"> Basic Panel </h3>
+      </div>
+      <div class="panel-body"> Panel Content </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading"> 
+        <h3 class="panel-title"> Basic Panel </h3>
+      </div>
+      <div class="panel-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, quidem, officiis, et ex laudantium sed cupiditate voluptatum libero nobis sit illum voluptates beatae ab. Ad, repellendus non sequi et at. </div>
+      <div class="panel-footer"> Panel footer </div>
+    </div>
+  </div>
+</div>
+<!-- Simple Panel End --> 
+
+<!-- Simple Panel With Tab -->
+<div class="row">
+  <div class="col-md-6"> 
+    <!-- Bootstrap Simple Tab -->
+    <div class="panel panel-default" data-ng-controller="TabsDemoCtrl">
+      <tabset> <tab heading="Panel Tab">
+        <div class="pad-10"> Tab 1 content here. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, quidem, officiis, et ex laudantium sed cupiditate voluptatum libero nobis sit illum voluptates beatae ab. Ad, repellendus non sequi et at. </div>
+        </tab> <tab heading="Panel Tab">
+        <div class="pad-10"> Tab 2 content here. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, quidem, officiis, et ex laudantium sed cupiditate voluptatum libero nobis sit illum voluptates beatae ab. Ad, repellendus non sequi et at. </div>
+        </tab> <tab heading="Panel Tab">
+        <div class="pad-10"> Tab 3 content here. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, quidem, officiis, et ex laudantium sed cupiditate voluptatum libero nobis sit illum voluptates beatae ab. Ad, repellendus non sequi et at. </div>
+        </tab> </tabset>
+    </div>
+    <!-- end Bootstrap Simple Tab --> 
+  </div>
+  <div class="col-md-6"> 
+    <!-- Bootstrap Simple Tab -->
+    <div class="panel panel-default" data-ng-controller="TabsDemoCtrl">
+      <tabset> <tab heading="Panel Tab" class="pull-right">
+        <div class="pad-10"> Tab 1 content here. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, quidem, officiis, et ex laudantium sed cupiditate voluptatum libero nobis sit illum voluptates beatae ab. Ad, repellendus non sequi et at. </div>
+        </tab> <tab heading="Panel Tab" class="pull-right">
+        <div class="pad-10"> Tab 2 content here. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, quidem, officiis, et ex laudantium sed cupiditate voluptatum libero nobis sit illum voluptates beatae ab. Ad, repellendus non sequi et at. </div>
+        </tab> <tab heading="Panel Tab" class="pull-right">
+        <div class="pad-10"> Tab 3 content here. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, quidem, officiis, et ex laudantium sed cupiditate voluptatum libero nobis sit illum voluptates beatae ab. Ad, repellendus non sequi et at. </div>
+        </tab> </tabset>
+    </div>
+    <!-- end Bootstrap Simple Tab --> 
+  </div>
+</div>
+<!-- Simple Panel With Tab End-->
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading"> 
+        <h3 class="panel-title"> icon Dropdown </h3>
+        <span class="pull-right panel-toolbar">
+        <div class="btn-group" dropdown is-open="status.isopen">
+          <button class="btn btn-danger btn-xs dropdown-toggle" type="button" dropdown-toggle> <i class="fa fa-cog"></i> </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="javascript:;">Action</a></li>
+            <li><a href="javascript:;">Another action</a></li>
+            <li><a href="javascript:;">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="javascript:;">Separated link</a></li>
+          </ul>
+        </div>
+        </span> 
+       </div>
+      <div class="panel-body"> contents goes here </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading"> 
+        <h3 class="panel-title"> All Option </h3> 
+        <span class="pull-right panel-toolbar"> 
+          <i class="fa fa-chevron-down mr-10" data-panel-Toggle=""></i> 
+          <i class="fa fa-expand mr-10" data-fullscreen-widget=""></i> 
+          <i class="fa fa-times" data-widget-close=""></i> 
+        </span> 
+      </div>
+      <div class="panel-body"> contents goes here </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+       <h3 class="panel-title"> Switch </h3>
+        <span class="pull-right panel-toolbar">
+          <label class="switch switch-danger">
+            <input type="checkbox" ng-model="oneAtATime">
+            <i></i>
+          </label>
+        </span> 
+       </div>
+      <div class="panel-body"> contents goes here </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading"> 
+       <h3 class="panel-title"> Button </h3>
+        <span class="pull-right panel-toolbar">
+          <button class="btn btn-info btn-sm" type="button">info</button>
+          <button class="btn btn-danger btn-sm" type="button">Danger</button>
+        </span> 
+      </div>
+      <div class="panel-body"> contents goes here </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"> Split Button Dropdown </h3>
+        <span class="pull-right panel-toolbar">
+        <div class="btn-group" dropdown is-open="status.isopen18">
+          <button class="btn btn-danger btn-sm" type="button">Action</button>
+          <button class="btn btn-danger btn-sm dropdown-toggle" type="button" dropdown-toggle> <span class="caret"></span> </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="javascript:;">Action</a></li>
+            <li><a href="javascript:;">Another action</a></li>
+            <li><a href="javascript:;">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="javascript:;">Separated link</a></li>
+          </ul>
+        </div>
+        </span> </div>
+      <div class="panel-body"> contents goes here </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"> Button Group </h3>
+        <span class="pull-right panel-toolbar">
+        <div class="btn-group">
+          <button class="btn btn-default btn-sm" type="button">Left</button>
+          <button class="btn btn-default btn-sm" type="button">Middle</button>
+          <button class="btn btn-default btn-sm" type="button">Right</button>
+        </div>
+        </span> </div>
+      <div class="panel-body"> contents goes here </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"> Initial Collaps bar </h3>
+        <span class="pull-right panel-toolbar"> <i class="fa fa-chevron-down mr-10" data-panel-Toggle=""></i> </span> </div>
+      <div class="panel-body" collapse="isCollapsed"> contents goes here </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"> Panel with Scroll </h3>
+      </div>
+      <div class="panel-body">
+        <div class="overflow" data-slim-scroll data-scroll-height="130px">
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, quidem, officiis, et ex laudantium sed cupiditate voluptatum libero nobis sit illum voluptates beatae ab. Ad, repellendus non sequi et at. </p>
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, quidem, officiis, et ex laudantium sed cupiditate voluptatum libero nobis sit illum voluptates beatae ab. Ad, repellendus non sequi et at. </p>
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, quidem, officiis, et ex laudantium sed cupiditate voluptatum libero nobis sit illum voluptates beatae ab. Ad, repellendus non sequi et at. </p>
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, quidem, officiis, et ex laudantium sed cupiditate voluptatum libero nobis sit illum voluptates beatae ab. Ad, repellendus non sequi et at. </p>
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, quidem, officiis, et ex laudantium sed cupiditate voluptatum libero nobis sit illum voluptates beatae ab. Ad, repellendus non sequi et at. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <h4 class="page-header"> Panel Default </h4>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel Default</h3>
+      </div>
+      <div class="panel-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et eros nec ante venenatis pharetra. Nunc fermentum vel orci ac tempor. Vestibulum blandit dignissim ex, et posuere elit placerat id. Curabitur egestas tristique nulla. Proin maximus ante ut auctor hendrerit.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="panel panel-primary panel-color">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel Primary</h3>
+      </div>
+      <div class="panel-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et eros nec ante venenatis pharetra. Nunc fermentum vel orci ac tempor. Vestibulum blandit dignissim ex, et posuere elit placerat id. Curabitur egestas tristique nulla. Proin maximus ante ut auctor hendrerit.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="panel panel-success panel-color">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel Success</h3>
+      </div>
+      <div class="panel-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et eros nec ante venenatis pharetra. Nunc fermentum vel orci ac tempor. Vestibulum blandit dignissim ex, et posuere elit placerat id. Curabitur egestas tristique nulla. Proin maximus ante ut auctor hendrerit.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end row -->
+
+<div class="row">
+  <div class="col-lg-4">
+    <div class="panel panel-info panel-color">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel Info</h3>
+      </div>
+      <div class="panel-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et eros nec ante venenatis pharetra. Nunc fermentum vel orci ac tempor. Vestibulum blandit dignissim ex, et posuere elit placerat id. Curabitur egestas tristique nulla. Proin maximus ante ut auctor hendrerit.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="panel panel-warning panel-color">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel Warning</h3>
+      </div>
+      <div class="panel-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et eros nec ante venenatis pharetra. Nunc fermentum vel orci ac tempor. Vestibulum blandit dignissim ex, et posuere elit placerat id. Curabitur egestas tristique nulla. Proin maximus ante ut auctor hendrerit.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="panel panel-danger panel-color">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel Danger</h3>
+      </div>
+      <div class="panel-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et eros nec ante venenatis pharetra. Nunc fermentum vel orci ac tempor. Vestibulum blandit dignissim ex, et posuere elit placerat id. Curabitur egestas tristique nulla. Proin maximus ante ut auctor hendrerit.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end row -->
+
+<div class="row">
+  <div class="col-lg-4">
+    <div class="panel panel-purple panel-color">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel Purple</h3>
+      </div>
+      <div class="panel-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et eros nec ante venenatis pharetra. Nunc fermentum vel orci ac tempor. Vestibulum blandit dignissim ex, et posuere elit placerat id. Curabitur egestas tristique nulla. Proin maximus ante ut auctor hendrerit.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="panel panel-pink panel-color">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel Pink</h3>
+      </div>
+      <div class="panel-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et eros nec ante venenatis pharetra. Nunc fermentum vel orci ac tempor. Vestibulum blandit dignissim ex, et posuere elit placerat id. Curabitur egestas tristique nulla. Proin maximus ante ut auctor hendrerit.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="panel panel-inverse panel-color">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel Inverse</h3>
+      </div>
+      <div class="panel-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et eros nec ante venenatis pharetra. Nunc fermentum vel orci ac tempor. Vestibulum blandit dignissim ex, et posuere elit placerat id. Curabitur egestas tristique nulla. Proin maximus ante ut auctor hendrerit.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end row -->
+
+<div class="row">
+  <div class="col-sm-12">
+    <h4 class="page-header">Panel Border</h4>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-4">
+    <div class="panel panel-default panel-border">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel Default</h3>
+      </div>
+      <div class="panel-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et eros nec ante venenatis pharetra. Nunc fermentum vel orci ac tempor. Vestibulum blandit dignissim ex, et posuere elit placerat id. Curabitur egestas tristique nulla. Proin maximus ante ut auctor hendrerit.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="panel panel-border panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel Primary</h3>
+      </div>
+      <div class="panel-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et eros nec ante venenatis pharetra. Nunc fermentum vel orci ac tempor. Vestibulum blandit dignissim ex, et posuere elit placerat id. Curabitur egestas tristique nulla. Proin maximus ante ut auctor hendrerit.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="panel panel-border panel-success">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel Success</h3>
+      </div>
+      <div class="panel-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et eros nec ante venenatis pharetra. Nunc fermentum vel orci ac tempor. Vestibulum blandit dignissim ex, et posuere elit placerat id. Curabitur egestas tristique nulla. Proin maximus ante ut auctor hendrerit.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end row -->
+
+<div class="row">
+  <div class="col-lg-4">
+    <div class="panel panel-border panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel Info</h3>
+      </div>
+      <div class="panel-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et eros nec ante venenatis pharetra. Nunc fermentum vel orci ac tempor. Vestibulum blandit dignissim ex, et posuere elit placerat id. Curabitur egestas tristique nulla. Proin maximus ante ut auctor hendrerit.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="panel panel-border panel-warning">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel Warning</h3>
+      </div>
+      <div class="panel-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et eros nec ante venenatis pharetra. Nunc fermentum vel orci ac tempor. Vestibulum blandit dignissim ex, et posuere elit placerat id. Curabitur egestas tristique nulla. Proin maximus ante ut auctor hendrerit.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="panel panel-border panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel Danger</h3>
+      </div>
+      <div class="panel-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et eros nec ante venenatis pharetra. Nunc fermentum vel orci ac tempor. Vestibulum blandit dignissim ex, et posuere elit placerat id. Curabitur egestas tristique nulla. Proin maximus ante ut auctor hendrerit.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end row -->
+
+<div class="row">
+  <div class="col-lg-4">
+    <div class="panel panel-border panel-purple">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel Purple</h3>
+      </div>
+      <div class="panel-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et eros nec ante venenatis pharetra. Nunc fermentum vel orci ac tempor. Vestibulum blandit dignissim ex, et posuere elit placerat id. Curabitur egestas tristique nulla. Proin maximus ante ut auctor hendrerit.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="panel panel-border panel-pink">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel Pink</h3>
+      </div>
+      <div class="panel-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et eros nec ante venenatis pharetra. Nunc fermentum vel orci ac tempor. Vestibulum blandit dignissim ex, et posuere elit placerat id. Curabitur egestas tristique nulla. Proin maximus ante ut auctor hendrerit.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="panel panel-border panel-inverse">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel Inverse</h3>
+      </div>
+      <div class="panel-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et eros nec ante venenatis pharetra. Nunc fermentum vel orci ac tempor. Vestibulum blandit dignissim ex, et posuere elit placerat id. Curabitur egestas tristique nulla. Proin maximus ante ut auctor hendrerit.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end row --> 

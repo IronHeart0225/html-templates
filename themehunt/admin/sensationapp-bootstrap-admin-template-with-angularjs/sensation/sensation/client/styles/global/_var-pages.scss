@@ -1,0 +1,26 @@
+/*==================================
+  :: Layout
+  ==================================*/
+
+$boxed_layout_width:    1200px;
+
+/*==================================
+  :: Top Header
+  ==================================*/
+
+$header_height:             60px;
+$header_container_bg:       $brand-primary;
+
+$main_container_bg:         #eeeeee;
+
+// Sidebar default is vertical
+$sidebar_bg:                #2f343b;
+$sub_nav_bg:                #1b1a1f;
+$link_color:                $text-color;
+$link_active_bg:            $sub_nav_bg;
+
+$horizontal_sidebar_bg:                #30363e;
+$horizontal_sub_nav_bg:                #1b1a1f;
+$horizontal_link_color:                $text-color;
+$horizontal_link_active_bg:            #000000;
+$horizontal_link_active_color:         $brand-primary;

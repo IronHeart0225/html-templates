@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Documentation</title>
+
+    <link href="css/monokai.css" rel="stylesheet">
+    <link href="css/themify-icons.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.min.css" rel="stylesheet" />
+    <link href="css/lobipanel.min.css" rel="stylesheet" />
+    <link href="css/sidebar.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/doc-style.css" rel="stylesheet">
+    <link href="css/Unix.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+    <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures">
+        <div class="nano">
+            <div class="nano-content">
+                <ul>
+                    <li><a href="chart.html"> Chart Js </a></li>
+                    <li><a href="datamap.html"> Data Map </a></li>
+                    <li><a href="data-table.html"> Data Table </a></li>
+                    <li><a href="data-table.html"> Bootstrap Data Table</a></li>
+                    <li><a href="jsgrid.html"> JS Grid </a></li>
+                    <li><a href="todo.html"> Todo </a></li>
+                    <li><a href="panel.html"> Panel </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /sidebar Sidebar -->
+    <div class="header">
+        <div class="pull-left">
+            <div class="logo"><span> Documentation</span></div>
+            <div class="hamburger sidebar-toggle">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+        </div>
+
+        <div class="pull-right p-r-15">
+            <ul>
+                <li class="header-icon dib"><span class="user-avatar m-l-0">Buy</span></li>
+                <li class="header-icon dib"><span class="user-avatar m-l-0">Support <i class="ti-angle-down m-l-5 f-s-10"></i></span></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+    <div class="content-wrap">
+        <div class="main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-8 p-0">
+                        <div class="page-header">
+                            <div class="page-title">
+                                <h1>Panel</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <div class="row">
+
+<!--
+                        <div class="col-lg-12">
+                            <div class="panel lobipanel-basic panel-primary">
+                                <div class="panel-heading">
+                                    <div class="panel-title">Instruction</div>
+                                </div>
+                                <div class="panel-body">
+                                    Datatable Plugin <a class="plugin-link" href="https://datatables.net/examples/styling/bootstrap.html" target="_blank"> Click Here</a>
+
+                                </div>
+                            </div>
+                        </div>
+-->
+
+                        <div class="col-lg-12">
+                            <div class="panel lobipanel-basic panel-primary">
+                                <div class="panel-heading">
+                                    <div class="panel-title">HTML</div>
+                                </div>
+                                <div class="panel-body">
+<pre><code class="html">
+<div class="panel-body">
+	<div class="panel panel-success lobipanel-basic">
+		<div class="panel-heading">
+			<div class="panel-title">
+				<h4>Nested Panel title</h4>
+			</div>
+		</div>
+		<div class="panel-body">
+			Panel 1
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-6">
+			<div class="panel panel-warning lobipanel-basic">
+				<div class="panel-heading">
+					<div class="panel-title">
+						<h4>Panel title</h4>
+					</div>
+				</div>
+				<div class="panel-body">
+					Panel 2
+				</div>
+			</div>
+			<div class="panel panel-dark lobipanel-basic">
+				<div class="panel-heading">
+					<div class="panel-title">
+						<h4>Panel title</h4>
+					</div>
+				</div>
+				<div class="panel-body">
+					Panel 3
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="panel panel-pink lobipanel-basic">
+				<div class="panel-heading">
+					<div class="panel-title">
+						<h4>Panel title</h4>
+					</div>
+				</div>
+				<div class="panel-body">
+					Panel 4
+				</div>
+			</div>
+			<div class="panel panel-danger lobipanel-basic">
+				<div class="panel-heading">
+					<div class="panel-title">
+						<h4>Panel title</h4>
+					</div>
+				</div>
+				<div class="panel-body">
+					Panel 5
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+    <script src="assets/js/lobipanel.js"></script>
+</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="panel lobipanel-basic panel-primary">
+                                <div class="panel-heading">
+                                    <div class="panel-title">CSS</div>
+                                </div>
+                                <div class="panel-body">
+                                    <pre><code class="less">
+
+
+</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="panel lobipanel-basic panel-primary">
+                                <div class="panel-heading">
+                                    <div class="panel-title">Javascript</div>
+                                </div>
+                                <div class="panel-body">
+                                    <pre><code class="javascript">
+    /*  Data Table
+    -------------*/
+    /* 
+    ---------------
+    LobiPanel Function
+    ---------------*/
+    $(function () {
+        $('.lobipanel-basic').lobiPanel({
+            sortable: true,
+            reload: {
+                icon: 'ti-loop'
+            },
+            editTitle: {
+                icon: 'ti-pencil-alt',
+                icon2: 'ti-save'
+            },
+            unpin: {
+                icon: 'ti-pin-alt'
+            },
+            minimize: {
+                icon: 'ti-angle-up',
+                icon2: 'ti-angle-down'
+            },
+            close: {
+                icon: 'ti-close'
+            },
+            expand: {
+                icon: 'ti-fullscreen',
+                icon2: 'fa fa-compress'
+            }
+        });
+    });
+
+
+
+
+</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/lobipanel.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/jquery.nanoscroller.min.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src='js/underscore-min.js'></script>
+    <script src='js/highlight.min.js'></script>
+
+    <script src="js/scripts.js"></script>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+@@include('./src/include/head.html', {
+  "title": "Calendar"
+})
+
+
+<link rel="stylesheet" href="css/vendors/calendar.css">
+
+@@include('./src/include/head_end.html')
+
+<body>
+  <div id="wrap-content" class="wrap-content">
+
+    @@include('./src/include/top_menu.html',{
+      "name": "Calendar"
+    })
+
+    <div class="content container-fluid">
+      <div class="row row-broken">
+        <div class="col-md-12">
+          <ol class="breadcrumb">
+            <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+            <li>Sample pages</li>
+            <li class="active">Calendar</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div id='calendar'></div>
+    @@include('./src/include/footer-container.html')
+  </div>
+
+  @@include('./src/include/menu.html')
+
+  @@include('./src/include/footer.html')
+
+  <script src='js/moment.min.js'></script>
+  <script src='js/fullcalendar.min.js'></script>
+  <script>
+    $(document).ready(function () {
+      $('#calendar').fullCalendar({
+//        height: 450,
+        header: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'month,basicWeek,basicDay'
+        },
+        defaultDate: '2015-02-12',
+        editable: true,
+        eventLimit: true, // allow "more" link when too many events
+        events: [
+          {
+            title: 'All Day Event',
+            start: '2015-02-01'
+                    },
+          {
+            title: 'Long Event',
+            start: '2015-02-07',
+            end: '2015-02-10'
+                    },
+          {
+            id: 999,
+            title: 'Repeating Event',
+            start: '2015-02-09T16:00:00'
+                    },
+          {
+            id: 999,
+            title: 'Repeating Event',
+            start: '2015-02-16T16:00:00'
+                    },
+          {
+            title: 'Conference',
+            start: '2015-02-11',
+            end: '2015-02-13'
+                    },
+          {
+            title: 'Meeting',
+            start: '2015-02-12T10:30:00',
+            end: '2015-02-12T12:30:00'
+                    },
+          {
+            title: 'Lunch',
+            start: '2015-02-12T12:00:00'
+                    },
+          {
+            title: 'Meeting',
+            start: '2015-02-12T14:30:00'
+                    },
+          {
+            title: 'Happy Hour',
+            start: '2015-02-12T17:30:00'
+                    },
+          {
+            title: 'Dinner',
+            start: '2015-02-12T20:00:00'
+                    },
+          {
+            title: 'Birthday Party',
+            start: '2015-02-13T07:00:00'
+                    },
+          {
+            title: 'Click for Google',
+            url: 'http://google.com/',
+            start: '2015-02-28'
+                    }
+                ]
+      });
+
+      var currentMonth = $(".fc-center h2").text().replace(/[^a-zA-Z]+/g, '');
+      changeBg(currentMonth);
+
+      function changeBg(cM) {
+        var monthArray = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
+ 'August', 'September', 'October', 'November', 'December'];
+
+        if (cM == monthArray[0] || cM == monthArray[1] || cM == monthArray[11]) {
+          $(".fc-toolbar").removeClass("spring summer autumn").addClass("winter");
+        }
+        if (cM == monthArray[2] || cM == monthArray[3] || cM == monthArray[4]) {
+          $(".fc-toolbar").removeClass("winter summer autumn").addClass("spring");
+        }
+        if (cM == monthArray[5] || cM == monthArray[6] || cM == monthArray[7]) {
+          $(".fc-toolbar").removeClass("spring winter autumn").addClass("summer");
+        }
+        if (cM == monthArray[8] || cM == monthArray[9] || cM == monthArray[10]) {
+          $(".fc-toolbar").removeClass("spring summer winter").addClass("autumn");
+        }
+
+      }
+
+      $('.fc-next-button').click(function () {
+        var currentMonth = $(".fc-center h2").text().replace(/[^a-zA-Z]+/g, '');
+        changeBg(currentMonth);
+      });
+      $('.fc-prev-button').click(function () {
+        var currentMonth = $(".fc-center h2").text().replace(/[^a-zA-Z]+/g, '');
+        changeBg(currentMonth);
+      });
+      $('.fc-today-button').click(function () {
+        var currentMonth = $(".fc-center h2").text().replace(/[^a-zA-Z]+/g, '');
+        changeBg(currentMonth);
+      });
+
+
+
+    });
+  </script>
+  @@include('./src/include/footer_end.html')

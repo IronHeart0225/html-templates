@@ -1,0 +1,103 @@
+@@include('./src/include/head.html', {
+  "title": "Email-inbox"
+})
+
+@@include('./src/include/head_end.html')
+
+<body>
+  <div id="wrap-content" class="wrap-content">
+    @@include('./src/include/top_menu.html',{
+      "name": "Email-inbox"
+    })
+     <div class="content container-fluid">
+     <div class="row row-broken">
+        <div class="col-md-12">
+          <ol class="breadcrumb">
+            <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+            <li>E-mail</li>
+            <li class="active">Email-inbox</li>
+          </ol>
+        </div>
+      </div>
+      <div class="row decor-default p-email">
+        <div class="col-lg-3 col-md-4 col-sm-12 decor-primary b-profile">
+                    <img src="img/images/team/64.png" alt="image" class="b-profile-avatar" />
+                    <div class="b-profile-name">
+                        Alexander Van Gok
+                    </div>
+                    <div class="b-profile-profession">
+                        Web Designer
+                    </div>
+                    <ul class="b-profile-share">
+                        <li><a class="text-light" href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="text-light" href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a class="text-light" href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a class="text-light" href="#"><i class="fa fa-dribbble"></i></a></li>
+                    </ul>
+
+                    <ul class="b-profile-folders">
+                        <li><a href="email-list.html">Inbox <span class="badge badge-success pull-right">25</span></a></li>
+                        <li><a href="#">Important</a></li>
+                        <li><a href="#">Sent</a></li>
+                        <li><a href="#">Drafts</a></li>
+                        <li><a href="#">Spam <span class="badge badge-warning pull-right">75</span></a></li>
+                    </ul>
+                    <div class="b-profile-labels">
+                        <h6>Labels</h6>
+                        <span class="label label-success">New</span>
+                        <span class="label label-info">Social</span>
+                        <span class="label label-warning">Spam</span>
+                    </div>
+                    <a class="btn btn-lg btn-danger btn-block" href="email-send.html">Compose</a>
+            </div>
+        <div class="col-lg-9 col-md-8 col-sm-12 b-email">
+          <div class="b-email-title">
+            <h6>Reset your Apple ID password <span class="badge badge-primary">Trash</span> <span class="badge badge-success">Spam</span></h6>
+            <div class="control">
+              <span class="btn-box" data-toggle="tooltip" data-placement="top" title="Archive" onClick="window.location.reload()"></span>
+              <span class="btn-notification" data-toggle="tooltip" data-placement="top" title="Mark as SPAM" onClick="window.location.reload()"></span>
+              <span class="btn-delete" data-toggle="tooltip" data-placement="top" title="Delete" onClick="window.location.reload()"></span>
+            </div>
+          </div>
+          <div class="b-email-address">
+            <div class="to">
+              <b>Alexander Verdnam</b> (noreply@example.com) to <b>me</b>
+            </div>
+            <div class="control">
+              <div class="date">07:51 AM - 15 December</div>
+            </div>
+          </div>
+          <div class="b-email-body">
+            <p>Lose away off why half led have near bed. At engage simple father of period others except. My giving do summer of though narrow marked at. Spring formal no county ye waited. My whether cheered at regular it of promise blushes perhaps. Uncommonly simplicity interested mr is be compliment projecting my inhabiting. Gentleman he september in oh excellent.</p>
+          </div>
+          <div class="b-email-attach">
+            <div class="head">Attachments (2)</div>
+            <div class="body">
+              <div class="unit">
+                <span>c1.jpg</span>
+                <img src="img/images/mail-inbox/183.png" alt="email" />
+              </div>
+              <div class="unit">
+                <span>Lose away off why half led have near bed.</span>
+                <img src="img/images/mail-inbox/183-2.png" alt="email" />
+              </div>
+            </div>
+          </div>
+          <textarea class="b-email-textarea" placeholder="Reply or Forward this message..."></textarea>
+          <a class="btn btn-lg btn-danger pull-right" href="email-inbox.html">Send</a>
+          <input type="file" class="btn-attach pull-right" />
+        </div>
+      </div>
+    </div>
+    @@include('./src/include/footer-container.html')
+  </div>
+
+
+
+  @@include('./src/include/menu.html')
+
+  @@include('./src/include/footer.html')
+  <script>
+    $('[data-toggle="tooltip"]').tooltip();
+  </script>
+@@include('./src/include/footer_end.html')

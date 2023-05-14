@@ -1,0 +1,165 @@
+@@include('./src/include/head.html', {
+  "title": "Notifications"
+})
+
+@@include('./src/include/head_end.html')
+
+<body>
+    <div id="wrap-content" class="wrap-content">
+
+        @@include('./src/include/top_menu.html',{
+          "name": "Notifications"
+        })
+
+         <div class="content container-fluid">
+         <div class="row row-broken">
+            <div class="col-md-12">
+              <ol class="breadcrumb">
+                <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+                <li>Ui Kits</li>
+                <li class="active">Notifications</li>
+              </ol>
+            </div>
+          </div>
+          <div class="row row-broken">
+            <div class="col-md-6">
+              <div class="col-inside-lg decor-default">
+                <h6><strong>Bootstrap</strong> Color</h6>
+                <div class="alert alert-success">
+                  <button type="button" class="close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <strong>Well done!</strong> You successfully read this important alert message.
+                </div>
+                <div class="alert alert-info">
+                  <button type="button" class="close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+                </div>
+                <div class="alert alert-warning">
+                  <button type="button" class="close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <strong>Warning!</strong> Better check yourself, you're not looking too good.
+                </div>
+                <div class="alert alert-danger">
+                  <button type="button" class="close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <strong>Oh snap!</strong> Change a few things up and try submitting again.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="col-inside-lg decor-default">
+                <h6><strong>Bootstrap Alert</strong> with Link</h6>
+                <div class="alert alert-success">
+                  <button type="button" class="close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
+                </div>
+                <div class="alert alert-info">
+                  <button type="button" class="close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <strong>Heads up!</strong> This <a href="#" class="alert-link">alert needs your attention</a>, but it's not super important.
+                </div>
+                <div class="alert alert-warning">
+                  <button type="button" class="close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <strong>Warning!</strong> Better check yourself, you're <a href="#" class="alert-link">not looking too good</a>.
+                </div>
+                <div class="alert alert-danger">
+                  <button type="button" class="close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row row-broken">
+            <div class="col-md-6">
+              <div class="col-inside-lg decor-default">
+                <h6><strong>Notificaion</strong> with Icon & Link</h6>
+                <div class="alert-icon alert-icon-success">
+                  <button type="button" class="close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <strong>Well done!</strong> You successfully read this important alert message.
+                </div>
+                <div class="alert-icon alert-icon-info">
+                  <button type="button" class="close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+                </div>
+                <div class="alert-icon alert-icon-warning">
+                  <button type="button" class="close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <strong>Warning!</strong> Better check yourself, you're not looking too good.
+                </div>
+                <div class="alert-icon alert-icon-danger">
+                  <button type="button" class="close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <strong>Oh snap!</strong> Change a few things up and try submitting again.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="col-inside-lg decor-default">
+                <h6><strong>Notificaion</strong> with Link</h6>
+                <div class="alert-icon alert-icon-success">
+                  <button type="button" class="close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
+                </div>
+                <div class="alert-icon alert-icon-info">
+                  <button type="button" class="close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <strong>Heads up!</strong> This <a href="#" class="alert-link">alert needs your attention</a>, but it's not super important.
+                </div>
+                <div class="alert-icon alert-icon-warning">
+                  <button type="button" class="close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <strong>Warning!</strong> Better check yourself, you're <a href="#" class="alert-link">not looking too good</a>.
+                </div>
+                <div class="alert-icon alert-icon-danger">
+                  <button type="button" class="close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        @@include('./src/include/footer-container.html')
+    </div>
+
+
+
+    @@include('./src/include/menu.html')
+
+    @@include('./src/include/footer.html')
+
+    <script>
+    $('.alert .close, .alert-icon .close').on('click', function () {
+      var p = $(this).parent();
+      p.addClass("animated fadeOutUp");
+      setTimeout(function(){
+        p.remove();
+      }, 800)
+    })
+    </script>
+
+    @@include('./src/include/footer_end.html')

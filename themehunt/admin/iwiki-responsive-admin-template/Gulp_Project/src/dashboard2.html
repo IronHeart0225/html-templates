@@ -1,0 +1,256 @@
+@@include('./src/include/head.html', {
+  "title": "Dashboard 2"
+})
+
+@@include('./src/include/head_end.html')
+
+<body>
+    <div id="wrap-content" class="wrap-content">
+
+        @@include('./src/include/top_menu.html',{
+          "name": "Dashboard 2"
+        })
+
+         <div class="content container-fluid">
+         <div class="row row-broken">
+            <div class="col-md-12">
+              <ol class="breadcrumb">
+                <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+                <li>Dashboards</li>
+                <li class="active">Dashboard 2</li>
+              </ol>
+            </div>
+          </div>
+          <div class="row row-broken">
+                <div class="col-xs-12 cover">
+                    <img src="img/img-cover.jpg" class="cover-img" alt="image">
+                    <div class="cover-inside cover-blackout text-c text-light">
+                        <h3>There are many variations of passages</h3>
+                        <div class="field place">Central and southern Alaska</div>
+                        <br/>
+                        <div class="field likes">54,546</div>
+                    </div>
+                </div>
+          </div>
+
+            <div class="row row-broken" data-height>
+                <div class="col-sm-12 col-md-4">
+                    <div class="col-inside-lg decor-primary b-profile text-c" data-height-col>
+                        <img src="img/images/team/64.png" alt="image" class="b-profile-avatar" />
+                        <div class="b-profile-name">
+                            Alexander Van Gok
+                        </div>
+                        <div class="b-profile-profession">
+                            Web Designer
+                        </div>
+                        <div class="b-profile-about">
+                            <p>Lorem ipsum dolor sit amet, consecteter adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+                        </div>
+                        <ul class="b-profile-share">
+                            <li><a class="f" href="#">f</a></li>
+                            <li><a class="t" href="#">t</a></li>
+                            <li><a class="l" href="#">l</a></li>
+                            <li><a class="x" href="#">x</a></li>
+                        </ul>
+                        <span class="btn-follow-this m-b-md" onClick="window.location.reload()">FOLLOW THIS</span>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-8 decor-default chart content-block" data-height-col>
+                    <div class="col-inside-lg">
+                       <h6 class="m-r-md m-b-md pull-left">
+                            Energy Predictions
+                        </h6>
+                        <div class="setting f-r">
+                    <span class="refresh-btn"><i class="fa fa-refresh"></i></span>
+                    <span class="setting-btn"><i class="fa fa-cog"></i></span>
+                    <ul class="setting-popup">
+                        <li>setting 1</li>
+                        <li><a href="#">setting 2</a></li>
+                        <li>setting 3</li>
+                        <li>setting 4</li>
+                        <li>setting 5</li>
+                    </ul>
+                    <span class="close-block text-center"><i class="fa fa-close"></i></span>
+                </div>
+                            <div class="clearfix"></div>
+                        <div class="chart-statistics">
+                            <p>Quisque volutpat condimentum velit. Class aptent taciti</p>
+                            <span class="up color-primary f-l">10.360</span>
+                            <span class="line color-warning f-r">total visitor <span>26.349</span></span>
+                            <span class="line color-success f-r f-c">total orders <span>16.349</span></span>
+                            <span class="line color-primary f-r f-c">new orders <span>16.349</span></span>
+                        </div>
+                    </div>
+                    <div class="chart-container full">
+                      <canvas id="chartLine"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row-broken" data-height>
+                <div class="col-sm-12 col-md-4">
+                    <div class="col-inside-lg sale sale-default hover-bg decor-primary" data-height-col>
+                        <h6 class="sale-title">OVERALL SALEs</h6>
+                        <div class="sale-overview">Lorem ipsum dolor sit amet</div>
+                        <div class="sale-total">$ 20.000</div>
+                        <div class="sale-persent">
+                            <div class="sale-persent-scale">
+                                <div class="sale-persent-scale-active" style="width: 42%;"></div>
+                            </div>
+                            <div class="sale-persent-value">42%</div>
+                        </div>
+                        <div class="sale-description">42% HIGHER than LAST MONTH</div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="col-inside-lg sale sale-success hover-bg decor-success" data-height-col>
+                        <div class="col-inside-lg">
+                            <h6 class="sale-title">TODAY'S SALEs</h6>
+                            <div class="sale-overview">Lorem ipsum dolor sit amet</div>
+                            <div class="sale-total">$ 20.000</div>
+                            <div class="sale-persent">
+                                <div class="sale-persent-scale">
+                                    <div class="sale-persent-scale-active" style="width: 70%;"></div>
+                                </div>
+                                <div class="sale-persent-value">70%</div>
+                            </div>
+                            <div class="sale-description">70% HIGHER than LAST MONTH</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="col-inside-lg sale sale-warning hover-bg decor-warning" data-height-col>
+                        <div class="col-inside-lg">
+                            <h6 class="sale-title">OVERALL SALEs</h6>
+                            <div class="sale-overview">Lorem ipsum dolor sit amet</div>
+                            <div class="sale-total">$ 20.000</div>
+                            <div class="sale-persent">
+                                <div class="sale-persent-scale">
+                                    <div class="sale-persent-scale-active" style="width: 36%;"></div>
+                                </div>
+                                <div class="sale-persent-value">36%</div>
+                            </div>
+                            <div class="sale-description">36% HIGHER than LAST MONTH</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row-broken" data-height>
+                <div class="col-md-12 col-lg-6">
+                    <div class="col-inside-lg decor-default" data-height-col>
+                        <h6>Followers</h6>
+                        <div class="followers">
+                            <div class="unit">
+                                <div class="avatar">
+                                    <img src="img/images/followers/40.png" alt="User name">
+                                    <div class="status off"></div>
+                                </div>
+                                <div class="field name">Alexander Verdnam</div>
+                                <div class="field phone">(657) 768 3459</div>
+                                <button type="button" class="btn btn-lg btn-follow btn-info id-btn-follow">Follow</button>
+                            </div>
+                            <div class="unit">
+                                <div class="avatar">
+                                    <img src="img/images/followers/40-2.png" alt="User name">
+                                    <div class="status online"></div>
+                                </div>
+                                <div class="field name">Alexander Verdnam</div>
+                                <div class="field phone">(657) 768 3459</div>
+                                <button type="button" class="btn btn-lg btn-follow btn-primary id-btn-follow">Follow</button>
+                            </div>
+                            <div class="unit">
+                                <div class="avatar">
+                                    <img src="img/images/followers/40-3.png" alt="User name">
+                                    <div class="status offline"></div>
+                                </div>
+                                <div class="field name">Alexander Verdnam</div>
+                                <div class="field phone">(657) 768 3459</div>
+                                <button type="button" class="btn btn-lg btn-follow btn-success id-btn-follow">Follow</button>
+                            </div>
+                            <div class="unit">
+                                <div class="avatar">
+                                    <img src="img/images/followers/40-4.png" alt="User name">
+                                    <div class="status busy"></div>
+                                </div>
+                                <div class="field name">Alexander Verdnam</div>
+                                <div class="field phone">(657) 768 3459</div>
+                                <button type="button" class="btn btn-lg btn-follow btn-warning id-btn-follow">Follow</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-6 decor-info" id="map" data-height-col>
+
+                </div>
+            </div>
+        </div>
+        @@include('./src/include/footer-container.html')
+    </div>
+
+
+    @@include('./src/include/menu.html')
+
+    @@include('./src/include/footer.html')
+
+    <script src="js/chart.js"></script>
+
+    <script>
+        var lineChartData = {
+            labels : ["January","February","March","April","May","June","July"],
+            datasets : [
+                {
+                    label: "Default",
+                    fillColor : "#7266ba",
+                    strokeColor : "#7266ba",
+                    pointColor : "#7266ba",
+                    data : [23,41,35,48,45,34,37]
+                },
+                {
+                    label: "Success",
+                    fillColor : "#46be8a",
+                    strokeColor : "#46be8a",
+                    pointColor : "#46be8a",
+                    data : [13,35,30,43,37,27,30]
+                },
+                {
+                    label: "Warning",
+                    fillColor : "#f2a654",
+                    strokeColor : "#f2a654",
+                    pointColor : "#f2a654",
+                    data : [10,21,24,34,26,17,20]
+                },
+            ]
+        }
+
+        Chart.defaults.global.animationEasing = "easeOutBounce";
+        Chart.defaults.global.pointLabelFontSize = 12;
+        Chart.defaults.global.maintainAspectRatio = false;
+
+        window.onload = function(){
+            var ctxLine = document.getElementById("chartLine").getContext("2d");
+            window.myLine = new Chart(ctxLine).Line(lineChartData, {
+                showScale: false,
+                pointDot : false,
+              responsive: true
+            });
+        }
+    </script>
+
+    <script>
+        var map;
+        var styles = [{"featureType":"landscape.man_made","elementType":"geometry","stylers":[{"color":"#f7f1df"}]},{"featureType":"landscape.natural","elementType":"geometry","stylers":[{"color":"#d0e3b4"}]},{"featureType":"landscape.natural.terrain","elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi.business","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.medical","elementType":"geometry","stylers":[{"color":"#fbd3da"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#bde6ab"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffe15f"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#efd151"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"color":"black"}]},{"featureType":"transit.station.airport","elementType":"geometry.fill","stylers":[{"color":"#cfb2db"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#a2daf2"}]}];
+        //                        map.setOptions({styles: styles});
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                styles: styles,
+                disableDefaultUI: true,
+                center: {lat: 52.4715273, lng: 5.5319843},
+                zoom: 9
+            });
+        }
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-MS-P2PoubPUU3_B_2QTqvqv03w_9FfY&callback=initMap" async defer></script>
+
+@@include('./src/include/footer_end.html')

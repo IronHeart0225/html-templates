@@ -1,0 +1,108 @@
+@import '../own/_mixin';
+@import '../own/variables';
+
+.preloader{
+  background: #484b68 !important;
+}
+
+body{
+  .header{
+    box-shadow: 3px -8px 10px 8px #2a2b3c !important;
+  }
+  .breadcrumb li, .breadcrumb li a, .breadcrumb li + li:before{
+    color: #484b68;
+  }
+  .wrap-content .header{
+    background: #36384e;
+    .backet .backet-btn, .backet .backet-title, .user-btn{
+      background-color: #484b68;
+    }
+    .btn-message.active, .btn-email.active{
+      background-color: #2a2b3c;
+    }
+    .backet .backet-content > .unit{
+      background-color: #36384D;
+      border-right-color: #484b68;
+      border-bottom-color: #484b68;
+      .btn-close:hover svg{
+        stroke: #36384D;
+      }
+    }
+    .message .message-content .clear-all, .email .mail-content .show-all, .view-profile{
+      background: $brand-warning !important;
+      &:active{
+        box-shadow: inset 0 4px 1px $brand-warning-hue;
+      }
+    }
+    .message .message-content .unit *[class*='icon-']{
+      background: #484b68;
+    }
+    .message .message-content .unit:hover, .email .mail-content .unit:hover, .message .message-content .percent .percent-value.color-1, .message .message-content .percent .percent-value.color-2{
+      background: #36384e;
+    }
+  }
+  .aside{
+    background: #484b68;
+    box-shadow: -8px 0 8px 8px #2a2b3c;
+    .btn-logo{
+      background-color: #2a2b3c;
+    }
+  }
+  .morphsearch-content, .morphsearch.open .morphsearch-form, .wrap-menu, .wrap-content .header > .unit.morphsearch.open{
+    background-color: #2a2b3c !important;
+  }
+  .dummy-media-object{
+    background-color: #1f202d;
+  }
+  .morphsearch.open .morphsearch-input{
+    border-bottom-color: #1f202d;
+  }
+  .menu li{
+    background-color: #484b68;
+    border-right-color: #2a2b3c;
+    border-bottom-color: #2a2b3c;
+    &:hover{
+      background: #40435d;
+    }
+  }
+  .visitors-stat .unit .scale{
+    background: #2a2b3c;
+  }
+  &.mobile-view .aside{
+    background: #2A2B3C !important;
+  }
+}
+
+.decor-dark, body .refresh-preloader{
+  background: #36384e;
+}
+
+body .setting>span{
+  color: #36384e;
+}
+
+@media (max-width: 1200px){
+  body .wrap-content .header > .unit.morphsearch {
+    background: #36384e !important;
+  }
+}
+
+@media (min-width: 481px){
+  .morphsearch {
+      background: #2a2b3c !important;
+  }
+}
+
+body .user-content{
+  background: #fff;
+  color:$text-dark;
+  .b-profile-folders a{
+    border-bottom-color: #eee;
+  }
+}
+
+
+
+body .notification-count {
+  background: $brand-warning;
+}

@@ -1,0 +1,124 @@
+@@include('./src/include/head.html', {
+  "title": "Form Validation"
+})
+
+<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css" />
+<link rel="stylesheet" href="css/bootstrap-select.css" />
+<link href="js/farbtastic/farbtastic.css" rel="stylesheet">
+@@include('./src/include/head_end.html')
+<body>
+    <div id="wrap-content" class="wrap-content">
+
+          @@include('./src/include/top_menu.html',{
+            "name": "Form Validation"
+          })
+
+           <div class="content container-fluid">
+           <div class="row row-broken">
+              <div class="col-md-12">
+                <ol class="breadcrumb">
+                  <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+                  <li>Forms</li>
+                  <li class="active">Form Validation</li>
+                </ol>
+              </div>
+            </div>
+            <div class="row row-broken decor-default p-full-md">
+              <div class="col-md-12">
+                <h5 class="m-b-md">Basic example</h5>
+                <div class="form-group has-success">
+                  <input type="text" class="form-control material" placeholder="Input with success">
+                  <small class="help-block">Lorem ipsum dolor sit amet.</small>
+                </div>
+                <div class="form-group has-warning">
+                  <input type="text" class="form-control material" placeholder="Input with warning">
+                  <small class="help-block">Lorem ipsum dolor sit amet.</small>
+                </div>
+                <div class="form-group has-error">
+                  <input type="text" class="form-control material" placeholder="Input with error">
+                  <small class="help-block">Lorem ipsum dolor sit amet.</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="row row-broken decor-default p-full-md">
+              <div class="col-md-12">
+                <h5 class="m-b-md">Inputs with icons</h5>
+                <div class="form-group has-success has-feedback">
+                  <input type="text" class="form-control material" placeholder="Input with success">
+                  <span class="fa fa-check"></span>
+                </div>
+                <div class="form-group has-warning has-feedback">
+                  <input type="text" class="form-control material" placeholder="Input with warning">
+                  <span class="fa fa-exclamation-triangle"></span>
+                </div>
+                <div class="form-group has-error has-feedback">
+                  <input type="text" class="form-control material" placeholder="Input with error">
+                  <span class="fa fa-ban"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="row row-broken decor-default p-full-md">
+              <div class="col-md-12">
+                  <h5>Checkboxes and Radio</h5>
+              </div>
+              <div class="col-md-4">
+                <p>Checkboxes</p>
+                <input id='check-1' class="custom-chr has-success" type="checkbox" name='check-1'/>
+                <label for="check-1">Checkbox with success</label>
+                <br>
+                <br>
+                <input id='check-2' class="custom-chr has-warning" type="checkbox" name='check-1'/>
+                <label for="check-2">Checkbox with warning</label>
+                <br>
+                <br>
+                <input id='check-3' class="custom-chr has-error" type="checkbox" name='check-1'/>
+                <label for="check-3">Checkbox with error</label>
+                <br>
+                <br>
+              </div>
+              <div class="col-md-4">
+                <p>Radios</p>
+                <input id='radio-1' class="custom-chr has-success" type="radio" name='r-group-1'/>
+                <label for="radio-1">Radio with success</label>
+                <br>
+                <br>
+                <input id='radio-2' class="custom-chr has-warning" type="radio" name='r-group-1' />
+                <label for="radio-2">Radio with success</label>
+                <br>
+                <br>
+                <input id='radio-3' class="custom-chr has-error" type="radio" name='r-group-1'/>
+                <label for="radio-3">Radio with success</label>
+                <br>
+                <br>
+              </div>
+              <div class="col-md-4">
+                <p>Toggles</p>
+                <input class='toggle has-success' type="checkbox" name='check-3'/>
+                <br>
+
+                <input class='toggle has-warning' type="checkbox" name='check-4' />
+                <br>
+
+                <input class='toggle has-error' type="checkbox" name='check-4'/>
+                <br>
+              </div>
+            </div>
+        </div>
+        @@include('./src/include/footer-container.html')
+    </div>
+
+
+
+  @@include('./src/include/menu.html')
+
+  @@include('./src/include/footer.html')
+
+  <script src="js/autosize.min.js"></script>
+
+  <script>
+    autosize(document.getElementById('autosize'));
+  </script>
+
+  @@include('./src/include/footer_end.html')

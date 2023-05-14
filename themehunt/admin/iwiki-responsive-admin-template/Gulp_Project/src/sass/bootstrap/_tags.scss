@@ -1,0 +1,37 @@
+//
+// tags
+// --------------------------------------------------
+
+.tag {
+  //display: inline;
+  //padding: .2em .6em .3em;
+  //font-size: 75%;
+  //line-height: 1;
+  //color: $tag-color;
+  //text-align: center;
+  //white-space: nowrap;
+  //vertical-align: baseline;
+
+  // [converter] extracted a& to a.tag
+
+  // Empty tags collapse automatically (not available in IE8)
+  &:empty {
+    display: none;
+  }
+
+  // Quick fix for tags in buttons
+  .btn & {
+    position: relative;
+    top: -1px;
+  }
+}
+
+// Add hover effects, but only for links
+a.tag {
+  &:hover,
+  &:focus {
+    color: $tag-link-hover-color;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}

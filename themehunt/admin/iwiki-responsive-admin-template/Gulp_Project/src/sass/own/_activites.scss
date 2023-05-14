@@ -1,0 +1,76 @@
+.activities {
+  max-height: 1208px;
+  position: relative;
+  padding-bottom: 50px;
+
+  @include media('md') {
+    margin: 20px 0 0;
+  }
+
+  .unit {
+    border-bottom: 1px solid $brand-default-hue;
+    padding: 20px 0 20px 50px;
+    min-height: 80px;
+    position: relative;
+    overflow: hidden;
+
+    .avatar {
+      display: block;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 20px;
+      left: 0;
+
+      img {
+        display: block;
+        border-radius: 50%;
+        max-width: 100%;
+      }
+    }
+
+    .field {
+      overflow: hidden;
+      font-size: 14px;
+      line-height: 20px;
+
+      a {
+        font-weight: bold;
+        color: $text-dark;
+      }
+
+      p {
+        font-size: 12px;
+        line-height: 20px;
+        padding: 10px 20px;
+        margin: 20px 0 0;
+        display: block;
+        max-width: 800px;
+      }
+
+      &.btn-group-xs {
+        padding: 20px 0 0;
+      }
+
+      &.photo {
+
+        img {
+          display: inline-block;
+          margin: 20px 16px 0 0;
+        }
+      }
+    }
+  }
+
+  .show-more {
+    margin: 20px 0 0;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 24px;
+      height: 17px;
+      background: url('../img/icon-60.png') no-repeat 0 50%;
+    }
+  }
+}

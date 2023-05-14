@@ -1,0 +1,460 @@
+<!-- Site Setting Panel -->
+<section id="settings" data-ng-include=" 'views/settings/settings.html' " style="display:none"></section>
+<!-- Site Setting Panel End -->
+
+<!-- Page Header Start -->
+<div class="pageheader">
+  <h2><i class="fa fa-shopping-cart"></i> Shopping Cart </h2>
+  <div class="breadcrumb-wrapper hidden-xs"> <span class="label">You are here:</span>
+    <ol class="breadcrumb">
+      <li> <a href="#"> Home </a> </li>
+      <li class="active"> shopping cart </li>
+    </ol>
+  </div>
+</div>
+<!-- Page Header End -->
+
+<div class="page"> 
+  
+  <!-- Stats -->
+  <div class="row">
+    <div class="col-lg-4 col-sm-6 col-md-4 col-xs-12">
+      <div class="panel panel-default">
+        <div data-ng-controller="chartCtrl">
+          <ul class="list-inline center">
+            <li class="left-easypiechart-data"> <span class="sell-percent">60%</span> <span>Direct Sell</span> </li>
+            <li>
+              <div easypiechart options="easypiechartxs1.options" percent="easypiechartxs1.percent" class="easypiechart easypiechart-xs"> <span class="pie-percent" ng-bind="easypiechartxs1.percent"></span> </div>
+            </li>
+            <li class="right-easypiechart-data"> <span class="sell-percent">40%</span> <span>Channel Sell</span> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-sm-6 col-md-4 col-xs-12">
+      <div class="panel panel-default">
+        <div data-ng-controller="chartCtrl">
+          <ul class="list-inline center">
+            <li class="left-easypiechart-data"> <span class="sell-percent">65%</span> <span>New Clients</span> </li>
+            <li>
+              <div easypiechart options="easypiechartxs2.options" percent="easypiechartxs2.percent" class="easypiechart easypiechart-xs"> <span class="pie-percent" ng-bind="easypiechartxs2.percent"></span> </div>
+            </li>
+            <li class="right-easypiechart-data np"> <span class="sell-percent">35%</span> <span>Return Clients</span> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-sm-6 col-md-4 col-xs-12">
+      <div class="panel panel-default">
+        <div data-ng-controller="chartCtrl">
+          <ul class="list-inline center">
+            <li class="left-easypiechart-data"> <span class="sell-percent">65%</span> <span>Credit Card</span> </li>
+            <li>
+              <div easypiechart options="easypiechartxs3.options" percent="easypiechartxs3.percent" class="easypiechart easypiechart-xs"> <span class="pie-percent" ng-bind="easypiechartxs3.percent"></span> </div>
+            </li>
+            <li class="right-easypiechart-data"> <span class="sell-percent">35%</span> <span>Paypal</span> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- end stats --> 
+    
+  </div>
+  <div class="row">
+    <div class="col-lg-6" data-ng-controller="flotChartCtrl">
+      <div class="panel panel-default">
+        <h4 class="nm pad-10">Order <strong>Statistics</strong></h4>
+        <div class="panel-body"> 
+          
+          <!-- Jqvmap Start -->
+          <div data-ng-controller="jvectormapCtrl" class="col-lg-6 pv-20">
+            <div class="ui-map-175" ui-jvectormap options="Jvusamap"></div>
+          </div>
+          <!-- Jqvmap End -->
+          
+          <div class="col-lg-6 pv-30">
+            <div class="panel">
+              <div class="panel-body text-bold text-center">
+                <p class="nm">THIS MONTH TOTAL ORDER ($)</p>
+                <h4 class="nm pv-10 text-primary text-bold"> $6,84,545 </h4>
+              </div>
+              <div class="panel-footer np">
+                <ul class="nav nav-section nav-justified">
+                  <li>
+                    <div class="section">
+                      <h4 class="text-azure text-bold"> 12560 </h4>
+                      <p> OHIO </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="section">
+                      <h4 class="text-green text-bold"> 12560 </h4>
+                      <p> NEW YORK </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="section">
+                      <h4 class="text-red text-bold"> 12560 </h4>
+                      <p>FLORIDA</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Progress bars Start -->
+          <div class="col-sm-6">
+            <div class="clearfix"> <span class="pull-left">New York</span> <small class="pull-right">72%</small> </div>
+            <progressbar class="progressbar-xs progress-rounded progress-striped" value="72" type="info"></progressbar>
+          </div>
+          <!-- Progress bars End --> 
+          
+          <!-- Progress bars Start -->
+          <div class="col-sm-6">
+            <div class="clearfix"> <span class="pull-left">Florida</span> <small class="pull-right">68%</small> </div>
+            <progressbar class="progressbar-xs progress-rounded progress-striped" value="68" type="info"></progressbar>
+          </div>
+          <!-- Progress bars End --> 
+          
+          <!-- Progress bars Start -->
+          <div class="col-sm-6">
+            <div class="clearfix"> <span class="pull-left">Texas</span> <small class="pull-right">58%</small> </div>
+            <progressbar class="progressbar-xs progress-rounded progress-striped" value="58" type="info"></progressbar>
+          </div>
+          <!-- Progress bars End --> 
+          
+          <!-- Progress bars Start -->
+          <div class="col-sm-6">
+            <div class="clearfix"> <span class="pull-left">Nevada</span> <small class="pull-right">45%</small> </div>
+            <progressbar class="progressbar-xs progress-rounded progress-striped" value="45" type="info"></progressbar>
+          </div>
+          <!-- Progress bars End --> 
+          
+          <!-- Progress bars Start -->
+          <div class="col-sm-6">
+            <div class="clearfix"> <span class="pull-left">New Jersey</span> <small class="pull-right">45%</small> </div>
+            <progressbar class="progressbar-xs progress-rounded progress-striped" value="45" type="info"></progressbar>
+          </div>
+          <!-- Progress bars End --> 
+          
+          <!-- Progress bars Start -->
+          <div class="col-sm-6">
+            <div class="clearfix"> <span class="pull-left">California</span> <small class="pull-right">65%</small> </div>
+            <progressbar class="progressbar-xs progress-rounded progress-striped" value="65" type="info"></progressbar>
+          </div>
+          <!-- Progress bars End --> 
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="panel panel-default">
+        <h4 class="nm pad-15">Order <strong>List</strong></h4>
+        <div class="panel-body">
+          <tabset class="tab-block"> <tab heading="Total Selling">
+            <div class="unseen">
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Sold</th>
+                    <th>Report</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="#"> Apple iPhone 4s - 16GB - Black </a></td>
+                    <td>$625.50</td>
+                    <td>809</td>
+                    <td><button class="btn btn-default btn-sm" type="button"> <i class="fa fa-download"></i> </button></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"> Samsung Galaxy S III SGH-I747 - 16GB </a></td>
+                    <td>$915.50 </td>
+                    <td>6709</td>
+                    <td><button class="btn btn-default btn-sm" type="button"> <i class="fa fa-download"></i> </button></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"> Motorola Droid 4 XT894 - 16GB - Black </a></td>
+                    <td>$878.50</td>
+                    <td>784</td>
+                    <td><button class="btn btn-default btn-sm" type="button"> <i class="fa fa-download"></i> </button></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"> Regatta Luca 3 in 1 Jacket </a></td>
+                    <td>$25.50</td>
+                    <td>1245</td>
+                    <td><button class="btn btn-default btn-sm" type="button"> <i class="fa fa-download"></i> </button></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"> Samsung Galaxy Note 3 </a></td>
+                    <td>$925.50</td>
+                    <td>21245</td>
+                    <td><button class="btn btn-default btn-sm" type="button"> <i class="fa fa-download"></i> </button></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"> Inoval Digital Pen </a></td>
+                    <td>$125.50</td>
+                    <td>1245</td>
+                    <td><button class="btn btn-default btn-sm" type="button"> <i class="fa fa-download"></i> </button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            </tab> <tab heading="New Customers">
+            <div class="unseen">
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th> Customer Name </th>
+                    <th>Total Orders</th>
+                    <th>Total Amount</th>
+                    <th> Report </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td> David Wilson </td>
+                    <td>3</td>
+                    <td>$625.50</td>
+                    <td><button class="btn btn-default btn-sm" type="button"> <i class="fa fa-download"></i> </button></td>
+                  </tr>
+                  <tr>
+                    <td> Amanda Nilson </td>
+                    <td>4</td>
+                    <td>$12625.50</td>
+                    <td><button class="btn btn-default btn-sm" type="button"> <i class="fa fa-download"></i> </button></td>
+                  </tr>
+                  <tr>
+                    <td>Jhon Doe</td>
+                    <td>2</td>
+                    <td>$125.00</td>
+                    <td><button class="btn btn-default btn-sm" type="button"> <i class="fa fa-download"></i> </button></td>
+                  </tr>
+                  <tr>
+                    <td>Bill Chang</td>
+                    <td>45</td>
+                    <td>$12,125.70</td>
+                    <td><button class="btn btn-default btn-sm" type="button"> <i class="fa fa-download"></i> </button></td>
+                  </tr>
+                  <tr>
+                    <td>Paul Strong</td>
+                    <td>1</td>
+                    <td>$890.85</td>
+                    <td><button class="btn btn-default btn-sm" type="button"> <i class="fa fa-download"></i> </button></td>
+                  </tr>
+                  <tr>
+                    <td> Jane Hilson </td>
+                    <td>5</td>
+                    <td>$239.85</td>
+                    <td><button class="btn btn-default btn-sm" type="button"> <i class="fa fa-download"></i> </button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            </tab> <tab heading="Recent Orders">
+            <div class="unseen">
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Product</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Report</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td> David Wilson </td>
+                    <td>3 Jan, 2013</td>
+                    <td>$625.50</td>
+                    <td><span class="label label-sm label-success"> Dispatch </span></td>
+                    <td><button class="btn btn-default btn-sm" type="button"> <i class="fa fa-download"></i> </button></td>
+                  </tr>
+                  <tr>
+                    <td> Amanda Nilson </td>
+                    <td>13 Feb, 2013</td>
+                    <td>$12625.50</td>
+                    <td><span class="label label-sm label-danger"> On Hold </span></td>
+                    <td><button class="btn btn-default btn-sm" type="button"> <i class="fa fa-download"></i> </button></td>
+                  </tr>
+                  <tr>
+                    <td>Jhon Doe</td>
+                    <td>20 Mar, 2013</td>
+                    <td>$125.00</td>
+                    <td><span class="label label-sm label-info"> Pending </span></td>
+                    <td><button class="btn btn-default btn-sm" type="button"> <i class="fa fa-download"></i> </button></td>
+                  </tr>
+                  <tr>
+                    <td>Bill Chang</td>
+                    <td>29 May, 2013</td>
+                    <td>$12,125.70</td>
+                    <td><span class="label label-sm label-success"> Dispatch </span></td>
+                    <td><button class="btn btn-default btn-sm" type="button"> <i class="fa fa-download"></i> </button></td>
+                  </tr>
+                  <tr>
+                    <td>Paul Strong</td>
+                    <td>1 Jun, 2013</td>
+                    <td>$890.85</td>
+                    <td><span class="label label-sm label-warning"> On Process </span></td>
+                    <td><button class="btn btn-default btn-sm" type="button"> <i class="fa fa-download"></i> </button></td>
+                  </tr>
+                  <tr>
+                    <td> Jane Hilson </td>
+                    <td>5 Aug, 2013</td>
+                    <td>$239.85</td>
+                    <td><span class="label label-sm label-info"> Pending </span></td>
+                    <td><button class="btn btn-default btn-sm" type="button"> <i class="fa fa-download"></i> </button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            </tab> </tabset>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="panel panel-default">
+        <h4 class="nm pad-15">Top <strong>Countries</strong></h4>
+        <div class="panel-body">
+          <div class="unseen">
+            <table class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  <th>Country</th>
+                  <th class="numeric">Unique User</th>
+                  <th class="numeric">Pageviews</th>
+                  <th class="numeric">Changes</th>
+                  <th class="numeric">New Vs. Return</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>AAC</td>
+                  <td>USA</td>
+                  <td class="numeric">109820</td>
+                  <td class="numeric">454590</td>
+                  <td class="numeric">25.85%</td>
+                  <td class="numeric"><progress class="progressbar-sm progress-striped nm progress">
+                      <bar value="65" type="success"></bar>
+                      <bar value="35" type="info"></bar>
+                    </progress></td>
+                </tr>
+                <tr>
+                  <td>AAD</td>
+                  <td>India</td>
+                  <td class="numeric">85450</td>
+                  <td class="numeric">350475</td>
+                  <td class="numeric">15.32%</td>
+                  <td class="numeric"><progress class="progressbar-sm progress-striped nm progress">
+                      <bar value="30" type="success"></bar>
+                      <bar value="70" type="info"></bar>
+                    </progress>
+                </tr>
+                <tr>
+                  <td>AAX</td>
+                  <td>Brazil</td>
+                  <td class="numeric">75480</td>
+                  <td class="numeric">254780</td>
+                  <td class="numeric">22.52%</td>
+                  <td class="numeric"><progress class="progressbar-sm progress-striped nm progress">
+                      <bar value="80" type="success"></bar>
+                      <bar value="20" type="info"></bar>
+                    </progress></td>
+                </tr>
+                <tr>
+                  <td>ABC</td>
+                  <td>Russia</td>
+                  <td class="numeric">65700</td>
+                  <td class="numeric">211522</td>
+                  <td class="numeric">10.14%</td>
+                  <td class="numeric"><progress class="progressbar-sm progress-striped nm progress">
+                      <bar value="40" type="success"></bar>
+                      <bar value="60" type="info"></bar>
+                    </progress></td>
+                </tr>
+                <tr>
+                  <td>ABP</td>
+                  <td>Poland</td>
+                  <td class="numeric">55000</td>
+                  <td class="numeric">185045</td>
+                  <td class="numeric">5.15%</td>
+                  <td class="numeric"><progress class="progressbar-sm progress-striped nm progress">
+                      <bar value="55" type="success"></bar>
+                      <bar value="45" type="info"></bar>
+                    </progress></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="panel panel-default">
+        <h4 class="nm pad-15">Last 5 <strong> Transaction</strong></h4>
+        <div class="panel-body">
+         <div class="unseen">
+          <table class="table table-bordered table-striped">
+            <tbody>
+              <tr>
+                <th>Payee name</th>
+                <th>Amount</th>
+                <th>Description</th>
+                <th>Date/Time</th>
+                <th>Fee</th>
+                <th>Manager</th>
+              </tr>
+              <tr>
+                <td>Angelina Jolie</td>
+                <td>$157.10</td>
+                <td>Dont forget about fee</td>
+                <td>20.01.2014 19:24</td>
+                <td>$30.42</td>
+                <td>John Doe</td>
+              </tr>
+              <tr>
+                <td>Brad Pitt</td>
+                <td>$39.45</td>
+                <td>Delivery...</td>
+                <td>20.01.2014 18:55</td>
+                <td>$3.94</td>
+                <td>John Doe</td>
+              </tr>
+              <tr>
+                <td>Martin Freeman</td>
+                <td>$78.00</td>
+                <td>Will pay by cash</td>
+                <td>20.01.2014 16:41</td>
+                <td>$0.00</td>
+                <td>John Doe</td>
+              </tr>
+              <tr>
+                <td>Lucy Liu</td>
+                <td>$427.31</td>
+                <td>Call me...</td>
+                <td>20.01.2014 15:11</td>
+                <td>$15.71</td>
+                <td>John Doe</td>
+              </tr>
+              <tr>
+                <td>Lee Miller</td>
+                <td>$85.15</td>
+                <td>Empty</td>
+                <td>20.01.2014 12:01</td>
+                <td>$5.65</td>
+                <td>John Doe</td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

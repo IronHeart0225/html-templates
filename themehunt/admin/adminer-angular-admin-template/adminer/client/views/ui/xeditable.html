@@ -1,0 +1,128 @@
+<!-- Site Setting Panel -->
+<section id="settings" data-ng-include=" 'views/settings/settings.html' " style="display:none"></section>
+<!-- Site Setting Panel End -->
+
+<div class="pageheader">
+  <h2><i class="fa fa-life-ring"></i> Angular xeditable </h2>
+  <div class="breadcrumb-wrapper hidden-xs"> <span class="label">You are here:</span>
+    <ol class="breadcrumb">
+      <li> <a href="index.html"> Home </a> </li>
+      <li class="active"> Angular-xeditable </li>
+    </ol>
+  </div>
+</div>
+
+<div class="page">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title"> Basic Elements </h3> 
+    </div>
+    <div class="panel-body text-center">
+      <table class="table tc-list-1">
+        <tbody ng-controller="Html5InputsCtrl">
+          <tr>
+            <td>1.</td>
+            <td><div>Email: <a href="#" editable-email="user.email">{{ user.email || 'empty' }}</a></div></td>
+          </tr>
+          <tr>
+            <td>2.</td>
+            <td><div>Tel: <a href="#" editable-tel="user.tel" e-pattern="\d{3}\-\d{2}\-\d{2}" e-title="xxx-xx-xx">{{ user.tel || 'empty' }}</a></div></td>
+          </tr>
+          <tr>
+            <td>3.</td>
+            <td><div>Number: <a href="#" editable-number="user.number" e-min="18">{{ user.number || 'empty' }}</a></div></td>
+          </tr>
+          <tr>
+            <td>4.</td>
+            <td><div>Range: <a href="#" editable-range="user.range" e-step="5">{{ user.range || 'empty' }}</a></div></td>
+          </tr>
+          <tr>
+            <td>5.</td>
+            <td><div>Url: <a href="#" editable-url="user.url">{{ user.url || 'empty' }}</a></div></td>
+          </tr>
+          <tr>
+            <td>6.</td>
+            <td><div>Search: <a href="#" editable-search="user.search">{{ user.search || 'empty' }}</a></div></td>
+          </tr>
+          <tr>
+            <td>7.</td>
+            <td><div>Color: <a href="#" editable-color="user.color">{{ user.color || 'empty' }}</a></div></td>
+          </tr>
+          <tr>
+            <td>8.</td>
+            <td><div>Date: <a href="#" editable-date="user.date">{{ user.date || 'empty' }}</a></div></td>
+          </tr>
+          <tr>
+            <td>9.</td>
+            <td><div>Time: <a href="#" editable-time="user.time">{{ user.time || 'empty' }}</a></div></td>
+          </tr>
+          <tr>
+            <td>10.</td>
+            <td><div>Datetime: <a href="#" editable-datetime="user.datetime">{{ user.datetime || 'empty' }}</a></div></td>
+          </tr>
+          <tr>
+            <td>11.</td>
+            <td><div>Month: <a href="#" editable-month="user.month">{{ user.month || 'empty' }}</a></div></td>
+          </tr>
+          <tr>
+            <td>12.</td>
+            <td><div>Week: <a href="#" editable-week="user.week">{{ user.week || 'empty' }}</a></div></td>
+          </tr>
+          <tr>
+            <td>13.</td>
+            <td><div ng-controller="SelectLocalCtrl"> <a href="#" editable-select="user.status" e-ng-options="s.value as s.text for s in statuses"> {{ showStatus() }} </a> </div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title"> Textarea </h3> 
+    </div>
+    <div class="panel-body">
+      <table class="table">
+        <tbody>
+          <tr>
+            <td class="hidden-xs">1.</td>
+            <td><div ng-controller="TextareaCtrl"> <a href="#" editable-textarea="user.desc">
+                <pre>{{ user.desc || 'no description' }}</pre>
+                </a> </div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title"> Checkbox </h3> 
+    </div>
+    <div class="panel-body text-center">
+      <table class="table tc-list-1">
+        <tbody>
+          <tr>
+            <td width="5%">1.</td>
+            <td><div ng-controller="CheckboxCtrl"> <a href="#" editable-checkbox="user.remember" e-title="Remember?"> {{ user.remember && "Remember me!" || "Don't remember" }} </a> </div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title"> Editable Text </h3> 
+    </div>
+    <div class="panel-body text-center">
+      <table class="table tc-list-1">
+        <tbody>
+          <tr>
+            <td width="5%">1.</td>
+            <td><div ng-controller="TextBtnCtrl"> <span editable-text="user.name" e-form="textBtnForm"> {{ user.name || 'empty' }} </span>
+                <button class="btn btn-default" ng-click="textBtnForm.$show()" ng-hide="textBtnForm.$visible"> edit </button>
+              </div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

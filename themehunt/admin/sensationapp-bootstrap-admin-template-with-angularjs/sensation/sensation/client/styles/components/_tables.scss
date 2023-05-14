@@ -1,0 +1,425 @@
+/*=====================================
+  :: Table
+  =====================================*/
+
+th {
+  text-align: left;
+}
+
+.table {
+  > {
+    thead > tr > th, tbody > tr > th, tfoot > tr > th, thead > tr > td, tbody > tr > td, tfoot > tr > td {
+      padding: 7px;
+      line-height: 1.5;
+      vertical-align: middle;
+      border-top: 1px solid #eeeeee;
+    }
+    thead > tr > th {
+      font-weight: 700;
+      vertical-align: bottom;
+      border-bottom: 1px solid #eeeeee;
+    }
+    caption + thead > tr:first-child > th, colgroup + thead > tr:first-child > th, thead:first-child > tr:first-child > th, caption + thead > tr:first-child > td, colgroup + thead > tr:first-child > td, thead:first-child > tr:first-child > td {
+      border-top: 0;
+    }
+    tbody + tbody {
+      border-top: 2px solid #eeeeee;
+    }
+  }
+  tbody > tr:first-child > td {
+    border-top: 0;
+  }
+  .table {
+    margin-bottom: 0;
+    background-color: #ffffff;
+  }
+}
+
+.table-condensed > {
+  thead > tr > th, tbody > tr > th, tfoot > tr > th, thead > tr > td, tbody > tr > td, tfoot > tr > td {
+    padding: 5px;
+  }
+}
+
+.table-bordered {
+  border: 1px solid #eeeeee;
+  > {
+    thead > tr > th, tbody > tr > th, tfoot > tr > th, thead > tr > td, tbody > tr > td, tfoot > tr > td {
+      border: 1px solid #eeeeee;
+    }
+    thead > tr > {
+      th, td {
+        border-bottom-width: 2px;
+      }
+    }
+  }
+}
+
+.table-striped > tbody > tr:nth-child(odd) > {
+  td, th {
+    background-color: #f9f9f9;
+  }
+}
+
+.table-hover > tbody > tr:hover > {
+  td, th {
+    background-color: #f5f5f5;
+  }
+}
+
+.table-curved > tbody > tr > td {
+  &:first-child {
+    border-radius: 4px 0 0 4px;
+  }
+  &:last-child {
+    border-radius: 0 4px 4px 0;
+  }
+}
+
+table {
+  col[class*="col-"] {
+    position: static;
+    float: none;
+    display: table-column;
+  }
+  td[class*="col-"], th[class*="col-"] {
+    position: static;
+    float: none;
+    display: table-cell;
+  }
+}
+
+.table > {
+  thead > tr > td.active, tbody > tr > td.active, tfoot > tr > td.active, thead > tr > th.active, tbody > tr > th.active, tfoot > tr > th.active, thead > tr.active > td, tbody > tr.active > td, tfoot > tr.active > td, thead > tr.active > th, tbody > tr.active > th, tfoot > tr.active > th {
+    color: #a9a9a9;
+    border-color: #ffffff;
+    background-color: #ffffff;
+  }
+}
+
+.table-hover > tbody > tr {
+  > {
+    td.active:hover, th.active:hover {
+      background-color: #ffffff;
+    }
+  }
+  &.active:hover > td, &:hover > .active, &.active:hover > th {
+    background-color: #ffffff;
+  }
+}
+
+.table > {
+  thead > tr > td.default, tbody > tr > td.default, tfoot > tr > td.default, thead > tr > th.default, tbody > tr > th.default, tfoot > tr > th.default, thead > tr.default > td, tbody > tr.default > td, tfoot > tr.default > td, thead > tr.default > th, tbody > tr.default > th, tfoot > tr.default > th {
+    color: #b3b3b3;
+    border-color: #ffffff;
+    background-color: #ffffff;
+  }
+}
+
+.table-hover > tbody > tr {
+  > {
+    td.default:hover, th.default:hover {
+      background-color: #ffffff;
+    }
+  }
+  &.default:hover > td, &:hover > .default, &.default:hover > th {
+    background-color: #ffffff;
+  }
+}
+
+.table > {
+  thead > tr > td.primary, tbody > tr > td.primary, tfoot > tr > td.primary, thead > tr > th.primary, tbody > tr > th.primary, tfoot > tr > th.primary, thead > tr.primary > td, tbody > tr.primary > td, tfoot > tr.primary > td, thead > tr.primary > th, tbody > tr.primary > th, tfoot > tr.primary > th {
+    color: #1f57a1;
+    border-color: #97bbeb;
+    background-color: #caddf5;
+  }
+}
+
+.table-hover > tbody > tr {
+  > {
+    td.primary:hover, th.primary:hover {
+      background-color: #dbe8f8;
+    }
+  }
+  &.primary:hover > td, &:hover > .primary, &.primary:hover > th {
+    background-color: #dbe8f8;
+  }
+}
+
+.table > {
+  thead > tr > td.success, tbody > tr > td.success, tfoot > tr > td.success, thead > tr > th.success, tbody > tr > th.success, tfoot > tr > th.success, thead > tr.success > td, tbody > tr.success > td, tfoot > tr.success > td, thead > tr.success > th, tbody > tr.success > th, tfoot > tr.success > th {
+    color: #3f9532;
+    border-color: #afe1a8;
+    background-color: #d9f1d5;
+  }
+}
+
+.table-hover > tbody > tr {
+  > {
+    td.success:hover, th.success:hover {
+      background-color: #e7f6e4;
+    }
+  }
+  &.success:hover > td, &:hover > .success, &.success:hover > th {
+    background-color: #e7f6e4;
+  }
+}
+
+.table > {
+  thead > tr > td.info, tbody > tr > td.info, tfoot > tr > td.info, thead > tr > th.info, tbody > tr > th.info, tfoot > tr > th.info, thead > tr.info > td, tbody > tr.info > td, tfoot > tr.info > td, thead > tr.info > th, tbody > tr.info > th, tfoot > tr.info > th {
+    color: #1c7393;
+    border-color: #88cfe9;
+    background-color: #bce4f2;
+  }
+}
+
+.table-hover > tbody > tr {
+  > {
+    td.info:hover, th.info:hover {
+      background-color: #cdebf6;
+    }
+  }
+  &.info:hover > td, &:hover > .info, &.info:hover > th {
+    background-color: #cdebf6;
+  }
+}
+
+.table > {
+  thead > tr > td.warning, tbody > tr > td.warning, tfoot > tr > td.warning, thead > tr > th.warning, tbody > tr > th.warning, tfoot > tr > th.warning, thead > tr.warning > td, tbody > tr.warning > td, tfoot > tr.warning > td, thead > tr.warning > th, tbody > tr.warning > th, tfoot > tr.warning > th {
+    color: #c88a0a;
+    border-color: #fadb9a;
+    background-color: #fdf0d4;
+  }
+}
+
+.table-hover > tbody > tr {
+  > {
+    td.warning:hover, th.warning:hover {
+      background-color: #fef7e8;
+    }
+  }
+  &.warning:hover > td, &:hover > .warning, &.warning:hover > th {
+    background-color: #fef7e8;
+  }
+}
+
+.table > {
+  thead > tr > td.danger, tbody > tr > td.danger, tfoot > tr > td.danger, thead > tr > th.danger, tbody > tr > th.danger, tfoot > tr > th.danger, thead > tr.danger > td, tbody > tr.danger > td, tfoot > tr.danger > td, thead > tr.danger > th, tbody > tr.danger > th, tfoot > tr.danger > th {
+    color: #bc2d16;
+    border-color: #f4ab9f;
+    background-color: #fadbd6;
+  }
+}
+
+.table-hover > tbody > tr {
+  > {
+    td.danger:hover, th.danger:hover {
+      background-color: #fcebe8;
+    }
+  }
+  &.danger:hover > td, &:hover > .danger, &.danger:hover > th {
+    background-color: #fcebe8;
+  }
+}
+
+.table > {
+  thead > tr > td.alert, tbody > tr > td.alert, tfoot > tr > td.alert, thead > tr > th.alert, tbody > tr > th.alert, tfoot > tr > th.alert, thead > tr.alert > td, tbody > tr.alert > td, tfoot > tr.alert > td, thead > tr.alert > th, tbody > tr.alert > th, tfoot > tr.alert > th {
+    color: #542fb2;
+    border-color: #c6b7ec;
+    background-color: #ece7f9;
+  }
+}
+
+.table-hover > tbody > tr {
+  > {
+    td.alert:hover, th.alert:hover {
+      background-color: #f9f7fd;
+    }
+  }
+  &.alert:hover > td, &:hover > .alert, &.alert:hover > th {
+    background-color: #f9f7fd;
+  }
+}
+
+.table > {
+  thead > tr > td.system, tbody > tr > td.system, tfoot > tr > td.system, thead > tr > th.system, tbody > tr > th.system, tfoot > tr > th.system, thead > tr.system > td, tbody > tr.system > td, tfoot > tr.system > td, thead > tr.system > th, tbody > tr.system > th, tfoot > tr.system > th {
+    color: #206d5a;
+    border-color: #77d7c0;
+    background-color: #a7e5d6;
+  }
+}
+
+.table-hover > tbody > tr {
+  > {
+    td.system:hover, th.system:hover {
+      background-color: #b7eadd;
+    }
+  }
+  &.system:hover > td, &:hover > .system, &.system:hover > th {
+    background-color: #b7eadd;
+  }
+}
+
+.table > {
+  thead > tr > td.dark, tbody > tr > td.dark, tfoot > tr > td.dark, thead > tr > th.dark, tbody > tr > th.dark, tfoot > tr > th.dark, thead > tr.dark > td, tbody > tr.dark > td, tfoot > tr.dark > td, thead > tr.dark > th, tbody > tr.dark > th, tfoot > tr.dark > th {
+    color: #3b3f4f;
+    border-color: #999eb3;
+    background-color: #bcbfcd;
+  }
+}
+
+.table-hover > tbody > tr {
+  > {
+    td.dark:hover, th.dark:hover {
+      background-color: #c8cbd6;
+    }
+  }
+  &.dark:hover > td, &:hover > .dark, &.dark:hover > th {
+    background-color: #c8cbd6;
+  }
+}
+
+.table > {
+  thead > tr > td.default, tbody > tr > td.default, tfoot > tr > td.default, thead > tr > th.default, tbody > tr > th.default, tfoot > tr > th.default, thead > tr.default > td, tbody > tr.default > td, tfoot > tr.default > td, thead > tr.default > th, tbody > tr.default > th, tfoot > tr.default > th {
+    color: #777;
+    border-color: #ddd;
+    background-color: #f0f0f0;
+  }
+}
+
+.table-hover > tbody > tr {
+  > {
+    td.default:hover, th.default:hover {
+      background-color: #fcfcfc;
+    }
+  }
+  &.default:hover > td, &:hover > .default, &.default:hover > th {
+    background-color: #fcfcfc;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .table-responsive {
+    width: 100%;
+    margin-bottom: 14.25px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid #eeeeee;
+    -webkit-overflow-scrolling: touch;
+    > {
+      .table {
+        margin-bottom: 0;
+        > {
+          thead > tr > th, tbody > tr > th, tfoot > tr > th, thead > tr > td, tbody > tr > td, tfoot > tr > td {
+            white-space: nowrap;
+          }
+        }
+      }
+      .table-bordered {
+        border: 0;
+        > {
+          thead > tr > th:first-child, tbody > tr > th:first-child, tfoot > tr > th:first-child, thead > tr > td:first-child, tbody > tr > td:first-child, tfoot > tr > td:first-child {
+            border-left: 0;
+          }
+          thead > tr > th:last-child, tbody > tr > th:last-child, tfoot > tr > th:last-child, thead > tr > td:last-child, tbody > tr > td:last-child, tfoot > tr > td:last-child {
+            border-right: 0;
+          }
+          tbody > tr:last-child > th, tfoot > tr:last-child > th, tbody > tr:last-child > td, tfoot > tr:last-child > td {
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.table-dynamic {
+  .table-filters {
+    margin: 10px 0;
+    padding: 8px;
+    select {
+      padding: 5px;
+    }
+  }
+  .filter-result-info {
+    padding: 7px;
+  }
+  .table-bordered {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    thead th {
+      position: relative;
+      padding: 10px;
+      > .th {
+        position: relative;
+        padding: 8px 20px 8px 8px;
+      }
+      .glyphicon-chevron-down, .glyphicon-chevron-up {
+        position: absolute;
+        color: #999;
+      }
+      .glyphicon-chevron-down:hover, .glyphicon-chevron-up:hover {
+        color: #10cfbd;
+        cursor: pointer;
+      }
+      .glyphicon-chevron-down.active, .glyphicon-chevron-up.active {
+        color: #10cfbd;
+      }
+      .fa-sort-down, .fa-sort-up {
+        position: absolute;
+        color: #999;
+        font-size: 16px;
+        font-weight: 700;
+      }
+      .fa-sort-down:hover, .fa-sort-up:hover {
+        color: #10cfbd;
+        cursor: pointer;
+      }
+      .fa-sort-down.active {
+        color: #10cfbd;
+      }
+      .fa-sort-up {
+        &.active {
+          color: #10cfbd;
+        }
+        top: 8px;
+        right: 5px;
+      }
+      .glyphicon-chevron-up {
+        top: 8px;
+        right: 5px;
+      }
+      .fa-sort-down {
+        top: 12px;
+        right: 5px;
+      }
+      .glyphicon-chevron-down {
+        top: 18px;
+        right: 6px;
+      }
+    }
+  }
+  .table-footer {
+    margin: 10px 0;
+    padding: 8px;
+  }
+  .pagination-container ul {
+    margin: 0;
+    li:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+table {
+  &.tc-list-1 tbody td:first-child, &.tc-list-2 tbody td:nth-child(2), &.tc-list-3 tbody td:nth-child(3), &.tc-list-last tbody td:last-child {
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    min-width: 35px;
+    padding: 0 10px;
+    border-right: 1px solid #ddd;
+    background: #f9f9f9;
+  }
+}

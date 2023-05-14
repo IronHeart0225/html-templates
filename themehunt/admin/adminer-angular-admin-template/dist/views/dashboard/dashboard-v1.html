@@ -1,0 +1,628 @@
+<!-- Site Setting Panel -->
+  <section id="settings" data-ng-include=" 'views/settings/settings.html' " style="display:none"></section>
+<!-- Site Setting Panel End -->
+
+<!-- Page Header Start -->
+<div class="pageheader">
+  <h2><i class="fa fa-home"></i> Dashboard </h2>
+  <div class="breadcrumb-wrapper hidden-xs"> <span class="label">You are here:</span>
+    <ol class="breadcrumb">
+      <li> <a href="#"> Home </a> </li>
+      <li class="active"> Dashboard </li>
+    </ol>
+  </div>
+</div>
+<!-- Page Header End -->
+
+<div class="page">
+    <div class="row">
+      <div class="col-lg-3">
+          <div class="panel panel-default">
+            <div class="panel-body" ng-controller="chartCtrl">
+              <div class="center">
+                <div easypiechart options="easypiechartxs1.options" percent="easypiechartxs1.percent" class="easypiechart easypiechart-xs"> <span class="pie-percent" ng-bind="easypiechartxs1.percent"></span> </div>
+              </div>
+              <ul class="nav nav-section nav-justified">
+                <li>
+                  <div class="section">
+                    <p class="text-muted">Direct Sell</p>
+                    <h4>60%</h4>
+                  </div>
+                </li>
+                <li>
+                  <div class="section">
+                    <p class="text-muted">Channel Sell</p>
+                    <h4>40%</h4>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-body" ng-controller="chartCtrl">
+              <div class="center">
+                <div easypiechart options="easypiechartxs2.options" percent="easypiechartxs2.percent" class="easypiechart easypiechart-xs"> <span class="pie-percent" ng-bind="easypiechartxs2.percent"></span> </div>
+              </div>
+              <ul class="nav nav-section nav-justified">
+                <li>
+                  <div class="section">
+                    <p class="text-muted">Direct Sell</p>
+                    <h4>60%</h4>
+                  </div>
+                </li>
+                <li>
+                  <div class="section">
+                    <p class="text-muted">Channel Sell</p>
+                    <h4>40%</h4>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      <div class="col-lg-9">
+        <div class="row" data-ng-controller="flotChartCtrl">
+          <div class="col-md-8">
+            <div class="panel">
+              <div class="panel-body">
+                <div data-flot-chart data-data="barChart3.data" data-options="barChart3.options" style="width: 100%; height: 190px;"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="panel">
+              <div class="panel-body">
+                <div data-flot-chart data-data="line4.data" data-options="line4.options" style="width: 100%; height: 190px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+      <!-- START SLICK SLIDER -->
+      <slick autoplay=true arrows=false pauseOnHover=true responsive=true swipe=true slides-to-show=1 slides-to-scroll=1 class="slider">
+        <div>
+          <div class="panel">
+            <div class="panel-body">
+              <div class="text-bold"> Task in Progress </div>
+              <div class="pv-5"> Navigation Illustration </div>
+              <div class="progress progressbar-xs">
+                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%"> <span class="sr-only">45% Complete</span> </div>
+              </div>
+              <div class="text-dark"> Status : </div>
+              <div class="text-dark text-large pull-left"> Active </div>
+              <div class="text-dark text-large pull-right"> <a href="#" class="btn btn-info btn-sm"> <i class="fa fa-pause"></i> Pause </a> <a href="#" class="btn btn-info btn-sm"> <i class="fa fa-check"></i> Complete </a> </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="panel">
+            <div class="panel-body">
+              <div class="text-bold"> Task in Progress </div>
+              <div class="pv-5"> App Usability Testing </div>
+              <div class="progress progressbar-xs">
+                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%"> <span class="sr-only">45% Complete</span> </div>
+              </div>
+              <div class="text-dark"> Status : </div>
+              <div class="text-dark text-large pull-left"> On Hold </div>
+              <div class="text-dark text-large pull-right"> <a href="#" class="btn btn-info btn-sm"> <i class="fa fa-pause"></i> Pause </a> <a href="#" class="btn btn-info btn-sm"> <i class="fa fa-check"></i> Complete </a> </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="panel">
+            <div class="panel-body">
+              <div class="text-bold"> Task in Progress </div>
+              <div class="pv-5"> Web Portal Redesign Portal </div>
+              <div class="progress progressbar-xs">
+                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%"> <span class="sr-only">45% Complete</span> </div>
+              </div>
+              <div class="text-dark"> Status : </div>
+              <div class="text-dark text-large pull-left"> Active </div>
+              <div class="text-dark text-large pull-right"> <a href="#" class="btn btn-info btn-sm"> <i class="fa fa-pause"></i> Pause </a> <a href="#" class="btn btn-info btn-sm"> <i class="fa fa-check"></i> Complete </a> </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="panel">
+            <div class="panel-body">
+              <div class="text-bold"> Task in Progress </div>
+              <div class="pv-5"> A/B Testing </div>
+              <div class="progress progressbar-xs">
+                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%"> <span class="sr-only">45% Complete</span> </div>
+              </div>
+              <div class="text-dark"> Status : </div>
+              <div class="text-dark text-large pull-left"> Active </div>
+              <div class="text-dark text-large pull-right"> <a href="#" class="btn btn-info btn-sm"> <i class="fa fa-pause"></i> Pause </a> <a href="#" class="btn btn-info btn-sm"> <i class="fa fa-check"></i> Complete </a> </div>
+            </div>
+          </div>
+        </div>
+      </slick>
+      <!-- END SLICK SLIDER --> 
+          </div>
+          <div class="col-lg-4">
+            <div class="panel">
+              <div class="panel-body">
+          <!-- START SLICK SLIDER -->
+          <slick autoplay=true arrows=false pauseOnHover=true vertical=true responsive=true swipe=true slides-to-show=1 slides-to-scroll=1 class="slider">
+            <div>
+              <div class="media"><span class="pull-left"><i class="fa fa-twitter fa-4x text-azure"></i></span>
+                <div class="media-body">
+                  <p class="media-heading"><strong>Semantha Schwarz</strong> <small>1 hour ago</small></p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim...</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="media"><span class="pull-left"><i class="fa fa-facebook fa-4x text-blue"></i></span>
+                <div class="media-body">
+                  <p class="media-heading"><strong>Jonathan Smith</strong> <small>1 hour ago</small></p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim...</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="media"><span class="pull-left"><i class="fa fa-google-plus fa-4x text-google-plus"></i></span>
+                <div class="media-body">
+                  <p class="media-heading"><strong>Stevan peterson</strong> <small>1 hour ago</small></p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim...</p>
+                </div>
+              </div>
+            </div>
+          </slick>
+          <!-- END SLICK SLIDER --> 
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="panel panel-default papernote">
+              <div class="panel-body"> 
+                <!-- START SLICK SLIDER -->
+                <slick autoplay=false arrows=false pauseOnHover=true responsive=true swipe=true slides-to-show=1 slides-to-scroll=1 class="slider">
+                  <div>
+                    <h4>This is my note #2</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+                  </div>
+                  <div>
+                    <h4>This is my note #3</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+                  </div>
+                  <div>
+                    <h4>This is my note #4</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+                  </div>
+                </slick>
+                <!-- END SLICK SLIDER --> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="col-md-9 np" data-ng-controller="flotChartCtrl">
+            <div data-flot-chart data="line1.data" data-options="line1.options" style="width: 100%; height: 350px;"></div>
+          </div>
+          <div class="col-md-3">
+            <h4 class="nm pv-10">Reports </h4>
+            <span class="text-small">In Queue <span class="pull-right"> 45% </span> </span>
+            <progressbar class="progressbar-xs progress-rounded progress-striped" value="68" type="info"></progressbar>
+            <span class="text-small">Shipped Products <span class="pull-right"> 350/500 </span> </span>
+            <progressbar class="progressbar-xs progress-rounded progress-striped" value="68" type="primary"></progressbar>
+            <span class="text-small">Returned Products<span class="pull-right"> 50/500 </span> </span>
+            <progressbar class="progressbar-xs progress-rounded progress-striped" value="68" type="warning"></progressbar>
+            <span class="text-small">Pending Deliveries<span class="pull-right"> 150/500 </span> </span>
+            <progressbar class="progressbar-xs progress-rounded progress-striped" value="68" type="danger"></progressbar>
+            <span class="text-small">Project 2 <span class="pull-right"> 32% </span> </span>
+            <progressbar class="progressbar-xs progress-rounded progress-striped" value="68" type="info"></progressbar>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, quidem, officiis, et ex laudantium sed cupiditate voluptatum .</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6" data-ng-controller="TabsDemoCtrl">
+      <div class="panel panel-default">
+        <h4 class="nm pad-15">Order <strong>List</strong></h4>
+        <div class="panel-body">
+          <tabset> 
+           <tab heading="Total Selling">
+            <table class="table table-condensed">
+              <thead>
+                <tr>
+                  <th width="45%">Product</th>
+                  <th>Price</th>
+                  <th>Sold</th>
+                  <th>Report</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="#"> Apple iPhone 4s - 16GB - Black </a></td>
+                  <td>$625.50</td>
+                  <td>809</td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen">
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button" dropdown-toggle> <i class="fa fa-cog"></i> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td><a href="#"> Samsung Galaxy S III SGH-I747 - 16GB </a></td>
+                  <td>$915.50 </td>
+                  <td>6709</td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen1">
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button" dropdown-toggle> <i class="fa fa-cog"></i> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td><a href="#"> Motorola Droid 4 XT894 - 16GB - Black </a></td>
+                  <td>$878.50</td>
+                  <td>784</td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen2">
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button" dropdown-toggle> <i class="fa fa-cog"></i> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td><a href="#"> Regatta Luca 3 in 1 Jacket </a></td>
+                  <td>$25.50</td>
+                  <td>1245</td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen3">
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button" dropdown-toggle> <i class="fa fa-cog"></i> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td><a href="#"> Samsung Galaxy Note 3 </a></td>
+                  <td>$925.50</td>
+                  <td>21245</td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen4">
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button" dropdown-toggle> <i class="fa fa-cog"></i> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td><a href="#"> Inoval Digital Pen </a></td>
+                  <td>$125.50</td>
+                  <td>1245</td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen5">
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button" dropdown-toggle> <i class="fa fa-cog"></i> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+              </tbody>
+            </table>
+            </tab> 
+            <tab heading="New Customers">
+            <table class="table table-condensed">
+              <thead>
+                <tr>
+                  <th> Customer Name </th>
+                  <th>Total Orders</th>
+                  <th>Total Amount</th>
+                  <th> Report </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> David Wilson </td>
+                  <td>3</td>
+                  <td>$625.50</td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen6" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button" dropdown-toggle> <i class="fa fa-cog"></i> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td> Amanda Nilson </td>
+                  <td>4</td>
+                  <td>$12625.50</td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen7" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button" dropdown-toggle> <i class="fa fa-cog"></i> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td>Jhon Doe</td>
+                  <td>2</td>
+                  <td>$125.00</td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen8" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button" dropdown-toggle> <i class="fa fa-cog"></i> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td>Bill Chang</td>
+                  <td>45</td>
+                  <td>$12,125.70</td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen9" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button" dropdown-toggle> <i class="fa fa-cog"></i> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td>Paul Strong</td>
+                  <td>1</td>
+                  <td>$890.85</td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen10" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button" dropdown-toggle> <i class="fa fa-cog"></i> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td> Jane Hilson </td>
+                  <td>5</td>
+                  <td>$239.85</td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen11" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button" dropdown-toggle> <i class="fa fa-cog"></i> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+              </tbody>
+            </table>
+            </tab> 
+            <tab heading="Recent Orders">
+            <table class="table table-condensed">
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th>Date</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th>Report</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> David Wilson </td>
+                  <td>3 Jan, 2013</td>
+                  <td>$625.50</td>
+                  <td><span class="label label-sm label-success"> Dispatch </span></td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen18" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button" dropdown-toggle> <i class="fa fa-cog"></i> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td> Amanda Nilson </td>
+                  <td>13 Feb, 2013</td>
+                  <td>$12625.50</td>
+                  <td><span class="label label-sm label-danger"> On Hold </span></td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen19" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button" dropdown-toggle> <i class="fa fa-cog"></i> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td>Jhon Doe</td>
+                  <td>20 Mar, 2013</td>
+                  <td>$125.00</td>
+                  <td><span class="label label-sm label-info"> Pending </span></td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen20" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button" dropdown-toggle> <i class="fa fa-cog"></i> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td>Bill Chang</td>
+                  <td>29 May, 2013</td>
+                  <td>$12,125.70</td>
+                  <td><span class="label label-sm label-success"> Dispatch </span></td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen21" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button" dropdown-toggle> <i class="fa fa-cog"></i> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td>Paul Strong</td>
+                  <td>1 Jun, 2013</td>
+                  <td>$890.85</td>
+                  <td><span class="label label-sm label-warning"> On Process </span></td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen22" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button" dropdown-toggle> <i class="fa fa-cog"></i> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td> Jane Hilson </td>
+                  <td>5 Aug, 2013</td>
+                  <td>$239.85</td>
+                  <td><span class="label label-sm label-info"> Pending </span></td>
+                  <td><div class="btn-group" dropdown is-open="status.isopen23" >
+                      <button class="btn btn-default btn-sm dropdown-toggle" type="button" dropdown-toggle> <i class="fa fa-cog"></i> </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:;">Action</a></li>
+                        <li><a href="javascript:;">Another action</a></li>
+                        <li><a href="javascript:;">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Separated link</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+              </tbody>
+            </table>
+            </tab> 
+           </tabset>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="panel panel-default">
+        <h4 class="nm pad-15">User <strong>Accounts</strong></h4>
+        <div class="panel-body">
+          <div class="table-responsive">
+            <table class="table" style="margin-bottom: 0px;">
+              <thead>
+                <tr>
+                  <th class="hidden-xs"> <label for="toggle-all" class="ui-checkbox">
+                      <input name="checkbox1" type="checkbox" value="option1" id="toggle-all">
+                      <span></span></label>
+                  </th>
+                  <th>Profile</th>
+                  <th>User ID</th>
+                  <th class="hidden-xs">Email Address</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="hidden-xs"><label class="ui-checkbox">
+                      <input name="checkbox1" type="checkbox" value="option1">
+                      <span></span></label></td>
+                  <td><div class="media-object center"><img src="images/photos/user1.png" alt="" class="img-circle"></div></td>
+                  <td>cranston</td>
+                  <td class="hidden-xs">cranstonb@gnail.com</td>
+                  <td><span class="label label-success">Approved</span></td>
+                </tr>
+                <tr>
+                  <td class="hidden-xs"><label class="ui-checkbox">
+                      <input name="checkbox1" type="checkbox" value="option1">
+                      <span></span></label></td>
+                  <td><div class="media-object center"><img src="images/photos/user3.png" alt="" class="img-circle"></div></td>
+                  <td>norris</td>
+                  <td class="hidden-xs">j.norris@gnail.com</td>
+                  <td><span class="label label-warning">Suspended</span></td>
+                </tr>
+                <tr>
+                  <td class="hidden-xs"><label class="ui-checkbox">
+                      <input name="checkbox1" type="checkbox" value="option1">
+                      <span></span></label></td>
+                  <td><div class="media-object center"><img src="images/photos/user4.png" alt="" class="img-circle"></div></td>
+                  <td>gunner</td>
+                  <td class="hidden-xs">gunner@outluk.com</td>
+                  <td><span class="label label-danger">Blocked</span></td>
+                </tr>
+                <tr>
+                  <td class="hidden-xs"><label class="ui-checkbox">
+                      <input name="checkbox1" type="checkbox" value="option1">
+                      <span></span></label></td>
+                  <td><div class="media-object center"><img src="images/photos/user5.png" alt="" class="img-circle"></div></td>
+                  <td>mrford</td>
+                  <td class="hidden-xs">fordm@gnail.com</td>
+                  <td><span class="label label-success">Approved</span></td>
+                </tr>
+                <tr>
+                  <td class="hidden-xs"><label class="ui-checkbox">
+                      <input name="checkbox1" type="checkbox" value="option1">
+                      <span></span></label></td>
+                  <td><div class="media-object center"><img src="images/photos/user7.png" alt="" class="img-circle"></div></td>
+                  <td>kristian</td>
+                  <td class="hidden-xs">mack@outluk.com</td>
+                  <td><span class="label label-info">Pending</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>

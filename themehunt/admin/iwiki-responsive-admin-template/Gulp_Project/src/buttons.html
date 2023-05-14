@@ -1,0 +1,270 @@
+@@include('./src/include/head.html', {
+  "title": "Buttons"
+})
+
+@@include('./src/include/head_end.html')
+
+<body>
+  <div id="wrap-content" class="wrap-content">
+
+    @@include('./src/include/top_menu.html',{
+      "name": "Buttons"
+    })
+
+    <div class="content container-fluid btns">
+     <div class="row row-broken">
+        <div class="col-md-12">
+          <ol class="breadcrumb">
+            <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+            <li>Ui Kits</li>
+            <li class="active">Buttons</li>
+          </ol>
+        </div>
+      </div>
+      <div class="row decor-default">
+        <div class="col-lg-12">
+          <h6 class="m-b-md">Button sizes</h6>
+          <p>If You want larger buttons You can add <code>.btn-lg</code> class.</p>
+          <button type="button" class="btn btn-lg btn-lg btn-default">Large button</button>
+          <button type="button" class="btn btn-lg btn-lg btn-primary">Large button</button>
+          <button type="button" class="btn btn-lg btn-lg btn-success">Large button</button>
+          <button type="button" class="btn btn-lg btn-lg btn-info">Large button</button>
+          <button type="button" class="btn btn-lg btn-lg btn-warning">Large button</button>
+          <button type="button" class="btn btn-lg btn-lg btn-round btn-danger">Large button</button>
+          <br>
+          <br>
+
+          <p>Default buttons don`t need any additional classes.</p>
+          <button type="button" class="btn btn-default">Default button</button>
+          <button type="button" class="btn btn-primary">Default button</button>
+          <button type="button" class="btn btn-success">Default button</button>
+          <button type="button" class="btn btn-info">Default button</button>
+          <button type="button" class="btn btn-warning">Default button</button>
+          <button type="button" class="btn btn-danger btn-round">Default button</button>
+          <br>
+          <br>
+
+          <p>Add <code>.btn-sm</code> to get smaller buttons</p>
+          <button type="button" class="btn btn-sm btn-default">Small button</button>
+          <button type="button" class="btn btn-sm btn-primary">Small button</button>
+          <button type="button" class="btn btn-sm btn-success">Small button</button>
+          <button type="button" class="btn btn-sm btn-info">Small button</button>
+          <button type="button" class="btn btn-sm btn-warning">Small button</button>
+          <button type="button" class="btn btn-sm btn-round btn-danger">Small button</button>
+          <br>
+          <br>
+
+          <p>Add <code>.btn-mini</code> to get mini buttons</p>
+          <button type="button" class="btn btn-mini btn-default">Mini button</button>
+          <button type="button" class="btn btn-mini btn-primary">Mini button</button>
+          <button type="button" class="btn btn-mini btn-success">Mini button</button>
+          <button type="button" class="btn btn-mini btn-info">Mini button</button>
+          <button type="button" class="btn btn-mini btn-warning">Mini button</button>
+          <button type="button" class="btn btn-mini btn-round btn-danger">Mini button</button>
+
+        </div>
+      </div>
+      <div class="row decor-default">
+        <div class="col-lg-12">
+          <h6 class="m-b-md">Basic buttons</h6>
+          <!-- Buttons default view -->
+          <button type="button" class="btn btn-lg btn-default">Default</button>
+          <button type="button" class="btn btn-lg btn-primary">Primary</button>
+          <button type="button" class="btn btn-lg btn-success">Success</button>
+          <button type="button" class="btn btn-lg btn-info">Info</button>
+          <button type="button" class="btn btn-lg btn-warning">Warning</button>
+          <button type="button" class="btn btn-lg btn-danger">Danger</button>
+          <br>
+          <br>
+          <h6 class="m-b-md">Hover buttons</h6>
+          <!-- Hover buttons -->
+          <div class="hover-btn">
+            <button type="button" class="btn btn-lg btn-default">Default</button>
+            <button type="button" class="btn btn-lg btn-primary">Primary</button>
+            <button type="button" class="btn btn-lg btn-success">Success</button>
+            <button type="button" class="btn btn-lg btn-info">Info</button>
+            <button type="button" class="btn btn-lg btn-warning">Warning</button>
+            <button type="button" class="btn btn-lg btn-danger">Danger</button>
+          </div>
+          <br>
+          <h6 class="m-b-md">Active buttons</h6>
+          <!-- Active buttons -->
+          <div class="active-btn">
+            <button type="button" class="btn btn-lg btn-default">Default</button>
+            <button type="button" class="btn btn-lg btn-primary">Primary</button>
+            <button type="button" class="btn btn-lg btn-success">Success</button>
+            <button type="button" class="btn btn-lg btn-info">Info</button>
+            <button type="button" class="btn btn-lg btn-warning">Warning</button>
+            <button type="button" class="btn btn-lg btn-danger">Danger</button>
+          </div>
+          <br>
+          <h6 class="m-b-md">Disabled buttons</h6>
+          <!-- Buttons disabled -->
+          <button type="button" class="btn btn-lg btn-default" disabled>Default</button>
+          <button type="button" class="btn btn-lg btn-primary" disabled>Primary</button>
+          <button type="button" class="btn btn-lg btn-success" disabled>Success</button>
+          <button type="button" class="btn btn-lg btn-info" disabled>Info</button>
+          <button type="button" class="btn btn-lg btn-warning" disabled>Warning</button>
+          <button type="button" class="btn btn-lg btn-danger" disabled>Danger</button>
+
+          <br>
+          <br>
+          <h6 class="m-b-md">Rounded buttons</h6>
+          <p>You can also add <code>.btn-round</code> class to round buttons.</p>
+          <!-- Buttons round -->
+          <button type="button" class="btn btn-lg btn-default btn-round">Default</button>
+          <button type="button" class="btn btn-lg btn-primary btn-round">Primary</button>
+          <button type="button" class="btn btn-lg btn-success btn-round">Success</button>
+          <button type="button" class="btn btn-lg btn-info btn-round">Info</button>
+          <button type="button" class="btn btn-lg btn-warning btn-round">Warning</button>
+          <button type="button" class="btn btn-lg btn-danger btn-round">Danger</button>
+
+          <br>
+          <br>
+          <h6 class="m-b-md">Hover rounded buttons</h6>
+          <!-- Buttons round -->
+          <div class="hover-btn">
+            <button type="button" class="btn btn-lg btn-default btn-round">Default</button>
+            <button type="button" class="btn btn-lg btn-primary btn-round">Primary</button>
+            <button type="button" class="btn btn-lg btn-success btn-round">Success</button>
+            <button type="button" class="btn btn-lg btn-info btn-round">Info</button>
+            <button type="button" class="btn btn-lg btn-warning btn-round">Warning</button>
+            <button type="button" class="btn btn-lg btn-danger btn-round">Danger</button>
+          </div>
+
+          <br>
+          <h6 class="m-b-md">Active rounded buttons</h6>
+          <!-- Buttons round -->
+          <div class="active-btn">
+            <button type="button" class="btn btn-lg btn-default btn-round">Default</button>
+            <button type="button" class="btn btn-lg btn-primary btn-round">Primary</button>
+            <button type="button" class="btn btn-lg btn-success btn-round">Success</button>
+            <button type="button" class="btn btn-lg btn-info btn-round">Info</button>
+            <button type="button" class="btn btn-lg btn-warning btn-round">Warning</button>
+            <button type="button" class="btn btn-lg btn-danger btn-round">Danger</button>
+          </div>
+
+          <br>
+          <h6 class="m-b-md">Disabled rounded buttons</h6>
+          <!-- Buttons round and disabled -->
+          <button type="button" class="btn btn-lg btn-default btn-round" disabled>Default</button>
+          <button type="button" class="btn btn-lg btn-primary btn-round" disabled>Primary</button>
+          <button type="button" class="btn btn-lg btn-success btn-round" disabled>Success</button>
+          <button type="button" class="btn btn-lg btn-info btn-round" disabled>Info</button>
+          <button type="button" class="btn btn-lg btn-warning btn-round" disabled>Warning</button>
+          <button type="button" class="btn btn-lg btn-danger btn-round" disabled>Danger</button>
+          <br>
+          <br>
+          <h6 class="m-b-md">Buttons with icons</h6>
+          <p>Add <code>.btn-icon</code> class to get square buttons</p>
+          <!-- Btn plus -->
+          <button type="button" class="btn btn-lg btn-primary btn-icon"><span class="fa fa-plus"></span></button>
+          <button type="button" class="btn btn-lg btn-success btn-icon"><span class="fa fa-plus"></span></button>
+          <button type="button" class="btn btn-lg btn-info btn-icon"><span class="fa fa-plus"></span></button>
+          <button type="button" class="btn btn-lg btn-warning btn-icon"><span class="fa fa-plus"></span></button>
+          <button type="button" class="btn btn-lg btn-danger btn-icon"><span class="fa fa-plus"></span></button>
+          <br>
+          <br>
+          <p>Add <code>.btn-round</code> class to get circled buttons with icons.</p>
+          <button type="button" class="btn btn-lg btn-primary btn-icon btn-round"><span class="fa fa-plus"></span></button>
+          <button type="button" class="btn btn-lg btn-success btn-icon btn-round"><span class="fa fa-plus"></span></button>
+          <button type="button" class="btn btn-lg btn-info btn-icon btn-round"><span class="fa fa-plus"></span></button>
+          <button type="button" class="btn btn-lg btn-warning btn-icon btn-round"><span class="fa fa-plus"></span></button>
+          <button type="button" class="btn btn-lg btn-danger btn-icon btn-round"><span class="fa fa-plus"></span></button>
+          <br>
+          <br>
+          <!-- Buttons follow -->
+          <button type="button" class="btn btn-lg btn-follow btn-info id-btn-follow">Follow</button>
+          <button type="button" class="btn btn-lg btn-follow btn-info id-btn-follow hovered">Follow</button>
+          <button type="button" class="btn btn-lg btn-follow btn-info id-btn-follow active">Follow</button>
+          <button type="button" class="btn btn-lg btn-follow btn-info id-btn-follow" disabled>Follow</button>
+          <br>
+          <br>
+          <button type="button" class="btn btn-follow btn-success id-btn-follow checked">Followed</button>
+          <button type="button" class="btn btn-follow btn-success id-btn-follow checked hovered">Followed</button>
+          <button type="button" class="btn btn-follow btn-success id-btn-follow checked active">Followed</button>
+          <button type="button" class="btn btn-follow btn-success id-btn-follow checked" disabled>Followed</button>
+          <br>
+          <br>
+          <button type="button" class="btn btn-sm btn-follow btn-danger unchecked id-btn-follow">Unfollow</button>
+          <button type="button" class="btn btn-sm btn-follow btn-danger unchecked id-btn-follow hovered">Unfollow</button>
+          <button type="button" class="btn btn-sm btn-follow btn-danger unchecked id-btn-follow active">Unfollow</button>
+          <button type="button" class="btn btn-sm btn-follow btn-danger unchecked id-btn-follow" disabled>Unfollow</button>
+        </div>
+      </div>
+
+      <div class="row decor-default">
+        <div class="col-lg-12">
+          <h6 class="m-b-md">Other buttons</h6>
+          <!-- Pagination v1 -->
+          <ul class="pagination view-1 clearfix">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">1</a></li>
+            <li class="active"><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+          </ul>
+
+          <!-- Sorting -->
+          <ul class="sorting clearfix">
+            <li class="view-1"></li>
+            <li class="view-2 active"></li>
+            <li class="view-3"></li>
+            <li class="view-4"></li>
+          </ul>
+
+          <!-- Pagination v2 -->
+          <ul class="pagination view-2 clearfix">
+            <li><a href="#">Prev</a></li>
+            <li><a href="#">1</a></li>
+            <li class="active"><a href="#">2</a></li>
+            <li><a href="#">Next</a></li>
+          </ul>
+        </div>
+      </div>
+
+
+
+      <div class="row decor-info">
+        <div class="col-sm-12">
+          <h6 class="m-b-md text-light">Sliders</h6></div>
+        <div class="col-md-6 col-sm-12">
+          <div class="slider-ui slider-ui-view-1 m-b-md"></div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="slider-ui slider-ui-view-2 m-b-md"></div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="slider-ui slider-ui-view-3 m-b-md"></div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="slider-ui slider-ui-view-4 m-b-md"></div>
+        </div>
+      </div>
+
+
+    </div>
+
+    @@include('./src/include/footer-container.html')
+  </div>
+
+  @@include('./src/include/menu.html')
+
+  @@include('./src/include/footer.html')
+
+  <script src="js/jquery-ui.min.js"></script>
+  <script>
+    $(function () {
+      $(".slider-ui").slider({
+        range: "min",
+        value: 60
+      });
+
+      $(".hover-btn .btn").addClass("hovered");
+      $(".active-btn .btn").addClass("active");
+    });
+  </script>
+
+  @@include('./src/include/footer_end.html')

@@ -1,0 +1,78 @@
+.followers {
+
+  .unit {
+    border-bottom: 1px solid $brand-default-hue;
+    padding: 25px 220px 25px 60px;
+    color: $text-dark;
+    font-size: 16px;
+    line-height: 40px;
+    position: relative;
+    @include clearfix();
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      margin-top: -20px;
+
+      img {
+        display: block;
+        border-radius: 20px;
+        height: 100%;
+      }
+
+      .status {
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 0;
+        left: 28px;
+
+        &.off {
+          border: 1px solid #5a5a5a;
+          background: #ffffff;
+        }
+
+        &.online {
+          background: #4caf50;
+        }
+
+        &.offline {
+          background: #ed4e6e;
+        }
+
+        &.busy {
+          background: #ffc107;
+        }
+      }
+    }
+
+    .field {
+      float: left;
+      width: 50%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      &.name {
+
+       }
+
+      &.phone {
+        text-align: center;
+      }
+    }
+
+
+
+
+    .btn {
+      position: absolute;
+      right: 0;
+      top: 21px;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+@@include('./src/include/head.html', {
+  "title": "Gallery"
+})
+
+@@include('./src/include/head_end.html')
+<body>
+    <div id="wrap-content" class="wrap-content">
+        @@include('./src/include/top_menu.html',{
+          "name": "Gallery"
+        })
+        <div class="content container-fluid">
+
+          <div class="row row-broken">
+            <div class="col-md-12">
+              <ol class="breadcrumb">
+                <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+                <li>Media</li>
+                <li class="active">Gallery</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="row row-broken">
+                <div class="col-sm-12">
+
+                       <div class="row gallery-list">
+                            <a href="img/images/gallery/1200-1.png" data-toggle="lightbox" data-gallery="multiimages" data-title="Title 1" class="col-sm-3">
+                                <img src="img/images/gallery/1200-1.png" class="img-responsive">
+                            </a>
+                            <a href="img/images/gallery/1200-2.png" data-toggle="lightbox" data-gallery="multiimages" data-title="Title 2" class="col-sm-3">
+                                <img src="img/images/gallery/1200-2.png" class="img-responsive">
+                            </a>
+                            <a href="img/images/gallery/1200-3.png" data-toggle="lightbox" data-gallery="multiimages" data-title="Title 3" class="col-sm-3">
+                                <img src="img/images/gallery/1200-3.png" class="img-responsive">
+                            </a>
+                            <a href="img/images/gallery/1200-4.png" data-toggle="lightbox" data-gallery="multiimages" data-title="Title 4" class="col-sm-3">
+                                <img src="img/images/gallery/1200-4.png" class="img-responsive">
+                            </a>
+
+                            <a href="img/images/gallery/1200-5.png" data-toggle="lightbox" data-gallery="multiimages" data-title="Title 5" class="col-sm-3">
+                                <img src="img/images/gallery/1200-5.png" class="img-responsive">
+                            </a>
+                            <a href="img/images/gallery/1200-6.png" data-toggle="lightbox" data-gallery="multiimages" data-title="Title 6" class="col-sm-3">
+                                <img src="img/images/gallery/1200-6.png" class="img-responsive">
+                            </a>
+                            <a href="img/images/gallery/1200-7.png" data-toggle="lightbox" data-gallery="multiimages" data-title="Title 7" class="col-sm-3">
+                                <img src="img/images/gallery/1200-7.png" class="img-responsive">
+                            </a>
+                            <a href="img/images/gallery/1200-8.png" data-toggle="lightbox" data-gallery="multiimages" data-title="Title 8" class="col-sm-3">
+                                <img src="img/images/gallery/1200-8.png" class="img-responsive">
+                            </a>
+
+                            <a href="img/images/gallery/1200-9.png" data-toggle="lightbox" data-gallery="multiimages" data-title="Title 9" class="col-sm-3">
+                                <img src="img/images/gallery/1200-9.png" class="img-responsive">
+                            </a>
+                            <a href="img/images/gallery/1200-10.png" data-toggle="lightbox" data-gallery="multiimages" data-title="Title 10" class="col-sm-3">
+                                <img src="img/images/gallery/1200-10.png" class="img-responsive">
+                            </a>
+                            <a href="img/images/gallery/1200-11.png" data-toggle="lightbox" data-gallery="multiimages" data-title="Title 11" class="col-sm-3">
+                                <img src="img/images/gallery/1200-11.png" class="img-responsive">
+                            </a>
+                            <a href="img/images/gallery/1200-12.png" data-toggle="lightbox" data-gallery="multiimages" data-title="Title 12" class="col-sm-3">
+                                <img src="img/images/gallery/1200-12.png" class="img-responsive">
+                            </a>
+                        </div>
+
+                </div>
+          </div>
+
+        </div>
+        @@include('./src/include/footer-container.html')
+    </div>
+
+
+
+    @@include('./src/include/menu.html')
+
+    @@include('./src/include/footer.html')
+
+    <script src="js/ekko-lightbox.min.js"></script>
+
+    <script>
+    $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox({
+          onShown: function() {
+            $(".ekko-lightbox-container").append('<div class="control-wrap"><span class="control control-1"></span><span class="control control-2"></span><span class="control control-3"></span></div>');
+          }
+        });
+
+    });
+    </script>
+
+    @@include('./src/include/footer_end.html')

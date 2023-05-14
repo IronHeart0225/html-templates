@@ -1,0 +1,129 @@
+.cover {
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+  padding: 0;
+
+  @include media('lg') {
+    height: 380px;
+  }
+
+  @include media('md') {
+    height: 320px;
+  }
+
+  &-img {
+    display: block;
+    min-height: 100%;
+    margin: 0 auto;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &-blackout {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+  }
+
+  &-name {
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    left: 20px;
+  }
+
+  &-avatar {
+    display: block;
+
+    &.size-md {
+      width: 130px;
+      height: 130px;
+      margin: 90px auto 0;
+
+      @include media('lg') {
+        margin-top: 20px;
+      }
+
+      @include media('md') {
+        width: 75px;
+        height: 75px;
+      }
+    }
+  }
+
+  &-inside {
+
+    * {
+      line-height: 2;
+    }
+
+    h3 {
+      margin-top: 10%;
+    }
+
+    .field {
+      font-size: 16px;
+      display: inline-block;
+    }
+
+    .place {
+      padding: 0 0 0 20px;
+      background: url('../img/icon-52.png') 0 50% no-repeat;
+    }
+
+    .likes {
+      padding: 0 0 0 25px;
+      background: url('../img/icon-53.png') 0 50% no-repeat;
+    }
+
+    .name {
+
+    }
+  }
+
+  .user-icon {
+    display: inline-block;
+    padding: 35px 0 0;
+    font-size: 16px;
+    line-height: 20px;
+      >div{
+        line-height: 1;
+      }
+    &-1 {
+      background: url('../img/icon-54.png') no-repeat 50% 0;
+    }
+
+    &-2 {
+      background: url('../img/icon-55.png') no-repeat 50% 0;
+    }
+
+    &-3 {
+      background: url('../img/icon-56.png') no-repeat 50% 0;
+    }
+  }
+
+  .help-block-1 {
+    width: 50%;
+    margin: 12px auto 0;
+    overflow: hidden;
+
+    @include media('md') {
+      width: 75%;
+    }
+
+    @include media('sm') {
+      width: 100%;
+
+      .btn {
+        min-width: 150px;
+        font-size: 20px;
+        padding: 0 10px;
+      }
+    }
+  }
+}

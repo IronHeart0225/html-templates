@@ -1,0 +1,547 @@
+<!-- Site Setting Panel -->
+<section id="settings" data-ng-include=" 'views/settings/settings.html' " style="display:none"></section>
+<!-- Site Setting Panel End -->
+
+<!-- Page Header Start -->
+
+<div class="pageheader">
+  <h2><i class="fa fa-home"></i> Dashboard </h2>
+  <div class="breadcrumb-wrapper hidden-xs"> <span class="label">You are here:</span>
+    <ol class="breadcrumb">
+      <li> <a href="#"> Home </a> </li>
+      <li class="active"> Dashboard </li>
+    </ol>
+  </div>
+</div>
+<!-- Page Header End --> 
+
+<!-- Dashboard Body Start -->
+<div class="page">
+  <div class="row">
+    <div class="col-lg-9 col-md-12">
+      <div class="row" data-ng-controller="flotChartCtrl">
+        <div class="col-lg-4">
+          <div class="panel panel-default">
+            <div class="panel-body center">
+              <div data-flot-chart data-data="barChart3.data" data-options="barChart3.options" style="width: 100%; height: 155px;"></div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-body center">
+              <div data-flot-chart data="barChart4.data" data-options="barChart4.options" style="width: 100%; height: 155px;"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="panel panel-default">
+            <div class="panel-body"> 
+              <!-- Jqvmap Start -->
+              <div data-ng-controller="jvectormapCtrl" class="col-lg-6">
+                <div class="ui-map-175" ui-jvectormap options="Jvusamap"></div>
+              </div>
+              <!-- Jqvmap End -->
+              <div class="col-lg-6 pv-10">
+                <div class="panel">
+                  <div class="panel-body text-bold text-center">
+                    <p class="nm">THIS YEAR TOTAL ORDER ($)</p>
+                    <h4 class="nm pv-10 text-primary text-bold"> $6,84,545 </h4>
+                  </div>
+                  <div class="panel-footer np">
+                    <ul class="nav nav-section nav-justified">
+                      <li>
+                        <div class="section">
+                          <h4 class="text-azure text-bold"> 12560 </h4>
+                          <p> OHIO </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="section">
+                          <h4 class="text-green text-bold"> 12560 </h4>
+                          <p> NEW YORK </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="section">
+                          <h4 class="text-red text-bold"> 12560 </h4>
+                          <p>FLORIDA</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Progress bars Start -->
+              <div class="col-sm-6">
+                <div class="clearfix"> <span class="pull-left">New York</span> <small class="pull-right">72%</small> </div>
+                <progressbar class="progressbar-xs progress-rounded progress-striped" value="72" type="info"></progressbar>
+              </div>
+              <!-- Progress bars End --> 
+              
+              <!-- Progress bars Start -->
+              <div class="col-sm-6">
+                <div class="clearfix"> <span class="pull-left">Florida</span> <small class="pull-right">68%</small> </div>
+                <progressbar class="progressbar-xs progress-rounded progress-striped" value="68" type="info"></progressbar>
+              </div>
+              <!-- Progress bars End --> 
+              
+              <!-- Progress bars Start -->
+              <div class="col-sm-6">
+                <div class="clearfix"> <span class="pull-left">Texas</span> <small class="pull-right">58%</small> </div>
+                <progressbar class="progressbar-xs progress-rounded progress-striped" value="58" type="info"></progressbar>
+              </div>
+              <!-- Progress bars End --> 
+              
+              <!-- Progress bars Start -->
+              <div class="col-sm-6">
+                <div class="clearfix"> <span class="pull-left">Nevada</span> <small class="pull-right">45%</small> </div>
+                <progressbar class="progressbar-xs progress-rounded progress-striped" value="45" type="info"></progressbar>
+              </div>
+              <!-- Progress bars End --> 
+              
+              <!-- Progress bars Start -->
+              <div class="col-sm-6">
+                <div class="clearfix"> <span class="pull-left">New Jersey</span> <small class="pull-right">45%</small> </div>
+                <progressbar class="progressbar-xs progress-rounded progress-striped" value="45" type="info"></progressbar>
+              </div>
+              <!-- Progress bars End --> 
+              
+              <!-- Progress bars Start -->
+              <div class="col-sm-6">
+                <div class="clearfix"> <span class="pull-left">Ohio</span> <small class="pull-right">75%</small> </div>
+                <progressbar class="progressbar-xs progress-rounded progress-striped" value="75" type="info"></progressbar>
+              </div>
+              <!-- Progress bars End --> 
+              
+              <!-- Progress bars Start -->
+              <div class="col-sm-6">
+                <div class="clearfix"> <span class="pull-left">California</span> <small class="pull-right">45%</small> </div>
+                <progressbar class="progressbar-xs progress-rounded progress-striped" value="45" type="info"></progressbar>
+              </div>
+              <!-- Progress bars End --> 
+              
+              <!-- Progress bars Start -->
+              <div class="col-sm-6">
+                <div class="clearfix"> <span class="pull-left">Houston</span> <small class="pull-right">55%</small> </div>
+                <progressbar class="progressbar-xs progress-rounded progress-striped" value="55" type="info"></progressbar>
+              </div>
+              <!-- Progress bars End --> 
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-body" data-ng-controller="chartCtrl">
+          <div class="center">
+            <div easypiechart options="easypiechartxs1.options" percent="easypiechartxs1.percent" class="easypiechart easypiechart-xs"> <span class="pie-percent" ng-bind="easypiechartxs1.percent"></span> </div>
+          </div>
+          <ul class="nav nav-section nav-justified">
+            <li>
+              <div class="section">
+                <p class="text-muted">Direct Sell</p>
+                <h4>60%</h4>
+              </div>
+            </li>
+            <li>
+              <div class="section">
+                <p class="text-muted">Channel Sell</p>
+                <h4>40%</h4>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-body" data-ng-controller="chartCtrl">
+          <div class="center">
+            <div easypiechart options="easypiechartxs3.options" percent="easypiechartxs3.percent" class="easypiechart easypiechart-xs"> <span class="pie-percent" ng-bind="easypiechartxs3.percent"></span> </div>
+          </div>
+          <ul class="nav nav-section nav-justified">
+            <li>
+              <div class="section">
+                <p class="text-muted">Credit Card</p>
+                <h4>65%</h4>
+              </div>
+            </li>
+            <li>
+              <div class="section">
+                <p class="text-muted">Paypal</p>
+                <h4>35%</h4>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <section class="panel panel-box">
+        <div class="panel-body bg-facebook"> <i class="fa fa-facebook fa-4x"></i>
+        </div>
+        <div class="panel-footer np">
+          <ul class="nav nav-section nav-justified">
+            <li>
+              <div class="section">
+                <h4>12.5k</h4>
+                <p class="text-muted">Followers</p>
+              </div>
+            </li>
+            <li>
+              <div class="section">
+                <h4>1853</h4>
+                <p class="text-muted">Following</p>
+              </div>
+            </li>
+            <li>
+              <div class="section">
+                <h4>3451</h4>
+                <p class="text-muted">Tweets</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <div class="col-md-3">
+      <section class="panel panel-box">
+        <div class="panel-body bg-twitter"> <i class="fa fa-twitter fa-4x"></i>
+        </div>
+        <div class="panel-footer np">
+          <ul class="nav nav-section nav-justified">
+            <li>
+              <div class="section">
+                <h4>12.5k</h4>
+                <p class="text-muted">Followers</p>
+              </div>
+            </li>
+            <li>
+              <div class="section">
+                <h4>1853</h4>
+                <p class="text-muted">Following</p>
+              </div>
+            </li>
+            <li>
+              <div class="section">
+                <h4>3451</h4>
+                <p class="text-muted">Tweets</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <div class="col-md-3">
+      <section class="panel panel-box">
+        <div class="panel-body bg-warning"> <i class="fa fa-dollar fa-4x"></i>
+        </div>
+        <div class="panel-footer np">
+          <ul class="nav nav-section nav-justified">
+            <li>
+              <div class="section">
+                <h4>12.5k</h4>
+                <p class="text-muted">Followers</p>
+              </div>
+            </li>
+            <li>
+              <div class="section">
+                <h4>1853</h4>
+                <p class="text-muted">Following</p>
+              </div>
+            </li>
+            <li>
+              <div class="section">
+                <h4>3451</h4>
+                <p class="text-muted">Tweets</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <div class="col-md-3">
+      <section class="panel panel-box">
+        <div class="panel-body bg-info"> <i class="fa fa-comments-o fa-4x"></i>
+        </div>
+        <div class="panel-footer np">
+          <ul class="nav nav-section nav-justified">
+            <li>
+              <div class="section">
+                <h4>12.5k</h4>
+                <p class="text-muted">Followers</p>
+              </div>
+            </li>
+            <li>
+              <div class="section">
+                <h4>1853</h4>
+                <p class="text-muted">Following</p>
+              </div>
+            </li>
+            <li>
+              <div class="section">
+                <h4>3451</h4>
+                <p class="text-muted">Tweets</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-7">
+      <div class="panel panel-default" ng-controller="AccordionDemoCtrl">
+        <div class="panel-heading">
+          <div class="text-center">
+            <h4>Monthly <strong>Statistics</strong></h4>
+            <span class="text-dark">based on the User Activities</span> </div>
+        </div>
+        <div class="panel-body np">
+          <accordion close-others="oneAtATime">
+            <accordion-group is-open="status.isFirstOpen" class="panel-transparent">
+              <accordion-heading> <i class="fa fa-map-marker pr-5"></i> Top Countries </accordion-heading>
+              <div class="unseen">
+                <table class="table partition-light-grey nm">	
+                  <thead>
+                    <tr>
+                      <th>Country</th>
+                      <th>Unique User</th>
+                      <th>Pageviews</th>
+                      <th>Changes</th>
+                      <th>New Vs. Return</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>USA</td>
+                      <td>109820</td>
+                      <td>454590</td>
+                      <td>25.85%</td>
+                      <td><progress class="progressbar-sm progress-striped nm">
+                          <bar value="40" type="success"></bar>
+                          <bar value="60" type="info"></bar>
+                        </progress></td>
+                    </tr>
+                    <tr>
+                      <td>India</td>
+                      <td>85450</td>
+                      <td>350475</td>
+                      <td>15.32%</td>
+                      <td><progress class="progressbar-sm progress-striped nm">
+                          <bar value="55" type="success"></bar>
+                          <bar value="45" type="info"></bar>
+                        </progress></td>
+                    </tr>
+                    <tr>
+                      <td>Brazil</td>
+                      <td>75480</td>
+                      <td>254780</td>
+                      <td>22.52%</td>
+                      <td><progress class="progressbar-sm progress-striped nm">
+                          <bar value="85" type="success"></bar>
+                          <bar value="15" type="info"></bar>
+                        </progress></td>
+                    </tr>
+                    <tr>
+                      <td>Russia</td>
+                      <td>65700</td>
+                      <td>211522</td>
+                      <td>10.14%</td>
+                      <td><progress class="progressbar-sm progress-striped nm">
+                          <bar value="35" type="success"></bar>
+                          <bar value="65" type="info"></bar>
+                        </progress></td>
+                    </tr>
+                    <tr>
+                      <td>Poland</td>
+                      <td>55000</td>
+                      <td>185045</td>
+                      <td>5.15%</td>
+                      <td><progress class="progressbar-sm progress-striped nm">
+                          <bar value="25" type="success"></bar>
+                          <bar value="75" type="info"></bar>
+                        </progress></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </accordion-group>
+            <accordion-group is-open="status.tab2.open" class="panel-transparent">
+              <accordion-heading> <i class="fa fa-users pr-5"></i> Age Group </accordion-heading>
+              <table class="table partition-light-grey nm">
+                <tbody>
+                  <tr>
+                    <td class="center text-azure"><i class="fa fa-male"></i></td>
+                    <td>18 to 25 year old</td>
+                    <td class="center">25%</td>
+                    <td><i class="fa fa-caret-up text-green"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="center text-azure"><i class="fa fa-male"></i></td>
+                    <td>26 to 35 year old</td>
+                    <td class="center">65%</td>
+                    <td><i class="fa fa-caret-up text-green"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="center text-azure"><i class="fa fa-male"></i></td>
+                    <td>36 to 45 year old</td>
+                    <td class="center">40%</td>
+                    <td><i class="fa fa-caret-down text-red"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="center text-azure"><i class="fa fa-male"></i></td>
+                    <td>46 to 55 year old</td>
+                    <td class="center">35%</td>
+                    <td><i class="fa fa-caret-down text-red"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="center text-azure"><i class="fa fa-male"></i></td>
+                    <td>56 to 65 year old</td>
+                    <td class="center">15%</td>
+                    <td><i class="fa fa-caret-down text-red"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+            </accordion-group>
+          </accordion>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5">
+      <div class="panel panel-default">
+        <div class="panel-body"> 
+          <!-- START SLICK SLIDER -->
+          <slick autoplay=true arrows=false pauseOnHover=true vertical=true responsive=true swipe=true slides-to-show=1 slides-to-scroll=1 class="slider">
+            <div>
+              <div class="media"><span class="pull-left"><i class="fa fa-twitter fa-4x text-azure"></i></span>
+                <div class="media-body">
+                  <p class="media-heading"><strong>Semantha Schwarz</strong> <small>1 hour ago</small></p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim...</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="media"><span class="pull-left"><i class="fa fa-facebook fa-4x text-blue"></i></span>
+                <div class="media-body">
+                  <p class="media-heading"><strong>Jonathan Smith</strong> <small>1 hour ago</small></p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="media"><span class="pull-left"><i class="fa fa-google-plus fa-4x text-google-plus"></i></span>
+                <div class="media-body">
+                  <p class="media-heading"><strong>Stevan peterson</strong> <small>1 hour ago</small></p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim...</p>
+                </div>
+              </div>
+            </div>
+          </slick>
+          <!-- END SLICK SLIDER --> 
+        </div>
+      </div>
+      <div class="panel panel-default papernote">
+        <div class="panel-body"> 
+          <!-- START SLICK SLIDER -->
+          <slick autoplay=true arrows=false pauseOnHover=true responsive=true swipe=true slides-to-show=1 slides-to-scroll=1 class="slider">
+            <div>
+              <h4>This is my note #2</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad. </p>
+            </div>
+            <div>
+              <h4>This is my note #3</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad.</p>
+            </div>
+            <div>
+              <h4>This is my note #4</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad.</p>
+            </div>
+          </slick>
+          <!-- END SLICK SLIDER --> 
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="panel panel-default">
+        <header class="panel-heading">
+          <span>General <strong>Table</strong></span>
+          <span class="pull-right">
+            <i class="fa fa-chevron-down mr-10" data-panel-Toggle=""></i> 
+            <i class="fa fa-expand mr-10" data-fullscreen-widget=""></i> 
+            <i class="fa fa-times" data-widget-close=""></i>
+          </span> 
+        </header>
+        <div class="panel-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Project</th>
+                <th> Project Deadline </th>
+                <th>Status</th>
+                <th>Client</th>
+                <th>Progress</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>IT Help Desk</td>
+                <td>11 Feb 2015</td>
+                <td><span class="label label-danger">Critical</span></td>
+                <td>Amery Lee</td>
+                <td><progressbar class="progressbar-xs no-margin" value="55"></progressbar></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Product Dev</td>
+                <td>12 june 2015</td>
+                <td><span class="label label-warning">High</span></td>
+                <td>Romayne Carlyn</td>
+                <td><progressbar class="progressbar-xs no-margin" value="34" type="success"></progressbar></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td> Website Redesign</td>
+                <td>11 november 2015</td>
+                <td><span class="label label-success">Normal</span></td>
+                <td>Marybeth Joanna</td>
+                <td><progressbar class="progressbar-xs no-margin" value="68" type="info"></progressbar></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td> Local Ad </td>
+                <td>15 april 2015</td>
+                <td><span class="label label-success">Normal</span></td>
+                <td>Jonah Benny</td>
+                <td><progressbar class="progressbar-xs no-margin" value="52" type="warning"></progressbar></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Design new theme</td>
+                <td>2 May 2015</td>
+                <td><span class="label label-warning">High</span></td>
+                <td>Daly Royle</td>
+                <td><progressbar class="progressbar-xs no-margin" value="77" type="danger"></progressbar></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Mockup Testing</td>
+                <td>6 June 2015</td>
+                <td><span class="label label-info">On Hold</span></td>
+                <td>Jane Swift</td>
+                <td><progressbar class="progressbar-xs no-margin" value="55" type="success"></progressbar></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Dashboard Body End --> 
+</div>

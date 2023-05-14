@@ -1,0 +1,365 @@
+@@include('./src/include/head.html', {
+  "title": "Charts"
+})
+
+@@include('./src/include/head_end.html')
+
+<body>
+  <div id="wrap-content" class="wrap-content">
+
+    @@include('./src/include/top_menu.html',{
+      "name": "Charts"
+    })
+
+
+    <div class="content container-fluid">
+
+      <div class="row row-broken">
+        <div class="col-md-12">
+          <ol class="breadcrumb">
+            <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+            <li class="active">Charts</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="row row-broken">
+        <div class="col-sm-12 col-md-6">
+          <div class="decor-default chart content-block p-t-md">
+            <h6 class="m-l-md m-b-md pull-left">
+                Line
+            </h6>
+            <div class="setting f-r m-r-md">
+                    <span class="refresh-btn"><i class="fa fa-refresh"></i></span>
+                    <span class="setting-btn"><i class="fa fa-cog"></i></span>
+                    <ul class="setting-popup">
+                        <li>setting 1</li>
+                        <li><a href="#">setting 2</a></li>
+                        <li>setting 3</li>
+                        <li>setting 4</li>
+                        <li>setting 5</li>
+                    </ul>
+                    <span class="close-block text-center"><i class="fa fa-close"></i></span>
+                </div>
+                <div class="clearfix"></div>
+            <p class="p-r-md p-l-md">The line chart requires an array of labels for each of the data points. This is shown on the X axis. The data for line charts is broken up into an array of datasets. Each dataset has a colour for the fill, a colour for the line and colours for the points and strokes of the points. These colours are strings just like CSS. You can use RGBA, RGB, HEX or HSL notation.</p>
+            <div class="chart-container full">
+              <canvas id="chartLine"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-inside-lg decor-default">
+          <div class="col-inside-lg decor-default chart content-block">
+            <h6 class="m-r-md m-b-md pull-left">
+                Bar
+            </h6>
+            <div class="setting f-r">
+                    <span class="refresh-btn"><i class="fa fa-refresh"></i></span>
+                    <span class="setting-btn"><i class="fa fa-cog"></i></span>
+                    <ul class="setting-popup">
+                        <li>setting 1</li>
+                        <li><a href="#">setting 2</a></li>
+                        <li>setting 3</li>
+                        <li>setting 4</li>
+                        <li>setting 5</li>
+                    </ul>
+                    <span class="close-block text-center"><i class="fa fa-close"></i></span>
+                </div>
+                <div class="clearfix"></div>
+            <p>
+              The bar chart has the a very similar data structure to the line chart, and has an array of datasets, each with colours and an array of data. Again, colours are in CSS format. We have an array of labels too for display. In the example, we are showing the same data as the previous line chart example.
+            </p>
+            <div class="chart-container absolute">
+              <canvas id="chartBar"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row row-broken">
+        <div class="col-sm-12 col-md-6">
+          <div class="col-inside-lg decor-default chart content-block">
+            <h6 class="m-r-md m-b-md pull-left">
+                Radar
+            </h6>
+            <div class="setting f-r">
+                    <span class="refresh-btn"><i class="fa fa-refresh"></i></span>
+                    <span class="setting-btn"><i class="fa fa-cog"></i></span>
+                    <ul class="setting-popup">
+                        <li>setting 1</li>
+                        <li><a href="#">setting 2</a></li>
+                        <li>setting 3</li>
+                        <li>setting 4</li>
+                        <li>setting 5</li>
+                    </ul>
+                    <span class="close-block text-center"><i class="fa fa-close"></i></span>
+                </div>
+                <div class="clearfix"></div>
+            <p>For a radar chart, to provide context of what each point means, we include an array of strings that show around each point in the chart. For the radar chart data, we have an array of datasets. Each of these is an object, with a fill colour, a stroke colour, a colour for the fill of each point, and a colour for the stroke of each point. We also have an array of data values.</p>
+            <div class="chart-container">
+              <canvas id="chartRadar"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <div class="col-inside-lg decor-default chart content-block">
+            <h6 class="m-r-md m-b-md pull-left">
+                Polar area
+            </h6>
+            <div class="setting f-r">
+                    <span class="refresh-btn"><i class="fa fa-refresh"></i></span>
+                    <span class="setting-btn"><i class="fa fa-cog"></i></span>
+                    <ul class="setting-popup">
+                        <li>setting 1</li>
+                        <li><a href="#">setting 2</a></li>
+                        <li>setting 3</li>
+                        <li>setting 4</li>
+                        <li>setting 5</li>
+                    </ul>
+                    <span class="close-block text-center"><i class="fa fa-close"></i></span>
+                </div>
+                <div class="clearfix"></div>
+            <p>
+              Polar area charts are similar to pie charts, but each segment has the same angle - the radius of the segment differs depending on the value.This type of chart is often useful when we want to show a comparison data similar to a pie chart, but also show a scale of values for context.
+            </p>
+            <div class="chart-container">
+              <canvas id="chartArea"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row row-broken">
+        <div class="col-sm-12 col-md-6">
+          <div class="col-inside-lg decor-default chart content-block">
+            <h6 class="m-r-md m-b-md pull-left">
+                Pie
+            </h6>
+            <div class="setting f-r">
+                    <span class="refresh-btn"><i class="fa fa-refresh"></i></span>
+                    <span class="setting-btn"><i class="fa fa-cog"></i></span>
+                    <ul class="setting-popup">
+                        <li>setting 1</li>
+                        <li><a href="#">setting 2</a></li>
+                        <li>setting 3</li>
+                        <li>setting 4</li>
+                        <li>setting 5</li>
+                    </ul>
+                    <span class="close-block text-center"><i class="fa fa-close"></i></span>
+                </div>
+                <div class="clearfix"></div>
+            <p>Pie charts are probably the most commonly used chart there are. They are divided into segments, the arc of each segment shows the proportional value of each piece of data.</p>
+            <div class="chart-container">
+              <canvas id="chartPie"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <div class="col-inside-lg decor-default chart content-block">
+            <h6 class="m-r-md m-b-md pull-left">
+                Donut
+            </h6>
+            <div class="setting f-r">
+                    <span class="refresh-btn"><i class="fa fa-refresh"></i></span>
+                    <span class="setting-btn"><i class="fa fa-cog"></i></span>
+                    <ul class="setting-popup">
+                        <li>setting 1</li>
+                        <li><a href="#">setting 2</a></li>
+                        <li>setting 3</li>
+                        <li>setting 4</li>
+                        <li>setting 5</li>
+                    </ul>
+                    <span class="close-block text-center"><i class="fa fa-close"></i></span>
+                </div>
+                <div class="clearfix"></div>
+            <p>
+              Doughnut charts are probably the most commonly used chart there are. They are divided into segments, the arc of each segment shows the proportional value of each piece of data.
+            </p>
+            <div class="chart-container">
+              <canvas id="chartDoughnut"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    @@include('./src/include/footer-container.html')
+  </div>
+
+  @@include('./src/include/menu.html')
+
+  @@include('./src/include/footer.html')
+
+  <script src="js/chart.js"></script>
+
+  <script>
+    var lineChartData = {
+      labels: ["January", "February", "March", "April", "May", "June", "July"],
+      datasets: [
+        {
+          label: "Default",
+          fillColor: "#7266ba",
+          strokeColor: "#7266ba",
+          pointColor: "#7266ba",
+          data: [23, 41, 35, 48, 45, 34, 37]
+                },
+        {
+          label: "Success",
+          fillColor: "#46be8a",
+          strokeColor: "#46be8a",
+          pointColor: "#46be8a",
+          data: [13, 35, 30, 43, 37, 27, 30]
+                },
+        {
+          label: "Warning",
+          fillColor: "#f2a654",
+          strokeColor: "#f2a654",
+          pointColor: "#f2a654",
+          data: [10, 21, 24, 34, 26, 17, 20]
+                },
+            ]
+    }
+    var barChartData = {
+      labels: ["January", "February", "March", "April", "May", "June", "July"],
+      datasets: [
+        {
+          fillColor: "#7266ba",
+          highlightFill: "#585b9c",
+          data: [10, 21, 58, 64, 21, 35, 55]
+                },
+        {
+          fillColor: "#f2a654",
+          highlightFill: "#f2a654",
+          data: [13, 25, 10, 68, 10, 2, 46]
+                }
+            ]
+
+    }
+    var radarChartData = {
+      labels: ["Running", "Eating", "Partying", "Coding", "Designing"],
+      datasets: [
+        {
+          label: "My dataset",
+          fillColor: "rgba(70,190,138,0.6)",
+          strokeColor: "#39bee8",
+          pointColor: "#39bee8",
+          pointStrokeColor: "#39bee8",
+          pointHighlightFill: "#ff69b4",
+          pointHighlightStroke: "#ff69b4",
+          data: [80, 70, 80, 100, 46]
+                }
+            ]
+    };
+    var polarData = [
+      {
+        value: 300,
+        color: "#f2a654",
+        highlight: "#e39c4f",
+        label: "Warning"
+            },
+      {
+        value: 150,
+        color: "#7266ba",
+        highlight: "#585b9c",
+        label: "Default"
+            },
+      {
+        value: 100,
+        color: "#46be8a",
+        highlight: "#41b181",
+        label: "Success"
+            },
+      {
+        value: 50,
+        color: "#39bee8",
+        highlight: "#34aed4",
+        label: "Primary"
+            }
+        ];
+    var pieData = [
+      {
+        value: 120,
+        color: "#7266ba",
+        highlight: "#585b9c",
+        label: "Default"
+            },
+      {
+        value: 100,
+        color: "#46be8a",
+        highlight: "#41b181",
+        label: "Success"
+            },
+      {
+        value: 100,
+        color: "#f2a654",
+        highlight: "#e39c4f",
+        label: "Warning"
+            }
+        ];
+    var doughnutData = [
+      {
+        value: 120,
+        color: "#7266ba",
+        highlight: "#585b9c",
+        label: "Default"
+            },
+      {
+        value: 100,
+        color: "#46be8a",
+        highlight: "#41b181",
+        label: "Success"
+            },
+      {
+        value: 100,
+        color: "#f2a654",
+        highlight: "#e39c4f",
+        label: "Warning"
+            }
+        ];
+
+    Chart.defaults.global.animationEasing = "easeOutBounce";
+    Chart.defaults.global.pointLabelFontSize = 12;
+    Chart.defaults.global.maintainAspectRatio = false;
+
+    window.onload = function () {
+      var ctxLine = document.getElementById("chartLine").getContext("2d");
+      var ctxBar = document.getElementById("chartBar").getContext("2d");
+      var ctxRadar = document.getElementById("chartRadar").getContext("2d");
+      var ctxArea = document.getElementById("chartArea").getContext("2d");
+      var ctxPie = document.getElementById("chartPie").getContext("2d");
+      var ctxDoughnut = document.getElementById("chartDoughnut").getContext("2d");
+
+      window.myLine = new Chart(ctxLine).Line(lineChartData, {
+        showScale: false,
+        pointDot: false,
+        responsive: true
+      });
+      window.myBar = new Chart(ctxBar).Bar(barChartData, {
+        showScale: false,
+        barShowStroke: false,
+        barValueSpacing: 0,
+        barDatasetSpacing: 0,
+        responsive: true
+      });
+      window.myRadar = new Chart(ctxRadar).Radar(radarChartData, {
+        angleLineColor: "#7266ba",
+        scaleLineColor: "#7266ba",
+        responsive: true
+      });
+      window.myPolarArea = new Chart(ctxArea).PolarArea(polarData, {
+        scaleLineColor: "#ededed",
+        scaleShowLabelBackdrop: false,
+        segmentShowStroke: false,
+        responsive: true
+      });
+      window.myPie = new Chart(ctxPie).Pie(pieData, {
+        segmentShowStroke: false,
+        responsive: true
+      });
+      window.myDoughnut = new Chart(ctxDoughnut).Doughnut(doughnutData, {
+        segmentShowStroke: false,
+        responsive: true
+      });
+    }
+  </script>
+
+  @@include('./src/include/footer_end.html')

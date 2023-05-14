@@ -1,0 +1,411 @@
+.contacts {
+
+    &-search{
+      width: 100%;
+      line-height: 38px;
+      color: $text-dark;
+      padding: 0 8px;
+      border: 1px solid #ccc;
+      border-right: 0;
+      &:-moz-placeholder {
+        color: $text-dark;
+      }
+      &::-moz-placeholder {
+        color: $text-dark;
+      }
+      &:-ms-input-placeholder {
+        color: $text-dark;
+      }
+      &::-webkit-input-placeholder {
+        color: $text-dark;
+      }
+      + .input-group-addon{
+        border-right: 1px solid #ccc !important;
+      }
+    }
+
+  &-labels {
+
+     .input-group-addon{
+        background: #fff;
+        border-radius: 0;
+        border: 1px solid #ccc;
+        border-right: 0;
+        button{
+          background: transparent;
+        }
+      }
+
+    .settings{
+      min-width: 70px;
+      max-width: 70px;
+      line-height: 38px;
+      float: left;
+      margin-right: 10px;
+    }
+
+    .title {
+      font-size: 16px;
+      line-height: 112px;
+      background: url('../img/icon-42.png') 0 50% no-repeat;
+      padding: 0 0 0 32px;
+      color: $text-dark;
+      overflow: hidden;
+
+      span {
+        float: right;
+      }
+    }
+
+    .list {
+
+      .head {
+        font-size: 20px;
+        line-height: 32px;
+        font-weight: bold;
+        text-align: center;
+        background: $brand-info;
+        color: #ffffff;
+        margin: -8px 0 40px;
+      }
+
+      .unit {
+        overflow: hidden;
+        padding: 0 0 20px;
+
+        &:last-of-type {
+          margin-bottom: 20px;
+        }
+
+        .lab {
+          font-size: 16px;
+          line-height: 32px;
+          float: left;
+          width: 112px;
+          padding: 0 0 0 18px;
+          color: #ffffff;
+
+          &-default {
+            background: $brand-default;
+          }
+
+          &-primary {
+            background: $brand-primary;
+          }
+
+          &-success {
+            background: $brand-success;
+          }
+
+          &-warning {
+            background: $brand-warning;
+          }
+
+          &-danger {
+            background: $brand-danger;
+          }
+        }
+
+        span {
+          display: block;
+          float: right;
+          font-size: 16px;
+          line-height: 32px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  &-list {
+    border-left: 1px solid $brand-default-hue;
+    margin: -20px 0 40px;
+
+    @include media('md') {
+      border-left: none;
+      margin: 0;
+    }
+
+    @media(max-width: 480px) {
+      margin: 0 -20px;
+    }
+
+    &-search{
+      width: 100%;
+      line-height: 60px;
+      background: $brand-primary-hue;
+      font-size: 24px;
+      color: #fff;
+      padding: 0 20px;
+      &:-moz-placeholder {
+        color: #fff;
+      }
+      &::-moz-placeholder {
+        color: #fff;
+      }
+      &:-ms-input-placeholder {
+        color: #fff;
+      }
+      &::-webkit-input-placeholder {
+        color: #fff;
+      }
+      +.input-group-addon{
+        background: $brand-primary-hue !important;
+        border-radius: 0;
+        border: 0;
+        button{
+          background: transparent;
+        }
+      }
+    }
+
+    .lab {
+          font-size: 14px;
+          line-height: 21px;
+          float: left;
+          min-width: 75px;
+          padding: 0 0 0 18px;
+          color: #ffffff;
+          margin-left: 60px;
+          @media(max-width: 480px) {
+            margin-left: 0;
+          }
+          &-default {
+            background: $brand-default;
+          }
+
+          &-primary {
+            background: $brand-primary;
+          }
+
+          &-success {
+            background: $brand-success;
+          }
+
+          &-warning {
+            background: $brand-warning;
+          }
+
+          &-danger {
+            background: $brand-danger;
+          }
+        }
+
+    .title {
+      padding: 0 0 0 20px;
+      color: $brand-primary;
+      line-height: 124px;
+    }
+
+    .icons {
+      padding: 0 0 20px 20px;
+
+      .icon {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-top: 3px;
+      }
+
+      .icon-folder {
+        background: url('../img/icon-9.png') no-repeat 50% 50%;
+      }
+
+      .icon-label {
+        background: url('../img/icon-5.png') no-repeat 50% 50%;
+      }
+
+      .icon-trash {
+        background: url('../img/icon-10.png') no-repeat 50% 50%;
+      }
+    }
+
+    .unit {
+      padding: 20px 0;
+      margin-top: -7px;
+      border-bottom: 1px solid $brand-default-hue;
+      display: inline-block;
+      width: 100%;
+      font-size: 16px;
+      line-height: 40px;
+      color: $text-dark;
+      @include transition(background, 0.3s);
+      &.selected{
+        background: #d8d8d8;
+      }
+
+      .dropdown-menu{
+        border-radius: 0;
+        box-shadow: none;
+        border-color: #a3afb7;
+        min-width: inherit;
+        li{
+          margin: 0;
+          a{
+            line-height: 32px;
+            padding: 0 10px;
+            font-size: 16px;
+          }
+        }
+      }
+
+      &.head {
+        font-size: 20px;
+        color: $brand-primary;
+        padding-bottom: 10px;
+        overflow: visible;
+      }
+
+      .field {
+        float: left;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      .name {
+        width: 45%;
+        padding: 0 0 0 80px;
+        position: relative;
+        @media(max-width: 480px) {
+          width: auto;
+        }
+
+        .check {
+          position: absolute;
+          left: 5px;
+          top: -8px;
+        }
+        a{
+          color: $text-dark;
+          font-weight: 600;
+        }
+
+        .avatar {
+          display: inline-block;
+          width: 40px;
+          height: 40px;
+          border-radius: 20px;
+          margin: 0 16px 0 0;
+          vertical-align: top;
+          @media(max-width: 480px) {
+            display: none;
+          }
+        }
+      }
+
+      .phone {
+        width: 25%;
+        padding: 0 0 0 20px;
+        @media(max-width: 480px) {
+          display: none;
+        }
+      }
+
+      .email {
+        width: 30%;
+        padding: 0 0 0 20px;
+        overflow: visible;
+        @media(max-width: 480px) {
+          display: none;
+        }
+        .btn{
+          min-width: 38px;
+          max-width: 38px;
+          font-size: inherit;
+          padding: 0 8px;
+          line-height: 36px;
+        }
+      }
+    }
+  }
+}
+
+.unit.head{
+  .action-btns {
+    margin-top: 8px;
+    .btn{
+      max-width: 32px !important;
+      min-width: 32px !important;
+      color: #a3afb7;
+      font-size: inherit;
+      padding: 0 8px;
+      line-height: 32px;
+      &:hover{
+        background: #b9b9b9;
+        color: #fff;
+      }
+    }
+    .btn-group{
+      width: auto !important;
+      height: auto !important;
+      border: 0 !important;
+    }
+    ul{
+      min-width: inherit;
+      border-radius: 0;
+      li{
+        margin: 0;
+      }
+    }
+    .label{
+      color: $text-dark;
+    }
+  }
+  .nav-btns{
+    .btn-group{
+      border: 1px solid $brand-default-hue;
+    }
+    b{
+      color: $text-dark;
+      font-size: 16px;
+    }
+  }
+  .btn-group {
+//    border: 1px solid $brand-default-hue;
+
+    *[class^='btn-'] {
+      width: 31px;
+      height: 30px;
+      border-right: 1px solid $brand-default-hue;
+      display: block;
+      float: left;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      cursor: pointer;
+
+      &:last-child {
+        border-right: none;
+        width: 30px;
+      }
+    }
+
+    .btn-folder {
+      background-image: url('../img/icon-9.png');
+    }
+
+    .btn-label {
+      background-image: url('../img/icon-5.png');
+    }
+
+    .btn-delete {
+      background-image: url('../img/icon-10.png');
+    }
+
+    .btn-select {
+      background-image: url('../img/icon-11.png');
+    }
+
+    .btn-flag {
+      background-image: url('../img/icon-13.png');
+    }
+
+    .btn-prev {
+      background-image: url('../img/icon-15.png');
+    }
+
+    .btn-next {
+      background-image: url('../img/icon-16.png');
+    }
+  }
+}

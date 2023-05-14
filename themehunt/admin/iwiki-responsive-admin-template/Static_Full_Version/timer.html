@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#7266ba">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#7266ba" />
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <title>Iwiki - Timer</title>
+
+
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/vendors/sweetalert.css">
+  <link rel="stylesheet" href="css/vendors/loading.css">
+  <link rel="stylesheet" href="css/vendors/chat.css">
+  <link rel="stylesheet" href="css/bootstrap-select.css" />
+
+
+
+
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/modernizr.js"></script>
+
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.src.js"></script>
+  <![endif]-->
+</head>
+
+
+
+
+<body class="decor-primary timer-page">
+ <a class="gohome" href="index.html"><i class="fa fa-home"></i> Go to Home Page</a>
+  <div class="table-wrapper-a">
+    <div class="table-row">
+      <div class="table-cell text-center text-light">
+        <div class="timer-wrapper center-block">
+          <h1>Some title</h1>
+          <p class="h5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti non similique eveniet optio reprehenderit.</p>
+          <div id="countdown"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.plugin.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+
+  <script>
+    var now = new Date();
+    $("#countdown").countdown({
+      format: 'DHMS',
+      padZeroes: true,
+      since: now
+    });
+  </script>
+
+  </body>
+</html>
+

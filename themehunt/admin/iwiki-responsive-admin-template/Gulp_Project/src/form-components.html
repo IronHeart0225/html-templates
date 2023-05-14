@@ -1,0 +1,561 @@
+@@include('./src/include/head.html', {
+  "title": "Form Components"
+})
+
+<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css" />
+
+<link href="js/farbtastic/farbtastic.css" rel="stylesheet">
+@@include('./src/include/head_end.html')
+<body>
+    <div id="wrap-content" class="wrap-content">
+
+          @@include('./src/include/top_menu.html',{
+            "name": "Form Components"
+          })
+
+           <div class="content container-fluid">
+           <div class="row row-broken">
+              <div class="col-md-12">
+                <ol class="breadcrumb">
+                  <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+                  <li>Forms</li>
+                  <li class="active">Form Components</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="row row-broken decor-default p-full-md">
+              <div class="col-md-12">
+                  <h5 class="m-b-md">Input groups</h5>
+                  <h6 class="m-b-md">Basic Example</h6>
+              </div>
+              <div class="col-md-4">
+                  <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                      <input type="text" class="form-control material" placeholder="Full Name">
+                  </div>
+
+                  <br/>
+
+                  <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                      <input type="text" class="form-control material" placeholder="Contact Number">
+                  </div>
+
+                  <br/>
+
+                  <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                      <input type="text" class="form-control material" placeholder="Email Address">
+                  </div>
+
+                  <br/>
+
+                  <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                      <input type="text" class="form-control material" placeholder="Home Address">
+                  </div>
+
+                  <br/>
+              </div>
+              <div class="col-md-4">
+                  <div class="input-group">
+                      <input type="text" class="form-control material" placeholder="Weather">
+                      <span class="input-group-addon"><i class="fa fa-sun-o"></i></span>
+                  </div>
+
+                  <br/>
+
+                  <div class="input-group">
+                      <input type="text" class="form-control material" placeholder="Flight">
+                      <span class="input-group-addon"><i class="fa fa-plane"></i></span>
+                  </div>
+
+                  <br/>
+
+                  <div class="input-group">
+                      <input type="text" class="form-control material" placeholder="Landscape">
+                      <span class="input-group-addon"><i class="fa fa-globe"></i></span>
+                  </div>
+
+                  <br/>
+
+                  <div class="input-group">
+                      <input type="text" class="form-control material" placeholder="Location">
+                      <span class="input-group-addon"><i class="fa fa-compass"></i></span>
+                  </div>
+
+                  <br/>
+              </div>
+              <div class="col-md-4">
+                  <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                      <input type="text" class="form-control material" placeholder="Dates">
+                      <span class="input-group-addon"><i class="fa fa-cab"></i></span>
+                  </div>
+
+                  <br/>
+
+                  <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-camera"></i></span>
+                      <input type="text" class="form-control material" placeholder="Notifications">
+                      <span class="input-group-addon"><i class="fa fa-birthday-cake"></i></span>
+                  </div>
+
+                  <br/>
+
+                  <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-bank"></i></span>
+                      <input type="text" class="form-control material" placeholder="Layers">
+                      <span class="input-group-addon"><i class="fa fa-child"></i></span>
+                  </div>
+
+                  <br/>
+
+                  <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-crop"></i></span>
+                      <input type="text" class="form-control material" placeholder="Price">
+                      <span class="input-group-addon"><i class="fa fa-cog"></i></span>
+                  </div>
+
+                  <br/>
+              </div>
+              <div class="col-md-12">
+                <h6 class="m-b-md m-t-md">Floating Labels</h6>
+              </div>
+              <div class="col-md-4">
+                  <div class="input-group fg-float">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                    <div class="fg-line">
+                        <input type="text" class="form-control material fg-input">
+                        <label class="fg-label">Float Input</label>
+                    </div>
+                  </div>
+
+                  <br/>
+              </div>
+              <div class="col-md-4">
+                  <div class="input-group fg-float">
+                    <div class="fg-line">
+                        <input type="text" class="form-control material fg-input">
+                        <label class="fg-label">Float Input</label>
+                    </div>
+                    <span class="input-group-addon"><i class="fa fa-sun-o"></i></span>
+                  </div>
+
+                  <br/>
+              </div>
+              <div class="col-md-4">
+                  <div class="input-group fg-float">
+                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                    <div class="fg-line">
+                        <input type="text" class="form-control material fg-input">
+                        <label class="fg-label">Float Input</label>
+                    </div>
+                    <span class="input-group-addon"><i class="fa fa-cab"></i></span>
+                  </div>
+
+                  <br/>
+              </div>
+              <div class="col-md-12">
+                <h6 class="m-b-md m-t-md">Different sizes</h6>
+              </div>
+              <div class="col-md-12">
+                <div class="input-group input-lg">
+                    <span class="input-group-addon"><i class="fa fa-usd"></i></span>
+                    <input type="text" class="form-control material" placeholder="Price">
+                </div>
+
+                <br>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-usd"></i></span>
+                    <input type="text" class="form-control material" placeholder="Price">
+                </div>
+                <br>
+                <div class="input-group input-sm">
+                    <span class="input-group-addon"><i class="fa fa-usd"></i></span>
+                    <input type="text" class="form-control material" placeholder="Price">
+                </div>
+                <br>
+              </div>
+
+            </div>
+
+            <div class="row row-broken decor-default p-full-md">
+               <div class="col-md-12">
+                  <h5 class="m-b-md">Input mask</h5>
+              </div>
+              <div class="col-md-3 no-mobile-p">
+                <label><strong>Date</strong></label>
+                <input class="form-control material" type="text" data-mask="00/00/0000" placeholder="12/12/2016" autocomplete="off" maxlength="10">
+              </div>
+              <div class="col-md-3 no-mobile-p">
+                <label><strong>IP Adress</strong></label>
+                <input class="form-control material" type="text" data-mask="000.000.000.000" placeholder="192.168.0.1" autocomplete="off" maxlength="15">
+              </div>
+              <div class="col-md-3 no-mobile-p">
+                <label><strong>Time</strong></label>
+                <input class="form-control material" type="text" data-mask="00:00:00" placeholder="17:22:16" autocomplete="off" maxlength="8">
+              </div>
+              <div class="col-md-3 no-p-r">
+                <label><strong>Credit Card</strong></label>
+                <input class="form-control material" type="text" data-mask="0000 0000 0000 0000" placeholder="8392 2414 9301 8402" autocomplete="off" maxlength="19">
+              </div>
+
+              <div class="col-md-3 no-mobile-p">
+                <label><strong>Phone Number</strong></label>
+                <input class="form-control material" type="text" data-mask="000-00-0000000" placeholder="234-76-2638469" autocomplete="off" maxlength="14">
+              </div>
+              <div class="col-md-3 no-mobile-p">
+                <label><strong>Phone with Odd</strong></label>
+                <input class="form-control material" type="text" data-mask="(00) 0000-0000" placeholder="(22) 6247-3272" maxlength="14" autocomplete="off">
+              </div>
+              <div class="col-md-3 no-mobile-p">
+                <label><strong>US Phone Number</strong></label>
+                <input class="form-control material" type="text" data-mask="(000) 000-0000" placeholder="(765) 231-2412" maxlength="14" autocomplete="off">
+              </div>
+              <div class="col-md-3 no-p-r">
+                <label><strong>Percentage</strong></label>
+                <input class="form-control material" type="text" data-mask="00000,00%" placeholder=" 00006,87%" maxlength="9" autocomplete="off">
+              </div>
+
+              <div class="col-md-3 no-mobile-p">
+                <label><strong>Post code</strong></label>
+                <input class="form-control material" type="text" data-mask="000-0000" placeholder="145-7564" autocomplete="off" maxlength="8">
+              </div>
+              <div class="col-md-3 no-mobile-p">
+                <label><strong>CV code</strong></label>
+                <input class="form-control material" type="text" data-mask="000" placeholder="930" maxlength="14" autocomplete="off">
+              </div>
+              <div class="col-md-3 no-mobile-p">
+                <label><strong>Tax ID</strong></label>
+                <input class="form-control material" type="text" data-mask="00 0000000" placeholder="56 0568466" maxlength="10" autocomplete="off">
+              </div>
+              <div class="col-md-3 no-p-r">
+                <label><strong>Product Key</strong></label>
+                <input class="form-control material" type="text" data-mask="0-000-00" placeholder="7-152-55" maxlength="8" autocomplete="off">
+              </div>
+
+              <div class="col-md-3 no-mobile-p">
+                <label><strong>US ZIP Code</strong></label>
+                <input class="form-control material" type="text" data-mask="00000" placeholder="98110" autocomplete="off" maxlength="5">
+              </div>
+              <div class="col-md-3 no-mobile-p">
+                <label><strong>Atomic Radius</strong></label>
+                <input class="form-control material" type="text" data-mask="0,000 nanometers" placeholder="0,099 nanometers" maxlength="14" autocomplete="off">
+              </div>
+              <div class="col-md-3 no-mobile-p">
+                <label><strong>US Dollars</strong></label>
+                <input class="form-control material" type="text" data-mask="$0,000.00" placeholder="$1,234.00" maxlength="9" autocomplete="off">
+              </div>
+              <div class="col-md-3 no-p-r">
+                <label><strong>Social Security</strong></label>
+                <input class="form-control material" type="text" data-mask="000-00-0000" placeholder="382-23-7856" maxlength="12" autocomplete="off">
+              </div>
+            </div>
+
+            <div class="row row-broken decor-default p-full-md">
+              <div class="col-md-12">
+                  <h5>Custom Select</h5>
+              </div>
+              <div class="col-md-3 no-mobile-p">
+                <p>Basic Example</p>
+                <div class="form-group">
+                    <div class="fg-line">
+                        <div class="select">
+                          <select class="selectpicker">
+                            <option>Mustard</option>
+                            <option>Ketchup</option>
+                            <option>Relish</option>
+                            <option>Meat</option>
+                            <option>Milk</option>
+                            <option>Bread</option>
+                          </select>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-3 no-mobile-p">
+                <p>Search Option</p>
+                <div class="form-group">
+                    <div class="fg-line">
+                        <div class="select">
+                          <select class="selectpicker" data-live-search="true">
+                            <option>Mustard</option>
+                            <option>Ketchup</option>
+                            <option>Relish</option>
+                            <option>Meat</option>
+                            <option>Milk</option>
+                            <option>Bread</option>
+                          </select>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-3 no-mobile-p">
+                <p>Option Groups</p>
+                <div class="form-group">
+                    <div class="fg-line">
+                        <div class="select">
+                          <select class="selectpicker">
+                            <optgroup label="Picnic">
+                              <option>Mustard</option>
+                              <option>Ketchup</option>
+                              <option>Relish</option>
+                            </optgroup>
+                            <optgroup label="Camping">
+                              <option>Tent</option>
+                              <option>Flashlight</option>
+                              <option>Toilet Paper</option>
+                            </optgroup>
+                          </select>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-3 no-p-r">
+                <p>Disabled Options</p>
+                <div class="form-group">
+                    <div class="fg-line">
+                        <div class="select">
+                          <select class="selectpicker" multiple>
+                            <option>Mustard</option>
+                            <option disabled>Ketchup</option>
+                            <option>Relish</option>
+                            <option disabled>Meat</option>
+                            <option disabled>Milk</option>
+                            <option>Bread</option>
+                          </select>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-3 no-mobile-p">
+                <p>Multiple Select</p>
+                <div class="form-group">
+                    <div class="fg-line">
+                        <div class="select">
+                          <select class="selectpicker" multiple>
+                            <option>Mustard</option>
+                            <option>Ketchup</option>
+                            <option>Relish</option>
+                            <option>Meat</option>
+                            <option>Milk</option>
+                            <option>Bread</option>
+                          </select>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-3 no-mobile-p">
+                <p>Limit of selections</p>
+                <div class="form-group">
+                    <div class="fg-line">
+                        <div class="select">
+                          <select class="selectpicker" multiple data-max-options="2">
+                            <option>Mustard</option>
+                            <option>Ketchup</option>
+                            <option>Relish</option>
+                            <option>Meat</option>
+                            <option>Milk</option>
+                            <option>Bread</option>
+                          </select>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-3 no-mobile-p">
+                <p>Display Count</p>
+                <div class="form-group">
+                    <div class="fg-line">
+                        <div class="select">
+                          <select class="selectpicker" multiple data-selected-text-format="count">
+                            <option>Mustard</option>
+                            <option>Ketchup</option>
+                            <option>Relish</option>
+                            <option>Meat</option>
+                            <option>Milk</option>
+                            <option>Bread</option>
+                          </select>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <p>Multiple Group Select</p>
+                <div class="form-group">
+                    <div class="fg-line">
+                        <div class="select">
+                          <select class="selectpicker">
+                            <optgroup label="Picnic" data-max-options="2">
+                              <option>Mustard</option>
+                              <option>Ketchup</option>
+                              <option>Relish</option>
+                            </optgroup>
+                            <optgroup label="Camping" data-max-options="2">
+                              <option>Tent</option>
+                              <option>Flashlight</option>
+                              <option>Toilet Paper</option>
+                            </optgroup>
+                          </select>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row row-broken decor-default p-full-md">
+              <div class="col-md-12">
+                  <h5>Colorpicker</h5>
+              </div>
+              <div class="col-md-6">
+                  <div class="cp-container">
+                      <div class="input-group">
+                          <span class="input-group-addon"><i class="fa fa-eyedropper"></i></span>
+                          <div class="dropdown">
+                              <input type="text" class="form-control material cp-value" value="#39bee8" data-toggle="dropdown">
+
+                              <div class="dropdown-menu">
+                                  <div class="color-picker" data-cp-default="#39bee8"></div>
+                              </div>
+
+                              <i class="cp-value"></i>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6 no-p-r">
+                  <div class="cp-container">
+                      <div class="input-group">
+                          <span class="input-group-addon"><i class="fa fa-eyedropper"></i></span>
+                          <div class="dropdown">
+                              <input type="text" class="form-control material cp-value" value="#46be8a" data-toggle="dropdown">
+
+                              <div class="dropdown-menu">
+                                  <div class="color-picker" data-cp-default="#46be8a"></div>
+                              </div>
+
+                              <i class="cp-value"></i>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="cp-container">
+                      <div class="input-group">
+                          <span class="input-group-addon"><i class="fa fa-eyedropper"></i></span>
+                          <div class="dropdown">
+                              <input type="text" class="form-control material cp-value" value="#f2a654" data-toggle="dropdown">
+
+                              <div class="dropdown-menu">
+                                  <div class="color-picker" data-cp-default="#f2a654"></div>
+                              </div>
+
+                              <i class="cp-value"></i>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="cp-container">
+                      <div class="input-group">
+                          <span class="input-group-addon"><i class="fa fa-eyedropper"></i></span>
+                          <div class="dropdown">
+                              <input type="text" class="form-control material cp-value" value="#ff69b4" data-toggle="dropdown">
+
+                              <div class="dropdown-menu">
+                                  <div class="color-picker" data-cp-default="#ff69b4"></div>
+                              </div>
+
+                              <i class="cp-value"></i>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+
+            <div class="row row-broken decor-default p-full-md">
+              <div class="col-md-12">
+                  <h5>Datatimepicker</h5>
+              </div>
+              <div class='col-md-4'>
+                  <p>Basic Example</p>
+                  <div class="form-group">
+                      <div class='input-group date'>
+                          <span class="input-group-addon">
+                              <span class="fa fa-calendar"></span>
+                          </span>
+                          <input id='datetimepicker1' type='text' class="form-control material" />
+                      </div>
+                  </div>
+              </div>
+
+              <div class='col-md-4'>
+                  <p>Enabled/Disabled Dates</p>
+                  <div class="form-group">
+                      <div class='input-group date'>
+                          <span class="input-group-addon">
+                              <span class="fa fa-calendar"></span>
+                          </span>
+                          <input id='datetimepicker2' type='text' class="form-control material" />
+                      </div>
+                  </div>
+              </div>
+
+              <div class='col-md-4'>
+                  <p>Time Picker</p>
+                  <div class="form-group">
+                      <div class='input-group date'>
+                          <span class="input-group-addon">
+                              <span class="fa fa-clock-o"></span>
+                          </span>
+                          <input id='datetimepicker3' type='text' class="form-control material" />
+                      </div>
+                  </div>
+              </div>
+
+            </div>
+
+
+        </div>
+        @@include('./src/include/footer-container.html')
+    </div>
+
+
+
+  @@include('./src/include/menu.html')
+
+  @@include('./src/include/footer.html')
+
+  <script src="js/autosize.min.js"></script>
+  <script src="js/bootstrap-datetimepicker.min.js"></script>
+  <script src="js/input-mask.min.js"></script>
+  <script src="js/farbtastic/farbtastic.min.js"></script>
+  <script>
+    autosize(document.getElementById('autosize'));
+    $(function () {
+        $('#datetimepicker1').datetimepicker();
+
+        $('#datetimepicker2').datetimepicker({
+            defaultDate: "02/10/2016",
+            disabledDates: [
+                moment("02/19/2016"),
+                moment("02/20/2016")
+            ]
+        });
+
+        $("#datetimepicker3").datetimepicker({
+            format: 'LT'
+        });
+
+
+      $('.color-picker').each(function(){
+        var colorOutput = $(this).closest('.cp-container').find('.cp-value');
+          $(this).farbtastic(colorOutput);
+        });
+
+
+    });
+  </script>
+
+  @@include('./src/include/footer_end.html')

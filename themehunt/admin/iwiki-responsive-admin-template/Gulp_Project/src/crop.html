@@ -1,0 +1,44 @@
+@@include('./src/include/head.html', {
+  "title": "Crop"
+})
+<link rel="stylesheet" href="css/vendors/crop.css">
+
+@@include('./src/include/head_end.html')
+
+<body>
+  <div id="wrap-content" class="wrap-content">
+
+    @@include('./src/include/top_menu.html',{
+      "name": "Crop"
+    })
+
+    <div class="content container-fluid">
+     <div class="row row-broken">
+        <div class="col-md-12">
+          <ol class="breadcrumb">
+            <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+            <li>Media</li>
+            <li class="active">Crop</li>
+          </ol>
+        </div>
+      </div>
+      <div class="row decor-default">
+        <div class="col-lg-12">
+          <div class="crop">
+            <div class="crop-overlay">
+              <div class="crop-overlay-inner"></div>
+            </div>
+            <img class="resize-image" src="img/crop-img.jpg" alt="image for resizing">
+            <button type="button" class="btn-crop js-crop">Crop<img class="icon-crop" src="img/crop-btn.svg" alt="crop"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    @@include('./src/include/footer-container.html')
+  </div>
+
+  @@include('./src/include/menu.html')
+
+  @@include('./src/include/footer.html')
+  <script src="js/crop.js"></script>
+  @@include('./src/include/footer_end.html')

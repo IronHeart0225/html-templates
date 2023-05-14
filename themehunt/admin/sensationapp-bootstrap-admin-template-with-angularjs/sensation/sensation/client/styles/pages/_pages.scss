@@ -1,0 +1,76 @@
+/*================================
+  :: Page Header
+  ================================*/
+
+.pageheader {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  background: #f7f7f7;
+  position: relative;
+  h2 {
+    font-size: 28px;
+    color: #343434;
+    letter-spacing: -0.5px;
+    margin: 0;
+  }
+  .glyphicon {
+    font-size: 24px;
+    margin-right: 5px;
+    padding: 6px 7px;
+    border: 2px solid #343434;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
+  .fa {
+    font-size: 24px;
+    margin-right: 5px;
+    padding: 6px 7px;
+    border: 2px solid #343434;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    &.fa-pencil {
+      padding: 6px 9px;
+    }
+    &.fa-hand-o-up {
+      padding: 6px 9px 6px 7px;
+    }
+  }
+  .fa-file-o, .fa-user, .fa-file-text {
+    padding: 6px 10px;
+  }
+  .fa-map-marker, .fa-dollar {
+    padding: 6px 12px;
+  }
+  .fa-clock-o {
+    padding: 6px 8px;
+  }
+  .breadcrumb-wrapper {
+    position: absolute;
+    top: 30px;
+    right: 25px;
+    .label {
+      color: #999;
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: normal;
+      display: inline-block;
+    }
+  }
+  .breadcrumb {
+    background: none;
+    display: inline-block;
+    padding: 0;
+    li {
+      font-size: 12px;
+      &.active {
+        color: #333;
+      }
+    }
+  }
+}
+
+.page {
+	padding: 15px;
+}
