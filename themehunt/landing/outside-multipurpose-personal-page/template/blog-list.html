@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="Outside - one page personal portfolio">
+    <meta name="keywords" content="Jakub Kwarciński, portfolio, frontend developer, Kraków, html, css, javascript, websites, graphic design, bootstrap">
+    <meta name="author" content="Jakub Kwarciński">
+
+    <title>Outside - Multipurpose personal page - blog list page</title>
+
+    <!-- Lato Font -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- Orbitron Font -->
+    <link href="https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="css/font-awesome.min.css" media="screen" rel="stylesheet" type="text/css">
+
+    <!-- Font Linea -->
+    <link href="css/linea-arrows.min.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="css/linea-basic.min.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="css/linea-ecommerce.min.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="css/linea-software.min.css" media="screen" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles -->
+    <link href="css/yellow.min.css" media="screen" rel="stylesheet" type="text/css" title="yellow">
+    <link href="css/gold.min.css" media="screen" rel="alternate stylesheet" type="text/css" title="gold">
+    <link href="css/pink.min.css" media="screen" rel="alternate stylesheet" type="text/css" title="pink">
+    <link href="css/orange.min.css" media="screen" rel="alternate stylesheet" type="text/css" title="orange">
+    <link href="css/brown.min.css" media="screen" rel="alternate stylesheet" type="text/css" title="brown">
+    <link href="css/red.min.css" media="screen" rel="alternate stylesheet" type="text/css" title="red">
+    <link href="css/violet.min.css" media="screen" rel="alternate stylesheet" type="text/css" title="violet">
+    <link href="css/silver.min.css" media="screen" rel="alternate stylesheet" type="text/css" title="silver">
+    <link href="css/green.min.css" media="screen" rel="alternate stylesheet" type="text/css" title="green">
+    <link href="css/blue.min.css" media="screen" rel="alternate stylesheet" type="text/css" title="blue">
+
+     <!-- Modernizr -->
+    <script type="text/javascript" src="js/modernizr-custom.min.js"></script>
+
+    <!-- Favicons -->
+    <link rel="icon" href="img/logo-mini.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/logo-mini.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <div class="loader-overlay">
+        <div class="loader">
+            <div class="loader-icon">
+                <span class="icon icon-arrows-glide"></span>
+            </div>
+            <h3 class="loader-text">Loading</h3>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <a class="sidebar-switcher" href="#" title="Color switcher">
+            <i class="fa fa-gear"></i>
+        </a>
+        <div class="sidebar-content">
+            <h4 class="sidebar-header">Color switcher</h4>
+            <a href="#" class="color-switcher bg-yellow" data-color="yellow"></a>
+            <a href="#" class="color-switcher bg-gold" data-color="gold"></a>
+            <a href="#" class="color-switcher bg-pink" data-color="pink"></a>
+            <a href="#" class="color-switcher bg-orange" data-color="orange"></a>
+            <a href="#" class="color-switcher bg-brown" data-color="brown"></a>
+            <a href="#" class="color-switcher bg-red" data-color="red"></a>
+            <a href="#" class="color-switcher bg-violet" data-color="violet"></a>
+            <a href="#" class="color-switcher bg-silver" data-color="silver"></a>
+            <a href="#" class="color-switcher bg-green" data-color="green"></a>
+            <a href="#" class="color-switcher bg-blue" data-color="blue"></a>
+        </div>
+    </div>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" id="navbar-main">
+        <div class="navbar-inner clearfix">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="brand" href="index.html" title="Outside">
+                        <span class="title">
+                            Outside
+                        </span>
+                        <span class="icon icon-arrows-glide"></span>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="nav navbar-nav nav-left">
+                        <li>
+                            <a href="index-default.html#home">
+                                <span class="main-link">Home</span>
+                                <span class="jewel"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index-default.html#about">
+                                <span class="main-link">About</span>
+                                <span class="jewel"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index-default.html#career">
+                                <span class="main-link">Career</span>
+                                <span class="jewel"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index-default.html#services">
+                                <span class="main-link">Services</span>
+                                <span class="jewel"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index-default.html#works">
+                                <span class="main-link">Works</span>
+                                <span class="jewel"></span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav nav-right">
+                        <li>
+                            <a href="index-default.html#skills">
+                                <span class="main-link">Skills</span>
+                                <span class="jewel"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index-default.html#pricing">
+                                <span class="main-link">Pricing</span>
+                                <span class="jewel"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index-default.html#clients">
+                                <span class="main-link">Clients</span>
+                                <span class="jewel"></span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span class="main-link">Blog</span>
+                                <span class="jewel"></span>
+                                <span class="icon hidden-xs"><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                <span class="icon icon-arrows-down visible-xs"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="index-default.html#blog">Blog section</a>
+                                </li>
+                                <li class="active">
+                                    <a class="external-link" href="blog-list.html">List page</a>
+                                </li>
+                                <li>
+                                    <a class="external-link" href="blog-item.html">Single page</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="index-default.html#contact-details">
+                                <span class="main-link">Contact</span>
+                                <span class="jewel"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-standard section-single-page section-blog-list">
+        <div class="section-inner">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Blog <span class="main-color">list</span></h3>
+                    <div class="divider divider-icon divider-md">//</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 col-md-8">
+                        <div class="post-list-item">
+                            <h2 class="post-item-header"><a href="blog-item.html">Title of the first post</a></h2>
+                            <ul class="list-inline post-item-toolbar">
+                                <li>
+                                    February 15, 2016
+                                </li>
+                                <li>
+                                    By <a href="#">John Smith</a>
+                                </li>
+                                <li>
+                                    6 Comments
+                                </li>
+                            </ul>
+                            <div class="post-item-image">
+                                <a href="blog-item.html" title="Title of the first post">
+                                    <span class="post-item-image-border-outer">
+                                        <span class="post-item-image-border-inner"></span>
+                                    </span>
+                                    <img class="img-responsive" src="img/hero-7.jpg" alt="Title of the first post">
+                                </a>
+                            </div>
+                            <div class="post-item-text">
+                                <p class="post-item-lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum interdum augue massa, a varius libero feugiat iaculis. Duis malesuada vel quam ut semper. Donec mollis porta euismod. Donec quis massa in urna consequat aliquam ut sit amet lectus.</p>
+                                <p class="no-margin text-uppercase">
+                                    <a class="btn btn-transparent" href="blog-item.html" title="Read more">
+                                        <span class="icon icon-basic-eye"></span> <strong>Read more</strong>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <hr class="post-separator">
+                        <div class="post-list-item">
+                            <h2 class="post-item-header"><a href="blog-item.html">This is the second post</a></h2>
+                            <ul class="list-inline post-item-toolbar">
+                                <li>
+                                    February 15, 2016
+                                </li>
+                                <li>
+                                    By <a href="#">John Smith</a>
+                                </li>
+                                <li>
+                                    6 Comments
+                                </li>
+                            </ul>
+                            <div class="post-item-image">
+                                <a href="blog-item.html" title="This is the second post">
+                                    <span class="post-item-image-border-outer">
+                                        <span class="post-item-image-border-inner"></span>
+                                    </span>
+                                    <img class="img-responsive" src="img/hero-3.jpg" alt="This is the second post">
+                                </a>
+                            </div>
+                            <div class="post-item-text">
+                                <p class="post-item-lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum interdum augue massa, a varius libero feugiat iaculis. Duis malesuada vel quam ut semper. Donec mollis porta euismod. Donec quis massa in urna consequat aliquam ut sit amet lectus.</p>
+                                <p class="no-margin text-uppercase">
+                                    <a class="btn btn-transparent" href="blog-item.html" title="Read more">
+                                        <span class="icon icon-basic-eye"></span> <strong>Read more</strong>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <hr class="post-separator">
+                        <div class="post-list-item">
+                            <h2 class="post-item-header"><a href="blog-item.html">And the last one</a></h2>
+                            <ul class="list-inline post-item-toolbar">
+                                <li>
+                                    February 15, 2016
+                                </li>
+                                <li>
+                                    By <a href="#">John Smith</a>
+                                </li>
+                                <li>
+                                    6 Comments
+                                </li>
+                            </ul>
+                            <div class="post-item-image">
+                                <a href="blog-item.html" title="And the last one">
+                                    <span class="post-item-image-border-outer">
+                                        <span class="post-item-image-border-inner"></span>
+                                    </span>
+                                    <img class="img-responsive" src="img/hero-6.jpg" alt="And the last one">
+                                </a>
+                            </div>
+                            <div class="post-item-text">
+                                <p class="post-item-lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum interdum augue massa, a varius libero feugiat iaculis. Duis malesuada vel quam ut semper. Donec mollis porta euismod. Donec quis massa in urna consequat aliquam ut sit amet lectus.</p>
+                                <p class="no-margin text-uppercase">
+                                    <a class="btn btn-transparent" href="blog-item.html" title="Read more">
+                                        <span class="icon icon-basic-eye"></span> <strong>Read more</strong>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <nav class="text-center" aria-label="Page navigation">
+                            <ul class="pagination">
+                                <li class="prev">
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li><li>
+                                    <a href="#">1</a>
+                                </li><li class="active">
+                                    <a href="#">2</a>
+                                </li><li>
+                                    <a href="#">3</a>
+                                </li><li>
+                                    <a href="#">4</a>
+                                </li><li>
+                                    <a href="#">5</a></li>
+                                <li class="next">
+                                    <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <div class="standard-box">
+                             <div class="standard-header">
+                                <h3>Archives</h3>
+                            </div>
+                            <ul class="list-unstyled categories-list">
+                                <li>
+                                    <a href="#">July 2016 <span class="number">(43)</span> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#">June 2016 <span class="number">(31)</span> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#">May 2016 <span class="number">(29)</span> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#">April 2016 <span class="number">(26)</span> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#">March 2016 <span class="number">(12)</span> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#">February 2016 <span class="number">(18)</span> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="standard-box">
+                            <div class="standard-header">
+                                <h3>Categories</h3>
+                            </div>
+                            <ul class="list-unstyled categories-list">
+                                <li>
+                                    <a href="#">All <span class="number">(126)</span> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#">Reviews <span class="number">(60)</span> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#">News <span class="number">(26)</span> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#">Solutions <span class="number">(11)</span> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#">Video <span class="number">(12)</span> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#">Hyde Park <span class="number">(7)</span> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="standard-box">
+                            <div class="standard-header">
+                                <h3>Tags</h3>
+                            </div>
+                            <ul class="list-inline tags-list">
+                                <li><a class="tag" href="#"><i class="fa fa-tag"></i>outside</a></li>
+                                <li><a class="tag" href="#"><i class="fa fa-tag"></i>portfolio</a></li>
+                                <li><a class="tag" href="#"><i class="fa fa-tag"></i>resume</a></li>
+                                <li><a class="tag" href="#"><i class="fa fa-tag"></i>CV</a></li>
+                                <li><a class="tag" href="#"><i class="fa fa-tag"></i>profile</a></li>
+                                <li><a class="tag" href="#"><i class="fa fa-tag"></i>personal</a></li>
+                                <li><a class="tag" href="#"><i class="fa fa-tag"></i>blog</a></li>
+                                <li><a class="tag" href="#"><i class="fa fa-tag"></i>template</a></li>
+                                <li><a class="tag" href="#"><i class="fa fa-tag"></i>bootstrap</a></li>
+                            </ul>
+                        </div>
+                        <div class="standard-box">
+                            <div class="standard-header">
+                                <h3>Most popular</h3>
+                            </div>
+                            <div class="media-list">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="img-thumbnail pull-left" src="img/blog-photo-1.jpg" alt="First article in a box">
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">
+                                            <a href="#" title="First article in a box">First article in a box</a>
+                                        </h4>
+                                        <div class="media-toolbar">
+                                            <i class="fa fa-calendar"></i> <strong>2016-09-08</strong> &nbsp; <i class="fa fa-user"></i> <a href="#">adam</a>
+                                        </div>
+                                        <a href="#" class="btn btn-transparent btn-block btn-sm" title="Read more">Read more &raquo;</a>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="img-thumbnail pull-left" src="img/blog-photo-2.jpg" alt="Another nice text">
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">
+                                            <a href="#" title="Another nice text">Another nice text</a>
+                                        </h4>
+                                        <div class="media-toolbar">
+                                            <i class="fa fa-calendar"></i> <strong>2016-09-08</strong> &nbsp; <i class="fa fa-user"></i> <a href="#">adam</a>
+                                        </div>
+                                        <a href="#" class="btn btn-transparent btn-block btn-sm" title="Read more">Read more &raquo;</a>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="img-thumbnail pull-left" src="img/blog-photo-3.jpg" alt="Popular article">
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">
+                                            <a href="#" title="Popular article">Popular article</a>
+                                        </h4>
+                                        <div class="media-toolbar">
+                                            <i class="fa fa-calendar"></i> <strong>2016-09-08</strong> &nbsp; <i class="fa fa-user"></i> <a href="#">adam</a>
+                                        </div>
+                                        <a href="#" class="btn btn-transparent btn-block btn-sm" title="Read more">Read more &raquo;</a>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="img-thumbnail pull-left" src="img/blog-photo-1.jpg" alt="Lorem ipsum post">
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">
+                                            <a href="#" title="Lorem ipsum post">Lorem ipsum post</a>
+                                        </h4>
+                                        <div class="media-toolbar">
+                                            <i class="fa fa-calendar"></i> <strong>2016-09-08</strong> &nbsp; <i class="fa fa-user"></i> <a href="#">adam</a>
+                                        </div>
+                                        <a href="#" class="btn btn-transparent btn-block btn-sm" title="Read more">Read more &raquo;</a>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="img-thumbnail pull-left" src="img/blog-photo-3.jpg" alt="Finally the last one">
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">
+                                            <a href="#" title="Finally the last one">Finally the last one</a>
+                                        </h4>
+                                        <div class="media-toolbar">
+                                            <i class="fa fa-calendar"></i> <strong>2016-09-08</strong> &nbsp; <i class="fa fa-user"></i> <a href="#">adam</a>
+                                        </div>
+                                        <a href="#" class="btn btn-transparent btn-block btn-sm" title="Read more">Read more &raquo;</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer text-center" id="follow-us">
+        <div class="section-inner">
+            <div class="container">
+                <ul class="list-inline icons-list-square">
+                    <li>
+                        <a href="https://www.facebook.com/jakub.kwarcinski" class="icon-circle-container">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </li><li>
+                        <a href="https://github.com/kwarc87" class="icon-circle-container">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </li><li>
+                        <a href="https://google.com/+JakubKwarciński" class="icon-circle-container">
+                            <i class="fa fa-google-plus"></i>
+                        </a>
+                    </li><li>
+                        <a href="https://www.youtube.com/user/sernick87" class="icon-circle-container">
+                            <i class="fa fa-youtube"></i>
+                        </a>
+                    </li><li>
+                        <a href="http://www.last.fm/pl/user/kwarc87" class="icon-circle-container">
+                            <i class="fa fa-lastfm" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+                <p> &copy; 2016 <a href="http://jakubkwarcinski.pl" title="Jakub Kwarciński - Frontend Developer">Jakub Kwarciński</a></p>
+
+    <script type="text/javascript" src="js/modernizr-custom.min.js"></script>
+            </div>
+        </div>
+    </footer>
+
+    <div id="to-top" class="to-top">
+        <a href="#" class="To the top" title="To the top">
+            <i class="fa fa-angle-up"></i>
+        </a>
+    </div>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script type="text/javascript" src="bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
+
+    <!-- skrollr -->
+    <script type="text/javascript" src="js/skrollr.min.js"></script>
+
+    <!-- Custom javascript -->
+    <script type="text/javascript" src="js/custom.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+**Outside** is a unique one page multipurpose portfolio with many page variants. Many occupation variants (such as agency, medical, legal, culture, culinary, fashion, science) allow you to build a modern and unique personal page with expanded and rich sections. Outside template contains 10 different defined colors and also light and dark versions of every section, which you can easily switch. It also contains many unique components like timeline, 3 different looks of skills, stylish google maps, preloader, pricing tables, calendar, tags list, process graph and many other (all in light and dark variants). You can easily and successful personalize them to your specific goals. This template will definitely help you to find your dream job!
+
+**Key features:**
+
+ - Modern design
+ - Built with Bootstrap 3.3.7
+ - Full responsive
+ - Easy to customize
+ - Cross browser support
+ - One page navigation
+ - 10 colors schemes
+ - Multiple thematical layouts
+ - Light and dark version of all pages
+ - Fancy fonts
+ - 2 different icons sets - Font Awesome and linea fonts
+ - 3 different looks of skills
+ - Stylish google maps (two variants - light and dark)
+ - Smart responsive timeline
+ - Process line
+ - Elegant modal (two variant - light and dark)
+ - Lightbox gallery
+ - Pricing tables
+ - Tags list
+ - Calendar box
+ - skrollr plugin for fancy animations on page scroll
+ - Parallax effect for backgrounds
+ - Animated page loader
+ - 2 additional blog single pages: blog list and blog item (two variants - light and dark)
+ - SEO friendly
+ - W3C Valid Code
+
+**Pages:**
+
+ - Preview page
+ - Default variant for frontend developer
+ - Default variant with no skrollr animations
+ - Basic version of default variant (no preloader, no css switcher, no skrollr animations and no parallax background effect)
+ - Light version of default variant 
+ - Dark version of default variant 
+ - Beauty version - ideal for stylist, model, lingerie shop
+ - Medical version - ideal for doctor, dentist, hospital
+ - Culinary version - ideal for chef, baker, restaurant
+ - Culture version - ideal for historian, architect, literary
+ - Fashion version - ideal for beautician, hairdresser, stylist and model
+ - Legal version - ideal for lawyer, law office, consultant
+ - Science version - ideal for scientist, teacher, professor, university, school, college, research center
+ - Blog list - single page for posts list (in light and dark variants)
+ - Blog item - single page for post item (in light and dark variants)
+ - Features.html - demo page with modal and tooltip features (in light and dark variants)
+ - Typography - demo page with most of the standard bootstrap components and typography (in light and dark variants)
+
+**Includes:**
+ 
+ - [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
+ - [jQuery 3.1.0](http://jquery.com/download/)
+ - [jQuery Parallax](https://github.com/IanLunn/jQuery-Parallax)
+ - [Lato Font](https://fonts.google.com/specimen/Lato)
+ - [Lightbox 2.7.1](http://lokeshdhakar.com/projects/lightbox2/)
+ - [Linea: a free outline iconset] -  http://linea.io/
+ - [Modernizr](http://modernizr.com/)
+ - [Orbitron Font] - https://fonts.google.com/specimen/Orbitron
+ - [skrollr](https://github.com/Prinzhorn/skrollr)

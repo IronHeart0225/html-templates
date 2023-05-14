@@ -1,0 +1,134 @@
+var _Elements = {"elements": {
+    "Home Image-BG": [
+        {"url":"elements/home-image-app-dark.html","height":531, "thumbnail":"thumbnails/home-image-app-dark.png"},
+        {"url":"elements/home-image-app-gradient-color.html","height":531, "thumbnail":"thumbnails/home-image-app-gradient-color.png"},
+        {"url":"elements/home-image-app-transparent-color.html","height":531, "thumbnail":"thumbnails/home-image-app-transparent-color.png"},
+
+        {"url":"elements/home-image-book-dark.html","height":531, "thumbnail":"thumbnails/home-image-book-dark.png"},
+        {"url":"elements/home-image-book-gradient-color.html","height":531, "thumbnail":"thumbnails/home-image-book-gradient-color.png"},
+        {"url":"elements/home-image-book-transparent-color.html","height":531, "thumbnail":"thumbnails/home-image-book-transparent-color.png"},
+
+        {"url":"elements/home-image-service-1-dark.html","height":764, "thumbnail":"thumbnails/home-image-service-1-dark.png"},
+        {"url":"elements/home-image-service-1-gradient-color.html","height":764, "thumbnail":"thumbnails/home-image-service-1-gradient-color.png"},
+        {"url":"elements/home-image-service-1-transparent-color.html","height":764, "thumbnail":"thumbnails/home-image-service-1-transparent-color.png"},
+
+        {"url":"elements/home-image-service-2-dark.html","height":764, "thumbnail":"thumbnails/home-image-service-2-dark.png"},
+        {"url":"elements/home-image-service-2-gradient-color.html","height":764, "thumbnail":"thumbnails/home-image-service-2-gradient-color.png"},
+        {"url":"elements/home-image-service-2-transparent-color.html","height":764, "thumbnail":"thumbnails/home-image-service-2-transparent-color.png"},
+
+        {"url":"elements/home-image-service-3-dark.html","height":764, "thumbnail":"thumbnails/home-image-service-3-dark.png"},
+        {"url":"elements/home-image-service-3-gradient-color.html","height":764, "thumbnail":"thumbnails/home-image-service-3-gradient-color.png"},
+        {"url":"elements/home-image-service-3-transparent-color.html","height":764, "thumbnail":"thumbnails/home-image-service-3-transparent-color.png"},
+    ],
+
+    "Home Video-BG": [
+        {"url":"elements/home-video-app-dark.html","height":531, "thumbnail":"thumbnails/home-video-app-dark.png"},
+        {"url":"elements/home-video-app-gradient-color.html","height":531, "thumbnail":"thumbnails/home-video-app-gradient-color.png"},
+        {"url":"elements/home-video-app-transparent-color.html","height":531, "thumbnail":"thumbnails/home-video-app-transparent-color.png"},
+
+        {"url":"elements/home-video-book-dark.html","height":531, "thumbnail":"thumbnails/home-video-book-dark.png"},
+        {"url":"elements/home-video-book-gradient-color.html","height":531, "thumbnail":"thumbnails/home-video-book-gradient-color.png"},
+        {"url":"elements/home-video-book-transparent-color.html","height":531, "thumbnail":"thumbnails/home-video-book-transparent-color.png"},
+
+        {"url":"elements/home-video-service-1-dark.html","height":764, "thumbnail":"thumbnails/home-video-service-1-dark.png"},
+        {"url":"elements/home-video-service-1-gradient-color.html","height":764, "thumbnail":"thumbnails/home-video-service-1-gradient-color.png"},
+        {"url":"elements/home-video-service-1-transparent-color.html","height":764, "thumbnail":"thumbnails/home-video-service-1-transparent-color.png"},
+
+        {"url":"elements/home-video-service-2-dark.html","height":764, "thumbnail":"thumbnails/home-video-service-2-dark.png"},
+        {"url":"elements/home-video-service-2-gradient-color.html","height":764, "thumbnail":"thumbnails/home-video-service-2-gradient-color.png"},
+        {"url":"elements/home-video-service-2-transparent-color.html","height":764, "thumbnail":"thumbnails/home-video-service-2-transparent-color.png"},
+
+        {"url":"elements/home-video-service-3-dark.html","height":764, "thumbnail":"thumbnails/home-video-service-3-dark.png"},
+        {"url":"elements/home-video-service-3-gradient-color.html","height":764, "thumbnail":"thumbnails/home-video-service-3-gradient-color.png"},
+        {"url":"elements/home-video-service-3-transparent-color.html","height":764, "thumbnail":"thumbnails/home-video-service-3-transparent-color.png"}
+    ],
+
+    "Home Solid-Color": [
+        {"url":"elements/home-solid-app-solid-color.html","height":531, "thumbnail":"thumbnails/home-solid-app-solid-color.png"},
+        {"url":"elements/home-solid-app-gradient-color.html","height":531, "thumbnail":"thumbnails/home-solid-app-gradient-color.png"},
+
+        {"url":"elements/home-solid-book-solid-color.html","height":531, "thumbnail":"thumbnails/home-solid-book-solid-color.png"},
+        {"url":"elements/home-solid-book-gradient-color.html","height":531, "thumbnail":"thumbnails/home-solid-book-gradient-color.png"},
+
+        {"url":"elements/home-solid-service-1-solid-color.html","height":764, "thumbnail":"thumbnails/home-solid-service-1-solid-color.png"},
+        {"url":"elements/home-solid-service-1-gradient-color.html","height":764, "thumbnail":"thumbnails/home-solid-service-1-gradient-color.png"},
+
+        {"url":"elements/home-solid-service-2-solid-color.html","height":764, "thumbnail":"thumbnails/home-solid-service-2-solid-color.png"},
+        {"url":"elements/home-solid-service-2-gradient-color.html","height":764, "thumbnail":"thumbnails/home-solid-service-2-gradient-color.png"},
+
+        {"url":"elements/home-solid-service-3-solid-color.html","height":764, "thumbnail":"thumbnails/home-solid-service-3-solid-color.png"},
+        {"url":"elements/home-solid-service-3-gradient-color.html","height":764, "thumbnail":"thumbnails/home-solid-service-3-gradient-color.png"}
+    ],
+
+	"Services": [
+    	{"url":"elements/service-1.html","height":531, "thumbnail":"thumbnails/service-1.png"},
+    	{"url":"elements/service-2.html","height":743, "thumbnail":"thumbnails/service-2.png"},
+    	{"url":"elements/service-3.html","height":731, "thumbnail":"thumbnails/service-3.png"},
+    	{"url":"elements/service-4.html","height":543, "thumbnail":"thumbnails/service-4.png"}
+	],
+
+	"Description": [
+    	{"url":"elements/app-description-1.html","height":851, "thumbnail":"thumbnails/app-description-1.png"},
+    	{"url":"elements/app-description-2.html","height":851, "thumbnail":"thumbnails/app-description-2.png"},
+    	{"url":"elements/app-description-3.html","height":981, "thumbnail":"thumbnails/app-description-3.png"}
+	],
+
+	"Features": [
+    	{"url":"elements/app-feature-1.html","height":844, "thumbnail":"thumbnails/app-feature-1.png"},
+        {"url":"elements/app-feature-2.html","height":844, "thumbnail":"thumbnails/app-feature-2.png"},
+    	{"url":"elements/app-feature-3.html","height":844, "thumbnail":"thumbnails/app-feature-3.png"}
+	],
+
+    "Pricing Tables": [
+    	{"url":"elements/pricing-table-2.html","height":1055, "thumbnail":"thumbnails/pricing-table-2.png"},
+
+        {"url":"elements/pricing-table-1-image-bg-dark.html","height":1055, "thumbnail":"thumbnails/pricing-table-1-image-bg-dark.png"},
+        {"url":"elements/pricing-table-1-image-bg-gradient-color.html","height":1055, "thumbnail":"thumbnails/pricing-table-1-image-bg-gradient-color.png"},
+        {"url":"elements/pricing-table-1-image-bg-transparent-color.html","height":1055, "thumbnail":"thumbnails/pricing-table-1-image-bg-transparent-color.png"},
+
+        {"url":"elements/pricing-table-1-video-bg-dark.html","height":1055, "thumbnail":"thumbnails/pricing-table-1-video-bg-dark.png"},
+        {"url":"elements/pricing-table-1-video-bg-gradient-color.html","height":1055, "thumbnail":"thumbnails/pricing-table-1-video-bg-gradient-color.png"},
+        {"url":"elements/pricing-table-1-video-bg-transparent-color.html","height":1055, "thumbnail":"thumbnails/pricing-table-1-video-bg-transparent-color.png"},
+
+        {"url":"elements/pricing-table-1-solid-color.html","height":1055, "thumbnail":"thumbnails/pricing-table-1-solid-color.png"},
+        {"url":"elements/pricing-table-1-solid-gradient-color.html","height":1055, "thumbnail":"thumbnails/pricing-table-1-solid-gradient-color.png"}
+	],
+
+	"Screenshots": [
+    	{"url":"elements/screenshots.html","height":963, "thumbnail":"thumbnails/screenshots.png"}
+	],
+
+	"Testimonials": [
+    	{"url":"elements/testimonials-1.html","height":720, "thumbnail":"thumbnails/testimonials-1.png"},
+        {"url":"elements/testimonials-2-image-bg-dark.html","height":75, "thumbnail":"thumbnails/testimonials-2-image-bg-dark.png"},
+        {"url":"elements/testimonials-2-image-bg-gradient-color.html","height":75, "thumbnail":"thumbnails/testimonials-2-image-bg-gradient-color.png"},
+        {"url":"elements/testimonials-2-image-bg-transparent-color.html","height":75, "thumbnail":"thumbnails/testimonials-2-image-bg-transparent-color.png"},
+
+        {"url":"elements/testimonials-2-video-bg-dark.html","height":75, "thumbnail":"thumbnails/testimonials-2-video-bg-dark.png"},
+        {"url":"elements/testimonials-2-video-bg-gradient-color.html","height":75, "thumbnail":"thumbnails/testimonials-2-video-bg-gradient-color.png"},
+        {"url":"elements/testimonials-2-video-bg-transparent-color.html","height":75, "thumbnail":"thumbnails/testimonials-2-video-bg-transparent-color.png"},
+
+        {"url":"elements/testimonials-2-solid-color.html","height":75, "thumbnail":"thumbnails/testimonials-2-solid-color.png"},
+        {"url":"elements/testimonials-2-solid-gradient-color.html","height":75, "thumbnail":"thumbnails/testimonials-2-solid-gradient-color.png"}
+	],
+
+	"Downloads": [
+    	{"url":"elements/download-1.html","height":750, "thumbnail":"thumbnails/download-1.png"},
+    	{"url":"elements/download-2.html","height":481, "thumbnail":"thumbnails/download-2.png"},
+    	{"url":"elements/download-3.html","height":477, "thumbnail":"thumbnails/download-3.png"}
+	],
+
+    "Partners": [
+        {"url":"elements/partners.html","height":300, "thumbnail":"thumbnails/partners.png"}
+    ],
+
+	"Contact": [
+    	{"url":"elements/contact.html","height":645, "thumbnail":"thumbnails/contact.png"}
+	],
+
+    "Footers":[
+    	{"url":"elements/footer-1.html","height":75, "thumbnail":"thumbnails/footer-1.png"},
+    	{"url":"elements/footer-2.html","height":75, "thumbnail":"thumbnails/footer-2.png"}
+    ]
+    }
+}

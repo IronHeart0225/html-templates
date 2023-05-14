@@ -1,0 +1,120 @@
+
+.nav-background {
+    background: rgba(198, 40, 40, 1);
+}
+@media screen and (max-width: 767px){
+    .nav-mob {
+        background: rgba(198, 40, 40, 1) !important;
+    }
+}
+
+.step-number {
+    background: #C62828;
+}
+
+.service-left-side:hover .circle, .service-left-side.active .circle {
+    background-color: #C62828;
+    border: 6px solid #C62828;
+}
+
+.service-left-side:hover, .service-left-side.active {
+    border: 1px solid #C62828;
+    outline-color: #C62828;
+
+}
+.service-left-side:hover .title, .service-left-side.active .title {
+    color: #C62828;
+}
+.service-right-side:hover .circle {
+    background-color: #C62828;
+    border: 6px solid #C62828;
+}
+
+.service-right-side:hover, .service-right-side.active {
+    border: 1px solid #C62828;
+    outline-color: #C62828;
+}
+.service-right-side:hover .title, .service-right-side.active .title {
+    color: #C62828;
+}
+
+.k-why-choose-us-main .border-box {
+    border: 1px solid #C62828;
+    outline-color: #C62828;
+}
+
+.why-choose-single:hover .iconbox-smedium i {
+	background: #C62828;
+    border: 1px solid #C62828;
+    outline: 1px solid #C62828;
+}
+
+.awesome-team-members .item-holder .text-box{
+	background-color:#C62828;
+}
+
+.awesome-team-members .btn-circle.primary {
+    border: 1px solid #C62828;
+    color: #C62828;
+}
+.testimonial-single:hover .inner-box, .testimonial-single.active .inner-box {
+    background-color: #C62828;
+}
+.testimonial-single:hover, .testimonial-single.active {
+    border: 1px solid #C62828;
+}
+
+.pricing-table .item ul li i {
+	color: #C62828;
+}
+
+.pricing-table .item .btn-theme.active {
+	background-color: #C62828;
+}
+
+.pricing-table .item span.hot {
+
+	color: #C62828;
+
+}
+
+.pricing-table .item .btn-theme.active {
+    background-color: #C62828;
+}
+.pricing-table .item p.price {
+    border-bottom: 1px solid #e3e3e3;
+    color: #C62828;
+}
+.btn-theme:hover {
+    color: #ffffff;
+    background-color: #C62828;
+}
+
+.contact-info ul li i {
+    color: #C62828;
+    border: 1px solid #C62828;
+}
+
+.submit-btn:hover {
+    background: #C62828;
+}
+
+.btn-24 {
+    background-color: #C62828;
+}
+
+.bottom .socials a:hover {
+    background: #C62828;
+    outline-color: #C62828;
+    border-color: #C62828;
+}
+
+.awesome-team-members .btn-circle:hover {
+    background:#fff;
+    color:#C62828;
+}
+
+.awesome-team-members .btn-circle.primary:hover {
+    background:#C62828;
+    color:#fff;
+}

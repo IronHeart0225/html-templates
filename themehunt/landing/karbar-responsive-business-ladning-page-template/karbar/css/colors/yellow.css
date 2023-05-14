@@ -1,0 +1,119 @@
+
+.nav-background {
+    background: rgba(255, 143, 0, 1);
+}
+@media screen and (max-width: 767px){
+    .nav-mob {
+        background: rgba(255, 143, 0, 1) !important;
+    }
+}
+.step-number {
+    background: #FF8F00;
+}
+
+.service-left-side:hover .circle, .service-left-side.active .circle {
+    background-color: #FF8F00;
+    border: 6px solid #FF8F00;
+}
+
+.service-left-side:hover, .service-left-side.active {
+    border: 1px solid #FF8F00;
+    outline-color: #FF8F00;
+
+}
+.service-left-side:hover .title, .service-left-side.active .title {
+    color: #FF8F00;
+}
+.service-right-side:hover .circle {
+    background-color: #FF8F00;
+    border: 6px solid #FF8F00;
+}
+
+.service-right-side:hover, .service-right-side.active {
+    border: 1px solid #FF8F00;
+    outline-color: #FF8F00;
+}
+.service-right-side:hover .title, .service-right-side.active .title {
+    color: #FF8F00;
+}
+
+.k-why-choose-us-main .border-box {
+    border: 1px solid #FF8F00;
+    outline-color: #FF8F00;
+}
+
+.why-choose-single:hover .iconbox-smedium i {
+	background: #FF8F00;
+    border: 1px solid #FF8F00;
+    outline: 1px solid #FF8F00;
+}
+
+.awesome-team-members .item-holder .text-box{
+	background-color:#FF8F00;
+}
+
+.awesome-team-members .btn-circle.primary {
+    border: 1px solid #FF8F00;
+    color: #FF8F00;
+}
+.testimonial-single:hover .inner-box, .testimonial-single.active .inner-box {
+    background-color: #FF8F00;
+}
+.testimonial-single:hover, .testimonial-single.active {
+    border: 1px solid #FF8F00;
+}
+
+.pricing-table .item ul li i {
+	color: #FF8F00;
+}
+
+.pricing-table .item .btn-theme.active {
+	background-color: #FF8F00;
+}
+
+.pricing-table .item span.hot {
+
+	color: #FF8F00;
+
+}
+
+.pricing-table .item .btn-theme.active {
+    background-color: #FF8F00;
+}
+.pricing-table .item p.price {
+    border-bottom: 1px solid #e3e3e3;
+    color: #FF8F00;
+}
+.btn-theme:hover {
+    color: #ffffff;
+    background-color: #FF8F00;
+}
+
+.contact-info ul li i {
+    color: #FF8F00;
+    border: 1px solid #FF8F00;
+}
+
+.submit-btn:hover {
+    background: #FF8F00;
+}
+
+.btn-24 {
+    background-color: #FF8F00;
+}
+
+.bottom .socials a:hover {
+    background: #FF8F00;
+    outline-color: #FF8F00;
+    border-color: #FF8F00;
+}
+
+.awesome-team-members .btn-circle:hover {
+    background:#fff;
+    color:#FF8F00;
+}
+
+.awesome-team-members .btn-circle.primary:hover {
+    background:#FF8F00;
+    color:#fff;
+}

@@ -1,0 +1,46 @@
+GameR is an ideal template for game-related websites (gaming, communities, clans, guilds, news and entertainment content) but also for technology, music, movies, CV or personal pages. Smart and compact. It's able to completely meet your needs. Many advanced customizable sections will help you get your own website fast and easy. Unique design will increase the value of your page!
+
+User gets many unique components like timeline, counter, charts, requirements boxes, calendar to use. You can easily personalize them to your specific goals.
+
+Key features:
+
+ - Modern design (a little bit inspired by pixel-art)
+ - One page navigation
+ - 6 colors schemes
+ - Built with Bootstrap 3.3.7
+ - Built on LESS
+ - Full responsive
+ - Easy to Customize
+ - Cross browser support
+ - Fancy fonts
+ - Animated hero (beautiful particles when mouse move)
+ - Animated page loader (pac-man and other loader effects)
+ - Customizable counter for comming soon section
+ - Smart responsive timeline
+ - Morris charts and progress bars
+ - Skrollr plugin for fancy animations on page scroll
+ - Dark elegant styled google maps ("Shades of Grey" skin used)
+ - Login and search boxes in navbar
+ - Lightbox gallery
+ - Parallax effect for backgrounds
+ - Pricing tables
+ - Tags
+ - Calendar box
+ - Stylish tooltip
+ - Dark elegant modal
+ - Requirements boxes
+ - Two additional blog single pages: blog list and blog item
+ - Built-in with FontAwesome icon packs
+ - SEO friendly
+ - W3C Valid Code
+
+Pages:
+
+ - Responsive one page template
+ - Responsive one page template without skrollr animations
+ - Blog list - single page with posts list
+ - Blog item - single page with post item
+ - Typography - single page with bootstrap components
+ - Documentation - single page with rich documentation
+ 
+ ...and also HTML file for every color variant.

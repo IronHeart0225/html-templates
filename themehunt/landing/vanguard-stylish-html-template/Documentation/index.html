@@ -1,0 +1,3524 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Vanguard - Documentation v.1.1</title>
+<link rel="stylesheet" href="css/base.css">
+<link type="text/css" rel="stylesheet" href="styles/shCoreDefault.css">
+<link type="text/css" rel="Stylesheet" href="styles/shThemeDefault.css">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lobster">
+
+<script type="text/javascript" src="scripts/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="scripts/shCore.js"></script>
+<script type="text/javascript" src="scripts/stickyPanel.js"></script>
+<script type="text/javascript" src="scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="scripts/shBrushPhp.js"></script>
+<script type="text/javascript" src="scripts/shBrushXml.js"></script>
+<script type="text/javascript" src="scripts/shBrushCss.js"></script>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+ 
+		/*
+$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top-10}, 500);
+		});
+*/
+		
+		
+		// Cache selectors
+		var lastId,
+		    topMenu = $(".menu"),
+		    topMenuHeight = 80,
+		    // All list items
+		    menuItems = topMenu.find("a"),
+		    // Anchors corresponding to menu items
+		    scrollItems = menuItems.map(function(){
+		      var item = $($(this).attr("href"));
+		      if (item.length) { return item; }
+		    });
+		
+		// Bind click handler to menu items
+		// so we can get a fancy scroll animation
+		menuItems.click(function(e){
+		  var href = $(this).attr("href"),
+		      offsetTop = href === "#" ? 0 : $(href).offset().top-60+1;
+		  $('html, body').stop().animate({ 
+		      scrollTop: offsetTop
+		  }, 300);
+		  e.preventDefault();
+		});
+		
+		// Bind to scroll
+		$(window).scroll(function(){
+		   // Get container scroll position
+		   var fromTop = $(this).scrollTop()+topMenuHeight;
+		   
+		   // Get id of current scroll item
+		   var cur = scrollItems.map(function(){
+		     if ($(this).offset().top < fromTop)
+		       return this;
+		   });
+		   // Get the id of the current element
+		   cur = cur[cur.length-1];
+		   var id = cur && cur.length ? cur[0].id : "";
+		   
+		   if (lastId !== id) {
+		       lastId = id;
+		       // Set/remove active class
+		       menuItems
+		         .parent().removeClass("active")
+		         .end().filter("[href=#"+id+"]").parent().addClass("active");
+		   }                   
+		});
+		
+	});
+
+</script><style type="text/css"></style></head>
+
+<body>
+	<div class="topbar">
+		<div class="topbargreen"><div class="bordergreen"></div></div>
+	</div>
+	<a name="top"></a>
+	<div class="tableofcontents" style="overflow:auto;"><!-- start #mainmenu -->
+        <ul class="menu">
+            <li class="active"><a href="#header-wrap" class="scroll">&nbsp;&nbsp;&nbsp;&nbsp;Start here</a></li>
+            <li ><a href="#setup-docs" class="scroll">01. Setup</a></li>
+            <li><a href="#structure-docs" class="scroll">02. HTML Structure</a></li>
+            <li><a href="#filess-docs" class="scroll">03. Template Files</a></li>
+            <li><a href="#grid-docs" class="scroll">04. Bootstrap Grid</a></li>
+            <li><a href="#home-menu" class="scroll">05. Navigation Menu</a></li>
+			<li><a href="#sections" class="scroll">06. Sections</a></li>
+            <li><a href="#home-docs" class="scroll">07. Home Section</a></li>
+            <li><a href="#whoweare" class="scroll">08. About Us Section</a></li>
+			<li><a href="#servicessection" class="scroll">09. Services Section</a></li>
+			<li><a href="#portfolio" class="scroll">10. Portfolios</a></li>
+			<li><a href="#clients" class="scroll">11. Clients Section</a></li>
+			<li><a href="#contacts" class="scroll">12. Contact Section</a></li>
+			<li><a href="#blogsection" class="scroll">13. Blog Section</a></li>
+			<li><a href="#blogsingle" class="scroll">14. Blog Single</a></li>
+			<li><a href="#footersection" class="scroll">15. Footer Section</a></li>
+			<li><a href="#stwitter" class="scroll">16. Setup Twitter</a></li>
+			<li><a href="#animatedc" class="scroll">17. Animated Contents</a></li>
+			<li><a href="#elements" class="scroll">18. Elements</a></li>
+			<li><a href="#fonts-docs" class="scroll">19. Template Fonts</a></li>
+            <li><a href="#credits" class="scroll">20. Credits &amp; Resources</a></li>          
+		</ul>
+		               
+    </div>
+    
+    <div class="content-c">
+	<div id="header-wrap"><!-- start #header-wrap -->
+         <div class="container">
+			<div id="header"><!-- start #header -->
+			
+              	<div class="textheader">
+              		<h1>Vanguard Documentation <span class="version">vs1.1</span></h1>
+              		
+              		
+              		<h6 class="toph">Thank you for purchasing our Template. We hope you enjoy our product! If you have any questions that are beyond the scope of this help file, please feel free to submit your question on our <a href="mailto:support@upperinc.com">Support Page</a>.</h6>
+              		<p><strong>Please if you like this template,  don't forget to rate it.</strong><span style="position: relative;top: 2px;left: 10px;"><img src="img/star-on.png"><img src="img/star-on.png"><img src="img/star-on.png"><img src="img/star-on.png"><img src="img/star-on.png"></span></p>
+              	</div>
+                
+                <div class="copyrights">
+					<div class="left">
+						<p>Author: <a href="http://upperinc.com">Upper</a></p> 
+						<p>Email: <a href="mailto:support@upperinc.com">@upper</a></p>
+					</div>
+					<div class="right">
+						<p>Created: 21 May 2014</p>
+						
+						<p>Updated: 24 May 2014</p>
+					</div>
+				</div> 
+                
+                <div class="clear"></div>
+            </div><!-- end #header -->
+            
+            
+            <div class="clear"></div>
+         
+	
+	
+	
+	<div id="maincontent">
+			
+		<div class="section">
+			
+			
+			<h3 id="setup-docs">1. Setup<a href="#header-wrap" class="toplink scroll">top</a></h3>
+			<p>We suppose that you have some knowledge about HTML and CSS, therefore this documentation doesn't include any detailed explanations of simple steps such as how to add, remove or edit HTML tags and CSS properties. You can check this course if you want to improve your knowledge, <a href="http://learncss.tutsplus.com/">"30 Days to Learn HTML & CSS".</a></p><br />
+			<p>In this documentation we will explain you how to setup Vanguard HTML Template. In order to edit template files you will need a code editor (e.g. you can use <a href="http://www.panic.com/coda/">CODA</a> for Mac or <a href="http://notepad-plus-plus.org/">NotePad++</a> for Windows.
+			</p>
+			
+			<p>
+			 <br/>
+	        This template is compatible with all the major browsers, Chrome, Firefox, Opera, Safari and Internet Explorer (ie9+).</p><br /><br />
+			
+			<h6>Server Require</h6>
+            <p>The template requires web server with PHP 4+ installed. Also PHP function mail() should be enabled (for correct work of the contact form). Please note, without having PHP enabled this Template will work fine, but the contact form will not send the email.
+	       
+            </p>
+             <br/><br/>
+            <h6>Web Development Tools</h6>
+            <p>With these tools you can inspect HTML and modify style and layout in real-time, use the most advanced JavaScript debugger available for any browser, accurately analyze network usage and performance, and much more. If you do not know this tool, should surely try it!</p>
+            
+   			<p>For Chrome: <a href="https://developers.google.com/chrome-developer-tools/docs/elements">Chrome DevTools</a></p>         
+            
+            <p>For Firefox: <a href="https://getfirebug.com/">Firebug</a></p>
+              
+			<br /><br />
+		</div>
+		
+		<div class="section">
+			<h3 id="structure-docs" class="scroll"><strong>2. HTML Structure</strong><a href="#header-wrap" class="toplink scroll">top</a></h3>
+           	  <h6>2.1 Templates </h6> 
+			  <p>This template comes with 9 different <b>MODELS</b> of html pages:</p>
+			  <br/>
+			  <ul>
+				<li>Parallax Home Page (x2)</li>
+				<li>Fullscreen Home Page (x2)</li>
+				<li>Fullscreen Video (x2)</li>
+				<li>Blog Wide</li>
+				<li>Blog Single</li>
+				<li>Single Project - No Ajax</li>
+			  </ul>
+			  <br/>
+			  
+			  
+			  <div class="note">
+			  	<p>NOTE: Vanguard mainly is a "One-Page" style but you can use the templates <b>blog-wide.html</b> or <b>proj-noajax.html</b> for create external pages and build your website like a <b>Multi-Page</b> Site.</p>
+			  
+			  </div>
+			  <h6>2.2 Color Schemes </h6> 
+			  <p>Also the template come with 9 pre-defined <b>COLOR SCHEMES</b> that can be found on CSS folder.</p>
+			  <p>You can use whatever color you like. You just need to leave uncommented your preferred color-scheme. You can do it this way:</p>
+			  <br/>
+			  <pre class="brush: xml; toolbar: false; highlight: [2]">
+			  	    <!-- COLORS -->					
+						<link href="css/color-variations/river.css" rel="stylesheet" type="text/css" media="screen" title="river">
+						<!--
+						<link href="css/color-variations/asphalt.css" rel="stylesheet" type="text/css" media="screen" title="asphalt">
+						<link href="css/color-variations/emerald.css" rel="stylesheet" type="text/css" media="screen" title="emerald">
+						<link href="css/color-variations/orange.css" rel="stylesheet" type="text/css" media="screen" title="orange">
+						<link href="css/color-variations/pumpkin.css" rel="stylesheet" type="text/css" media="screen" title="pumpkin">
+						<link href="css/color-variations/red.css" rel="stylesheet" type="text/css" media="screen" title="red">
+						<link href="css/color-variations/silver.css" rel="stylesheet" type="text/css" media="screen" title="silver">
+						<link href="css/color-variations/turquoise.css" rel="stylesheet" type="text/css" media="screen" title="turquoise">
+						<link href="css/color-variations/violet.css" rel="stylesheet" type="text/css" media="screen" title="violet">
+					-->
+			  </pre>
+			 
+			  
+			<br /><br/>
+		
+		
+			<div class="section">
+			<h3 id="filess-docs" class="scroll">3. Template Files<a href="#header-wrap" class="toplink scroll">top</a></h3>
+			
+			Inside the template folder your have the the following files and folders.
+			<br /><br/><br /><br/>
+			<img src="img/files.png" alt="Template Files">
+			<br /><br/>
+		<!--
+		<h6>3.1 Javascript Folder</h6>
+	            <ul class="llist">
+	            	  
+	            </ul>
+	            
+	            <ul class="llist">
+	            </ul>
+	            <p>&nbsp;</p>
+	-->
+			
+			</div>
+		
+		<div class="section">
+			<h3 id="grid-docs" class="scroll">4. Bootstrap Grid<a href="#header-wrap" class="toplink scroll">top</a></h3>
+			
+			<p>Bootstrap includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. It includes predefined classes for easy layout options, as well as powerful mixins for generating more semantic layouts.</p>
+			
+			<p>Grid systems are used for creating page layouts through a series of rows and columns that house your content. Here's how the Bootstrap grid system works:</p>
+			<br/>
+			<ul>
+			    <li>Rows must be placed within a <code>.container</code> (fixed-width) or <code>.container-fluid</code> (full-width) for proper alignment and padding.</li>
+			    <li>Use rows to create horizontal groups of columns.</li>
+			    <li>Content should be placed within columns, and only columns may be immediate children of rows.</li>
+			    <li>Predefined grid classes like <code>.row</code> and <code>.col-xs-4</code> are available for quickly making grid layouts. Less mixins can also be used for more semantic layouts.</li>
+			    <li>Columns create gutters (gaps between column content) via <code>padding</code>. That padding is offset in rows for the first and last column via negative margin on <code>.row</code>s.</li>
+			    <li>Grid columns are created by specifying the number of twelve available columns you wish to span. For example, three equal columns would use three <code>.col-xs-4</code>.</li>
+			</ul>
+			<br/>
+			<p>You can view more information about it <a href="http://getbootstrap.com/examples/grid/">Here →</a> or <a href="http://getbootstrap.com/css/">Here →</a></p></p>
+			<br /><br/>
+			<h6>How to change the number of columns?</h6>
+			
+			<p>For example on the html markup of the Who we are, you can see on Agency facts, Love our Clients etc.. each div have a class <b>col-xs-12 col-sm-4</b>. This means that at resolutions Phones Extra small devices (&lt;768px) you will have the divs with 12 columns and on Small devices Tablets (≥768px) to big resolutions you will have 4 columns, each div.</p>
+			<br />
+			<pre class="brush: xml; toolbar: false; highlight: [8]">
+			<div class="row">
+				<div class="col-xs-12 col-sm-4">
+					
+					
+			</pre> 
+			
+			<br /><br/>		
+		</div>
+		
+		<div class="section">
+			<h3 id="home-menu">5. Navigation Menu<a href="#header-wrap" class="toplink scroll">top</a></h3><br/>
+						
+			<p>You have the following options:
+				<ul>
+					<li>light-menu</li>
+					<li>hide-on-start</li>
+				</ul>
+			</p>
+			<div class="note">
+				<p>Just replace the style options you want for the menu on <b>line 4</b>.</p>
+			</div>
+			<pre class="brush: xml; toolbar: false; highlight: [4,18]">
+				<!-- BEGIN: HEADER BAR 
+					 OPTIONS: "dark" , "hide-on-start" 
+				-->
+				<div class="navbar navbar-default light-menu navbar-fixed-top" role="navigation">
+					<!-- BEGIN: NAV-CONTAINER -->
+					<div class="nav-container container">
+						<div class="navbar-header">
+							<!-- BEGIN: TOGGLE BUTTON (RESPONSIVE)-->
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							
+							<!-- BEGIN: LOGO -->
+							<a class="navbar-brand nav-to logo" href="index.html"></a>
+						</div>
+						
+						<!-- BEGIN: MENU -->       
+						<div class="navbar-collapse collapse">
+							<ul class="nav navbar-nav navbar-right">
+								<li><a class="nav-to" href="#home-fsslider">HOME</a></li>
+								<li><a class="nav-to" href="#about">About US</a></li>
+								<li><a class="nav-to" href="#services">Services</a></li> 
+								<li><a class="nav-to" href="#portfolio">Portfolio</a></li>
+								<li><a class="nav-to" href="#clients">CLIENTS</a></li>
+								<li><a class="nav-to" href="#contacts">Contact</a></li>
+								<li><a class="nav-to" href="blog.html">Blog</a></li>
+							</ul>
+						</div>
+						<!-- END: MENU -->
+					</div>
+					<!--END: NAV-CONTAINER -->
+				</div>
+				<!-- END: HEADER BAR -->  
+			</pre> 
+			
+			<br /><br/>
+		</div>
+		
+		<!--
+		/****************************************************************************/
+		********************************* Sections ***********************************
+		*****************************************************************************/
+		-->
+
+		<div class="section">
+								
+			<h3 id="sections">06. Sections<a href="#header-wrap" class="toplink scroll">top</a></h3>
+				<h6>6.1 How to create a section </h6>
+				<div class="note">For the sections area, you need to set the href with the id(#) equal to the section id, so that the navigation work fine with the menu. Also you need to add the <b>class="nav-to"</b> to the menu item for the scroll effect.</div>
+				
+				<pre class="brush: xml; toolbar: false; highlight: [4]">
+					<!-- BEGIN: MENU -->       
+					<div class="navbar-collapse collapse">
+						<ul class="nav navbar-nav navbar-right">
+							<li><a class="nav-to" href="#home">HOME</a></li>
+							<li><a class="nav-to" href="#about">About US</a></li>
+							
+							(...)
+							
+							<li><a class="nav-to" href="blog.html">Blog</a></li>
+						</ul>
+					</div>
+					<!-- END: MENU -->
+				</pre>
+					
+				<br/>
+				<h5>Section Created (Example: Home)</h5>
+				<pre class="brush: xml; toolbar: false; highlight: [2]">
+					<!-- BEGIN: #HOME -->
+					<section id="home" class="intro-parallax nav-sections">
+					  
+						(...)
+						
+					</section>
+					<!-- END: #HOME -->
+				</pre>
+				<br/>
+				<h6>6.2 Icons + Numerical + Video</h6>
+				
+				<div class="note">
+					<b>IMPORTANT:</b> This script only uses <b>Youtube</b> videos for this parallax section!
+				</div>
+				
+				<pre class="brush: xml; toolbar: false; highlight: [31,42,49,58,82]">
+					<section>		
+						<!-- START: PARALLAX - SERVICES CAROUSSEL -->
+						<div id="parallax-1" class="parallax"  data-stellar-background-ratio="0.5" style="background-image: url(images/parallax/darkbg.jpg);text-align:center;">
+							
+							<div class="box-overlay-pattern">
+							  
+								<!-- Remove this line "overlay-color" if you don't want the overlay color -->
+								<div class="overlay-color soft"></div>
+							  
+								<!-- BEGIN: PARALLAX CONTENTS -->	
+								<div class="parallax-content dark-text">
+								  
+									<!-- BEGIN: ABOUT TITLE --> 
+									<div class="section-title row text-center">
+										<h2>AGENCY FUN FACTS</h2>
+										<h4 class="sub-title">ABOVE ALL W'RE VERY NICE PEOPLE</h4>
+									</div>
+									<!-- END -->
+								  
+									
+									<!-- BEGIN: SERVICES CAROUSSEL -->
+									<!-- BEGIN: NUMERICAL INCREMENT -->
+									<div class="container numerical-c">	
+										<div class="row">
+											<!-- BEGIN 3 COLUMNS / 6 COLUMNS (<768px) 
+												 Numerical #01 -->
+											<div class="col-xs-6 col-sm-3 animated fadeInUp">		                
+												
+												<!-- Center Icon here -->
+												<div class="center-icon" style="">
+													<i class="fa fa-clock-o"></i>
+												</div> 
+												
+												<!-- Numerical here -->   
+												<div>
+													<div class="numericals">
+														<!-- Numerical script -->
+														<script type="text/javascript">
+															jQuery(window).load(function () {
+																if (isScrolledIntoView("numerical-10")) {
+																	jQuery('#numerical-10').removeClass('notinview');
+																	incrementNumerical('#numerical-10', 2140, 100);
+																}
+															});
+															jQuery(window).scroll(function () {
+																if (jQuery('#numerical-10.notinview').length) {
+																	if (isScrolledIntoView("numerical-10")) {
+																		jQuery('#numerical-10').removeClass('notinview');
+																		incrementNumerical('#numerical-10', 2140, 100);
+																	}
+																}
+															});
+														</script>
+														
+														<!-- Numerical html -->
+														<div class="numerical-container">
+															<div id="numerical-10" class="notinview">
+																<div class="value">0</div>
+																<div style="font-size:20;" class="unit"></div>
+															</div>
+															<div class="numerical-content">Hours of work</div>
+														</div>
+													</div>
+												</div> 
+												<!-- End Numerical -->     
+											</div>
+											
+											(...)
+											
+										</div>
+										<!-- END: Row -->
+									</div>
+									<!-- END: NUMERICAL INCREMENT -->
+									</div><!-- END .CONTAINER -->
+								</div>
+							  <!-- END: PARALLAX CONTENTS -->	
+							</div>
+							<!-- END box-overlay-pattern -->
+						
+						
+						<!-- YOUTUBE VIDEO URL -->
+						<div id="P3" class="player" style="display:block; margin: auto; background: rgba(0,0,0,0.5)" data-property="{videoURL:'http://youtu.be/nFS4GonXg64',showControls:false,containment:'#parallax-1',startAt:0,mute:true,autoPlay:true,loop:true,opacity:1}"></div>
+						
+					</section>
+				
+				</pre>
+				
+				<div class="note">
+					<ul>
+						<li>Line 31 - < i class="fa fa-clock-o" >< / i > - You need to set the icon name to use as the class name.</li>
+						<li>Line 42 - (incrementNumerical('#numerical-10', 2140, 100);) - Maximum value for the Numerical Increment and the Increment.</li>
+						<li>Line 49 - (incrementNumerical('#numerical-10', 2140, 100);) - Maximum value for the Numerical Increment and the Increment.</li>
+						<li>Line 58 - < div class="value" > 0 < / div > - You have to set here the value to the beginning of Numerical Increment.</li>	
+						<li>Line 82 - Select the URL for the video of the parallax section and set it on the <b>data-property</b>.</li>
+					</ul>				
+				</div>
+		
+				<br/>
+				<h6>6.3 Icons + Numerical + Parallax</h6>
+				<pre class="brush: xml; toolbar: false; highlight: [2,30,41,48,57]">
+					<!-- START: PARALLAX - SERVICES CAROUSSEL -->
+					<div id="parallax-facts" class="parallax" data-stellar-background-ratio="0.5" style="background-image: url(images/parallax/6.jpg);text-align:center;">
+						
+						<div class="box-overlay-pattern">
+						  
+							<!-- Remove this line "overlay-color" if you don't want the overlay color -->
+							<div class="overlay-color"></div>
+						  
+							<!-- BEGIN: PARALLAX CONTENTS -->	
+							<div class="parallax-content dark-text">
+							  
+								<!-- BEGIN: ABOUT TITLE --> 
+								<div class="section-title row text-center">
+									<h2>AGENCY FUN FACTS</h2>
+									<h4 class="sub-title">ABOVE ALL W'RE VERY NICE PEOPLE</h4>
+								</div>
+								<!-- END -->
+							  
+								
+								<!-- BEGIN: SERVICES CAROUSSEL -->
+								<!-- BEGIN: NUMERICAL INCREMENT -->
+								<div class="container numerical-c">	
+									<div class="row">
+										<!-- BEGIN 3 COLUMNS / 6 COLUMNS (<768px) 
+											 Numerical #01 -->
+										<div class="col-xs-6 col-sm-3 animated fadeInUp">		                
+											
+											<!-- Center Icon here -->
+											<div class="center-icon" style="">
+												<i class="fa fa-clock-o"></i>
+											</div> 
+											
+											<!-- Numerical here -->   
+											<div>
+												<div class="numericals">
+													<!-- Numerical script -->
+													<script type="text/javascript">
+														jQuery(window).load(function () {
+															if (isScrolledIntoView("numerical-10")) {
+																jQuery('#numerical-10').removeClass('notinview');
+																incrementNumerical('#numerical-10', 2140, 100);
+															}
+														});
+														jQuery(window).scroll(function () {
+															if (jQuery('#numerical-10.notinview').length) {
+																if (isScrolledIntoView("numerical-10")) {
+																	jQuery('#numerical-10').removeClass('notinview');
+																	incrementNumerical('#numerical-10', 2140, 100);
+																}
+															}
+														});
+													</script>
+													
+													<!-- Numerical html -->
+													<div class="numerical-container">
+														<div id="numerical-10" class="notinview">
+															<div class="value">0</div>
+															<div style="font-size:20;" class="unit"></div>
+														</div>
+														<div class="numerical-content">Hours of work</div>
+													</div>
+												</div>
+											</div> 
+											<!-- End Numerical -->     
+										</div>
+										
+									</div>
+									<!-- END: Row -->
+								</div>
+								<!-- END: NUMERICAL INCREMENT -->
+							</div>
+							<!-- END: PARALLAX CONTENTS -->	
+						</div>
+						<!-- END: box-overlay-pattern -->
+					</div>
+					<!-- END parallax-facts -->
+				</pre>
+				
+				
+				<div class="note">
+					<ul>
+						<li>Line 2 - Select the <b>background-image</b> for the image of the parallax section.</li>
+						<li>Line 30 - < i class="fa fa-clock-o" >< / i > - You need to set the icon name to use as the class name.</li>
+						<li>Line 41 - (incrementNumerical('#numerical-10', 2140, 100);) - Maximum value for the Numerical Increment and the Increment.</li>
+						<li>Line 48 - (incrementNumerical('#numerical-10', 2140, 100);) - Maximum value for the Numerical Increment and the Increment.</li>
+						<li>Line 57 - < div class="value" > 0 < / div > - You have to set here the value to the beginning of Numerical Increment.</li>						
+					</ul>				
+				</div>
+
+		</div>
+		
+		<div class="section">
+			<h3 id="home-docs">7. Home Section<a href="#header-wrap" class="toplink scroll">top</a></h3><br/>
+			
+			<h6>7.1 Index - Fullscreen Revolution Slider - Style 1</h6>
+			
+			<p></p>
+			
+			<pre class="brush: xml; toolbar: false;">
+				<!-- BEGIN: HOME REVOLUTION SLIDER -->      
+				<section id="home-fsslider" class="nav-sections">
+
+					<div class="tp-banner-container">
+						<div class="tp-banner" >
+							<ul>
+								<!-- SLIDE #01 -->
+								<li data-transition="fade" data-slotamount="5" data-masterspeed="700" >
+									<!-- MAIN IMAGE -->
+									<img src="images/parallax/7.jpg"   alt="slidebg1"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+									
+									<!-- Caption #01 -->
+									<div class="tp-caption large_bold_white_25 text-center customin customout start tp-resizeme"
+										data-x="center"
+										data-hoffset="0"
+										data-y="190"
+										data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+										data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+										data-speed="1000"
+										data-start="1000"
+										data-easing="Back.easeInOut"
+										data-endspeed="300">WE ARE VANGUARD 
+									</div>
+									
+									<!-- Caption #02 -->
+									<div class="tp-caption lfb large_text text-center customin customout tp-resizeme"
+										data-x="center"
+										data-hoffset="0"
+										data-y="280"
+										data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+										data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+										data-speed="1000"
+										data-start="1500"
+										data-easing="Back.easeInOut"
+										style="z-index: 6">CREATIVE <b>WEB</b> &amp; <b>GRAPHIC DESIGN</b> AGENCY
+									</div>
+									
+									<!-- Caption #03 -->
+									<div class="tp-caption lfb"
+										data-x="center"
+										data-hoffset="-85"
+										data-y="350"
+										data-speed="1000"
+										data-start="1800"
+										data-easing="Power4.easeOut"
+										data-endspeed="300"
+										data-endeasing="Power1.easeIn"
+										data-captionhidden="off"
+										style="z-index: 6">
+										<a class="nav-to des-button-white des-button-white-1 des-button-white-1d bt1" href="#about"><span>KNOW US</span></a>
+									</div>
+									
+									<!-- Caption #04 -->
+									<div class="tp-caption lfb"
+										data-x="center"
+										data-hoffset="85"
+										data-y="350"
+										data-speed="1000"
+										data-start="2000"
+										data-easing="Power4.easeOut"
+										data-endspeed="300"
+										data-endeasing="Power1.easeIn"
+										data-captionhidden="off"
+										style="z-index: 6">
+										<a class="nav-to des-button-white des-button-white-1 des-button-white-1d bt2" href="#portfolio"><span>OUR PORTFOLIO</span></a>
+									</div>
+				
+								</li>
+								
+								
+								<!-- SLIDE #02 -->
+								<li data-transition="fade" data-slotamount="5" data-masterspeed="700" >
+									<!-- MAIN IMAGE -->
+									<img src="images/parallax/5.jpg"   alt="slidebg1"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+									
+									<!-- Caption #01 -->
+									<div class="tp-caption large_bold_white_15 text-center customin customout start tp-resizeme"
+										data-x="center"
+										data-hoffset="0"
+										data-y="140"
+										data-speed="800"
+										data-start="800"
+										data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+										data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+										
+										data-easing="Power3.easeInOut"
+										data-splitin="chars"
+										data-splitout="chars"
+										data-elementdelay="0.08"
+										data-endelementdelay="0.08"
+										data-end="3800"
+										data-endspeed="500"
+										style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">RESPONSIVE DESIGN
+									</div>
+									
+									<!-- Caption #02 -->
+									<div class="tp-caption large_bold_white_15 text-center customin customout tp-resizeme"
+										data-x="center"
+										data-hoffset="0"
+										data-y="140"
+										data-speed="800"
+										data-start="4000"
+										data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+										data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+										
+										data-easing="Power3.easeInOut"
+										data-splitin="chars"
+										data-splitout="chars"
+										data-elementdelay="0.08"
+										data-endelementdelay="0.08"
+										data-end="7000"
+										data-endspeed="500"
+										style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">MULTI PORTFOLIOS
+									</div>
+									
+									<!-- Caption #03 -->
+									<div class="tp-caption large_bold_white_15 text-center customin customout tp-resizeme"
+										data-x="center"
+										data-hoffset="0"
+										data-y="140"
+										data-speed="800"
+										data-start="7200"
+										data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+										data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+										
+										data-easing="Power3.easeInOut"
+										data-splitin="chars"
+										data-splitout="chars"
+										data-elementdelay="0.08"
+										data-endelementdelay="0.08"
+										style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">VANGUARD EXPERIENCE
+									</div>
+									
+									<!-- Caption #04 -->
+									<div class="tp-caption lfb boldwide_small_white text-center customin customout tp-resizeme"
+										data-x="center"
+										data-hoffset="0"
+										data-y="230"
+										data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+										data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+										data-speed="1000"
+										data-start="1500"
+										data-easing="Back.easeInOut"
+										style="z-index: 6">THE MOST <b>BEAUTIFUL THEME</b> THAT <b>WE</b> HAVE <b>MADE</b> SO FAR
+									</div>
+									
+									<!-- Caption #05 -->
+									<div class="tp-caption lfb"
+										data-x="center"
+										data-hoffset="-95"
+										data-y="290"
+										data-speed="1000"
+										data-start="1800"
+										data-easing="Power4.easeOut"
+										data-endspeed="300"
+										data-endeasing="Power1.easeIn"
+										data-captionhidden="off"
+										style="z-index: 6">
+										<a class="nav-to des-button-white des-button-white-1 des-button-white-1d bt1" href="index-video2.html"><span>DEMO VIDEO</span></a>
+									</div>
+									
+									<!-- Caption #06 -->
+									<div class="tp-caption lfb"
+										data-x="center"
+										data-hoffset="95"
+										data-y="290"
+										data-speed="1000"
+										data-start="2000"
+										data-easing="Power4.easeOut"
+										data-endspeed="300"
+										data-endeasing="Power1.easeIn"
+										data-captionhidden="off"
+										style="z-index: 6">
+										<a class="nav-to des-button-white des-button-white-1 end des-button-white-1d bt2" href="index-parallax.html"><span>DEMO PARALLAX</span></a>
+									</div>
+				
+								</li>
+							</ul>
+
+						</div>
+					</div>
+										
+				</section>
+				<!-- END REVOLUTION SLIDER -->
+			</pre> 
+			<h5>Javascript function request for Fullscreen initialization</h5>
+			<pre class="brush: xml; toolbar: false;">
+				<script type="text/javascript">
+					var revapi;
+					jQuery(document).ready(function() {
+
+						   revapi = jQuery('.tp-banner').revolution(
+							{
+								delay:15000,
+								startwidth:1170,
+								startheight:500,
+								hideThumbs:10,
+								fullWidth:"off",
+								stopAtSlide:1,
+								fullScreen:"on",
+								hideArrowsOnMobile:"on",
+								touchenabled:"on",
+								fullScreenOffsetContainer: "#header, #footer"
+							});
+					});
+				</script>
+			</pre>
+			<br /><br />
+			<h6>7.2 Index - Fullscreen Revolution Slider - Style 2</h6>
+			
+			<p></p>
+			
+			<pre class="brush: xml; toolbar: false;">
+				<!-- BEGIN: HOME REVOLUTION SLIDER -->      
+				<section id="home-fsslider" class="nav-sections demo2">
+
+					<div class="tp-banner-container">
+						<div class="tp-banner" >
+							<ul>
+								<!-- SLIDE  -->
+								<li data-transition="fade" data-slotamount="5" data-masterspeed="700" >
+									
+									<!-- MAIN IMAGE -->
+									<img src="images/parallax/10.jpg"   alt="slidebg1"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+									
+									<!-- Parallax pattern overlay -->
+									<!--
+										<div class="parallax-overlay overlay-color medium"></div>
+									
+									-->
+									
+									<div class="parallax-overlay parallax-overlay-pattern soft"></div>
+									
+									<!-- LAYERS -->
+									<div class="tp-caption large_bold_white_15 small text-right customin customout start tp-resizeme"
+										data-x="center"
+										data-hoffset="275"
+										data-y="60"
+										data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+										data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+										data-speed="1000"
+										data-start="1000"
+										data-easing="Back.easeInOut"
+										data-endspeed="300">HELLO! WE ARE
+										
+										
+									</div>
+									
+									<!-- LAYERS -->
+									<div class="tp-caption large_bold_white_25 extra text-right customin customout start tp-resizeme"
+										
+										
+										data-x="center"
+										data-hoffset="228"
+										data-y="155"
+										data-speed="800"
+										data-start="1800"
+										data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+										data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+										
+										data-easing="Power3.easeInOut"
+										data-splitin="chars"
+										data-splitout="chars"
+										data-elementdelay="0.08"
+										data-endelementdelay="0.08"
+										style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">VANGUARD
+									</div>
+									
+									
+									<!-- LAYER NR. 9 -->
+									<div class="tp-caption lfb rev-bt1"
+										data-x="center"
+										data-hoffset="220"
+										data-y="280"
+										data-speed="1000"
+										data-start="2200"
+										data-easing="Power4.easeOut"
+										data-endspeed="300"
+										data-endeasing="Power1.easeIn"
+										data-captionhidden="off"
+										style="z-index: 6">
+										<a class="nav-to des-button-white des-button-white-1 des-button-white-1d bt1" href="#about"><span>KNOW THE TEAM</span></a>
+									</div>
+									
+									<!-- LAYER NR. 9 -->
+									<div class="tp-caption lfb rev-bt2"
+										data-x="center"
+										data-hoffset="400"
+										data-y="280"
+										data-speed="1000"
+										data-start="2400"
+										data-easing="Power4.easeOut"
+										data-endspeed="300"
+										data-endeasing="Power1.easeIn"
+										data-captionhidden="off"
+										style="z-index: 6">
+										<a class="nav-to des-button-white des-button-white-1 des-button-white-1d bt2" href="#portfolio"><span>WHAT WE DO</span></a>
+									</div>
+				
+								</li>
+								
+								
+								
+								
+								
+								<!-- SLIDE  -->
+								<li data-transition="fade" data-slotamount="5" data-masterspeed="700" >
+									
+									<!-- MAIN IMAGE -->
+									<img src="images/parallax/4.jpg"   alt="slidebg1"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+									
+									<!-- Parallax pattern & color overlay -->
+									<!--
+										<div class="parallax-overlay overlay-color medium"></div>
+									
+									-->
+									<div class="parallax-overlay parallax-overlay-pattern soft"></div>
+									
+									<!-- LAYERS -->
+									<div class="tp-caption large_bold_white_15 text-right customin customout start tp-resizeme"
+										data-x="center"
+										data-hoffset="295"
+										data-y="60"
+										data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+										data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+										data-speed="1000"
+										data-start="1000"
+										data-easing="Back.easeInOut"
+										data-endspeed="300">WE LOVE
+										
+										
+									</div>
+									
+									<!-- LAYERS -->
+									<div class="tp-caption large_bold_white_25 extra text-right customin customout start tp-resizeme"
+										
+										
+										data-x="center"
+										data-hoffset="208"
+										data-y="165"
+										data-speed="800"
+										data-start="1800"
+										data-end="4800"
+										data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+										data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+										
+										data-easing="Power3.easeInOut"
+										data-splitin="chars"
+										data-splitout="chars"
+										data-elementdelay="0.08"
+										data-endelementdelay="0.08"
+										
+										style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">DESIGN
+									</div>
+									
+									
+									<div class="tp-caption large_bold_white_25 extra text-right customin customout start tp-resizeme"
+										
+										
+										data-x="center"
+										data-hoffset="200"
+										data-y="165"
+										data-speed="800"
+										data-start="5000"
+										data-end="8000"
+										data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+										data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+										
+										data-easing="Power3.easeInOut"
+										data-splitin="chars"
+										data-splitout="chars"
+										data-elementdelay="0.08"
+										data-endelementdelay="0.08"
+										style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">PEOPLE
+									</div>
+									
+									
+									
+									<div class="tp-caption large_bold_white_25 extra text-right customin customout start tp-resizeme"
+										
+										
+										data-x="center"
+										data-hoffset="205"
+										data-y="165"
+										data-speed="800"
+										data-start="8200"
+										data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+										data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+										
+										data-easing="Power3.easeInOut"
+										data-splitin="chars"
+										data-splitout="chars"
+										data-elementdelay="0.08"
+										data-endelementdelay="0.08"
+										style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">COFFEE
+									</div>
+									
+									
+									
+									<!-- LAYER NR. 9 -->
+									<div class="tp-caption lfb rev-bt3"
+										data-x="center"
+										data-hoffset="265"
+										data-y="280"
+										data-speed="1000"
+										data-start="2200"
+										data-easing="Power4.easeOut"
+										data-endspeed="300"
+										data-endeasing="Power1.easeIn"
+										data-captionhidden="off"
+										style="z-index: 6">
+										<a class="nav-to des-button-white des-button-white-1 des-button-white-1d bt1" href="#about"><span>KNOW US</span></a>
+									</div>
+									
+									<!-- LAYER NR. 9 -->
+									<div class="tp-caption lfb rev-bt2"
+										data-x="center"
+										data-hoffset="420"
+										data-y="280"
+										data-speed="1000"
+										data-start="2400"
+										data-easing="Power4.easeOut"
+										data-endspeed="300"
+										data-endeasing="Power1.easeIn"
+										data-captionhidden="off"
+										style="z-index: 6">
+										<a class="nav-to des-button-white des-button-white-1 des-button-white-1d bt2" href="#portfolio"><span>WHAT WE DO</span></a>
+									</div>
+				
+								</li>
+								
+								
+							</ul>
+
+						</div>
+					</div>
+					
+				</section>
+				<!-- END REVOLUTION SLIDER -->
+				</pre>
+			
+			
+			<h5>Javascript function request for Fullscreen initialization</h5>
+			<pre class="brush: xml; toolbar: false;">
+				<script type="text/javascript">
+					var revapi;
+					jQuery(document).ready(function() {
+
+						   revapi = jQuery('.tp-banner').revolution(
+							{
+								delay:15000,
+								navigationArrows: "none",
+								navigationHOffset: 450,
+								navigationVOffset: 150,
+								startwidth:1170,
+								startheight:500,
+								hideThumbs:10,
+								fullWidth:"off",
+								stopAtSlide:1,
+								fullScreen:"on",
+								hideArrowsOnMobile:"on",
+								touchenabled:"on",
+								fullScreenOffsetContainer: "#header, #footer"
+							});
+					});
+				</script>
+			</pre>
+			<br /><br />
+			<h6>7.3 Index - Parallax - Style 1</h6>
+			
+			<p></p>
+			
+			<pre class="brush: xml; toolbar: false;">
+				<!-- BEGIN: #HOME -->
+				<section id="home" class="intro-parallax nav-sections">
+				  
+					<!-- BEGIN: HOME PARALLAX -->
+					<div id="parallax-home"  class="parallax" data-stellar-background-ratio="0.5" style="background-image: url(images/parallax/5.jpg);background-size: cover;">
+										
+						<!-- BEGIN: PARALLAX HOME CONTENTS -->
+						<div id="parallax-home-contents">
+							<div class="home-center-contents">
+								
+								<a href="#about" class="nav-to"><h1 class="h-slider">WELCOME TO VANGUARD</h1></a>
+								<!-- BEGIN: TEXT SLIDER -->		
+								<div id="text-slider" class="flexslider">			
+									<ul class="slides styled-list">
+										<li class="home-slide">
+											<p class="home-slide-content">WE ARE VANGUARD</p>
+										</li>
+										<li class="home-slide">
+											<p class="home-slide-content">CREATIVE AGENCY</p>
+										</li>
+										<li class="home-slide">
+											<p class="home-slide-content">FROM MELBOURNE</p>
+										</li>
+										
+									</ul>
+								 </div>
+								<!-- END: TEXT SLIDER -->		
+							</div>
+						</div>
+						<!-- END: PARALLAX HOME CONTENTS -->
+						
+						<!-- BEGIN: GO NEXT SECTION BUTTON -->
+						<div class="next-section">
+							<a class="nav-to go-about" href="#about"><img src="images/scrolldown.png" alt=""></a>
+						</div>
+						
+					</div>
+					<!-- END: HOME PARALLAX -->
+			</pre>
+						
+			<h5>Javascript function request for Parallax initialization</h5>
+			<div class="note">
+				<p>You can find this function on js/Vanguard.js</p>
+			</div>
+			<pre class="brush: xml; toolbar: false;">
+				<script type="text/javascript">
+					function parallaxInit(){
+						if (!isMobile.any()){
+							if (window.BrowserDetect.browser === "Safari"){
+								$('#parallax-home').removeAttr('data-stellar-background-ratio');
+							}
+							if ($('.parallax').length || $('#parallax-home').length) $.stellar();
+						}
+					}
+				</script>
+			</pre>
+			<br /><br />
+			<h6>7.4 Index - Parallax - Style 2</h6>
+				
+			<p></p>
+			
+			<pre class="brush: xml; toolbar: false;">
+				<!-- BEGIN: HOME PARALLAX -->
+				<div id="parallax-home" class="parallax" data-stellar-background-ratio="0.5" style="background-image: url(images/parallax/5.jpg);background-size: cover;">
+									
+					<!-- BEGIN: PARALLAX HOME CONTENTS -->
+					<div id="parallax-home-contents">
+						<div class="home-center-contents">
+							
+							<h2>HELLO WE'RE VANGUARD</h2>
+							<h2 class="popup">CREATIVE AGENCY</h2>
+							<h2>FROM MELBOURNE</h2>
+									
+						</div>
+					</div>
+					<!-- END: PARALLAX HOME CONTENTS -->
+					
+					<!-- BEGIN: GO NEXT SECTION BUTTON -->
+					<div class="next-section">
+						<a class="nav-to go-about" href="#about"><img src="images/scrolldown.png" alt=""></a>
+					</div>
+					
+				</div>
+				<!-- END: HOME PARALLAX -->
+			</pre>
+						
+			<h5>Javascript function request for Parallax initialization</h5>
+			<div class="note">
+				<p>You can find this function on js/Vanguard.js</p>
+			</div>
+			<pre class="brush: xml; toolbar: false;">
+				<script type="text/javascript">
+					function parallaxInit(){
+						if (!isMobile.any()){
+							if (window.BrowserDetect.browser === "Safari"){
+								$('#parallax-home').removeAttr('data-stellar-background-ratio');
+							}
+							if ($('.parallax').length || $('#parallax-home').length) $.stellar();
+						}
+					}
+				</script>
+			</pre>
+			<br /><br />
+			<h6>7.5 Index - Video - Style 1</h6>
+			
+			<p></p>
+			
+			<pre class="brush: xml; toolbar: false; highlight: [40]">
+				<!-- BEGIN: HOME PARALLAX -->
+				<div id="parallax-home" class="parallax"  data-stellar-background-ratio="0.5" style="background-image: url(images/parallax/darkbg.jpg);background-size: cover;">
+												
+					<!-- BEGIN: PARALLAX HOME CONTENTS -->
+					<div id="parallax-home-contents">
+						<div class="home-center-contents">
+							
+							<a href="#about" class="nav-to"><h1 class="h-slider">WELCOME TO VANGUARD</h1></a>
+							<!-- BEGIN: TEXT SLIDER -->		
+							<div id="text-slider" class="flexslider">			
+								<ul class="slides styled-list">
+									<li class="home-slide">
+										<p class="home-slide-content">WE ARE VANGUARD</p>
+									</li>
+									<li class="home-slide">
+										<p class="home-slide-content">CREATIVE AGENCY</p>
+									</li>
+									<li class="home-slide">
+										<p class="home-slide-content">FROM MELBOURNE</p>
+									</li>
+									
+								</ul>
+							 </div>
+							<!-- END: TEXT SLIDER -->		
+						</div>
+					</div>
+					<!-- END: PARALLAX HOME CONTENTS -->
+					
+					<!-- BEGIN: GO NEXT SECTION BUTTON -->
+					<div class="next-section">
+						<a class="nav-to go-about" href="#about"><img src="images/scrolldown.png" alt=""></a>
+					</div>
+					
+				</div>
+				<!-- END: HOME PARALLAX -->
+			</section>
+			<!-- END: #HOME -->
+			
+			<!-- YOUTUBE VIDEO URL -->
+			<div id="P2" class="player" style="display:block; margin: auto; background: rgba(0,0,0,0.5)" data-property="{videoURL:'http://youtu.be/nFS4GonXg64',  optimizeDisplay:true, showControls:true,containment:'#parallax-home',startAt:0,mute:true,autoPlay:true,player:true,loop:true,opacity:1}"></div>
+			
+			</pre>
+			<div class="note">
+				<p><b>This script only uses Youtube videos for this parallax section!</b></p>
+				<p>You need to select on line 40 the video that you want to display.</p>
+				<p>You can select the url for the <b>data-property</b> as:</p>
+				<ul>
+					<li>http://youtu.be/nFS4GonXg64</li>
+					<li>https://www.youtube.com/watch?v=nFS4GonXg64&feature=youtu.be</li>
+				</ul>
+				
+			</div>
+						
+			<h5>Javascript function request for Video initialization</h5>
+			<div class="note">
+				<p>You can find this function on js/Vanguard.js</p>
+			</div>
+			<pre class="brush: xml; toolbar: false;">
+				<script type="text/javascript">
+					function parallaxInit(){
+						if (!isMobile.any()){
+							if (window.BrowserDetect.browser === "Safari"){
+								$('#parallax-home').removeAttr('data-stellar-background-ratio');
+							}
+							if ($('.parallax').length || $('#parallax-home').length) $.stellar();
+						}
+					}
+				</script>
+			</pre>
+			<br /><br />
+			<h6>7.6 Index - Video - Style 2</h6>
+			
+			<p></p>
+			
+			<pre class="brush: xml; toolbar: false; highlight: [40]">
+				<!-- BEGIN: #HOME -->
+				<section id="home" class="intro-parallax nav-sections">
+				  
+					<!-- BEGIN: HOME PARALLAX -->
+					<div id="parallax-home" class="parallax" data-stellar-background-ratio="0.5" style="background-image: url(images/parallax/darkbg.jpg);background-size: cover;">
+						<!-- Remove this line "overlay-color" if you don't want the overlay color -->
+						<div class="overlay-color soft"></div>
+												
+						<!-- BEGIN: PARALLAX HOME CONTENTS -->
+						<div id="parallax-home-contents">
+							<div class="home-center-contents">
+								
+								<h2>HELLO WE'RE VANGUARD</h2>
+								<h2 class="popup">CREATIVE AGENCY</h2>
+								<h2>FROM MELBOURNE</h2>
+										
+							</div>
+						</div>
+						<!-- END: PARALLAX HOME CONTENTS -->
+						
+						<!-- BEGIN: GO NEXT SECTION BUTTON -->
+						<div class="next-section">
+							<a class="nav-to go-about" href="#about"><img src="images/scrolldown.png" alt=""></a>
+						</div>
+						
+					</div>
+					<!-- END: HOME PARALLAX -->
+				</section>
+				<!-- END: #HOME -->
+				
+				<!-- VIDEO SECTION-->
+					
+					
+				<!-- YOUTUBE VIDEO URL -->
+				<div id="P2" class="player" style="display:block; margin: auto; background: rgba(0,0,0,0.5)" data-property="{videoURL:'http://youtu.be/nFS4GonXg64',  optimizeDisplay:true, showControls:true,containment:'#parallax-home',startAt:0,mute:true,autoPlay:true,player:true,loop:true,opacity:1}"></div>
+			
+			</pre>
+			<div class="note">
+				<p><b>This script only uses Youtube videos for this parallax section!</b></p>
+				<p>You need to select on line 35 the video that you want to display.</p>
+				<p>You can select the url for the <b>data-property</b> as:</p>
+				<ul>
+					<li>http://youtu.be/nFS4GonXg64</li>
+					<li>https://www.youtube.com/watch?v=nFS4GonXg64&feature=youtu.be</li>
+				</ul>
+				
+			</div>			
+			<h5>Javascript function request for Video initialization</h5>
+			<div class="note">
+				<p>You can find this function on js/Vanguard.js</p>
+			</div>
+			<pre class="brush: xml; toolbar: false;">
+				<script type="text/javascript">
+					function parallaxInit(){
+						if (!isMobile.any()){
+							if (window.BrowserDetect.browser === "Safari"){
+								$('#parallax-home').removeAttr('data-stellar-background-ratio');
+							}
+							if ($('.parallax').length || $('#parallax-home').length) $.stellar();
+						}
+					}
+				</script>
+			</pre>
+			<br /><br/>
+			
+		</div>  
+		
+		
+		<!--
+        /****************************************************************************/
+		********************************* About Us ***********************************
+		*****************************************************************************/
+        -->
+		<div class="section">
+			<h3 id="whoweare">8. About Us <a href="#header-wrap" class="toplink scroll">top</a></h3><br/>
+			<p>In this section you can had text about you or your enterprise. It's constituted by two parts:</p>
+			<br/>
+			<h6>Intro Text + Team Members</h6> 
+			<br/>
+			<h6>Intro Text</h6>
+			<pre class="brush: xml; toolbar: false;">
+				<!-- BEGIN: ABOUT TITLE --> 
+				<div class="section-title row text-center">
+					<div class="divider-vertical"></div>
+					<h2>ABOUT US</h2>
+					<h4 class="sub-title">WE ARE VANGUARD</h4>
+					<div class="space"></div>
+					<p class="small-pwide">There are many variations of passages Lorem Ipsum available of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected. available, but the majority have suffered alteration in some form, by injected.</p>
+					<div class="space"></div>
+					<!-- <div class="divider"></div> -->
+				</div>
+				<!-- END --> 
+			</pre>
+			
+			<br/>
+			<h6>Team Members</h6>
+			<pre class="brush: xml; toolbar: false; highlight: [17]">
+				<!-- BEGIN: LIGHT SECTION -->
+				<div class="light-section dark-text nopaddingbottom section-arrow-down">
+					
+					<!-- BEGIN: CONTAINER -->
+					<div class="container">
+						
+						(...)
+						
+						<!-- BEGIN: ROW TEAM MEMBERS -->
+						<div class="row team text-center">
+							
+							(...)
+						
+							<!-- BEGIN MEMBER #03 -->
+							<!-- MEMBER IMAGE -->
+							<div class="col-xs-4 col-sm-4">
+								<a data-toggle="modal" href="#member3" class="modal-popup-link team-profile">
+									<img src="images/team/3.png" alt="">
+								</a>
+							</div>
+						
+						</div><!-- ROW TEAM MEMBERS -->
+					</div><!-- END CONTAINER -->
+				</div><!-- END: LIGHT SECTION -->
+			</pre> 
+
+			<div class="note">
+				<p>You have to scroll down the page, and find the <b>id="member3"</b>, that you refer on the <b>href="#member3"</b>, and edit your preferences.</p>
+			</div>
+			
+			<pre class="brush: xml; toolbar: false; highlight: [2]">
+				<!-- START MODAL MEMBER #03 -->
+				<div id="member3" class="modal hide fade.in animated fadeIn">
+			 
+					<!-- START TEAM INFO -->       
+					<div class="tm-info">
+						<div class="container">      
+							
+							<!-- MEMBER IMAGE -->
+							<div class="col-xs-3 col-sm-4">
+								<img src="images/team/3-big.png" alt="">
+								<img class="member-pos3" src="images/team/theleader.png" alt="">
+							</div>
+							
+							<!-- MEMBER DESCRIPTION -->
+							<div class="col-xs-12 col-sm-8 member-desc">
+								<h2>Paulo Moreira</h2>
+								<h4>Senior Web Designer</h4>
+								<div class="space"></div>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sapien risus, hendrerit non velit ultrices, iaculis adipiscing nisi. Maecenas tristique pretium tellus eu fermentum. Pellentesque non malesuada mi, quis condimentum urna. Fusce id euismod quam. Nam iaculis mattis dui.</p>
+								<div class="space"></div>
+								
+								<div class="col-xs-6 col-sm-6" style="padding-left: 0;">
+									<!-- SKILL #01 -->
+									<div id="skillbar-9" class="skillbar clearfix notinview" data-percent="95%">
+										<div class="skillbar-title">
+											<span>Photoshop</span>
+										</div>
+										<div class="skillbar-bar">
+											<div class="skill-bar-percent" style="background: #2BCDDB;"></div>
+											<div class="pointerval">
+												<span class="value">85%</span>
+												<span class="pointer"></span>
+											</div>
+										</div> <!-- End Skill Bar -->
+									</div>
+									
+									<!-- SKILL #02 -->
+									<div id="skillbar-10" class="skillbar clearfix notinview" data-percent="79%">
+										<div class="skillbar-title">
+											<span>Illustrator</span>
+										</div>
+										<div class="skillbar-bar">
+											<div class="skill-bar-percent" style="background: #2BCDDB;"></div>
+											<div class="pointerval">
+												<span class="value">79%</span>
+												<span class="pointer"></span>
+											</div>
+										</div>
+									</div> <!-- End Skill Bar -->
+								</div>
+								
+								<div class="col-xs-6 col-sm-6" style="padding-right: 0;">
+									<!-- SKILL #01 -->
+									<div id="skillbar-11" class="skillbar clearfix notinview" data-percent="95%">
+										<div class="skillbar-title">
+											<span>Photoshop</span>
+										</div>
+										<div class="skillbar-bar">
+											<div class="skill-bar-percent" style="background: #2BCDDB;"></div>
+											<div class="pointerval">
+												<span class="value">85%</span>
+												<span class="pointer"></span>
+											</div>
+										</div> <!-- End Skill Bar -->
+									</div>
+									
+									<!-- SKILL #02 -->
+									<div id="skillbar-12" class="skillbar clearfix notinview" data-percent="79%">
+										<div class="skillbar-title">
+											<span>Illustrator</span>
+										</div>
+										<div class="skillbar-bar">
+											<div class="skill-bar-percent" style="background: #2BCDDB;"></div>
+											<div class="pointerval">
+												<span class="value">79%</span>
+												<span class="pointer"></span>
+											</div>
+										</div>
+									</div> <!-- End Skill Bar -->
+								</div>
+								
+								<div class="space"></div>
+								
+								<!-- FONT AWESOME ICONS -->
+								<div class="social-font-awesome">
+									<img class="member-cont" src="images/team/mycontacts.png" alt="">
+									
+									<ul>
+										<li><a href="#"><i class="fa fa-envelope"></i></a></li>
+										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+										<li><a href="#"><i class="fa fa-tumblr"></i></a></li>
+										<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+										<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+										<li><a href="#"><i class="fa fa-skype"></i></a></li>
+									</ul>
+								</div>
+							</div>
+							<!-- END SKILLS BARS -->
+							
+							<!-- MODAL CLOSE BUTTON -->                                     
+							<a href="#" class="close" data-dismiss="modal">×</a>	                         
+						</div><!-- MEMBER DESCRIPTION --> 
+					</div><!-- END CONTAINER -->
+				</div><!-- END MODAL -->
+			</pre>
+			
+			
+			<br/><br/>
+
+		</div>
+		
+		<!--
+		/****************************************************************************/
+		******************************* SERVICES ************************************
+		****************************************************************************/
+		-->
+		<div class="section">
+			<h3 id="servicessection">9. Services Section<a href="#header-wrap" class="toplink scroll">top</a></h3><br/>
+			<p>Display your services with some nice effects.</p>
+			<br/>
+			<h6>9.1 Service Icons + OWL Slider + Parallax</h6>
+			<br/>					
+			<pre class="brush: xml; toolbar: false; highlight: [5,30,34,35]">
+				<!-- BEGIN: SERVICES PARALLAX -->
+				<section id="services" class="nav-sections">
+				
+					<!-- START: PARALLAX - SERVICES CAROUSSEL -->
+					<div id="parallax-1" class="parallax" data-stellar-background-ratio="0.5" style="background-image: url(images/parallax/4.jpg);text-align:center;">
+						
+						<div class="box-overlay-pattern">
+						  
+							<!-- Remove this line "overlay-color" if you don't want the overlay color -->
+							<div class="overlay-color"></div>
+						  
+							<!-- BEGIN: PARALLAX CONTENTS -->	
+							<div class="parallax-content dark-text">
+							  
+								<!-- BEGIN: ABOUT TITLE --> 
+								<div class="section-title row text-center">
+									<h2>OUR SERVICES</h2>
+									<h4 class="sub-title">COOL DESIGN COOL FEATURES</h4>
+								</div>
+								<!-- END -->
+							  
+								
+								<!-- BEGIN: SERVICES CAROUSSEL -->
+								<div class="container">
+									<div id="services-carousel" class="owl-carousel light-text">
+										
+										<!-- SERVICE #01 -->
+										<div class="carousel-item">
+											<div class="text-center">
+												<i class="glyphicons iphone_shake"></i>
+											</div>
+											
+											<div class="text-center white-text">
+												<h4>Great Features</h4>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing integer sodales vel eros quis consequat.</p>
+											</div>
+										</div> <!-- END .carousel-item -->
+										
+										(...)
+						
+									</div> <!-- END #services-carousel -->
+								</div><!-- END .CONTAINER -->
+							</div>
+						  <!-- END: PARALLAX CONTENTS -->	
+						</div>
+						<!-- END box-overlay-pattern -->
+					</div>
+					<!-- END: PARALLAX -->
+				</section>
+				<!-- END: SERVICES SECTION -->
+			</pre>
+			
+			<div class="note">
+				<ul>
+					<li>Line 5 - Select the <b>background-image</b> for the image of the parallax section.</li>
+					<li>Line 30 - < i class="glyphicons iphone_shake">< / i > - You need to set the icon name to use as the class name.</li>
+					<li>Line 34 - Short title for the Service.</li>
+					<li>Line 35 - Description about your service.</li>			
+				</ul>				
+			</div>
+			
+			<h5>Javascript function request for setting up the Services carousel</h5>
+			<pre class="brush: xml; toolbar: false;">
+				<script type="text/javascript">
+					jQuery("#services-carousel").owlCarousel({
+						navigation : false,
+						items : 3,
+						itemsCustom : false,
+						itemsDesktop : [1199,3],
+						itemsDesktopSmall : [980,3],
+						itemsTablet: [768,2],
+						itemsTabletSmall: false,
+						itemsMobile : [479,1],
+					});
+				</script>
+			</pre>
+			
+			<br/>
+			<h6>9.2 Service Vertical Tabs</h6> 
+			<br/>	
+			<pre class="brush: xml; toolbar: false; highlight: [19,23]">
+				<!-- BEGIN: SERVICES -->
+				<section id="services" class="nav-sections">    
+					
+					<!-- BEGIN: SECTION -->
+					<div class="light-section nopaddingbottom">
+						
+						<!-- BEGIN: ABOUT TITLE --> 
+						<div class="section-title row text-center">
+							<div class="divider-vertical"></div>
+							<h2>SERVICES</h2>
+							<h4 class="sub-title">WE BUILD STRONG PRODUCTS</h4>
+						</div>
+						<!-- END --> 
+						
+						
+						<!-- BEGIN: SERVICES STYLE 1 CONTAINER -->
+						<div class="container">  
+							<!-- BEGIN: UPPER VERTICAL TABS -->
+							<section class="special_tabs">
+								
+								<!-- BEGIN: LABEL TAB #01 -->
+								<div class="label 1">
+									<div class='upper_icon_special_tabs'><i class="fa fa-mobile" style="font-size: 28px !important; padding-left: 2px;"></i>
+									<div class="divider-vertical-tabs first"></div>
+									
+								  </div>
+								</div>
+								
+								<!-- BEGIN: CONTENT TAB #01 -->
+								<div class="content 1">
+									<div class="col-xs-12 col-sm-6 animated fadeInUp delay-400">	
+										<h2 class="bigone">We build App's </h2>
+										<h2 style="margin-top: 0;">Beautiful and strong!</h2>
+										<br/>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget viverra augue. Nunc dignissim rutrum tempor. Donec vitae dolor lectus. Etiam facilisis rutrum vestibulum. In at ligula vitae lectus porta posuere vel vel est. Aliquam interdum mi vitae arcu fermentum iaculis. Sed feugiat.</p>
+										<div class="space"></div>
+										
+										
+										<ul class="list">
+											<li><i class="fa fa-check"></i>Aliquam interdum mi vitae arcu fermentum iaculis</li>
+											<li><i class="fa fa-check"></i>Vestibulum non nisl sagittis, dapibus dolor sed</li>
+											<li><i class="fa fa-check"></i>Pellentesque pellentesque iaculis sem id fermentum</li>
+											<li><i class="fa fa-check"></i>Fusce augue tortor, congue eget ullamcorper at mattis</li>
+											
+										</ul>
+										
+										<a class="des-button-dark des-button-dark-1d" href="#"><span><i class="fa fa-cloud-download"></i> DOWNLOAD APP</span></a>
+										<a class="des-button-color des-button-color-1 des-button-color-1d" href="#"><span>BUY THEME</span></a>
+										
+									</div>
+									
+									<div class="col-xs-12 col-sm-6 animated fadeInUp delay-400">	
+										<img style="width: 100%;" alt="" src="images/tabs-services/phones.png" />
+									</div>
+									
+								</div>
+								
+								(...)
+								
+							</section>
+							<!-- END: UPPER VERTICAL TABS -->
+						   
+						   
+						</div><!-- END CONTAINER -->
+					</div><!-- END GREY SECTION -->
+								
+				</section>
+				<!-- END: SERVICES SECTION -->	
+			</pre>
+			
+			<div class="note">
+				<ul>
+					<li>Line 19 - Select the <b>class="special_tabs"</b> having the special tabs option in a section.</li>
+					<li>Line 23 - < i class="fa fa-mobile"< / i > - You need to set the icon name to use in the class name.</li>	
+				</ul>				
+			</div>
+			
+			<h5>Javascript function request for setting up the Services Special Tabs(vertical tabs)</h5>
+			<pre class="brush: xml; toolbar: false;">
+				<script type="text/javascript">
+				/* UPPER SPECIAL TABS */
+				if ($('.special_tabs').length){
+				
+					$('.special_tabs').each(function(e){
+					
+						$(this).addClass('st-'+e);
+						$el = $('.st-'+e);
+						
+						$el.children("p, br").remove();
+
+						$el.append('<div class="tab-selector col-sm-1" />');
+						$el.find('.label').appendTo($el.children('.tab-selector'));
+						$el.append('<div class="tab-container col-sm-11" />');
+						$el.find('.content').appendTo($el.children('.tab-container'));
+						
+						$el.find('.tab-selector > .label').eq(0).addClass('current');
+						$el.find('.tab-container > .content').eq(0).addClass('current').css({
+							'opacity':1,
+							'top':'0%'
+						});
+						
+						if ($el.find('.tab-container > .content').find('img.aligncenter').length){
+							$el.find('.tab-container > .content').find('img.aligncenter').parents('p').css('text-align','center');
+						}
+						
+						$el.css('min-height', $el.find('.tab-selector').height());
+						if ($el.find('.tab-container > .content').eq(0).height() > $el.find('.tab-selector').height())
+							$el.animate({'height': $el.find('.tab-container > .content').eq(0).height()}, 1000, 'easeInOutExpo');
+						else $(this).parents('.special_tabs').animate({'height': $(this).parents('.tab-selector').height()}, 1000, 'easeInOutExpo');
+						for ( var i = 1; i < $el.find('.tab-container > .content').length; i++){
+							$el.find('.tab-container > .content').eq(i).css({
+								'position':'absolute',
+								'margin-top':'100%',
+								opacity:0
+							});
+						}
+						
+						var elm = $(this).attr('class').split("special_tabs ");
+						var elm = elm[1];
+						
+						$('.'+elm).find('.tab-selector > .label').each(function(){
+						
+							if (!$(this).find('.upper_fa_special_tabs').length){
+								$(this).find('.tab_title').css('padding-left','10px');
+							}
+											
+							$(this).click(function(){
+							
+								if (!$(this).hasClass('current')){
+									var filterClass = $(this).attr('class').toString();
+									var randid = filterClass.replace("label ","");
+									$nextEl = $('.'+elm).find('.tab-container > .content.'+randid);
+									if ($nextEl.height() > $(this).parents('.tab-selector').height())
+										$(this).parents('.special_tabs').stop().animate({'height': $nextEl.height()}, 1000, 'easeInOutExpo');
+									else 
+										$(this).parents('.special_tabs').stop().animate({'height': $(this).parents('.tab-selector').height()}, 1000, 'easeInOutExpo');
+									$nextEl.css({'margin-top':'100%','top':'0%', 'display':'block'});
+									$current = $('.'+elm).find('.tab-container .current');
+									var id = $current.attr('class').split(" ");
+										id = id[1];
+									$('.'+elm).find('.tab-selector > .label.'+id).css({'color':'#5c5c5c'});
+									$('.'+elm).find('.tab-selector > .label.'+id+'.current').css({'color':'#5c5c5c'});
+									$current.stop().animate({'margin-top':'100%', opacity:0}, 1000, 'easeInOutExpo', function(){
+										$(this).css('display','none');
+									}); 
+									$('.'+elm).find('.tab-selector > .label.'+id).removeClass('current');
+									$current.removeClass('current');
+									$current.animate({
+										'margin-top': '-100%',
+										opacity: 0
+									}, 1000, 'easeInOutExpo', function(){
+										$(this).css({'margin-top':'100%'});
+									});
+									$('.'+elm).find('.tab-selector > .label.'+randid).css({'color': $('').html() });
+									$('.'+elm).find('.tab-selector > .label.'+randid).addClass('current');
+									$('.'+elm).find('.tab-selector > label.'+randid).css('color', $('').html());
+									$('.'+elm).find('.tab-container > .content.'+randid).css('display','block');
+									$('.'+elm).find('.tab-container > .content.'+randid).addClass('current').stop().animate({ 'margin-top': '0%', opacity:1 },1000, 'easeInOutExpo', function(){
+										$(this).css('display','block');
+										if ($(this).find('.services-graph').length){
+											var id = $(this).find('.services-graph').attr('id');
+											sliding_horizontal_graph(id,3000);
+										}
+										
+										if (window.BrowserDetect.browser == "Explorer" && window.BrowserDetect.version == 8){
+											if ($(this).find('.recent_testimonials').length){
+												$(this).css('width','100%');
+											}
+										}
+										
+									});
+								}		
+							});
+							
+						});
+						
+					});
+				}
+				/* END: UPPER SPECIAL TABS */
+			</script>
+			</pre>
+			<br/>
+			<h6>9.3 Service Icons + Text + Animations</h6> 
+			<p>You have three columns. This section should be created by a div, and inside, you should add the number of icons/services you want to show.</p>
+			<pre class="brush: xml; toolbar: false; highlight: [20,23]">
+				<!-- BEGIN: SERVICES -->
+				<section id="services" class="nav-sections">    
+					
+					<!-- BEGIN: "grey-section" WITH "section-arrow-down", "nopaddingbottom" AND "dark-text" TEXT -->
+					<div class="light-section nopaddingbottom">
+						
+						<!-- BEGIN: ABOUT TITLE --> 
+						<div class="section-title row text-center">
+							
+							<h2>SERVICES</h2>
+							<div class="divider-grey"></div>
+							<h4 class="sub-title">WE BUILD STRONG PRODUCTS</h4>
+						</div>
+						<!-- END --> 
+						
+						<!-- BEGIN: SERVICES STYLE 1 CONTAINER -->
+						<div class="container">  
+							<div>
+								<!-- SERVICE #01 -->
+								<div class="col-xs-12 col-md-4 service animated fadeInRightBig">
+									<div class="col-xs-12 col-md-2 a-mobile">
+										<div class="icon-nofill">
+											<i class="glyphicons ipad"></i>
+										</div>
+									</div>
+									
+									<div class="col-xs-12 col-md-10 npservice">		                 		
+										<div class="text-left">
+											<h5>Responsive Design</h5>
+											<p>Praesent faucibus nisl sit amet nulla sollicitudin pretium a sed purus nullam</p>
+										</div>
+									</div>
+								</div>
+								
+								<!-- SERVICE #02 -->
+								<div class="col-xs-12 col-md-4 service animated fadeInRightBig delay-200">
+									<div class="col-xs-12 col-md-2 a-mobile">
+										<div class="icon-nofill">
+											<i class="glyphicons display"></i>
+										</div>
+									</div>
+									
+									<div class="col-xs-12 col-md-10 npservice">		                 		
+										<div class="text-left">
+											<h5>Multiple Demos</h5>
+											<p>Praesent faucibus nisl sit amet nulla sollicitudin pretium a sed purus nullam</p>
+										</div>
+									</div>
+								</div>
+   
+						</div><!-- END CONTAINER -->
+					</div><!-- END GREY SECTION -->
+						
+				</section>
+				<!-- END: SERVICES SECTION -->
+			</pre>
+			
+			<div class="note">
+				<ul>
+					<li>Line 20 - Select the <b>class="animated"</b> For setting the animation for the animation of this service.<br/>
+					Also on this line you can select which type of animation you wan to use, by adding for example <b>fadeInRightBig</b>.</li>
+					<li>Line 23 - < i class="fa fa-mobile"< / i > - You need to set the icon name to use in the class name.</li>
+				</ul>				
+			</div>
+			
+			<h5>Javascript function request for setting up the Services with animation</h5>
+			<pre class="brush: xml; toolbar: false; highlight: [3]">
+				<script type="text/javascript">
+					function getEffect(el){
+						var effects = ["bounce", "flash", "pulse", "rubberBand", "shake", "swing", "tada", "wobble", "bounceIn", "bounceInDown", "bounceInLeft", "bounceInRight", "bounceInUp", "bounceOut", "bounceOutDown", "bounceOutLeft", "bounceOutRight", "bounceOutUp", "fadeIn", "fadeInDown", "fadeInDownBig", "fadeInLeft", "fadeInLeftBig", "fadeInRight", "fadeInRightBig", "fadeInUp", "fadeInUpBig", "fadeOut", "fadeOutDown", "fadeOutDownBig", "fadeOutLeft", "fadeOutLeftBig", "fadeOutRight", "fadeOutRightBig", "fadeOutUp", "fadeOutUpBig", "flip", "flipInX", "flipInY", "flipOutX", "flipOutY", "lightSpeedIn", "lightSpeedOut", "rotateIn", "rotateInDownLeft", "rotateInDownRight", "rotateInUpLeft", "rotateInUpRight", "rotateOut", "rotateOutDownLeft", "rotateOutDownRight", "rotateOutUpLeft", "rotateOutUpRight", "slideInDown", "slideInLeft", "slideInRight", "slideOutLeft", "slideOutRight", "slideOutUp", "hinge", "rollIn", "rollOut"]
+						var effect = false;
+						for (var i=0; i<effects.length; i++){
+							if (el.hasClass(effects[i])) {
+								effect = effects[i];
+							} 
+						}
+						effect = effect.toString();
+						return effect;
+					}			
+			</script>
+			</pre>
+			<div class="note">
+				<ul>
+					<li>Line 3 - Select the kind of the animation for the animation of this service.<br/>
+					You also have this options on the <b>css/animate.css</b> file.
+					For more information go to the Section 17 - <a href="#animatedc" class="scroll">Animated Contents</a></li>
+				</ul>				
+			</div>
+			<br/><br/>
+
+		</div>
+		
+		<!--
+		/****************************************************************************/
+		***************************** Portfolio Section ******************************
+		*****************************************************************************/
+		-->
+
+		<div class="section">
+								
+			<h3 id="portfolio">10. Portfolios<a href="#header-wrap" class="toplink scroll">top</a></h3>
+			
+				<p>We use Cube Portfolio that is a powerful jQuery plugin and that provides beautiful animated filtering, custom captions and it's perfect for portfolios, galleries, team members, blog posts or any other ordered content. We will give some ints on how to set them, but for further information you can check the documentation from the plugin <a href="cubeportfolio/index.html" target="_blank">Here</a>.</p>
+				<br/>
+								
+				<h6>10.1 Portfolio Filters</h6> 
+				
+				<p>Also for this portfolio sections, you have two kind of filter containers:
+					<ul>
+						<li>Filter with Tooltip</li>
+						<li>Dropdown Filter</li>
+					</ul>
+				</p>
+				<br/>
+				
+				<h4>Filter with Tooltip</h4>
+					<pre class="brush: xml; toolbar: false; highlight: [3]">
+						<div id="filters-container" class="cbp-l-filters-alignCenter">
+							<div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All<div class="cbp-filter-counter"></div></div>
+							<div data-filter=".identity" class="cbp-filter-item">Identity<div class="cbp-filter-counter"></div></div>
+							<div data-filter=".web-design" class="cbp-filter-item">Web Design<div class="cbp-filter-counter"></div></div>
+							<div data-filter=".graphic" class="cbp-filter-item">Graphic<div class="cbp-filter-counter"></div></div>
+						</div>
+					</pre>
+				<br/>
+				<h4>Dropdown Filter</h4>
+					<pre class="brush: xml; toolbar: false; highlight: [3]">
+						<div id="filters-container" class="cbp-l-filters-dropdown">
+							<div class="cbp-l-filters-dropdownWrap">
+								<div class="cbp-l-filters-dropdownHeader">Sort Gallery</div>
+								<ul class="cbp-l-filters-dropdownList text-left">
+									<li>
+										<div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All (<span class="cbp-filter-counter"></span> items)</div>
+									</li>
+									<li>
+										<div data-filter=".app" class="cbp-filter-item">App Design (<span class="cbp-filter-counter"></span> items)</div>
+									</li>
+									<li>
+										<div data-filter=".branding" class="cbp-filter-item">Branding (<span class="cbp-filter-counter"></span> items)</div>
+									</li>
+									<li>
+										<div data-filter=".graphics" class="cbp-filter-item">Graphic (<span class="cbp-filter-counter"></span> items)</div>
+									</li>
+									<li>
+										<div data-filter=".motion" class="cbp-filter-item">Motion (<span class="cbp-filter-counter"></span> items)</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</pre>
+
+				<div class="note">
+					You need to add the class name set on the <b>data-filter</b> option. This is the class that will be related to the projects list item to be called.
+				</div>
+				
+				<br/>
+				<h6>10.2 Portfolio #1</h6> 
+					<div class="note">
+						<p>For this portfolio you need to use the respective portfolio.js from /js/ folder.</p>
+						<p>In this case you should use portfolio-index.js.</p>
+					</div>
+				<pre class="brush: xml; toolbar: false; highlight: [17,25,26,33,39,54]">
+					<!-- BEGIN: PORTFOLIO SECTION -->
+					<section id="portfolio" class="light-section nav-sections dark-text nopaddingbottom">
+						
+						<!-- BEGIN: ABOUT TITLE --> 
+						<div class="section-title small-padding row text-center">
+							<div class="divider-vertical"></div>
+							<h2>PORTFOLIO</h2>
+							<h4 class="sub-title">WE BUILD VANGUARD DIGITAL PRODUCTS</h4>
+							
+						</div>
+						<!-- END -->
+						
+						<!-- BEGIN WRAPPER -->
+						<div class="wrapper">
+							<div id="filters-container" class="cbp-l-filters-alignCenter">
+								<div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All<div class="cbp-filter-counter"></div></div>
+								<div data-filter=".identity" class="cbp-filter-item">Identity<div class="cbp-filter-counter"></div></div>
+								<div data-filter=".web-design" class="cbp-filter-item">Web Design<div class="cbp-filter-counter"></div></div>
+								<div data-filter=".graphic" class="cbp-filter-item">Graphic<div class="cbp-filter-counter"></div></div>
+							</div>
+							
+							<!-- BEGIN: PORTFOLIO ITEMS - MASONRY -->
+							<div id="grid-container" class="cbp-l-grid-masonry">
+								<ul>
+									<li class="cbp-item identity cbp-l-grid-masonry-height1">
+										<a class="cbp-caption cbp-lightbox" data-title="Decision Maker Detail" href="images/portfolio/1big.jpg">
+											<div class="cbp-caption-defaultWrap">
+												<img src="images/portfolio/1.jpg" alt="" >
+											</div>
+											<div class="cbp-caption-activeWrap">
+												<div class="cbp-l-caption-alignCenter">
+													<div class="cbp-l-caption-body">
+														<div class="cbp-l-caption-title">Decision Maker Detail</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="cbp-item web-design cbp-l-grid-masonry-height2">
+										<a class="cbp-caption cbp-lightbox" data-title="Apex Card" href="images/portfolio/2big.jpg">
+											<div class="cbp-caption-defaultWrap">
+												<img src="images/portfolio/2.jpg" alt="" >
+											</div>
+											<div class="cbp-caption-activeWrap">
+												<div class="cbp-l-caption-alignCenter">
+													<div class="cbp-l-caption-body">
+														<div class="cbp-l-caption-title">Apex Card</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+
+									<li class="cbp-item graphic cbp-l-grid-masonry-height3">
+										<a class="cbp-caption cbp-lightbox" data-title="Pink Floyd" href="images/portfolio/4big.jpg">
+											<div class="cbp-caption-defaultWrap">
+												<img src="images/portfolio/4.jpg" alt="" >
+											</div>
+											<div class="cbp-caption-activeWrap">
+												<div class="cbp-l-caption-alignCenter">
+													<div class="cbp-l-caption-body">
+														<div class="cbp-l-caption-title">Pink Floyd</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+
+									(...)
+									
+								</ul>
+							</div>
+						</div>
+						<!-- END PORTFOLIO ITEMS -->
+
+					</section>
+				</pre>
+				
+				<div class="note">
+					<ul>
+						<li>Line 17 - <b>data-filter=".identity"</b> - Select the class for that type of portfolio you want to display.</li>
+						<li>Line 25 - <b>cbp-l-grid-masonry-height1</b> - Select the type of project size for portfolio display.</li>
+						<li>Line 33 - <b>< div class="cbp-l-caption-title" >Decision Maker Detail< / div ></b> - Caption for the project.</li>
+						<li>Line 39 and 54 - <b>You have 3 type of height of project that you can use here:</b>
+						<ul>
+							<li>cbp-l-grid-masonry-height1</li>
+							<li>cbp-l-grid-masonry-height2</li>
+							<li>cbp-l-grid-masonry-height3</li>
+						</ul>
+						</li>
+					</ul>				
+				</div>				
+				
+				<div class="note">
+					<p><b>Line 26 - On this line is where you will set what type of seing the projetcts on your website.</b><p>
+					<p>You two ways of setting them:</p>
+						<ul>
+							<li>cbp-lightbox</li>
+							<li>proj-noajax.html</li>
+						</ul>
+				</div>
+				
+				<div class="note">
+					<h5>cbp-lightbox</h5>
+						<p>This will enable you to open your project as a lightbox option, for seing images from the project you selected.</p>
+					
+					<h5>proj-noajax.html</h5>
+						<p>This will let you create a page for more explanaition about the project.</p>
+				</div>
+				<br/>
+				<h6>10.3 Portfolio #2</h6> 
+				
+					<div class="note">
+						<p>For this portfolio you need to use the respective portfolio.js from /js/ folder.</p>
+						<p>In this case you should use portfolio-index2.js.</p>
+					</div>
+				
+				<pre class="brush: xml; toolbar: false; highlight: [29,30,35,36]">
+					<!-- BEGIN: PORTFOLIO SECTION -->
+					<section id="portfolio" class="light-section nav-sections dark-text nopaddingbottom">
+						
+						<!-- BEGIN: ABOUT TITLE --> 
+						<div class="section-title small-padding row text-center">
+							<div class="divider-vertical"></div>
+							<h2>PORTFOLIO</h2>
+							<h4 class="sub-title">WE BUILD VANGUARD DIGITAL PRODUCTS</h4>
+							
+						</div>
+						<!-- END -->
+						
+						<div class="container">
+							<div class="wrapper">
+								
+								<!-- BEGIN: PORTFOLIO ITEMS -->		
+								<div id="grid-container" class="cbp-l-grid-projects">
+									<ul>
+										
+										<!-- ITEM #01 -->
+										<li class="cbp-item app">
+											<div class="cbp-caption">
+												<div class="cbp-caption-defaultWrap">
+													<img src="images/portfolio/1.jpg" alt="" >
+												</div>
+												<div class="cbp-caption-activeWrap">
+													<div class="cbp-l-caption-alignCenter">
+														<div class="cbp-l-caption-body">
+															<a href="proj-noajax.html" class="des-button-white des-button-white-1d"><span>more info</span></a>
+															<a href="images/portfolio/1big.jpg" class="cbp-lightbox des-button-white des-button-white-1d" data-title="Dashboard<br>by Paul Flavius Nechita"><span>view larger</span></a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="cbp-l-grid-projects-title">Decision Maker Detail</div>
+											<div class="cbp-l-grid-projects-desc">App Design / Graphic</div>
+										</li>
+										
+										<!-- ITEM #02 -->
+										<li class="cbp-item branding">
+											<div class="cbp-caption">
+												<div class="cbp-caption-defaultWrap">
+													<img src="images/portfolio/v2.jpg" alt="" >
+												</div>
+												<div class="cbp-caption-activeWrap">
+													<div class="cbp-l-caption-alignCenter">
+														<div class="cbp-l-caption-body">
+														   <a href="proj-noajax.html" class="des-button-white des-button-white-1d"><span>more info</span></a>
+															<a href="images/portfolio/2big.jpg" class="cbp-lightbox des-button-white des-button-white-1d" data-title="Apex Card"><span>view larger</span></a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="cbp-l-grid-projects-title">Apex Card</div>
+											<div class="cbp-l-grid-projects-desc">Logo / Branding</div>
+										</li>
+										
+										<!-- ITEM #03 -->
+										<li class="cbp-item graphic motion">
+											<div class="cbp-caption">
+												<div class="cbp-caption-defaultWrap">
+													<img src="images/portfolio/v3.jpg" alt="" >
+												</div>
+												<div class="cbp-caption-activeWrap">
+													<div class="cbp-l-caption-alignCenter">
+														<div class="cbp-l-caption-body">
+															<a href="proj-noajax.html" class="des-button-white des-button-white-1d"><span>more info</span></a>
+															<a href="https://www.youtube.com/watch?v=3wbvpOIIBQA" class="cbp-lightbox des-button-white des-button-white-1d" data-title="Real Branding"><span>view video</span></a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="cbp-l-grid-projects-title">Real Branding</div>
+											<div class="cbp-l-grid-projects-desc">Motion / Video</div>
+										</li>
+										
+										(...)
+										
+									</ul>
+								</div>
+					
+							</div>
+						</div>
+						
+					</section>
+				</pre>
+				
+				<div class="note">
+					<ul>
+						<li>Line 29 - <b>More info</b> - On this case this caption will send you to the <b>proj-noajax.html</b>.</li>
+						<li>Line 30 - <b>View larger</b> - On this case you have your project shown as a lightbox style displayed on the same page.</li>
+						<li>Line 35 - 36 - Projects title and description.</li>
+					</ul>				
+				</div>	
+				
+				<br/>
+				<h6>10.4 Portfolio #3</h6> 
+				
+					<div class="note">
+						<p>For this portfolio you need to use the respective portfolio.js from /js/ folder.</p>
+						<p>In this case you should use portfolio-video.js.</p>
+					</div>
+				
+				<pre class="brush: xml; toolbar: false; highlight: [46,48,53,54]">
+					<!-- BEGIN: PORTFOLIO SECTION -->
+					<section id="portfolio" class="light-section nav-sections dark-text nopaddingbottom">
+						
+						(...)
+						
+						<!-- BEGIN: PROJECT ITEMS -->
+						<div id="grid-container" class="cbp-l-grid-fullScreen">
+							<ul>
+								
+								<!-- ITEM #01 -->
+								<li class="cbp-item identity logo">
+									<a href="images/portfolio/1big.jpg" class="cbp-caption cbp-lightbox" data-title="Decision Maker Detail">
+										<div class="cbp-caption-defaultWrap">
+											<img src="images/portfolio/1.jpg" alt="">
+										</div>
+										<div class="cbp-caption-activeWrap">
+											<div class="cbp-l-caption-alignLeft">
+												<div class="cbp-l-caption-body">
+													<div class="cbp-l-caption-title">Decision Maker Detail</div>
+													<div class="cbp-l-caption-desc">App Design</div>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								
+								<!-- ITEM #02 -->
+								<li class="cbp-item web-design">
+									<a href="images/portfolio/2big.jpg" class="cbp-caption cbp-lightbox" data-title="Apex Card">
+										<div class="cbp-caption-defaultWrap">
+											<img src="images/portfolio/v2.jpg" alt="">
+										</div>
+										<div class="cbp-caption-activeWrap">
+											<div class="cbp-l-caption-alignLeft">
+												<div class="cbp-l-caption-body">
+													<div class="cbp-l-caption-title">Apex Card</div>
+													<div class="cbp-l-caption-desc">Logo / Branding</div>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								
+								<!-- ITEM #03 -->
+								<li class="cbp-item motion identity">
+									<a href="https://www.youtube.com/watch?v=3wbvpOIIBQA" class="cbp-caption cbp-lightbox" data-title="Real Branding">
+										<div class="cbp-caption-defaultWrap">
+											<img src="images/portfolio/v3.jpg" alt="">
+										</div>
+										<div class="cbp-caption-activeWrap">
+											<div class="cbp-l-caption-alignLeft">
+												<div class="cbp-l-caption-body">
+													<div class="cbp-l-caption-title">Real Branding</div>
+													<div class="cbp-l-caption-desc">Motion / Video</div>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								
+								(...)
+								
+							</ul>
+						</div>
+
+					</section>
+					<!-- END: PORTFOLIO -->
+				
+				</pre>
+				
+				<div class="note">
+					<ul>
+						<li>Line 43 - Set the <b>href</b> for the video URL from Youtube.</li>
+						<li>Line 48 - Image relative to the Video project URL.</li>
+						<li>Line 53 - 54 - Projects title and description.</li>
+					</ul>				
+				</div>	
+				
+				<br/>
+				<h6>10.5 Portfolio #4</h6> 
+				
+					<div class="note">
+						<p>For this portfolio you need to use the respective portfolio.js from /js/ folder.</p>
+						<p>In this case you should use portfolio-parallax.js.</p>
+					</div>
+				
+				<pre class="brush: xml; toolbar: false; highlight: [41,43,48,49]">
+					<!-- BEGIN: PROJECT ITEMS -->
+					<div id="grid-container" class="cbp-l-grid-fullScreen">
+						<ul>
+							
+							<!-- ITEM #01 -->
+							<li class="cbp-item identity logo">
+								<a href="images/portfolio/1big.jpg" class="cbp-caption cbp-lightbox" data-title="Decision Maker Detail">
+									<div class="cbp-caption-defaultWrap">
+										<img src="images/portfolio/1.jpg" alt="">
+									</div>
+									<div class="cbp-caption-activeWrap">
+										<div class="cbp-l-caption-alignLeft">
+											<div class="cbp-l-caption-body">
+												<div class="cbp-l-caption-title">Decision Maker Detail</div>
+												<div class="cbp-l-caption-desc">App Design</div>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							
+							<!-- ITEM #02 -->
+							<li class="cbp-item web-design">
+								<a href="images/portfolio/2big.jpg" class="cbp-caption cbp-lightbox" data-title="Apex Card">
+									<div class="cbp-caption-defaultWrap">
+										<img src="images/portfolio/v2.jpg" alt="">
+									</div>
+									<div class="cbp-caption-activeWrap">
+										<div class="cbp-l-caption-alignLeft">
+											<div class="cbp-l-caption-body">
+												<div class="cbp-l-caption-title">Apex Card</div>
+												<div class="cbp-l-caption-desc">Logo / Branding</div>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							
+							<!-- ITEM #03 -->
+							<li class="cbp-item motion identity">
+								<a href="https://www.youtube.com/watch?v=3wbvpOIIBQA" class="cbp-caption cbp-lightbox" data-title="Real Branding">
+									<div class="cbp-caption-defaultWrap">
+										<img src="images/portfolio/v3.jpg" alt="">
+									</div>
+									<div class="cbp-caption-activeWrap">
+										<div class="cbp-l-caption-alignLeft">
+											<div class="cbp-l-caption-body">
+												<div class="cbp-l-caption-title">Real Branding</div>
+												<div class="cbp-l-caption-desc">Motion / Video</div>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							
+							(...)
+							
+						</ul>
+					</div>
+				
+				</pre>
+				
+				<div class="note">
+					<ul>
+						<li>Line 41 - Set the <b>href</b> for the video URL from Youtube.</li>
+						<li>Line 43 - Image relative to the Video project URL.</li>
+						<li>Line 48 - 49 - Projects title and description.</li>
+					</ul>				
+				</div>
+
+		</div>
+
+		
+		<!--
+		/****************************************************************************/
+		***************************** Clients Section ********************************
+		*****************************************************************************/
+		-->
+		<div class="section">
+			<h3 id="clients">11. Clients Section<a href="#header-wrap" class="toplink scroll">top</a></h3><br/>
+
+			<h6>11.1 Testimonials</h6>
+			
+			<h5>Testimonials on Hover</h5>	
+			
+				<pre class="brush: xml; toolbar: false;">
+					<!-- BEGIN: TESTIMONIALS -->
+					<div id="testimonials" class="container">
+						
+						<!-- CLIENT THUMBNAILS -->
+						<div class="testimonial-box">
+							<ul class="testimonial-box-nav">
+								<li><a class="active" href="#testimonial1">
+									<img alt="" src="images/clients/1.jpg"></a>
+								</li>
+					
+								(...)
+								
+							</ul>
+						</div>
+						
+						<!-- CLIENT TESTIMONIALS -->
+						<div class="testimonial" id="testimonial1">
+							<p>“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et lectus posuere, blandit libero vitae, pellentesque elit. Nam a orci in dui blandit hendrerit. Quisque lectus metus, blandit quis mauris a, accumsan facilisis mauris. Vestibulum odio est, scelerisque sed ligula vitae, lacinia luctus ante. ”</p>
+							<span><b>Paulo Moreira</b> | <a href="#">Themeforest</a></span>
+						</div>
+						
+						(...)
+						
+					</div>
+					<!-- END: TESTIMONIALS -->
+				</pre> 			
+				
+			<br/>	
+			
+			<h5>Testimonials + Slider + Parallax</h5>
+	
+				<pre class="brush: xml; toolbar: false;">
+					<!-- BEGIN: TESTIMONIALS SLIDER -->
+						<div id="testimonials-slider" class="flexslider">			
+			              	<ul class="slides styled-list">
+			                	
+			                	<!-- SLIDE #01 -->
+				                <li class="testimonials-slide">
+				                	<div class="testimonials-slide-content container">
+				                		<!-- CLIENT IMAGE HERE -->
+				                		<div class="img-container">
+				                			<img title="" src="images/team/8.jpg" alt="">
+				                		</div>
+				                		
+				                		<!-- CLIENT TESTIMONIAL HERE -->
+				                		<div class="text-container">
+				                			<!-- AUTHOR -->
+				                			<span class="t-author">Paulo Moreira, CEO @ Upper</span>
+				                			<p><i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a consequat nibh. Praesent sodales enim facilisis accumsan rhoncus. <i class="fa fa-quote-right"></i></p>
+			                			</div>
+				                	</div>
+				                </li>
+				                
+				                <!-- SLIDE #02 -->
+				                <li class="testimonials-slide">
+				                	<div class="testimonials-slide-content container">
+				                		<div class="img-container">
+				                			<img title="" src="images/team/7.jpg" alt="">
+				                		</div>
+				                		
+				                		<div class="text-container">
+					                		<span class="t-author">Paulo Moreira, CEO @ Upper</span>
+					                		
+					                		<p><i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a consequat nibh. Praesent sodales enim facilisis accumsan rhoncus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a consequat nibh. Praesent sodales enim facilisis accumsan rhoncus.<i class="fa fa-quote-right"></i></p>
+				                		</div>
+				                	</div>
+				                </li>
+				                
+				                <!-- SLIDE #03 -->
+				                <li class="testimonials-slide">
+				                	<div class="testimonials-slide-content container">
+				                		<div class="img-container">
+				                			<img title="" src="images/team/6.jpg" alt="">
+				                		</div>
+				                		
+				                		<div class="text-container">
+					                		<span class="t-author">Paulo Moreira, CEO @ Upper</span>
+					                		<p><i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a consequat nibh. Praesent sodales enim facilisis accumsan rhoncus. <i class="fa fa-quote-right"></i></p>
+				                		</div>
+				                	</div>
+				                </li>
+			                </ul>
+			            </div><!-- END FLEXSLIDER -->
+				</pre>                    
+
+				<h5>Javascript flexslider function request for text rotation</h5>
+				<pre class="brush: xml; toolbar: false;">
+					<script type="text/javascript">
+						if ($('#testimonials-slider.flexslider').length){
+							$('#testimonials-slider.flexslider').flexslider({						
+								animation: "slide",
+								slideshow: true,
+								slideshowSpeed: 3500,
+								animationDuration: 1000,
+								directionNav: true,
+								controlNav: true,
+								smootheHeight:true,
+								after: function(slider) {
+								  slider.removeClass('loading');
+								}
+								
+							});	
+						}
+					</script>
+				</pre>
+				<br/>
+				
+			<h6>11.2 Client Logos</h6>
+			
+			<h5>Fixed</h5>	
+			
+				<pre class="brush: xml; toolbar: false; highlight: [3]">
+					<!-- BEGIN: CLIENTS LOGOS CAROUSEL -->
+					<div class="container-logos">
+						<div id="logos-carousel-noanimation" class="owl-carousel light-text">
+						  
+							<div class="carousel-item">
+								<a href="#"><img alt="" src="images/logos/client1.png"></a>
+							</div> <!-- END .carousel-item -->
+					
+							<div class="carousel-item">
+								<a href="#"><img alt="" src="images/logos/client2.png"></a>
+							</div> <!-- END .carousel-item -->
+							
+							<div class="carousel-item">
+								<a href="#"><img alt="" src="images/logos/client3.png"></a>
+							</div> <!-- END .carousel-item -->
+												
+							(...)
+							
+						</div> <!-- END #services-carousel -->
+					</div>
+					<!-- END: CLIENTS LOGOS CAROUSEL -->
+				</pre>
+
+				<div class="note">
+					<ul>
+						<li>Line 3 - Set the <b>id="logos-carousel-noanimation"</b> for no slider.</li>
+					</ul>				
+				</div>
+			
+				<h5>Javascript flexslider function request for text rotation</h5>
+				<pre class="brush: xml; toolbar: false;">
+					<script type="text/javascript">
+						if (jQuery("#logos-carousel-noanimation").length){
+							jQuery("#logos-carousel-noanimation").owlCarousel({
+								navigation : false,
+								items : 6,
+								pagination : false,
+								autoPlay : false,
+								stopOnHover : true,
+								itemsCustom : false,
+								itemsDesktop : [1199,4],
+								itemsDesktopSmall : [980,3],
+								itemsTablet: [768,3],
+								itemsTabletSmall: false,
+								itemsMobile : [479,2],
+							});
+							
+						}
+					</script>
+				</pre>
+				
+			<br/>	
+			
+			<h5>Slider</h5>
+	
+				<pre class="brush: xml; toolbar: false; highlight: [3]">
+					<!-- BEGIN: CLIENTS LOGOS CAROUSEL -->
+					<div class="container-logos">
+						<div id="logos-carousel" class="owl-carousel light-text">
+						  
+							<div class="carousel-item">
+								<a href="#"><img alt="" src="images/logos/client1.png"></a>
+							</div> <!-- END .carousel-item -->
+					
+							<div class="carousel-item">
+								<a href="#"><img alt="" src="images/logos/client2.png"></a>
+							</div> <!-- END .carousel-item -->
+							
+							<div class="carousel-item">
+								<a href="#"><img alt="" src="images/logos/client3.png"></a>
+							</div> <!-- END .carousel-item -->
+												
+							(...)
+							
+						</div> <!-- END #services-carousel -->
+					</div>
+					<!-- END: CLIENTS LOGOS CAROUSEL -->
+				</pre>   
+
+				<div class="note">
+					<ul>
+						<li>Line 3 - Set the <b>id="logos-carousel"</b> for having a slider.</li>
+					</ul>				
+				</div>
+
+				<h5>Javascript flexslider function request for text rotation</h5>
+				<pre class="brush: xml; toolbar: false;">
+					<script type="text/javascript">
+						if (jQuery("#logos-carousel").length){
+							jQuery("#logos-carousel").owlCarousel({
+								navigation : false,
+								items : 6,
+								autoPlay : 2000,
+								stopOnHover : true,
+								itemsCustom : false,
+								itemsDesktop : [1199,4],
+								itemsDesktopSmall : [980,3],
+								itemsTablet: [768,3],
+								itemsTabletSmall: false,
+								itemsMobile : [479,2],
+							});	
+						}
+					</script>
+				</pre>
+				
+			<br/><br/>
+
+		</div>
+
+				
+		
+		<!--
+		/****************************************************************************/
+		***************************** CONTACTS SECTION *******************************
+		*****************************************************************************/
+		-->	
+		<div class="section">
+			<h3 id="contacts">12. Contact Section<a href="#header-wrap" class="toplink scroll">top</a></h3>
+			<br/>
+			
+			<h5>12.1 Setup Contacts</h5>
+			<p>Like we said on the top of this documentation, this template requires a web server with PHP 4+ installed. Also PHP function mail() should be enabled.</p>
+			<p>Open the send.php file inside the contact-form folder. In this folder you need to edit one simple line for put your email adress.</p>			    
+	        <pre class="brush: xml; toolbar: false; highlight: [6]">					
+			<?php
+			/*------------------------------------
+				   YOUR EMAIL GOES HERE
+			--------------------------------------*/
+			$to = '<youname@yourdomain.com>';
+			?>
+			</pre>
+			<br/>
+			
+				<p>This is the form you need to have so that the contact form works fine.</p>
+				
+			<br/>
+			<pre class="brush: xml; toolbar: false;">
+				<!-- BEGIN: CONTACTS FORM -->
+				<div class="container">
+					<div class="col-xs-12 col-md-12">
+						<!-- CONTACT FORM -->			
+						<div id="contact_form">
+							
+							<!-- Sucess Message -->
+							<div class="form-success">
+								<p><i class="fa fa-check"></i>Thank you, your message has been sent.</p>
+							</div>
+							
+							<!-- Begin form -->
+							<div class="contact-form"> 
+								<form action="contact-form/send.php" method="post" class="form">   	
+									<div class="name">
+										<input class="text" type="text" name="name" placeholder="NAME"> 
+									</div>
+									<div class="email">  
+										<input class="text" type="text" name="email" placeholder="EMAIL"> 
+									</div>
+									<div class="subject">    
+										<input class="text" type="text" name="subject" placeholder="SUBJECT">
+									</div>
+									
+									<input class="service-input" type="text" name="service" style="display:none;" >
+									
+									<div class="message">    
+										<textarea name="message" rows="8" cols="60" placeholder="MESSAGE"></textarea> 
+																		
+									</div>
+									
+									<div class="bt-contact">
+										<a class="des-button-dark des-button-dark-1 des-button-dark-1d" id="submit" href="javascript:;"><span>SEND EMAIL</span></a>
+									</div>
+										
+									<div class="loading"></div>
+									
+								</form> 
+							</div>
+							<!-- End form -->
+						</div>
+						<!-- END CONTACT FORM -->
+					</div>
+				</div>
+				<!-- END: CONTACTS FORM -->
+			</pre>
+			<br/>
+			<h5>12.2 Setup Google Maps</h5>
+			<p></p>
+			
+			<pre class="brush: xml; toolbar: false;">
+				<!-- GOOGLE MAP -->
+				<div id="map" style="height:350px;"></div>
+			</pre>
+			<br/>
+			<p>Add the following script to the bottom of the page. Remove comments.</p>
+			<br/>			
+			<pre class="brush: xml; toolbar: false; highlight: [4,6,13,22]">
+			<!--
+			<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+			<script type="text/javascript">
+				function mapinitialize() {
+					var latlng = new google.maps.LatLng(-37.8122,144.9538);
+					var myOptions = {
+						zoom: 14,
+						center: latlng,
+						scrollwheel: false,
+						scaleControl: false,
+						disableDefaultUI: false,
+						mapTypeId: google.maps.MapTypeId.ROADMAP
+					};
+					var map = new google.maps.Map(document.getElementById("map"),myOptions);
+					
+					var image = "images/mappin.png";
+					var marker = new google.maps.Marker({
+						map: map, 
+						icon: image,
+						position: map.getCenter()
+					});
+					
+					var contentString = '<b>Office Adress</b><br>Envato State Route 60<br> Curzon Street Melbourne CBD';
+					var infowindow = new google.maps.InfoWindow({
+						content: contentString
+					});
+								
+					google.maps.event.addListener(marker, 'click', function() {
+					  infowindow.open(map,marker);
+					});
+									
+						
+				}
+				mapinitialize();
+			</script>
+			-->
+			</pre>
+			
+			<div class="note">
+					<ul>
+						<li>Line 4 - Set the coordinates for centering your location on the map.</li>
+						<li>Line 6 - Set the zoom to the map location you want.</li>
+						<li>Line 13 - ID responsible for setting up the map on the page.</li>
+						<li>Line 22 - String where you can set some identification/description on the markers location.</li>
+					</ul>				
+				</div>
+			
+			<br/><br/>
+		</div>
+		
+		<!--
+		/****************************************************************************/
+		******************************* Blog Section *********************************
+		*****************************************************************************/
+		-->
+
+		<div class="section">
+								
+			<h3 id="blogsection">13. Blog Section<a href="#header-wrap" class="toplink scroll">top</a></h3>
+			
+				<div class="note">
+				<p>Use your blog section for showing imformation, like news and thing that you might think are important.</p>
+				<p>You can set the following post types:</p><br/>
+					<ul>
+						<li>Featured Image</li>
+						<li>Post with Slider</li>
+						<li>Post with Video</li>
+						<li>Simple Text Post</li>
+						<li>Audio Post</li>
+					</ul>				
+				</div>
+			
+				<pre class="brush: xml; toolbar: false; highlight: [5,8,10]">
+					<!-- BEGIN BLOG WIDTH | OPTION: "big", "medium" container -->
+					<div class="container">	
+						
+						<!-- BEGIN BLOG POSTS ISOTOPE -->		
+						<div class="journal isotope" data-columns="3" data-gutter-space="0.25">
+							<!-- POST #01 -->
+							<div class="journal-post isotope-item">
+								<div class="post-content fadeInUpBig">
+									<!-- Featured image -->
+									<div class="featured-image">
+										<a href="blog-single.html"><img alt="" src="images/journal/1.jpg"></a>
+										
+									</div>
+									
+									<h2 class="post-title"><a href="blog-single.html">Featured Image</a></h2>
+			
+									<div class="post-summary">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat facilisis dignissim. Etiam scelerisque ultricies euismod. Etiam pellentesque enim ac risus dapibus consequat. Nulla euismod lacinia felis, vel porttitor massa accumsan sit amet [...]</p>
+									</div>
+									
+									<a class="des-button-dark des-button-dark-1d" href="#"><span>Read post</span></a>
+									
+									<!-- Begin Metas -->
+									<div class="metas">
+										
+										<div class="date">
+											<p><i class="fa fa-calendar"></i> MAR 7, 2014</p>
+										</div>
+										<div class="tags">
+											<p><i class="fa fa-tags"></i> <a href="#">Photography</a></p>
+										</div>
+										<div class="comments">
+											<p><i class="fa fa-comments-o"></i> 0</p>
+										</div>
+									</div>
+									<!-- end metas -->
+								</div>
+							</div><!-- #post -->
+							
+							<!-- POST #02 | Slider -->
+							<div class="journal-post isotope-item">
+								<div class="post-content fadeInUpBig delay-200">
+									
+									<div class="light">
+										<div id="slider2" class="flexslider">
+											<ul class="slides">
+												<li>
+													<img src="images/office/of1.jpg" alt=""/>
+												</li>
+												<li>
+													<img src="images/office/of2.jpg" alt=""/>
+												</li>
+												<li>
+													<img src="images/office/of3.jpg" alt=""/>
+												</li>
+											</ul>
+										</div>
+									</div>
+									
+									<h2 class="post-title">
+									  <a href="blog-single.html">Post with Slider</a>
+									</h2>
+			
+									<div class="post-summary">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat facilisis dignissim. Etiam scelerisque ultricies euismod. Etiam pellentesque enim ac risus dapibus consequat. Nulla euismod lacinia felis, vel porttitor massa accumsan sit amet. Cras id fermentum neque. Curabitur et mollis neque. Fusce eu mattis arcu. Integer eget augue sit amet lorem convallis fermentum [...]</p>
+									</div>
+									
+									<a class="des-button-dark des-button-dark-1d" href="#"><span>Read post</span></a>
+									
+									<!-- Begin Metas -->
+									<div class="metas">
+										
+										<div class="date">
+											<p><i class="fa fa-calendar"></i> MAR 4, 2014</p>
+										</div>
+										<div class="tags">
+											<p><i class="fa fa-tags"></i> <a href="#">Slider</a></p>
+										</div>
+										<div class="comments">
+											<p><i class="fa fa-comments-o"></i> 3</p>
+										</div>
+									</div>
+									
+								</div>
+							</div><!-- #post -->
+							
+							(...)
+							
+						</div>
+					</div>
+				</pre>
+				
+				<br/>
+				
+				<div class="note">
+					<ul>
+						<li>Line 5 - <b>data-columns="3"</b> - refers to the number of columns your blog section should have.</li>
+						<li>Line 8 - <b>fadeInUpBig</b> - Animation selected within the animated contents features.</li>
+						<li>Line 10 - <b>class="featured-image"</b> - Class referent to the post type selected.</li>
+					</ul>				
+				</div>
+
+			<br /><br />
+		</div>
+
+		<!--
+		/****************************************************************************/
+		******************************** Blog Single *********************************
+		*****************************************************************************/
+		-->
+
+		<div class="section">
+						
+			<h3 id="blogsingle">14. Blog Single<a href="#header-wrap" class="toplink scroll">top</a></h3>
+				
+				<div class="note">	
+					<p><b>IMPORTANT:</b> There is only one page relative to the Feature Image Post, but you can use it according the selected post type you've selected to show on the blog section.</p>							
+					<p>You can set the following post types:</p><br/>
+					<ul>
+						<li>Featured Image</li>
+						<li>Post with Slider</li>
+						<li>Post with Video</li>
+						<li>Simple Text Post</li>
+						<li>Audio Post</li>
+					</ul>			
+				</div>
+				
+				<h5>Featured Image</h5>
+				
+				<pre class="brush: xml; toolbar: false;">
+					<!-- BEGIN blog-posts isotope -->
+					<div class="blog-post isotope-item">
+	                    <div class="post-content">
+	                        <!-- Featured image -->
+	                        <div class="featured-image">
+	                        	<img alt="" src="images/journal/1.jpg">
+	                        	
+	                        </div>
+	                        
+	                        <div class="img-container">
+							    <img alt="" src="images/team/1.jpg">
+				            </div>
+					        
+					        <h1 class="single-title">Blog Single</h1>
+					        
+					          	                        
+	                        <!-- Begin Metas -->
+	                        <div class="metas text-center">
+								
+								<div class="date">
+									<p><i class="fa fa-calendar"></i> MAR 7, 2014</p>
+								</div>
+								<div class="tags">
+									<p><i class="fa fa-tags"></i> <a href="#">Photography</a> / <a href="#">World</a></p>
+								</div>
+								<div class="comments">
+									<p><i class="fa fa-comments-o"></i> 0</p>
+								</div>
+							</div>
+							<!-- end metas -->
+							
+							<div class="space"></div>
+							
+	                        <div class="post-summary">
+	                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac ligula a velit tincidunt venenatis. Donec viverra sit amet sem et rutrum. Suspendisse vel neque eget leo sagittis ultricies. Vivamus fringilla ultricies ullamcorper. Vivamus aliquet molestie dignissim. Fusce laoreet ante eget magna luctus, quis feugiat elit laoreet. Nullam euismod massa et augue luctus sollicitudin. Nulla luctus, lectus et egestas dignissim, odio ipsum hendrerit augue, ut hendrerit nunc dolor ac nisl. Nulla aliquet dolor dictum diam ultrices pretium. Nunc a purus quis tortor tristique mattis. Integer tincidunt in tortor vitae ultricies. Pellentesque laoreet urna sit amet.</p>
+
+	                           <p>Cras lobortis urna et lorem lobortis, non convallis sapien pulvinar. Vestibulum sit amet sollicitudin magna. Cras in mauris et sapien rhoncus sollicitudin. Morbi egestas nunc quis erat laoreet scelerisque. Mauris suscipit odio eget lectus scelerisque luctus. Quisque a massa eget velit pretium pellentesque. Vivamus ac ullamcorper urna. Nam tristique laoreet augue, quis porttitor purus aliquet nec. Sed in bibendum lorem. Duis nec augue ut magna scelerisque consectetur.</p>
+
+	                           <p>Nam aliquam ultrices turpis, sed congue leo cursus non. Praesent commodo lorem a lacus venenatis, non cursus velit aliquet. Fusce purus augue, varius sed auctor at, consectetur in felis. Vivamus viverra lectus quis molestie laoreet. Phasellus non magna in lectus adipiscing vulputate at ac quam. Aliquam sed tellus scelerisque urna facilisis mollis. Donec blandit consequat turpis non molestie.</p>
+	                           
+	                           <div class="space"></div>
+	                           <div class="space"></div>
+	                           
+	                           <blockquote><i class="fa fa-quote-left"></i> INNOVATION DISTINGUISHES BETWEEN A LEADER AND A FOLLOWER <i class="fa fa-quote-right"></i></blockquote><span class="author-quote">-- Steve Jobs --</span>
+	                           <div class="space"></div>
+	                           
+	                           <div class="space"></div>
+	                           <p>Proin volutpat venenatis luctus. Ut sagittis eget quam consequat ornare. Morbi accumsan eget tellus non venenatis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur ullamcorper sem quis elit rhoncus, eu scelerisque nibh tempor. Sed aliquam lectus quis tortor tempor placerat. Aliquam dapibus orci ac felis sagittis, cursus pharetra diam fringilla. Vestibulum tempus nibh sit amet viverra eleifend. Nunc ut libero elit.</p>
+	                        </div>
+	                        
+	                        <div class="share-post">
+	                        	<h4>Share this post</h4>
+	                        	<div class="space"></div>
+	                        	<div class="socialdiv colored dark">
+							        <ul>
+							            <li><a class="e-mail" href="mailto:someone@example.com?Subject=Hello" target="_blank" data-toggle="tooltip" data-placement="top" title="Mail"></a></li>
+							            <li><a class="facebook" href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook"></a></li>
+							            <li><a class="twitter" href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter"></a></li>
+							            <li><a class="forrst" href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="Forrst"></a></li>
+							            <li><a class="flickr" href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="Flickr"></a></li>
+							            <li><a class="linkedin" href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="Linkedin"></a></li>
+							            <li><a class="skype" href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="Skype"></a></li>
+							            <li><a class="google" href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="Google"></a></li>
+							            <li><a class="vimeo" href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="Vimeo"></a></li>
+							            <li><a class="deviantart" href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="Deviantart"></a></li>
+							            <li><a class="youtube" href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="Youtube"></a></li>
+							            <li><a class="rss" href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="rss"></a></li>
+							            <li><a class="pinterest" href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="Pinterest"></a></li>
+							            <li><a class="delicious" href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="Delicious"></a></li>
+							            <li><a class="digg" href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="Digg"></a></li>
+							            <li><a class="instagram" href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram"></a></li>
+							            <li><a class="grooveshark" href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="Grooveshark"></a></li>
+							            <li><a class="soundcloud" href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="Soundcloud"></a></li>
+							            <li><a class="dribbble" href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="Dribbble"></a></li>
+							            <li><a class="tumblr" href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="Tumblr"></a></li>
+							          
+							           
+							        </ul>
+							    </div>
+	                        </div>
+	                    </div>
+			        </div>
+			        <!-- END blog-posts isotope -->
+				</pre>				
+
+			<br /><br />
+		</div>
+
+		<!--
+		/****************************************************************************/
+		******************************* Footer Section *******************************
+		*****************************************************************************/
+		-->
+
+		<div class="section">
+								
+			<h3 id="footersection">15. Footer Section<a href="#header-wrap" class="toplink scroll">top</a></h3>
+				
+				<h5>15.1 MailChimp Newsletter</h5>
+				
+				<pre class="brush: xml; toolbar: false; highlight: [13,14,15]">
+					<!-- BEGIN: MAIL CHIMP CONTAINER -->
+					<div class="mail_chimp_form_container">
+		
+						<div class="mail-box">
+							<div class="mail-news">
+								<div class="news-l">
+									<div class="banner">
+										<h4>Subscribe our <span style="color:#100f0f">Newsletter</span></h4>
+										<p>Lorem Ipsum available of Lorem Ipsum</p>
+									</div>
+									
+									<div class="form">
+										<!-- BEGIN: MailChimp Signup Form 
+										NOTE: PASTE THE CODE FROM YOUR MAIL CHIMP ACCOUNT HERE
+										-->
+										<div id="mc_embed_signup">
+											
+											<form action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+												
+												<div class="mc-field-group">
+													<label for="mce-EMAIL">Email Address<span class="asterisk">*</span></label>
+													<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+												</div>
+												<div id="mce-responses" class="clear">
+													<div class="response" id="mce-error-response" style="display:none"></div>
+													<div class="response" id="mce-success-response" style="display:none"></div>
+												</div>
+												
+												<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+											</form>
+										</div>
+										<!-- END: MailChimp Signup Form -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- END: MAIL CHIMP CONTAINER -->
+				</pre>				
+				<br/>
+				<div class="note">	
+					<p><b>Line 13 - 15:</b> - Paste the code from your MailChimp account on these lines.</p>									
+				</div>
+				<br/>
+				
+				<h5>15.2 Other Contacts Section</h5>
+
+				<pre class="brush: xml; toolbar: false;">
+					<!-- BEGIN: OTHER CONTACTS -->	
+					<div class="container other-contacts text-center">
+						<div class="col-xs-12 col-md-4">
+							<div class="c-icon">
+								<i class="glyphicons phone_alt"></i>
+							</div>
+							<p>(+ 351) 209 456 666</p>
+						</div>
+						
+						<div class="col-xs-12 col-md-4">
+							<div class="c-icon">
+								<i class="glyphicons envelope"></i>
+							</div>
+							<a href="#">info@vanguard.com</a><br/>
+							<a href="#">workwithus@vanguard.com</a>
+						</div>
+						
+						<div class="col-xs-12 col-md-4">
+							<div class="c-icon">
+								<i class="glyphicons google_maps"></i>
+							</div>
+							<p>Street N1, 936534<br/> Washington D.C</p>
+							
+						</div>
+					</div>
+					<!-- END -->
+				</pre>				
+				<br/>
+				
+				<h5>15.3 Social Icons Section</h5>
+				
+				<pre class="brush: xml; toolbar: false;">
+					<!-- BEGIN BOTTOM FOOTER -->
+					<div class="container">
+						<div id="bottom-footer" class="text-center">
+								
+							<a href="#" class="logo-footer"><img src="images/logo.png" alt=""></a>
+							<div class="socialdiv colored">
+								<ul>
+									<li><a class="facebook" href="#" target="_blank"></a></li>
+									<li><a class="twitter" href="#" target="_blank"></a></li>
+									<li><a class="instagram" href="#" target="_blank"></a></li>
+									<li><a class="vimeo" href="#" target="_blank"></a></li>
+									<li><a class="pinterest" href="#" target="_blank"></a></li>
+									<li><a class="dribbble" href="#" target="_blank"></a></li>
+								</ul>   
+							</div>       
+						   
+							<div class="b-text">
+								<p>Copyrights © <a href="http://themeforest.net/user/Upper">Upper</a> 2014</p>
+							</div>
+						</div>
+					</div>
+					<!-- END BOTTOM FOOTER -->	
+				</pre>
+
+			<br /><br />
+		</div>
+		
+			
+		<!--
+        /****************************************************************************/
+		******************************* TWITTER *************************************
+		****************************************************************************/
+        -->
+		<div class="section">
+			<h3 id="stwitter">16. Setup Twitter<a href="#" class="toplink scroll">top</a></h3>
+		
+				<p>1) New twitter API requires you to setup the application before pulling the feed out. To achieve this, go to https://dev.twitter.com/apps/</p>
+            	<p>2) Logging in with your twitter account.</p>
+            	<p>3) Click to create the access token, then refresh the page.</p>
+            	<img src="img/twitter1.jpg" />
+            	
+            	<p>4) Go to Vanguard/twitter/index.php</p>
+                <p>5) Fill the fields</p>
+                <p>6) After that just fill up all the fields:</p>
+				
+				<pre class="brush: xml; toolbar: false;">
+					<script type="text/javascript">
+						 // Your Twitter App Consumer Key
+						private $consumer_key = "xxxxxxxxxxxxxxxxxxx";
+
+						// Your Twitter App Consumer Secret
+						private $consumer_secret = "xxxxxxxxxxxxxxxxxxx";
+
+						// Your Twitter App Access Token
+						private $user_token = "xxxxxxxxxxxxxxxxxxx";
+
+						// Your Twitter App Access Token Secret
+						private $user_secret = "xxxxxxxxxxxxxxxxxxx";
+					</script>
+				</pre>
+		 
+		</div>
+		
+		<!--
+		/****************************************************************************/
+		******************************* ANIMATED ************************************
+		****************************************************************************/	
+		-->
+		<div class="section">
+
+			<h3 id="animatedc">17. Animated Contents<a href="#header-wrap" class="toplink scroll">top</a></h3>
+			<br/>
+			
+			<p>Vanguard use the animated.css by daneden to animate your contents. You can animate how many elements you want! You can view more information and the effects list <a href="http://daneden.github.io/animate.css/" target="_blank">Here →</a></p>
+			<br/>
+			<p><b>How it works?</b></p>
+			<p>You can animate the contents just on page load but we decided put it on another level :) For that we use the Vanguard.js. This jQuery plugin makes it easy to execute a function whenever you scroll to an element. So we do the animations just when the page reach the active section.</p>
+			
+			<p>In the following example we make the animation of a Process Icon. For that we copy the function to the class into the div.</p>
+			
+			<pre class="brush: xml; toolbar: false; highlight: [7]">
+				<!-- BEGIN: SERVICES CAROUSSEL -->
+					    <!-- BEGIN: NUMERICAL INCREMENT -->
+						<div class="container numerical-c">	
+							<div class="row">
+								<!-- BEGIN 3 COLUMNS / 6 COLUMNS (<768px) 
+									 Numerical #01 -->
+								<div class="col-xs-6 col-sm-3 animated fadeInUp">		                
+					                
+					                <!-- Center Icon here -->
+					                <div class="center-icon" style="">
+					                	<i class="fa fa-clock-o"></i>
+					                </div> 
+							  
+							  (...)
+										  
+			</pre>
+			<p>Now you have to make sure you set the following elements:</p>
+			<p>
+				<ul>
+					<li>animated</li>
+					<li>effect</li>
+					<li>delay</li>
+				</ul>
+			</p>
+			<p><b>Animated</b> is the class for the animation that you need to add into the class div, so that it produces the movement.</p>
+			<p><b>Effect</b> is the effect that you want your item to bear. You can find the list for the effects on <b>line 2</b>:</p>
+			<pre class="brush: xml; toolbar: false; highlight: [3]">
+				<script type="text/javascript">
+					function getEffect(el){
+						var effects = ["bounce", "flash", "pulse", "rubberBand", "shake", "swing", "tada", "wobble", "bounceIn", "bounceInDown", "bounceInLeft", "bounceInRight", "bounceInUp", "bounceOut", "bounceOutDown", "bounceOutLeft", "bounceOutRight", "bounceOutUp", "fadeIn", "fadeInDown", "fadeInDownBig", "fadeInLeft", "fadeInLeftBig", "fadeInRight", "fadeInRightBig", "fadeInUp", "fadeInUpBig", "fadeOut", "fadeOutDown", "fadeOutDownBig", "fadeOutLeft", "fadeOutLeftBig", "fadeOutRight", "fadeOutRightBig", "fadeOutUp", "fadeOutUpBig", "flip", "flipInX", "flipInY", "flipOutX", "flipOutY", "lightSpeedIn", "lightSpeedOut", "rotateIn", "rotateInDownLeft", "rotateInDownRight", "rotateInUpLeft", "rotateInUpRight", "rotateOut", "rotateOutDownLeft", "rotateOutDownRight", "rotateOutUpLeft", "rotateOutUpRight", "slideInDown", "slideInLeft", "slideInRight", "slideOutLeft", "slideOutRight", "slideOutUp", "hinge", "rollIn", "rollOut"]
+						var effect = false;
+						for (var i=0; i<effects.length; i++){
+							if (el.hasClass(effects[i])) {
+								effect = effects[i];
+							} 
+						}
+						effect = effect.toString();
+						return effect;
+					}
+				</script>
+			</pre>
+			<p><b>Delay</b> is the timming that you want for it to makes the animation. Just type <b>delay-200</b>, and you can change the "200" to the value you want.</p>
+			<br/>
+			<h5>Javascript function request for Animated Contents</h5>
+			<pre class="brush: xml; toolbar: false; highlight: [6,10,20]">
+				<script type="text/javascript">
+					/* BEGIN: ANIMATED CONTENTS */
+					$(document).ready(function(){
+						
+						/* define if you want to display the contents animation (true|false) */
+						var effectsOnMobiles = false;
+						
+						var doAnimations = false;
+						if (isMobile.any() && effectsOnMobiles) doAnimations = true;
+						if (isMobile.any() && !effectsOnMobiles) doAnimations = false;
+						if (!isMobile.any()) doAnimations = true;
+						
+						if (isMobile.any()){
+							$('.parallax').css('background-attachment','scroll');
+							$('#intro-block .intro-text .intro-big').css('opacity', '1');
+						}
+						
+						if (doAnimations){
+							$('.animated').each(function(e){
+								var el = $(this);
+								var classes = $(el).attr('class').split(" ");
+								var delay = false;
+								for (var i=0; i<classes.length; i++){
+									if (classes[i].indexOf("delay-") > -1){
+										delay = classes[i].slice(6,classes[i].length)/1000;
+									}
+								}
+								if (window.BrowserDetect.browser === "Explorer" && window.BrowserDetect.version < 10){
+									$(el).removeClass(effect).addClass('notinview').css({
+										opacity: 0
+									});
+									$(el).waypoint({
+										handler: function() {
+											if ($(this).hasClass('notinview')){
+												$(this).removeClass('notinview');	
+												var elem = $(this);
+												setTimeout(function(){
+													$(elem).animate({
+														opacity: 1
+													}, 1000);
+												}, delay*1000);
+											}
+										},
+										offset: '75%',
+										triggerOnce: true
+									}, function(){ $.waypoints("refresh"); });
+								} else {
+									var effect = getEffect($(el));
+									$(el).removeClass(effect).addClass('notinview').css({
+										'-webkit-animation-delay': delay+'s',
+										'-moz-animation-delay': delay+'s',
+										'animation-delay': delay+'s',
+										opacity: 0
+									});
+									$(el).waypoint({
+										handler: function() {
+											if ($(this).hasClass('notinview')){
+												$(this).addClass(effect).removeClass('notinview');	
+												$(this).css('opacity', 1);	
+											}
+										},
+										offset: '75%',
+										triggerOnce: true
+									}, function(){ $.waypoints("refresh"); });	
+								}
+							});
+						}
+					});
+
+
+					function getEffect(el){
+						var effects = ["bounce", "flash", "pulse", "rubberBand", "shake", "swing", "tada", "wobble", "bounceIn", "bounceInDown", "bounceInLeft", "bounceInRight", "bounceInUp", "bounceOut", "bounceOutDown", "bounceOutLeft", "bounceOutRight", "bounceOutUp", "fadeIn", "fadeInDown", "fadeInDownBig", "fadeInLeft", "fadeInLeftBig", "fadeInRight", "fadeInRightBig", "fadeInUp", "fadeInUpBig", "fadeOut", "fadeOutDown", "fadeOutDownBig", "fadeOutLeft", "fadeOutLeftBig", "fadeOutRight", "fadeOutRightBig", "fadeOutUp", "fadeOutUpBig", "flip", "flipInX", "flipInY", "flipOutX", "flipOutY", "lightSpeedIn", "lightSpeedOut", "rotateIn", "rotateInDownLeft", "rotateInDownRight", "rotateInUpLeft", "rotateInUpRight", "rotateOut", "rotateOutDownLeft", "rotateOutDownRight", "rotateOutUpLeft", "rotateOutUpRight", "slideInDown", "slideInLeft", "slideInRight", "slideOutLeft", "slideOutRight", "slideOutUp", "hinge", "rollIn", "rollOut"]
+						var effect = false;
+						for (var i=0; i<effects.length; i++){
+							if (el.hasClass(effects[i])) {
+								effect = effects[i];
+							} 
+						}
+						effect = effect.toString();
+						return effect;
+					}
+				</script>
+			</pre>                    
+			
+			<br/><br/>
+		
+		</div>
+		
+		
+		<!--
+		/****************************************************************************/
+		******************************* ELEMENTS *************************************
+		****************************************************************************/
+		-->
+		<div class="section">
+			<h3 id="elements">18. Elements<a href="#header-wrap" class="toplink scroll">top</a></h3><br/>
+
+			<br/>
+			<h6>18.1 Accordion</h6> 
+			<br/>	
+			<pre class="brush: xml; toolbar: false;">
+				<div class="col-xs-12 col-sm-6">
+						<h3>Accordion</h3>
+						
+						<div class="panel-group" id="accordion">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+								  <h4 class="panel-title">
+								    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+								      Collapsible Group Item #1
+								    </a>
+								  </h4>
+								</div>
+								<div id="collapseOne" class="panel-collapse collapse in">
+								  <div class="panel-body">
+								    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+								  </div>
+								</div>
+								</div>
+								<div class="panel panel-default">
+								<div class="panel-heading">
+								  <h4 class="panel-title">
+								    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+								      Collapsible Group Item #2
+								    </a>
+								  </h4>
+								</div>
+								<div id="collapseTwo" class="panel-collapse collapse">
+								  <div class="panel-body">
+								    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+								  </div>
+								</div>
+								</div>
+								<div class="panel panel-default">
+								<div class="panel-heading">
+								  <h4 class="panel-title">
+								    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+								      Collapsible Group Item #3
+								    </a>
+								  </h4>
+								</div>
+								<div id="collapseThree" class="panel-collapse collapse">
+								  <div class="panel-body">
+								    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+								  </div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+			</pre>
+			<br/>
+			<h6>18.2 Tabs</h6> 
+			<br/>	
+			<pre class="brush: xml; toolbar: false;">
+				<div class="col-xs-12 col-sm-6">
+						<h3>Tabs</h3>
+						
+						<!-- WIDGET TABS -->
+					    <div class="widget_posts">
+					       <div id="blog-tabs">
+					        
+					          <ul class="tabs">
+					            <li id="tab_two1"> <i class="fa fa-home"></i> </li>
+					            <li id="tab_two2">With Love by</li>
+					            <li id="tab_two3">Upper</li>
+					          </ul>
+					          
+					          <div class="contents">
+					            <div id="content_two1" class="tabscontent">
+					              <h4>Cool One Page Template</h4>
+					              <p>Sed eleifend, mi ut eleifend faucibus, magna orci consectetur justo, ac mattis ipsum mi eget nunc. Sed a justo at lorem lacinia malesuada non vel lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc vel vestibulum tellus. Vivamus semper, diam a venenatis consequat, tortor nibh semper felis, sit amet venenatis odio purus vel nulla. Duis et purus scelerisque nisi ultricies fermentum. Fusce vel quam eget est ultrices venenatis. Donec placerat egestas gravida. Phasellus vehicula tortor vitae mi suscipit imperdiet. Proin a tellus ac mauris placera.</p>
+					              <p>Vivamus at tortor at nisi vehicula sodales eget quis sem. Donec molestie interdum turpis, ut interdum nunc vestibulum vitae.</p>
+					            </div> 
+					            <div id="content_two2" class="tabscontent">
+					              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce blandit, orci quis sagittis auctor, est lacus rutrum massa, et molestie justo lacus sed urna. Morbi arcu lacus, tempor sit amet imperdiet quis, blandit ut enim. Mauris et eleifend leo. Ut non sapien nibh. Curabitur eget lacus non odio sagittis eleifend. Donec a elit nisi. Vivamus a turpis et ante varius egestas. Vivamus at tortor at nisi vehicula sodales eget quis sem. Donec molestie interdum turpis, ut interdum nunc vestibulum vitae. Integer egestas elit non euismod tincidunt. Maecenas ac rhoncus odio. Donec bibendum arcu a aliquet bibendum. In et risus quam.</p>
+					            </div> 
+					            <div id="content_two3" class="tabscontent">
+					            	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce blandit, orci quis sagittis auctor, est lacus rutrum massa, et molestie justo lacus sed urna. Morbi arcu lacus, tempor sit amet imperdiet quis, blandit ut enim. Mauris et eleifend leo. Ut non sapien nibh. Curabitur eget lacus non odio sagittis eleifend. Donec a elit nisi. Vivamus a turpis et ante varius egestas.</p>
+					              <p>Vivamus at tortor at nisi vehicula sodales eget quis sem. Donec molestie interdum turpis, ut interdum nunc vestibulum vitae.</p>
+					            </div>  
+					          </div><!-- End contents -->
+					          
+					          </div><!-- End blog-tabs -->
+					      </div>
+					      <!-- End -->
+					</div>
+			</pre>
+				<br/>
+			<h6>18.3 Alerts</h6> 
+			<br/>	
+			<pre class="brush: xml; toolbar: false;">
+				<div class="col-xs-12 col-sm-6">
+					    <h3>Alerts</h3>
+					    <div class="alert alert-success fade in">
+						    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+					    	<strong>Well done!</strong> You successfully read this important alert message.
+					    </div>
+					    <div class="alert alert-info fade in">
+						    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+					    	<strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+					    </div>
+					    <div class="alert alert-warning fade in">
+					    	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+					    	<strong>Warning!</strong> Better check yourself, you're not looking too good.
+					    </div>
+					    <div class="alert alert-danger fade in">
+					    	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+					    	<strong>Oh snap!</strong> Change a few things up and try submitting again.
+					    </div>
+					    
+					    <div class="space"></div>
+					    
+					    <div class="labels">
+							<h3>Labels</h3>
+							<span class="label label-default">Default</span>
+							<span class="label label-primary">Primary</span>
+							<span class="label label-success">Success</span>
+							<span class="label label-info">Info</span>
+							<span class="label label-warning">Warning</span>
+							<span class="label label-danger">Danger</span>
+						</div>
+						
+					</div>
+			</pre>
+				<br/>
+			<h6>18.4 Callout Boxes</h6>  
+			<br/>	
+			<pre class="brush: xml; toolbar: false;">
+				<div class="col-xs-12 col-sm-6">
+						<h3>Callout Boxes</h3>
+						<div class="bs-callout bs-callout-warning">
+						    <h5>Callout Warning</h5>
+						    <p>Proin at enim nisi. Interdum et malesuada fames ac ante ipsum primis.</p>
+						</div>
+						
+						<div class="bs-callout bs-callout-success">
+						    <h5>Callout Success</h5>
+						</div>
+						
+						<div class="bs-callout bs-callout-danger">
+						    <h5>Callout Danger</h5>
+						</div>
+						
+						<div class="bs-callout bs-callout-theme-color">
+						    <h5>Callout Theme Color</h5>
+						</div>
+						
+					</div>
+			</pre>
+			<br/>
+			
+			<h6>18.5 Glyphicons Social Icons</h6> 
+			<br/>	
+			<pre class="brush: xml; toolbar: false;">
+					<div class="col-xs-12 col-sm-12">
+						<h3>Glyphicons Social Icons</h3>
+						<a href="" class="social pinterest"></a>
+						<a href="" class="social dropbox"></a>
+						<a href="" class="social google_plus"></a>
+						<a href="" class="social jolicloud"></a>
+						<a href="" class="social yahoo"></a>
+						<a href="" class="social blogger"></a>
+						<a href="" class="social picasa"></a>
+						<a href="" class="social amazon"></a>
+						<a href="" class="social tumblr"></a>
+						<a href="" class="social wordpress"></a>
+						<a href="" class="social instapaper"></a>
+						<a href="" class="social evernote"></a>
+						<a href="" class="social xing"></a>
+						<a href="" class="social zootool"></a>
+						<a href="" class="social dribbble"></a>
+						<a href="" class="social deviantart"></a>
+						<a href="" class="social read_it_later"></a>
+						<a href="" class="social linked_in"></a>
+						<a href="" class="social forrst"></a>
+						<a href="" class="social pinboard"></a>
+						<a href="" class="social behance"></a>
+						<a href="" class="social github"></a>
+						<a href="" class="social youtube"></a>
+						<a href="" class="social skitch"></a>
+						<a href="" class="social foursquare"></a>
+						<a href="" class="social quora"></a>
+						<a href="" class="social badoo"></a>
+						<a href="" class="social spotify"></a>
+						<a href="" class="social stumbleupon"></a>
+						<a href="" class="social readability"></a>
+						<a href="" class="social facebook"></a>
+						<a href="" class="social twitter"></a>
+						<a href="" class="social instagram"></a>
+						<a href="" class="social posterous_spaces"></a>
+						<a href="" class="social vimeo"></a>
+						<a href="" class="social flickr"></a>
+						<a href="" class="social last_fm"></a>
+						<a href="" class="social rss"></a>
+						<a href="" class="social skype"></a>
+						<a href="" class="social e-mail"></a>
+						<a href="" class="social vine"></a>
+						<a href="" class="social myspace"></a>
+						<a href="" class="social goodreads"></a>
+						<a href="" class="social apple"></a>
+						<a href="" class="social windows"></a>
+						<a href="" class="social yelp"></a>
+						<a href="" class="social playstation"></a>
+						<a href="" class="social xbox"></a>
+						<a href="" class="social android"></a>
+						<a href="" class="social ios"></a>
+					</div>
+			</pre>
+		
+			<br/><br/>
+
+		</div>
+		
+	
+		
+		<!--
+		/****************************************************************************/
+		******************************* TEMPLATE FONTS ******************************
+		****************************************************************************/
+		-->
+		<div class="section">
+		<h3 id="fonts-docs">19. Setup Template Fonts<a href="#header-wrap" class="toplink scroll">top</a></h3>
+		
+		<br/>
+		
+		<h6>19.1 Google Fonts</h6>
+		
+		<p>You can start using the Google Fonts API in just two steps:</p><br/>
+		<p>1. Add a stylesheet link to request the desired web font(s) on the head of the index.html.</p>
+		<br />
+			<pre class="brush: xml; toolbar: false; highlight: []">
+				 <!-- LOAD GOOGLE FONTS -->
+				<link href='http://fonts.googleapis.com/css?family=Raleway:100,300,600,800' rel='stylesheet' type='text/css'>
+				<link href='http://fonts.googleapis.com/css?family=Open+Sans:100,300,600,800' rel='stylesheet' type='text/css'>
+				<link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,400' rel='stylesheet' type='text/css'>
+			</pre>
+
+		<p>2. Style an element with the requested web font, either in a stylesheet.</p>
+		
+			<pre class="brush: xml; toolbar: false; highlight: [9]">
+			.home-center-contents h1.h-slider{
+				font-weight: 100;
+				font-size: 40px;
+				border: 4px solid #fff;
+				width: auto;
+				display: inline-block;
+				padding: 0 20px;
+				letter-spacing: normal;
+				font-family: Raleway, Arial, sans-serif;
+				text-transform: uppercase;
+				line-height: 1.8em;
+			}
+			</pre>
+
+		</div>    
+		
+		
+		<!--
+		/****************************************************************************/
+		******************************* RESOURCES *************************************
+		****************************************************************************/
+		-->
+		<div class="section">
+			<h3 id="credits">20. Credits &amp; Resources<a href="#header-wrap" class="toplink scroll">top</a></h3><br/>
+			<p>We used and maintained the following credits to the authors</p>
+			<br>
+			<h4>Javascript</h4>
+			<br>
+			<ul>
+				<li>Modernizr 2.6.2 (Custom Build) | MIT & BSD - <a href="http://modernizr.com/download/#-touch-shiv-cssclasses-teststyles-prefixes-load" target="_blank">Here</a></li>
+				<li>jQuery Easing v1.3 - <a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="_blank">Here</a></li>
+				<li>jQuery Waypoints - v1.1.4 - <a href="https://github.com/imakewebthings/jquery-waypoints/blob/master/MIT-license.txt" target="_blank">Here</a></li>
+				<li>Stellar.js v0.6.2 - <a href="http://markdalgleish.com/projects/stellar.js" target="_blank">Here</a></li>
+				<li>jQuery FlexSlider v2.1 - <a href="http://www.woothemes.com/flexslider/" target="_blank">Here</a></li>
+				<li>Isotope Extended - <a href="http://isotope.metafizzy.co/" target="_blank">Here</a></li>
+				<li>sliding-graphs</li>
+				<li>QueryLoader2 - <a href="http://www.gayadesign.com" target="_blank">Here</a></li>
+				<li>jquery.tweet</li>
+				<li>MediaElement - <a href="http://mediaelementjs.com/" target="_blank">Here</a></li>
+				<li>FitVids 1.0.3 - <a href="http://css-tricks.com" target="_blank">Here</a></li>
+				<li>Bootstrap v3.1.1 - <a href="http://getbootstrap.com" target="_blank">Here</a></li>
+				<li>SmartMenus jQuery v0.9.5 - <a href="http://www.smartmenus.org/" target="_blank">Here</a></li>
+				<li>jQuery plugin "tytabs" by Tyler - <a href="http://blog.carefordesign.com" target="_blank">Here</a></li>
+				<li>browserdetect</li>
+				<li>Hoverizr [grayscale modern IE's]</li>
+				<li>OWL Carousel - <a href="http://www.owlgraphic.com/owlcarousel/" target="_blank">Here</a></li>
+				<li>cubeportfolio v1.3	 - <a href="http://scriptpie.com" target="_blank">Here</a></li>	
+				<li>jquery.mb.components	 - <a href="http://pupunzi.open-lab.com" target="_blank">Here</a></li>				
+				<li>jQuery Parallax - <a href="http://www.ianlunn.co.uk/" target="_blank">Here</a></li>								
+				<li>tinyscrollbar - <a href="http://baijs.com/tinyscrollbar/" target="_blank">Here</a></li>				
+				<li>PrettyPhoto - <a href="http://www.no-margin-for-errors.com" target="_blank">Here</a></li>				
+				<li>Font-Awesome - <a href="http://fontawesome.io/icons/" target="_blank">Here</a></li>				
+				<li>jQuery Plugin for Revolution Slider</li>								
+				<li>SmoothScroll - <a href="https://github.com/kswedberg/jquery-smooth-scroll" target="_blank">Here</a></li>		
+				<li>Glyphicons - <a href="http://glyphicons.com/" target="_blank">Here</a></li>
+			</ul>               
+		
+			<br/><br/>
+
+		</div>
+		
+		
+                    
+	</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1786 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="Outside - one page personal portfolio">
+    <meta name="keywords" content="Jakub Kwarciński, portfolio, frontend developer, Kraków, html, css, javascript, websites, graphic design, bootstrap">
+    <meta name="author" content="Jakub Kwarciński">
+
+    <title>Outside - Multipurpose personal page</title>
+
+    <!-- Lato Font -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- Orbitron Font -->
+    <link href="https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="css/font-awesome.min.css" media="screen" rel="stylesheet" type="text/css">
+
+    <!-- Font Linea -->
+    <link href="css/linea-arrows.min.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="css/linea-basic.min.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="css/linea-ecommerce.min.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="css/linea-software.min.css" media="screen" rel="stylesheet" type="text/css">
+
+    <!-- Lightbox styles -->
+    <link href="lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="css/yellow.css" media="screen" rel="alternate stylesheet" type="text/css" title="yellow">
+    <link href="css/gold.css" media="screen" rel="alternate stylesheet" type="text/css" title="gold">
+    <link href="css/pink.css" media="screen" rel="alternate stylesheet" type="text/css" title="pink">
+    <link href="css/orange.css" media="screen" rel="alternate stylesheet" type="text/css" title="orange">
+    <link href="css/brown.css" media="screen" rel="alternate stylesheet" type="text/css" title="brown">
+    <link href="css/red.css" media="screen" rel="alternate stylesheet" type="text/css" title="red">
+    <link href="css/violet.css" media="screen" rel="alternate stylesheet" type="text/css" title="violet">
+    <link href="css/silver.css" media="screen" rel="alternate stylesheet" type="text/css" title="silver">
+    <link href="css/green.css" media="screen" rel="stylesheet" type="text/css" title="green">
+    <link href="css/blue.css" media="screen" rel="alternate stylesheet" type="text/css" title="blue">
+
+     <!-- Modernizr -->
+    <script type="text/javascript" src="js/modernizr-custom.min.js"></script>
+
+    <!-- Favicons -->
+    <link rel="icon" href="img/logo-mini.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/logo-mini.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <div class="loader-overlay">
+        <div class="loader">
+            <div class="loader-icon">
+                <span class="icon icon-arrows-glide"></span>
+            </div>
+            <h3 class="loader-text">Loading</h3>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <a class="sidebar-switcher" href="#" title="Color switcher">
+            <i class="fa fa-gear"></i>
+        </a>
+        <div class="sidebar-content">
+            <h4 class="sidebar-header">Color switcher</h4>
+            <a href="#" class="color-switcher bg-yellow" data-color="yellow"></a>
+            <a href="#" class="color-switcher bg-gold" data-color="gold"></a>
+            <a href="#" class="color-switcher bg-pink" data-color="pink"></a>
+            <a href="#" class="color-switcher bg-orange" data-color="orange"></a>
+            <a href="#" class="color-switcher bg-brown" data-color="brown"></a>
+            <a href="#" class="color-switcher bg-red" data-color="red"></a>
+            <a href="#" class="color-switcher bg-violet" data-color="violet"></a>
+            <a href="#" class="color-switcher bg-silver" data-color="silver"></a>
+            <a href="#" class="color-switcher bg-green" data-color="green"></a>
+            <a href="#" class="color-switcher bg-blue" data-color="blue"></a>
+        </div>
+    </div>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" id="navbar-main">
+        <div class="navbar-inner clearfix">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="brand" href="index.html" title="Outside">
+                        <span class="title">
+                            Outside
+                        </span>
+                        <span class="icon icon-arrows-glide"></span>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="nav navbar-nav nav-left">
+                        <li class="active">
+                            <a href="#home">
+                                <span class="main-link">Home</span>
+                                <span class="jewel"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#about">
+                                <span class="main-link">About</span>
+                                <span class="jewel"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#career">
+                                <span class="main-link">Career</span>
+                                <span class="jewel"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#services">
+                                <span class="main-link">Services</span>
+                                <span class="jewel"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#works">
+                                <span class="main-link">Works</span>
+                                <span class="jewel"></span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav nav-right">
+                        <li>
+                            <a href="#skills">
+                                <span class="main-link">Skills</span>
+                                <span class="jewel"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#pricing">
+                                <span class="main-link">Pricing</span>
+                                <span class="jewel"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#clients">
+                                <span class="main-link">Clients</span>
+                                <span class="jewel"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span class="main-link">Blog</span>
+                                <span class="jewel"></span>
+                                <span class="icon hidden-xs"><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                <span class="icon icon-arrows-down visible-xs"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#blog">Blog section</a>
+                                </li>
+                                <li>
+                                    <a class="external-link" href="blog-list.html">List page</a>
+                                </li>
+                                <li>
+                                    <a class="external-link" href="blog-item.html">Single page</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#contact-details">
+                                <span class="main-link">Contact</span>
+                                <span class="jewel"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-hero" id="home" style="background-image: url('img/hero-2.jpg')">
+        <div class="overlay"></div>
+        <div class="section-inner">
+            <div class="table-container-outer container">
+                <div class="table-container-inner">
+                    <div class="promo-shape">
+                        <div class="shape-content shape-content-1">
+                            Skills
+                        </div>
+                        <div class="shape-content shape-content-2">
+                            Health
+                        </div>
+                        <div class="shape-content shape-content-3">
+                            Science
+                        </div>
+                        <div class="shape-content shape-content-4">
+                            Beauty
+                        </div>
+                    </div>
+                    <h1 class="hero-header">George <strong class="main-color">Parker</strong></h1>
+                    <h2 class="hero-subheader">Personal <strong class="main-color">portfolio</strong></h2>
+                    <div class="divider">//</div>
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae velit sed sem tempus pellentesque. Vivamus tortor ligula, accumsan nec nisl id, sodales euismod massa. Nam in ipsum sed lacus lacinia volutpat.</p>
+                    <ul class="list-inline icons-list-square">
+                        <li>
+                            <a href="https://www.facebook.com/jakub.kwarcinski" class="icon-circle-container" title="Facebook">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li><li>
+                            <a href="https://github.com/kwarc87" class="icon-circle-container" title="GitHub">
+                                <i class="fa fa-github"></i>
+                            </a>
+                        </li><li>
+                            <a href="https://google.com/+JakubKwarciński" class="icon-circle-container" title="Google Plus">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                        </li><li>
+                            <a href="https://www.youtube.com/user/sernick87" class="icon-circle-container" title="Youtube">
+                                <i class="fa fa-youtube"></i>
+                            </a>
+                        </li><li>
+                            <a href="http://www.last.fm/pl/user/kwarc87" class="icon-circle-container" title="Last.fm">
+                                <i class="fa fa-lastfm" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="scroll-icon visible-lg">
+                <span class="icon icon-basic-magic-mouse"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-standard section-white" id="about">
+        <div class="section-inner">
+            <div class="container">
+                <div class="section-header">
+                    <h3>About <span class="main-color">me</span></h3>
+                    <div class="divider">//</div>
+                </div>
+                <div class="special-text text-center">
+                    <p>Lorem ipsum dolor sit amet, consectetur <strong>adipiscing elit</strong>. Ut vitae velit sed sem <span class="highlight">tempus</span> pellentesque. Vivamus tortor ligula, <span class="highlight">accumsan</span> nec nisl id, <strong>sodales</strong> euismod massa. Nam in ipsum sed <span class="highlight">lacus</span> lacinia volutpat. Suspendisse vulputate viverra enim eu <strong>venenatis</strong>. Donec vel condimentum enim. Cras sodales quam in purus <span class="highlight">venenatis</span> condimentum.</p>
+                    <p>Morbi <span class="highlight">vestibulum</span> libero tristique tempus imperdiet. <strong>Interdum</strong> et malesuada <strong>fames</strong> ac ante ipsum primis in faucibus. Phasellus lectus dui, <span class="highlight">vehicula</span> sed orci at, <strong>varius</strong> eleifend leo. Aenean suscipit purus in egestas <span class="highlight">bibendum</span>. Nullam id efficitur velit.</p>
+                </div>
+                <div class="profile">
+                    <div class="profile-content">
+                        <div class="profile-image">
+                            <div class="profile-image-inner">
+                                <div class="overlay"></div>
+                                <div class="profile-border-outer">
+                                    <div class="profile-border-inner"></div>
+                                </div>
+                                <img class="img-responsive" src="img/profile-image-2.jpg" alt="Profile image">
+                            </div>
+                            <a href="#" class="btn btn-transparent btn-lg btn-block margin-b-sections-text visible-xs" title="Download Resume">
+                                <span class="icon icon-basic-download"></span> Download Resume
+                            </a>
+                            <div class="profile-indicator-container profile-indicator-container-1 right">
+                                <div class="profile-indicator-description">
+                                    <h3>Knowledge</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae velit sed sem tempus pellentesque.</p>
+                                </div>
+                                <div class="profile-indicator hexagon"></div>
+                            </div>
+                            <div class="profile-indicator-container profile-indicator-container-2 left">
+                                <div class="profile-indicator-description">
+                                    <h3>Skills</h3>
+                                    <p>Nam in ipsum sed lacus lacinia volutpat. Suspendisse vulputate viverra enim eu venenatis.</p>
+                                </div>
+                                <div class="profile-indicator hexagon"></div>
+                            </div>
+                            <div class="profile-indicator-container profile-indicator-container-3 left">
+                                <div class="profile-indicator-description">
+                                    <h3>Initiative</h3>
+                                    <p>Cras sodales quam in purus venenatis condimentum. Morbi vestibulum libero tristique tempus imperdiet.</p>
+                                </div>
+                                <div class="profile-indicator hexagon"></div>
+                            </div>
+                            <div class="profile-indicator-container profile-indicator-container-4 right">
+                                <div class="profile-indicator-description">
+                                    <h3>Creative</h3>
+                                    <p>Phasellus lectus dui, vehicula sed orci at, varius eleifend leo. Aenean suscipit purus in egestas bibendum.</p>
+                                </div>
+                                <div class="profile-indicator hexagon"></div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-transparent btn-lg btn-block hidden-xs" title="Download Resume">
+                            <span class="icon icon-basic-download"></span> Download Resume
+                        </a>
+                    </div>
+                </div>
+                <div class="special-text text-center no-margin">
+                    <p>Suspendisse a velit aliquet, <span class="highlight">volutpat</span> ipsum a, semper sem. <strong>Proin</strong> eu blandit leo, vitae lacinia nisi. Praesent sit amet dui ac eros <strong>dictum</strong> euismod vel a <span class="highlight">nulla</span>. Integer ac <strong>lobortis</strong> odio, vulputate rhoncus mi. Aenean finibus <span class="highlight">ligula</span> arcu, ut <strong>dignissim</strong> metus sodales nec.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-standard" id="career">
+        <div class="section-inner">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Career</h3>
+                    <div class="divider">//</div>
+                </div>
+                <div class="special-text text-center">
+                    <p>These are my <span class="highlight">career</span> and <span class="highlight">education</span> paths. You can <strong>follow</strong> their most important <span class="highlight">points</span>.</p>
+                </div>
+                <h3 class="timeline-header">Education</h3>
+                <div class="timeline">
+                    <div class="timeline-block">
+                        <div class="timeline-img hexagon">
+                            <span class="plus">+</span>
+                        </div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">
+                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2002 - 2006</span>
+                            </span>
+                            <div class="timeline-description clearfix">
+                                <h3>Technical School of Communication in Cracow</h3>
+                                <p class="timeline-toolbar"><i class="fa fa-graduation-cap"></i> Qualifications of Telecommunications Technician</p>
+                                <img class="img-responsive" src="img/logos/logo-1.jpg" alt="Company">
+                                <p>Cras fermentum gravida luctus. Etiam imperdiet lacus in ante placerat, quis posuere tellus mollis. Sed porttitor, ante at semper placerat, libero diam convallis nunc, eu aliquam dui arcu quis est. Duis porta ipsum nec felis imperdiet sollicitudin. Vivamus et posuere lectus, vitae scelerisque libero. Cras vulputate condimentum elit, eu tempor nunc imperdiet eget.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-block">
+                        <div class="timeline-img hexagon">
+                            <span class="plus">+</span>
+                        </div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">
+                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2006 - 2010</span>
+                            </span>
+                            <div class="timeline-description clearfix">
+                                <h3>AGH University of Science And Technology</h3>
+                                <p class="timeline-toolbar"><i class="fa fa-graduation-cap"></i> Degree of Bachelor of Science</p>
+                                <img class="img-responsive" src="img/logos/logo-6.jpg" alt="Company">
+                                <p>Cras fermentum gravida luctus. Etiam imperdiet lacus in ante placerat, quis posuere tellus mollis. Sed porttitor, ante at semper placerat, libero diam convallis nunc, eu aliquam dui arcu quis est. Cras vulputate condimentum elit, eu tempor nunc imperdiet eget. Praesent hendrerit enim eu dolor ornare.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-block">
+                        <div class="timeline-img hexagon">
+                            <span class="plus">+</span>
+                        </div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">
+                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2010 - 2012</span>
+                            </span>
+                            <div class="timeline-description clearfix">
+                                <h3>Jagiellonian University</h3>
+                                <p class="timeline-toolbar"><i class="fa fa-graduation-cap"></i> Degree of Master of Science</p>
+                                <img class="img-responsive" src="img/logos/logo-7.jpg" alt="Company">
+                                <p>Cras fermentum gravida luctus. Etiam imperdiet lacus in ante placerat, quis posuere tellus mollis. Sed porttitor, ante at semper dui arcu quis est. Duis porta ipsum nec felis imperdiet sollicitudin. Vivamus et posuere lectus, vitae scelerisque libero. Cras vulputate condimentum elit, eu tempor nunc imperdiet eget. Praesent hendrerit enim eu dolor ornare.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="timeline-header">Career</h3>
+                <div class="timeline">
+                    <div class="timeline-block">
+                        <div class="timeline-img hexagon">
+                            <span class="plus">+</span>
+                        </div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">
+                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2014 - now</span>
+                            </span>
+                            <div class="timeline-description clearfix">
+                                <h3>ABC company</h3>
+                                <p class="timeline-toolbar"><i class="fa fa-user"></i> Professional worker</p>
+                                <img class="img-responsive" src="img/logos/logo-2.jpg" alt="Company">
+                                <p>Etiam imperdiet lacus in ante placerat, quis posuere tellus mollis. Sed porttitor, ante at semper placerat, libero diam, eu aliquam dui arcu quis est. Duis porta ipsum nec felis imperdiet sollicitudin. Vivamus et posuere lectus, vitae scelerisque libero. Cras vulputate condimentum elit, eu tempor nunc imperdiet eget. Praesent hendrerit enim eu dolor ornare.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-block">
+                        <div class="timeline-img hexagon">
+                            <span class="plus">+</span>
+                        </div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">
+                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2010 - 2014</span>
+                            </span>
+                            <div class="timeline-description clearfix">
+                                <h3>Green Wave</h3>
+                                <p class="timeline-toolbar"><i class="fa fa-user"></i> Professional worker</p>
+                                <img class="img-responsive" src="img/logos/logo-3.jpg" alt="Company">
+                                <p>Semper placerat, libero diam convallis nunc, eu aliquam dui arcu quis est. Duis porta ipsum nec felis imperdiet sollicitudin. Vivamus et posuere lectus, vitae scelerisque libero. Cras vulputate condimentum elit, eu tempor nunc imperdiet eget. Praesent hendrerit enim eu dolor ornare.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-block">
+                        <div class="timeline-img hexagon">
+                            <span class="plus">+</span>
+                        </div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">
+                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2009 - 2010</span>
+                            </span>
+                            <div class="timeline-description clearfix">
+                                <h3>HBO</h3>
+                                <p class="timeline-toolbar"><i class="fa fa-user"></i> Project Menager</p>
+                                <img class="img-responsive" src="img/logos/logo-4.jpg" alt="Company">
+                                <p>Cras fermentum gravida luctus. Sed porttitor, ante at semper placerat, libero diam convallis nunc, eu aliquam dui arcu quis est. Duis porta ipsum nec felis imperdiet sollicitudin. Vivamus et posuere lectus, vitae scelerisque libero. Cras vulputate condimentum elit, eu tempor nunc imperdiet eget. Praesent hendrerit enim eu dolor ornare.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-block">
+                        <div class="timeline-img hexagon">
+                            <span class="plus">+</span>
+                        </div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">
+                                <span><i class="fa fa-calendar" aria-hidden="true"></i> 2007 - 2009</span>
+                            </span>
+                            <div class="timeline-description clearfix">
+                                <h3>Rocket big</h3>
+                                <p class="timeline-toolbar"><i class="fa fa-user"></i> Assistant</p>
+                                <img class="img-responsive" src="img/logos/logo-8.jpg" alt="Company">
+                                <p>Libero diam convallis nunc, eu aliquam dui arcu quis est. Duis porta ipsum nec felis imperdiet sollicitudin. Vivamus et posuere lectus, vitae scelerisque libero. Cras vulputate condimentum elit, eu tempor nunc imperdiet eget. Praesent hendrerit enim eu dolor ornare.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-standard section-white" id="services">
+        <div class="section-inner">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Services</h3>
+                    <div class="divider">//</div>
+                </div>
+                <div class="special-text text-center">
+                    <p>Services i <strong>provide</strong>, this is the shortcut of my <span class="highlight">offer</span> - what can I do.</p>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="promo-item">
+                            <div class="promo-icon">
+                                <span class="icon icon-basic-clessidre"></span>
+                            </div>
+                            <h3 class="promo-header">Fast service</h3>
+                            <div class="divider"><span>#</span></div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non tristique turpis. Suspendisse ornare metus nisl, nec dictum nisi interdum nec.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="promo-item">
+                            <div class="promo-icon">
+                                <span class="icon icon-basic-calendar"></span>
+                            </div>
+                            <h3 class="promo-header">Your own schedule</h3>
+                            <div class="divider"><span>#</span></div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non tristique turpis. Suspendisse ornare metus nisl, nec dictum nisi interdum nec.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="promo-item">
+                            <div class="promo-icon">
+                                <span class="icon icon-basic-todolist-pencil"></span>
+                            </div>
+                            <h3 class="promo-header">Todo list</h3>
+                            <div class="divider"><span>#</span></div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non tristique turpis. Suspendisse ornare metus nisl, nec dictum nisi interdum nec.</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-sm-4">
+                        <div class="promo-item">
+                            <div class="promo-icon">
+                                <span class="icon icon-basic-signs"></span>
+                            </div>
+                            <h3 class="promo-header">Right direction</h3>
+                            <div class="divider"><span>#</span></div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non tristique turpis. Suspendisse ornare metus nisl, nec dictum nisi interdum nec.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="promo-item">
+                            <div class="promo-icon">
+                                <span class="icon icon-ecommerce-dollar"></span>
+                            </div>
+                            <h3 class="promo-header">Earning money</h3>
+                            <div class="divider"><span>#</span></div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non tristique turpis. Suspendisse ornare metus nisl, nec dictum nisi interdum nec.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="promo-item">
+                            <div class="promo-icon">
+                                <span class="icon icon-basic-life-buoy"></span>
+                            </div>
+                            <h3 class="promo-header">Full support &amp; consulting</h3>
+                            <div class="divider"><span>#</span></div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non tristique turpis. Suspendisse ornare metus nisl, nec dictum nisi interdum nec.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="special-button-container margin-b-0">
+                        <a href="#" class="special-button-outer" title="More">
+                            <span class="special-button-inner">
+                                <span class="special-button-text">More</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="section-divider">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Process</h3>
+                    <div class="divider">//</div>
+                </div>
+                <div class="special-text text-center">
+                    <p>This <span class="highlight">graph</span> shows my typical work <span class="highlight">process</span>, how I usually <strong>work</strong> and what is my <span class="highlight">workflow</span>.</p>
+                </div>
+                <div class="process">
+                    <div class="process-block">
+                        <div class="process-img hexagon">
+                            <div class="process-number">1</div>
+                        </div>
+                        <div class="process-content">
+                            <div class="process-description-outer">
+                                <div class="process-description-inner">
+                                    <h3 class="process-header">Step 1</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pharetra, sapien ut sodales pellentesque, tortor augue pellentesque massa, sed pharetra urna felis et lectus.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="process-block">
+                        <div class="process-img hexagon">
+                            <div class="process-number">2</div>
+                        </div>
+                        <div class="process-content">
+                            <div class="process-description-outer">
+                                <div class="process-description-inner">
+                                    <h3 class="process-header">Step 2</h3>
+                                    <p>Praesent porttitor, ex quis bibendum interdum, urna metus interdum ex, in condimentum dui libero id velit. Phasellus metus quam, facilisis id felis et.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="process-block">
+                        <div class="process-img hexagon">
+                            <div class="process-number">3</div>
+                        </div>
+                        <div class="process-content">
+                            <div class="process-description-outer">
+                                <div class="process-description-inner">
+                                    <h3 class="process-header">Another step</h3>
+                                    <p>Sed dapibus ante ac interdum malesuada. Aenean id hendrerit odio, et posuere sem. Nunc sit amet lacus a elit vestibulum mattis eget eu tortor.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="process-block">
+                        <div class="process-img hexagon">
+                            <div class="process-number">4</div>
+                        </div>
+                        <div class="process-content">
+                            <div class="process-description-outer">
+                                <div class="process-description-inner">
+                                    <h3 class="process-header">Step 4</h3>
+                                    <p>Nam eget pellentesque justo, at consectetur erat. Etiam id risus in quam condimentum accumsan eu eget sapien. Duis sed ipsum condimentum, rutrum libero sed, scelerisque nisi. Nunc at accumsan arcu.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="process-block">
+                        <div class="process-img hexagon">
+                            <div class="process-number">5</div>
+                        </div>
+                        <div class="process-content">
+                            <div class="process-description-outer">
+                                <div class="process-description-inner">
+                                    <h3 class="process-header">Results</h3>
+                                    <p>Morbi viverra rutrum sollicitudin. Mauris tristique sem vel urna laoreet tincidunt. Nulla massa dui, sollicitudin et laoreet ac, consectetur id leo.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-standard" id="works">
+        <div class="section-inner">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Works</h3>
+                    <div class="divider">//</div>
+                </div>
+                <div class="special-text text-center">
+                    <p>In this <strong>section</strong> you can see <span class="highlight">results</span> of my <span class="highlight">work</span>.</p>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <div class="portfolio-item">
+                            <div class="portfolio-image-container">
+                                <div class="portfolio-shape"></div>
+                                <img class="img-responsive" src="img/equalizer-thumb.png" alt="Equalizer">
+                                <div class="portfolio-caption">
+                                    <div class="portfolio-caption-outer">
+                                        <div class="overlay"></div>
+                                        <div class="portfolio-caption-inner">
+                                            <h4>Equalizer</h4>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                            <ul class="list-inline">
+                                                <li>
+                                                    <a class="portfolio-caption-icon" data-lightbox="portfolio" data-title="Equalizer" href="img/equalizer.png" title="Zoom"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                                                </li><li>
+                                                    <a class="portfolio-caption-icon" data-toggle="tooltip-clickable" href="#" title="
+                                                    <h3>Equalizer</h3>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque gravida tempus nisi, sit amet aliquet orci facilisis accumsan. Proin dapibus nisi sit amet rutrum tristique.</p>
+                                                    "><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                                </li><li>
+                                                    <a class="portfolio-caption-icon" href="http://jakubkwarcinski.pl/equalizer/" title="See"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="portfolio-header"><a href="http://jakubkwarcinski.pl/equalizer/" title="Equalizer">Equalizer</a></h4>
+                            <div class="divider">#</div>
+                            <p class="portfolio-toolbar">Responsive Magazine Template. Template for Bootstrap 3. Available to buy at <a href="https://shapebootstrap.net/item/1525853-equalizer-responsive-magazine-template">shapebootstrap</a></p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="portfolio-item">
+                            <div class="portfolio-image-container">
+                                <div class="portfolio-shape"></div>
+                                <img class="img-responsive" src="img/mn-thumb.png" alt="Music Nation">
+                                <div class="portfolio-caption">
+                                    <div class="portfolio-caption-outer">
+                                        <div class="overlay"></div>
+                                        <div class="portfolio-caption-inner">
+                                            <h4>Music Nation</h4>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                            <ul class="list-inline">
+                                                <li>
+                                                    <a class="portfolio-caption-icon" data-lightbox="portfolio" data-title="Music Nation" href="img/mn.png" title="Zoom"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                                                </li><li>
+                                                    <a class="portfolio-caption-icon" data-toggle="tooltip-clickable" href="#" title="
+                                                    <h3>Music Nation</h3>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque gravida tempus nisi, sit amet aliquet orci facilisis accumsan. Proin dapibus nisi sit amet rutrum tristique.</p>
+                                                    "><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                                </li><li>
+                                                    <a class="portfolio-caption-icon" href="http://jakubkwarcinski.pl/music-nation-bootstrap-v-1-1/" title="See"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="portfolio-header"><a href="http://jakubkwarcinski.pl/music-nation-bootstrap-v-1-1/" title="Music Nation">Music Nation</a></h4>
+                            <div class="divider">#</div>
+                            <p class="portfolio-toolbar">Responsive Magazine Template. Template for Bootstrap 3. Available to buy at <a href="https://wrapbootstrap.com/theme/music-nation-responsive-dark-template-WB07K727X">wrapbootstrap</a></p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="portfolio-item">
+                            <div class="portfolio-image-container">
+                                <div class="portfolio-shape"></div>
+                                <img class="img-responsive" src="img/pinker-floyd-thumb.png" alt="Pinker Floyd">
+                                <div class="portfolio-caption">
+                                    <div class="portfolio-caption-outer">
+                                        <div class="overlay"></div>
+                                        <div class="portfolio-caption-inner">
+                                            <h4>Pinker Floyd</h4>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                            <ul class="list-inline">
+                                                <li>
+                                                    <a class="portfolio-caption-icon" data-lightbox="portfolio" data-title="Pinker Floyd" href="img/pinker-floyd.png" title="Zoom"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                                                </li><li>
+                                                    <a class="portfolio-caption-icon" data-toggle="tooltip-clickable" href="#" title="
+                                                    <h3>Pinker Floyd</h3>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque gravida tempus nisi, sit amet aliquet orci facilisis accumsan. Proin dapibus nisi sit amet rutrum tristique.</p>
+                                                    "><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                                </li><li>
+                                                    <a class="portfolio-caption-icon" href="http://jakubkwarcinski.pl/pinker-floyd" title="See"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="portfolio-header"><a href="http://jakubkwarcinski.pl/pinker-floyd" title="Pinker Floyd">Pinker Floyd</a></h4>
+                            <div class="divider">#</div>
+                            <p class="portfolio-toolbar">One page corporate template. Available at <a href="http://jakubkwarcinski.pl/pinker-floyd">http://jakubkwarcinski.pl/pinker-floyd</a></p>
+                        </div>
+                    </div>
+                    <div class="clearfix hidden-sm"></div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="portfolio-item">
+                            <div class="portfolio-image-container">
+                                <div class="portfolio-shape"></div>
+                                <img class="img-responsive" src="img/symposium-thumb.png" alt="Symposium">
+                                <div class="portfolio-caption">
+                                    <div class="portfolio-caption-outer">
+                                        <div class="overlay"></div>
+                                        <div class="portfolio-caption-inner">
+                                            <h4>Symposium</h4>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                            <ul class="list-inline">
+                                                <li>
+                                                    <a class="portfolio-caption-icon" data-lightbox="portfolio" data-title="Symposium" href="img/symposium.png" title="Zoom"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                                                </li><li>
+                                                    <a class="portfolio-caption-icon" data-toggle="tooltip-clickable" href="#" title="
+                                                    <h3>Symposium</h3>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque gravida tempus nisi, sit amet aliquet orci facilisis accumsan. Proin dapibus nisi sit amet rutrum tristique.</p>
+                                                    "><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                                </li><li>
+                                                    <a class="portfolio-caption-icon" href="http://jakubkwarcinski.pl/symposium" title="See"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="portfolio-header"><a href="http://jakubkwarcinski.pl/symposium" title="Symposium">Symposium</a></h4>
+                            <div class="divider">#</div>
+                            <p class="portfolio-toolbar">Conference template. Available at <a href="http://jakubkwarcinski.pl/symposium">http://jakubkwarcinski.pl/symposium</a></p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="portfolio-item">
+                            <div class="portfolio-image-container">
+                                <div class="portfolio-shape"></div>
+                                <img class="img-responsive" src="img/mkr-thumb.png" alt="MKR">
+                                <div class="portfolio-caption">
+                                    <div class="portfolio-caption-outer">
+                                        <div class="overlay"></div>
+                                        <div class="portfolio-caption-inner">
+                                            <h4>MKR</h4>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                            <ul class="list-inline">
+                                                <li>
+                                                    <a class="portfolio-caption-icon" data-lightbox="portfolio" data-title="MKR" href="img/mkr.png" title="Zoom"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                                                </li><li>
+                                                    <a class="portfolio-caption-icon" data-toggle="tooltip-clickable" href="#" title="
+                                                    <h3>MKR</h3>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque gravida tempus nisi, sit amet aliquet orci facilisis accumsan. Proin dapibus nisi sit amet rutrum tristique.</p>
+                                                    "><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                                </li><li>
+                                                    <a class="portfolio-caption-icon" href="http://mkr.biz.pl" title="See"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="portfolio-header"><a href="http://mkr.biz.pl" title="MKR">MKR</a></h4>
+                            <div class="divider">#</div>
+                            <p class="portfolio-toolbar">Homepage for renovation company. Available at <a href="http://mkr.biz.pl">http://mkr.biz.pl</a></p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="portfolio-item">
+                            <div class="portfolio-image-container">
+                                <div class="portfolio-shape"></div>
+                                <img class="img-responsive" src="img/gamer-thumb.png" alt="GameR">
+                                <div class="portfolio-caption">
+                                    <div class="portfolio-caption-outer">
+                                        <div class="overlay"></div>
+                                        <div class="portfolio-caption-inner">
+                                            <h4>GameR</h4>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                            <ul class="list-inline">
+                                                <li>
+                                                    <a class="portfolio-caption-icon" data-lightbox="portfolio" data-title="GameR" href="img/gamer.png" title="Zoom"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                                                </li><li>
+                                                    <a class="portfolio-caption-icon" data-toggle="tooltip-clickable" href="#" title="
+                                                    <h3>GameR</h3>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque gravida tempus nisi, sit amet aliquet orci facilisis accumsan. Proin dapibus nisi sit amet rutrum tristique.</p>
+                                                    "><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                                </li><li>
+                                                    <a class="portfolio-caption-icon" href="http://jakubkwarcinski.pl/gamer" title="See"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="portfolio-header"><a href="http://jakubkwarcinski.pl/gamer" title="GameR">GameR</a></h4>
+                            <div class="divider">#</div>
+                            <p class="portfolio-toolbar">Gaming HTML template. Available to buy at <a href="https://shapebootstrap.net/item/1526056-gamer-gaming-html-template">shapebootstrap</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="special-button-container">
+                        <a href="#" class="special-button-outer" title="More">
+                            <span class="special-button-inner">
+                                <span class="special-button-text">More</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-standard section-promo section-some-fun-numbers section-parallax" id="some-fun-numbers" style="background-image: url('img/section-2-bg.jpg')">
+        <div class="overlay"></div>
+        <div class="section-inner">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Some fun numbers</h3>
+                    <div class="divider">//</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 col-md-3">
+                        <div class="number-container">
+                            <span class="icon icon-basic-world"></span>
+                            <div class="number">1 276</div>
+                            <div class="number-description">clients</div>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-6 col-md-3">
+                        <div class="number-container">
+                            <span class="icon icon-basic-lightbulb"></span>
+                            <div class="number">53</div>
+                            <div class="number-description">new ideas</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-3">
+                        <div class="number-container">
+                            <span class="icon icon-basic-cup"></span>
+                            <div class="number">20</div>
+                            <div class="number-description">awards</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-3">
+                        <div class="number-container">
+                            <span class="icon icon-basic-calendar"></span>
+                            <div class="number">10</div>
+                            <div class="number-description">years of experience</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-standard section-white" id="skills">
+        <div class="section-inner">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Strengths</h3>
+                    <div class="divider">//</div>
+                </div>
+                <div class="special-text text-center">
+                    <p>I have a high <span class="highlight">motivation</span> for <strong>interesting work</strong>. I love what I do and I try to be <span class="highlight">creative</span>, <span class="highlight">responsible</span> and <strong>polite</strong>.</p>
+                </div>
+                <h4 class="skill-header">Creativity</h4>
+                <div class="skill-line">
+                    <div class="skill-scale filled">
+                        <div class="skill-indicator first"></div>
+                        <div class="skill-indicator"></div>
+                    </div>
+                    <div class="skill-scale filled">
+                        <div class="skill-indicator"></div>
+                    </div>
+                    <div class="skill-scale filled">
+                        <div class="skill-indicator"></div>
+                    </div>
+                    <div class="skill-scale filled">
+                        <div class="skill-label">Very Good</div>
+                        <div class="skill-indicator"></div>
+                    </div>
+                    <div class="skill-scale">
+                        <div class="skill-indicator"></div>
+                    </div>
+                </div>
+                <h4 class="skill-header">Reliable</h4>
+                <div class="skill-line">
+                    <div class="skill-scale filled">
+                        <div class="skill-indicator first"></div>
+                        <div class="skill-indicator"></div>
+                    </div>
+                    <div class="skill-scale filled">
+                        <div class="skill-indicator"></div>
+                    </div>
+                    <div class="skill-scale filled">
+                        <div class="skill-label">Good</div>
+                        <div class="skill-indicator"></div>
+                    </div>
+                    <div class="skill-scale">
+                        <div class="skill-indicator"></div>
+                    </div>
+                    <div class="skill-scale">
+                        <div class="skill-indicator"></div>
+                    </div>
+                </div>
+                <h4 class="skill-header">Communication</h4>
+                <div class="skill-line margin-b-0">
+                    <div class="skill-scale filled">
+                        <div class="skill-indicator first"></div>
+                        <div class="skill-indicator"></div>
+                    </div>
+                    <div class="skill-scale filled">
+                        <div class="skill-label">Good enought</div>
+                        <div class="skill-indicator"></div>
+                    </div>
+                    <div class="skill-scale">
+                        <div class="skill-indicator"></div>
+                    </div>
+                    <div class="skill-scale">
+                        <div class="skill-indicator"></div>
+                    </div>
+                    <div class="skill-scale">
+                        <div class="skill-indicator"></div>
+                    </div>
+                </div>
+            </div>
+            <hr class="section-divider">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Skills</h3>
+                    <div class="divider">//</div>
+                </div>
+                <div class="special-text text-center">
+                    <p>Quisque varius <span class="highlight">vulputate semper</span>. Morbi sed efficitur mi, id <strong>placerat</strong> nunc. Phasellus placerat risus non nibh <span class="highlight">auctor</span> viverra.</p>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="clearfix">
+                            <div class="skill-item-outer">
+                                <div class="skill-item-inner">
+                                    <div class="skill-item-label-outer">
+                                        <div class="skill-item-label-inner">90%</div>
+                                    </div>
+                                    <div class="skill-item-indicator-outer">
+                                        <div class="skill-item-indicator-inner" style="height: 90%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="skill-item-header">Skill 1</h3>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="clearfix">
+                            <div class="skill-item-outer">
+                                <div class="skill-item-inner">
+                                    <div class="skill-item-label-outer">
+                                        <div class="skill-item-label-inner">85%</div>
+                                    </div>
+                                    <div class="skill-item-indicator-outer">
+                                        <div class="skill-item-indicator-inner" style="height: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="skill-item-header">Skill 2</h3>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="clearfix">
+                            <div class="skill-item-outer">
+                                <div class="skill-item-inner">
+                                    <div class="skill-item-label-outer">
+                                        <div class="skill-item-label-inner">80%</div>
+                                    </div>
+                                    <div class="skill-item-indicator-outer">
+                                        <div class="skill-item-indicator-inner" style="height: 80%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="skill-item-header">Another skill</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="clearfix">
+                            <div class="skill-item-outer">
+                                <div class="skill-item-inner">
+                                    <div class="skill-item-label-outer">
+                                        <div class="skill-item-label-inner">60%</div>
+                                    </div>
+                                    <div class="skill-item-indicator-outer">
+                                        <div class="skill-item-indicator-inner" style="height: 60%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="skill-item-header">Unique skill</h3>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="clearfix">
+                            <div class="skill-item-outer">
+                                <div class="skill-item-inner">
+                                    <div class="skill-item-label-outer">
+                                        <div class="skill-item-label-inner">55%</div>
+                                    </div>
+                                    <div class="skill-item-indicator-outer">
+                                        <div class="skill-item-indicator-inner" style="height: 55%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="skill-item-header">One more skill</h3>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="clearfix">
+                            <div class="skill-item-outer">
+                                <div class="skill-item-inner">
+                                    <div class="skill-item-label-outer">
+                                        <div class="skill-item-label-inner">40%</div>
+                                    </div>
+                                    <div class="skill-item-indicator-outer">
+                                        <div class="skill-item-indicator-inner" style="height: 40%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="skill-item-header">Final skill</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">
+                        <h3 class="text-center margin-t-0">To see my work in practice visit my LinkedIn account</h3>
+                        <p class="text-center"><small>There you can find additional information about my career.</small></p>
+                        <a href="#" class="btn btn-transparent btn-transparent-fa btn-black btn-lg btn-block" title="See my LinkedIn account">
+                            <span class="fa fa-linkedin-square"></span> See my LinkedIn account
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="section-divider">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Knowledge</h3>
+                    <div class="divider">//</div>
+                </div>
+                <div class="special-text text-center">
+                    <p>Fusce <span class="highlight">vestibulum</span>, diam quis hendrerit blandit, neque metus <span class="highlight">euismod</span> nunc, vitae <strong>pellentesque</strong> orci diam nec ligula. Cum sociis natoque <strong>penatibus</strong> et magnis dis parturient montes, nascetur ridiculus mus. Nullam iaculis, nisl vitae <span class="highlight">maximus tempor</span>, felis est lobortis nisi, nec congue lectus <strong>magna</strong> eget quam.</p>
+                </div>
+                <h4 class="skill-progress-header">Branch of science</h4>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
+                        <div class="progress-bar-indicator-outer">
+                            <div class="progress-bar-indicator-inner">85%</div>
+                        </div>
+                    </div>
+                </div>
+                <h4 class="skill-progress-header">Theory in practice</h4>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
+                        <div class="progress-bar-indicator-outer">
+                            <div class="progress-bar-indicator-inner">70%</div>
+                        </div>
+                    </div>
+                </div>
+                <h4 class="skill-progress-header">Resolving hard problems</h4>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                        <div class="progress-bar-indicator-outer">
+                            <div class="progress-bar-indicator-inner">60%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-standard" id="pricing">
+        <div class="section-inner">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Pricing</h3>
+                    <div class="divider">//</div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-3">
+                        <div class="pricing-item">
+                            <div class="pricing-item-header">
+                                <h4>Basic</h4>
+                                <div class="pricing-item-price-outer">
+                                    <div class="pricing-item-price-inner">
+                                        <span class="main-color">$</span> 250
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Lorem ipsum</li>
+                                <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Ut vitae velit sed sem</li>
+                                <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Cras sodales quam</li>
+                                <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Phasellus lectus dui</li>
+                                <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Aenean suscipit</li>
+                                <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Nullam id efficitur</li>
+                            </ul>
+                            <p><small>This is a packet for lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras posuere blandit magna, ut blandit turpis semper vel.</small></p>
+                            <a href="#" class="btn btn-primary btn-lg btn-block" title="Order this option">Order this option</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="pricing-item featured">
+                            <div class="ribbon"><span>POPULAR</span></div>
+                            <div class="pricing-item-header">
+                                <h4>Standard</h4>
+                                <div class="pricing-item-price-outer">
+                                    <div class="pricing-item-price-inner">
+                                        <span class="main-color">$</span> 500
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Lorem ipsum</li>
+                                <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Ut vitae velit sed sem</li>
+                                <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Cras sodales quam</li>
+                                <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Phasellus lectus dui</li>
+                                <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Aenean suscipit</li>
+                                <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Nullam id efficitur</li>
+                            </ul>
+                            <p><small>This is a packet for lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras posuere blandit magna, ut blandit turpis semper vel.</small></p>
+                            <a href="#" class="btn btn-primary btn-lg btn-block" title="Order this option">Order this option</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="pricing-item">
+                            <div class="pricing-item-header">
+                                <h4>Extended</h4>
+                                <div class="pricing-item-price-outer">
+                                    <div class="pricing-item-price-inner">
+                                        <span class="main-color">$</span> 800
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Lorem ipsum</li>
+                                <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Ut vitae velit sed sem</li>
+                                <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Cras sodales quam</li>
+                                <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Phasellus lectus dui</li>
+                                <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Aenean suscipit</li>
+                                <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Nullam id efficitur</li>
+                            </ul>
+                            <p><small>This is a packet for lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras posuere blandit magna, ut blandit turpis semper vel.</small></p>
+                            <a href="#" class="btn btn-primary btn-lg btn-block" title="Order this option">Order this option</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="pricing-item">
+                            <div class="pricing-item-header">
+                                <h4>Premium</h4>
+                                <div class="pricing-item-price-outer">
+                                    <div class="pricing-item-price-inner">
+                                        <span class="main-color">$</span> 999
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Lorem ipsum</li>
+                                <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Ut vitae velit sed sem</li>
+                                <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Cras sodales quam</li>
+                                <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Phasellus lectus dui</li>
+                                <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Aenean suscipit</li>
+                                <li><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Nullam id efficitur</li>
+                            </ul>
+                            <p><small>This is a packet for lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras posuere blandit magna, ut blandit turpis semper vel.</small></p>
+                            <a href="#" class="btn btn-primary btn-lg btn-block" title="Order this option">Order this option</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="special-button-container margin-b-0">
+                        <a href="#" class="special-button-outer" title="More">
+                            <span class="special-button-inner">
+                                <span class="special-button-text">More</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="section-divider">
+            <div class="container">
+                <div class="section-header">
+                    <h3>FAQ</h3>
+                    <div class="divider">//</div>
+                </div>
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                    <span class="glyphicon glyphicon-plus"></span> Am I ready to freelance work?
+                                    <span class="panel-icon">
+                                        <i class="fa fa-question" aria-hidden="true"></i>
+                                    </span>
+                                </a>
+                            </h3>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in">
+                            <div class="panel-body-outer">
+                                <div class="panel-body">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque gravida tempus nisi, sit amet aliquet orci facilisis accumsan. Proin dapibus nisi sit amet rutrum tristique. Fusce at ipsum eget massa sagittis condimentum. Duis eros ante, imperdiet a magna vitae, consectetur interdum leo. Morbi vitae leo ac diam commodo posuere quis ac ex. Aenean pretium euismod augue a aliquam. Sed sodales suscipit mi, id elementum libero dapibus nec. Aliquam id ex metus. Pellentesque imperdiet ultrices cursus.</p>
+                                    <p>Maecenas sit amet justo eget mi pellentesque varius. Nullam sit amet molestie risus. Nulla et metus non orci finibus sodales. Nam finibus eleifend elit, at bibendum nunc convallis aliquam. Aenean ac euismod odio. Etiam faucibus eros id lorem laoreet faucibus. Vestibulum et nulla sed magna porttitor luctus quis non risus. Ut ipsum lectus, aliquam eget euismod ut, imperdiet a erat. Fusce imperdiet orci non velit tincidunt tempus.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                    <span class="glyphicon glyphicon-plus"></span> What are my qualifications?
+                                    <span class="panel-icon">
+                                        <i class="fa fa-question" aria-hidden="true"></i>
+                                    </span>
+                                </a>
+                            </h3>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse">
+                            <div class="panel-body-outer">
+                                <div class="panel-body">
+                                    <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus eget euismod erat. Curabitur fringilla diam ac malesuada ullamcorper. Fusce ullamcorper nunc eget pulvinar fringilla. In euismod blandit felis eu congue. Pellentesque sed turpis justo. Aliquam viverra, tellus vel pretium malesuada, urna tellus iaculis nibh, et fringilla mi nisi sit amet felis. Nam leo metus, gravida nec imperdiet ut, consectetur ac lectus. Etiam sed purus viverra, pellentesque quam vitae, dictum nisi. Donec tincidunt diam a enim pellentesque tincidunt. Fusce placerat consectetur augue, tristique placerat velit ullamcorper vel. Nunc cursus mauris sit amet diam iaculis, et rhoncus urna tempor. Suspendisse ac vehicula dolor.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                    <span class="glyphicon glyphicon-plus"></span> Can you send me a job offer?
+                                    <span class="panel-icon">
+                                        <i class="fa fa-question" aria-hidden="true"></i>
+                                    </span>
+                                </a>
+                            </h3>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse">
+                            <div class="panel-body-outer">
+                                <div class="panel-body">
+                                    <p>Morbi blandit ipsum non nunc consectetur pellentesque. Quisque ultricies, turpis sed sagittis congue, elit libero tincidunt odio, eu rutrum nunc felis aliquam risus. Phasellus est ipsum, dignissim sit amet ultrices id, feugiat finibus libero. Phasellus fermentum turpis ligula. Donec aliquam elementum enim, eu mattis elit bibendum at. Phasellus feugiat aliquet arcu at vestibulum. Cras tempor lacus nisl, eu interdum ligula iaculis vitae. Sed tempor aliquam sollicitudin. Curabitur lacinia viverra lacus ac fermentum. Etiam lobortis scelerisque elit at fermentum. Vestibulum posuere tempor risus, quis rutrum dolor lobortis non. Aliquam at malesuada augue. Pellentesque egestas scelerisque nibh et semper. Quisque et auctor velit, ut pulvinar massa. Duis mattis tempor rutrum.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="special-button-container">
+                        <a href="#" class="special-button-outer" title="More">
+                            <span class="special-button-inner">
+                                <span class="special-button-text">More</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-standard section-white" id="mobile-app">
+        <div class="section-inner">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Check also my new <span class="main-color">mobile app</span></h3>
+                    <div class="divider">//</div>
+                </div>
+                <div class="special-text text-center">
+                    <p>I always try to follow the newest <span class="highlight">technology</span> and <span class="highlight">patterns</span>. My <strong>websites</strong> and <strong>apps</strong> are <span class="highlight">responsive</span> and <span class="highlight">mobile ready</span>.</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-md-push-4">
+                        <div class="text-center">
+                            <div class="img-technology-container">
+                                <img class="img-responsive img-layer" src="img/phone-layer.png" alt="Mobile App">
+                                <img class="img-responsive img-content" src="img/mobile.jpg" alt="Mobile App">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-8 col-sm-offset-2 col-md-12 col-md-offset-0">
+                                <p class="text-center margin-b-sections-text">
+                                    <a href="#" class="btn btn-transparent btn-lg btn-block" title="Download App">
+                                        <span class="icon icon-basic-download"></span> Download App
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-md-pull-4">
+                        <div class="stylish-list stylish-list-left">
+                            <div class="stylish-list-item">
+                                <div class="row">
+                                    <div class="col-md-3 col-md-push-9 col-lg-2 col-lg-push-10">
+                                        <div class="icon icon-basic-gear"></div>
+                                    </div>
+                                    <div class="col-md-9 col-md-pull-3 col-lg-10 col-lg-pull-2">
+                                        <h4>Android &amp; iOS</h4>
+                                        <p>Curabitur sit amet metus ipsum. Praesent varius, lorem malesuada ultricies mollis.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stylish-list-item">
+                                <div class="row">
+                                    <div class="col-md-3 col-md-push-9 col-lg-2 col-lg-push-10">
+                                        <div class="icon icon-basic-gear"></div>
+                                    </div>
+                                    <div class="col-md-9 col-md-pull-3 col-lg-10 col-lg-pull-2">
+                                        <h4>Full responsive</h4>
+                                        <p>Nullam ultrices congue quam, eu lacinia tortor. Vivamus sed risus eget magna.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stylish-list-item">
+                                <div class="row">
+                                    <div class="col-md-3 col-md-push-9 col-lg-2 col-lg-push-10">
+                                        <div class="icon icon-basic-gear"></div>
+                                    </div>
+                                    <div class="col-md-9 col-md-pull-3 col-lg-10 col-lg-pull-2">
+                                        <h4>Retina ready</h4>
+                                        <p>Aenean porta pharetra libero venenatis pellentesque. Aliquam erat volutpat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stylish-list-item">
+                                <div class="row">
+                                    <div class="col-md-3 col-md-push-9 col-lg-2 col-lg-push-10">
+                                        <div class="icon icon-basic-gear"></div>
+                                    </div>
+                                    <div class="col-md-9 col-md-pull-3 col-lg-10 col-lg-pull-2">
+                                        <h4>Receive messages</h4>
+                                        <p>sed malesuada risus egestas vel. Quisque augue justo, finibus id gravida eget urna.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stylish-list stylish-list-right">
+                            <div class="stylish-list-item">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-3">
+                                        <div class="icon icon-basic-gear"></div>
+                                    </div>
+                                    <div class="col-lg-10 col-md-9">
+                                        <h4>Community</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur elit. Sed ut mi metus. Phasellus maximus ultricies.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stylish-list-item">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-3">
+                                        <div class="icon icon-basic-gear"></div>
+                                    </div>
+                                    <div class="col-lg-10 col-md-9">
+                                        <h4>Your own schedule</h4>
+                                        <p>Sed commodo sit amet nulla non imperdiet. Nullam quis nisi quis quam sagittis malesuada.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stylish-list-item">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-3">
+                                        <div class="icon icon-basic-gear"></div>
+                                    </div>
+                                    <div class="col-lg-10 col-md-9">
+                                        <h4>Geolocation</h4>
+                                        <p>Mauris scelerisque, sapien vel semper interdum, turpis nunc scelerisque sapien.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stylish-list-item">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-3">
+                                        <div class="icon icon-basic-gear"></div>
+                                    </div>
+                                    <div class="col-lg-10 col-md-9">
+                                        <h4>Customizable</h4>
+                                        <p>Sed nec hendrerit quam. Vivamus ultrices erat non sodales. Nam est metus, sit amet.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-standard" id="clients">
+        <div class="section-inner">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Clients and Partners</h3>
+                    <div class="divider">//</div>
+                </div>
+                <div class="row clients-list">
+                    <div class="col-xs-4 col-sm-3 col-md-2">
+                        <img class="img-responsive" src="img/logos/logo-1.png" alt="Company">
+                    </div>
+                    <div class="col-xs-4 col-sm-3 col-md-2">
+                        <img class="img-responsive" src="img/logos/logo-2.png" alt="Company">
+                    </div>
+                    <div class="col-xs-4 col-sm-3 col-md-2">
+                        <img class="img-responsive" src="img/logos/logo-3.png" alt="Company">
+                    </div>
+                    <div class="clearfix visible-xs"></div>
+                    <div class="col-xs-4 col-sm-3 col-md-2">
+                        <img class="img-responsive" src="img/logos/logo-4.png" alt="Company">
+                    </div>
+                    <div class="clearfix visible-sm"></div>
+                    <div class="col-xs-4 col-sm-3 col-md-2">
+                        <img class="img-responsive" src="img/logos/logo-5.png" alt="Company">
+                    </div>
+                    <div class="col-xs-4 col-sm-3 col-md-2">
+                        <img class="img-responsive" src="img/logos/logo-6.png" alt="Company">
+                    </div>
+                    <div class="clearfix hidden-sm"></div>
+                    <div class="col-xs-4 col-sm-3 col-md-2">
+                        <img class="img-responsive" src="img/logos/logo-7.png" alt="Company">
+                    </div>
+                    <div class="col-xs-4 col-sm-3 col-md-2">
+                        <img class="img-responsive" src="img/logos/logo-8.png" alt="Company">
+                    </div>
+                    <div class="clearfix visible-sm"></div>
+                    <div class="col-xs-4 col-sm-3 col-md-2">
+                        <img class="img-responsive" src="img/logos/logo-9.png" alt="Company">
+                    </div>
+                    <div class="clearfix visible-xs"></div>
+                    <div class="col-xs-4 col-sm-3 col-md-2">
+                        <img class="img-responsive" src="img/logos/logo-10.png" alt="Company">
+                    </div>
+                    <div class="col-xs-4 col-sm-3 col-md-2">
+                        <img class="img-responsive" src="img/logos/logo-11.png" alt="Company">
+                    </div>
+                    <div class="col-xs-4 col-sm-3 col-md-2">
+                        <img class="img-responsive" src="img/logos/logo-12.png" alt="Company">
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="special-button-container margin-t-0">
+                        <a href="#" class="special-button-outer" title="More">
+                            <span class="special-button-inner">
+                                <span class="special-button-text">More</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-standard section-white" id="testimonials">
+        <div class="section-inner">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Testimonials</h3>
+                    <div class="divider">//</div>
+                </div>
+                <div class="special-text text-center">
+                    <p>What <span class="highlight">clients</span> and <span class="highlight">partners</span> say about <span class="highlight">collaboration</span> with me and <strong>results</strong> of my <strong>work</strong>.</p>
+                </div>
+                <div id="carousel-testimonials" class="carousel slide carousel-testimonials" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="row">
+                                <div class="col-lg-10 col-lg-push-2 col-md-9 col-md-push-3 col-sm-8 col-sm-push-4">
+                                    <div class="testimonial-description">
+                                        <div class="fa fa-quote-left"></div>
+                                        <p class="lead"><em>Nulla at nibh consectetur, convallis dui ut, luctus tellus. Aenean et vestibulum diam, ut pharetra nulla. Etiam faucibus pharetra consequat. Sed in vestibulum urna, et consectetur metus. Morbi sed nunc sed arcu auctor vulputate eget a augue.</em></p>
+                                        <p class="testimonial-author">John. W. Doe, <span><em>Pinker Floyd</em></span></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-lg-pull-10 col-md-3 col-md-pull-9 col-sm-4 col-sm-pull-8">
+                                    <div class="testimonial-image" style="background-image: url('img/human-1.jpg');">
+                                        <div class="testimonial-image-top"></div>
+                                        <div class="testimonial-image-bottom"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-lg-10 col-lg-push-2 col-md-9 col-md-push-3 col-sm-8 col-sm-push-4">
+                                    <div class="testimonial-description">
+                                        <div class="fa fa-quote-left"></div>
+                                        <p class="lead"><em>Phasellus lectus dui, vehicula sed orci at, varius eleifend leo. Aenean suscipit purus in egestas bibendum. Nullam id efficitur velit. Nulla at nibh consectetur, convallis dui ut, luctus tellus. Aenean et vestibulum diam, ut pharetra nulla. Etiam faucibus pharetra consequat.</em></p>
+                                        <p class="testimonial-author">Kate Bush, <span><em>GameR</em></span></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-lg-pull-10 col-md-3 col-md-pull-9 col-sm-4 col-sm-pull-8">
+                                    <div class="testimonial-image" style="background-image: url('img/human-3.jpg');">
+                                        <div class="testimonial-image-top"></div>
+                                        <div class="testimonial-image-bottom"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-lg-10 col-lg-push-2 col-md-9 col-md-push-3 col-sm-8 col-sm-push-4">
+                                    <div class="testimonial-description">
+                                        <div class="fa fa-quote-left"></div>
+                                        <p class="lead"><em>Suspendisse a velit aliquet, volutpat ipsum a, semper sem. Proin eu blandit leo, vitae lacinia nisi. Praesent sit amet dui ac eros dictum euismod vel a nulla. Integer ac lobortis odio, vulputate rhoncus mi. Aenean finibus ligula arcu, ut dignissim metus sodales nec.</em></p>
+                                        <p class="testimonial-author">Meghan Wilson, <span><em>Symposium</em></span></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-lg-pull-10 col-md-3 col-md-pull-9 col-sm-4 col-sm-pull-8">
+                                    <div class="testimonial-image" style="background-image: url('img/human-4.jpg');">
+                                        <div class="testimonial-image-top"></div>
+                                        <div class="testimonial-image-bottom"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-testimonials" data-slide-to="0" class="active">
+                        </li><li data-target="#carousel-testimonials" data-slide-to="1">
+                        </li><li data-target="#carousel-testimonials" data-slide-to="2"></li>
+                    </ol>
+                    <a class="left carousel-control" href="#carousel-testimonials" role="button" data-slide="prev">
+                        <span class="icon icon-arrows-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-testimonials" role="button" data-slide="next">
+                        <span class="icon icon-arrows-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-standard" id="blog">
+        <div class="section-inner">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Blog</h3>
+                    <div class="divider">//</div>
+                </div>
+                <div class="special-text text-center">
+                    <p>This is my personal <span class="highlight">blog</span> where I put <strong>interesting</strong> and <strong>usefull</strong> articles about my <span class="highlight">specialization</span>.</p>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="blog-item-outer">
+                            <div class="blog-item-inner">
+                                <a href="#" title="How to make an awesome template">
+                                    <img class="img-responsive" src="img/blog-photo-1.jpg" alt="How to make an awesome template">
+                                </a>
+                                <div class="blog-item-description">
+                                    <h4 class="blog-item-header">
+                                        <a href="#" title="How to make an awesome template">Cras faucibus eros in justo venenatis aliquet</a>
+                                    </h4>
+                                    <div class="blog-item-toolbar">
+                                        16 December 2016 by <a href="#" title="kwarc">kwarc</a>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi earum sapiente aperiam quia voluptates harum id.</p>
+                                    <a href="#" class="btn btn-transparent btn-thin btn-lg btn-block" title="How to make an awesome template">
+                                        <span class="icon icon-basic-eye"></span> Read more
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="blog-item-outer">
+                            <div class="blog-item-inner">
+                                <div class="blog-item-description">
+                                    <h4 class="blog-item-header">
+                                        <a href="#" title="Usefull tools for frontend developers">Aenean et vestibulum diam, ut pharetra nulla</a>
+                                    </h4>
+                                    <div class="blog-item-toolbar">
+                                        21 December 2016 by <a href="#" title="jessica">jessica</a>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi earum sapiente aperiam quia voluptates harum id.</p>
+                                    <a href="#" class="btn btn-transparent btn-thin btn-lg btn-block" title="Usefull tools for frontend developers">
+                                        <span class="icon icon-basic-eye"></span> Read more
+                                    </a>
+                                </div>
+                                <a href="#" title="Usefull tools for frontend developers">
+                                    <img class="img-responsive" src="img/blog-photo-2.jpg" alt="Usefull tools for frontend developers">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="blog-item-outer">
+                            <div class="blog-item-inner">
+                                <a href="#" title="Responsive web design in practice">
+                                    <img class="img-responsive" src="img/blog-photo-3.jpg" alt="Responsive web design in practice">
+                                </a>
+                                <div class="blog-item-description">
+                                    <h4 class="blog-item-header">
+                                        <a href="#" title="Responsive web design in practice">Morbi sed nunc sed arcu auctor vulputate</a>
+                                    </h4>
+                                    <div class="blog-item-toolbar">
+                                        23 December 2016 by <a href="#" title="johnny">johnny</a>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi earum sapiente aperiam quia voluptates harum id.</p>
+                                    <a href="#" class="btn btn-transparent btn-thin btn-lg btn-block" title="Responsive web design in practice">
+                                        <span class="icon icon-basic-eye"></span> Read more
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="special-button-container">
+                        <a href="#" class="special-button-outer" title="More">
+                            <span class="special-button-inner">
+                                <span class="special-button-text">More</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-standard section-white" id="contact-details">
+        <div class="section-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="margin-b-sections-text">
+                            <h3 class="margin-t-0">George Parker</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae velit sed sem tempus pellentesque. Vivamus tortor.<br>
+                            <a href="http://jakubkwarcinski.pl" title="Jakub Kwarciński - Frontend Developer"><strong>jakubkwarcinski.pl</strong></a></p>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="margin-b-sections-text">
+                            <h3 class="margin-t-0">Contact details</h3>
+                            <p>12345, Direct Drive - 110, Daytona Beach, Florida, USA<br>
+                            <strong>(495) 663 287 547</strong></p>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="margin-b-sections-text">
+                            <h3 class="margin-t-0">Social</h3>
+                            <p>
+                                <a href="#" title="Facebook"><strong>Facebook</strong></a><br>
+                                <a href="#" title="Twitter"><strong>Twitter</strong></a><br>
+                                <a href="#" title="LinkedIn"><strong>LinkedIn</strong></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-standard section-map" id="map-section">
+        <div class="section-inner">
+            <div class="map-content">
+                <div id="map" class="map"></div>
+                <div class="map-info">
+                    <div class="overlay"></div>
+                    <div class="map-info-content">
+                        <p><span class="glyphicon glyphicon-map-marker"></span> Powisle street 7 &#8226; Cracow</p>
+                        <p><span class="glyphicon glyphicon-earphone"></span> Free to call from 8:00 to 17:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-standard section-white" id="send-me-a-message">
+        <div class="section-inner">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Send me a <span class="main-color">message</span></h3>
+                    <div class="divider">//</div>
+                </div>
+                <div class="special-text text-center">
+                    <p>If you want to <span class="highlight">contact</span> with me you can send me a <span class="highlight">message</span> to <a href="#">mnbootstrap@gmail.com</a> or use the <strong>contact form</strong> below.</p>
+                </div>
+                <form class="contact-form form" method="POST" action="#">
+                    <div class="contact-form-content">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group has-feedback">
+                                    <input type="text" class="form-control" placeholder="Enter name">
+                                    <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <input type="email" class="form-control" placeholder="Enter email">
+                                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <input type="text" class="form-control" placeholder="Enter phone">
+                                    <span class="glyphicon glyphicon-phone form-control-feedback"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="3" cols="40" placeholder="Your Message"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-6">
+                                <button type="submit" class="btn btn-transparent btn-lg btn-block">
+                                    <span class="icon icon-basic-mail"></span> Send
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer text-center" id="follow-us">
+        <div class="section-inner">
+            <div class="container">
+                <ul class="list-inline icons-list-square">
+                    <li>
+                        <a href="https://www.facebook.com/jakub.kwarcinski" class="icon-circle-container" title="Facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </li><li>
+                        <a href="https://github.com/kwarc87" class="icon-circle-container" title="GitHub">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </li><li>
+                        <a href="https://google.com/+JakubKwarciński" class="icon-circle-container" title="Google +">
+                            <i class="fa fa-google-plus"></i>
+                        </a>
+                    </li><li>
+                        <a href="https://www.youtube.com/user/sernick87" class="icon-circle-container" title="YouTube">
+                            <i class="fa fa-youtube"></i>
+                        </a>
+                    </li><li>
+                        <a href="http://www.last.fm/pl/user/kwarc87" class="icon-circle-container" title="last.fm">
+                            <i class="fa fa-lastfm" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+                <p> &copy; 2016 <a href="http://jakubkwarcinski.pl" title="Jakub Kwarciński - Frontend Developer">Jakub Kwarciński</a></p>
+
+    <script type="text/javascript" src="js/modernizr-custom.min.js"></script>
+            </div>
+        </div>
+    </footer>
+
+    <div id="to-top" class="to-top">
+        <a href="#" class="To the top" title="To the top">
+            <i class="fa fa-angle-up"></i>
+        </a>
+    </div>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script type="text/javascript" src="bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
+
+    <!-- jQuery parallax -->
+    <script type="text/javascript" src="js/jquery.parallax-1.1.3-min.js"></script>
+
+    <!-- Lightbox -->
+    <script type="text/javascript" src="lightbox/js/lightbox.min.js"></script>
+
+    <!-- skrollr -->
+    <script type="text/javascript" src="js/skrollr.min.js"></script>
+
+    <!-- Custom javascript -->
+    <script type="text/javascript" src="js/custom.min.js"></script>
+
+    <!-- Main javascript -->
+    <script type="text/javascript" src="js/main.min.js"></script>
+
+    <!-- Google maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEspZc-GBwxrJtw4vS3GjhAzIv7gHVbXw&callback=initMap"></script>
+
+</body>
+</html>

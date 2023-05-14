@@ -1,0 +1,348 @@
+Outside - Multipurpose personal page
+
+Outside is a unique one page multipurpose portfolio with many page variants. Many occupation variants (such as agency, medical, legal, culture, culinary, fashion, science) allow you to build a modern and unique personal page with expanded and rich sections. Outside template contains 10 different defined colors and also light and dark versions of every section, which you can easily switch. It also contains many unique components like timeline, 3 different looks of skills, stylish google maps, preloader, pricing tables, calendar, tags list, process graph and many other (all in light and dark variants). You can easily personalize them to your specific goals. This template will definitely help you to find your dream job!
+
+## HTML
+
+Outside template includes many different page variants:
+
+* index-default.html - default variant for frontend developer, programmer, agency, office
+* index-light.html - default variant with all sections white
+* index-dark.html - default variant with all sections dark
+* index-basic.html - basic variant with no preloader, no CSS switcher, no skrollr animations and no parallax background effect
+* index-no-animation.html - default variant with no skrollr animations
+
+* index-beauty.html - beauty version - ideal for stylist, model, lingerie shop
+* index-medical.html - medical version - ideal for doctor, dentist, hospital
+* index-culinary.html - culinary version - ideal for chef, baker, restaurant
+* index-culture.html - culture version - ideal for historian, architect, literary
+* index-fashion.html - fashion version - ideal for beautician, hairdresser, stylist and model
+* index-legal.html - legal version - ideal for lawyer, law office, consultant
+* index-science.html - science version - ideal for scientist, teacher, professor, university, school, college, research center
+
+And also some single pages:
+
+* blog-list.html - single page with post (articles) list (dark version)
+* blog-list-light.html - single page with posts (articles) list (light version)
+* blog-item.html - single page with post (article) item (dark version)
+* blog-item-light.html - single page with post (article) item (light version)
+* features.html - demo page with modal and tooltip features
+* features-light.html - demo page with modal and tooltip features (light version)
+* typography.html - demo page with most of the standard bootstrap components and typography
+* typography-light.html - demo page with most of the standard bootstrap components and typography (light version)
+
+Pages validate correctly in the W3C validator and are fully compatible with HTML5.
+
+## LESS
+
+1. All LESS files are included in less folder.
+2. Custom LESS code is included in less/custom subfolder.
+3. less/custom subfolder contains three files: mixins.less, styles.less and variables.less. These three files are imported in less/bootstrap.less file.
+4. Every modification of LESS code should be appended to less/custom/styles.less or less/custom/variables.less file.
+5. After any modification you should compile less/bootstrap.less to css/styles.css and css/styles.min.css files - you may use the grunt for this.
+6. If you want to change color variant for template you have to edit the less/custom/variables.less file. There are 3 variable that you have to change:
+
+* @main-color
+* @overlay-main
+* @overlay-main-light
+
+7. You may choose between 10 predefined colors:
+
+* @yellow
+* @gold
+* @pink
+* @orange
+* @brown
+* @red
+* @violet
+* @silver
+* @green
+* @blue
+
+8. For example if you want to change the template color for red you have to type:
+
+@main-color:                    @red;
+@overlay-main:                  @overlay-red;
+@overlay-main-light:            @overlay-red-light;
+
+9. Next you have to compile LESS files to css/styles.css and css/styles.min.css files - you may use the grunt for this.
+10. At the end you have to attach your CSS file in document head section, example:
+
+<link href="css/styles.min.css" media="screen" rel="stylesheet" type="text/css">
+
+## EDITING HTML
+
+1. If you want to add/edit/remove some HTML elements you can do it quickly in the standard way in accordance with the philosophy of Bootstrap 3.
+2. Sections in main pages are in two different variants:
+
+* dark(default)
+* light
+
+3. If you want to make the section white, add the "section-white" class to your section HTML container. Example:
+
+<div class="section section-standard section-white" id="career">...</div>
+
+4. If you want to make the home(hero) section light you have to add the "section-light" class to your section HTML container. Example:
+
+<div class="section section-hero section-light" id="home" style="background-image: url('img/hero-6.jpg')">...</div>
+
+5. If you want to change the <footer> styles for white version add the "footer-white" class to the <footer> element. Example:
+
+<footer class="footer footer-white text-center">...</div>
+
+6. If you want to change the navbar styles for white version change the class "navbar-inverse" to the "navbar-default" of the navbar element. Example:
+
+<div class="navbar navbar-default navbar-fixed-top" id="navbar-main">...</div>
+
+7. If you want to change the sidebar (color switcher) styles for light version add the "sidebar-light" class to the sidebar element. Example:
+
+<div class="sidebar sidebar-light">...</div>
+
+8. Most of the elements are based on standard bootstrap 3 components. If you would like to make big changes please visit page: http://getbootstrap.com/
+
+## CSS
+
+1. CSS styles for Outside template are included in css/styles.css and css/styles.min.css.
+2. Colors variations are in files below:
+
+* css/yellow.css, css/yellow.min.css
+* css/gold.css, css/gold.min.css
+* css/pink.css, css/pink.min.css
+* css/orange.css, css/orange.min.css
+* css/brown.css, css/brown.min.css
+* css/red.css, css/red.min.css
+* css/violet.css, css/violet.min.css
+* css/silver.css, css/silver.min.css
+* css/green.css, css/green.min.css
+* css/blue.css, css/blue.min.css
+
+3. Font Awesome is defined in css/font-awesome.css and css/font-awesome.min.css.
+4. Linea icons are defined in files:
+
+* css/linea-arrows.css and css/linea-arrows.min.css
+* css/linea-basic.css and css/linea-basic.min.css
+* css/linea-ecommerce.css and css/linea-ecommerce.min.css
+* css/linea-software.css and css/linea-software.min.css
+
+5. All CSS files are available in both versions - uncompressed and minified.
+6. css/styles.css, css/styles.min.css and all colors variants files are compiled from LESS code.
+
+## CSS VARIANT SELECTION
+
+1. In the package of Outside template you may find separate HTML files for every color variant, but sometimes you may need to edit some other file with all colors variants included.
+1. In this case you should remove some HTML <link> tags and replace them with one HTML <link> tag which attaches the specify color variant.
+2. In most of the pages you can find the code:
+
+<link href="css/yellow.min.css" media="screen" rel="stylesheet" type="text/css" title="yellow">
+<link href="css/gold.min.css" media="screen" rel="alternate stylesheet" type="text/css" title="gold">
+<link href="css/pink.min.css" media="screen" rel="alternate stylesheet" type="text/css" title="pink">
+<link href="css/orange.min.css" media="screen" rel="alternate stylesheet" type="text/css" title="orange">
+<link href="css/brown.min.css" media="screen" rel="alternate stylesheet" type="text/css" title="brown">
+<link href="css/red.min.css" media="screen" rel="alternate stylesheet" type="text/css" title="red">
+<link href="css/violet.min.css" media="screen" rel="alternate stylesheet" type="text/css" title="violet">
+<link href="css/silver.min.css" media="screen" rel="alternate stylesheet" type="text/css" title="silver">
+<link href="css/green.min.css" media="screen" rel="alternate stylesheet" type="text/css" title="green">
+<link href="css/blue.min.css" media="screen" rel="alternate stylesheet" type="text/css" title="blue">
+
+3. You should choose the color variant you want and remove the the other HTML <link> tags. For example, if you want to have a violet variant on your page, remove all the code above instead of this line:
+
+<link href="css/violet.min.css" media="screen" rel="alternate stylesheet" type="text/css" title="violet">
+
+4. Next you have to change the rel attribute value of HTML <link> tag to "stylesheet" (it can't be "alternate stylesheet"). Example:
+
+<link href="css/violet.min.css" media="screen" rel="stylesheet" type="text/css" title="violet">
+
+5. There are two possible values of rel attribute:
+
+* rel="stylesheet" - for main color
+* rel="alternate stylesheet" - for every alternative color (for color switcher)
+
+6. Finally you should not have any CSS link element with rel="alternate stylesheet" (excepts you want to have a color switcher in you page)
+
+7. At least remove the HTML code of color switcher:
+
+<div class="sidebar">
+	<a class="sidebar-switcher" href="#" title="Color switcher">
+		<i class="fa fa-gear"></i>
+	</a>
+	<div class="sidebar-content">
+		<h4 class="sidebar-header">Color switcher</h4>
+		<a href="#" class="color-switcher bg-yellow" data-color="yellow"></a>
+		<a href="#" class="color-switcher bg-gold" data-color="gold"></a>
+		<a href="#" class="color-switcher bg-pink" data-color="pink"></a>
+		<a href="#" class="color-switcher bg-orange" data-color="orange"></a>
+		<a href="#" class="color-switcher bg-brown" data-color="brown"></a>
+		<a href="#" class="color-switcher bg-red" data-color="red"></a>
+		<a href="#" class="color-switcher bg-violet" data-color="violet"></a>
+		<a href="#" class="color-switcher bg-silver" data-color="silver"></a>
+		<a href="#" class="color-switcher bg-green" data-color="green"></a>
+		<a href="#" class="color-switcher bg-blue" data-color="blue"></a>
+	</div>
+</div>
+
+## EDITING STYLES
+
+If you want to edit CSS styles, there are several ways do to it:
+
+1. You can create additional CSS file with your own CSS code and include this file in page that needs it.
+2. You can create additional LESS file or edit less/custom/styles.less and after that compile it into the css/styles.css and css/styles.min.css files (you may use grunt for this). If you want to create new LESS file don't forget to import it at the end of less/bootstrap.less file. Example:
+
+// outside styles
+@import "custom/styles.less";
+
+//your own styles
+@import "custom/your-styles.less";
+
+## FONTS
+
+Pages are using fonts:
+
+1. Orbitron Font (Open Font License) - https://fonts.google.com/specimen/Orbitron
+2. Lato Font (Open Font License) - https://fonts.google.com/specimen/Lato
+3. Font Awesome (MIT license) - http://fortawesome.github.io/Font-Awesome/
+4. Linea: a free outline iconset (CCBY license) -  http://linea.io/
+
+## JAVASCRIPT
+
+All the custom JavaScript code is included in js/custom.js, js/custom.min.js, js/main.js, js/main.min.js files. You can add your own code there.
+All the js code sections have start and end comment. Example:
+
+In js/main.js (or js/main.min.js) file:
+
+//background parallax code start
+var query = Modernizr.mq('(min-width: 992px)');
+if (!Modernizr.touchevents & query) {
+	if($('.section-parallax').length) {
+		$('.section-parallax').parallax("0%", 0.2, true);
+	}
+}
+//background parallax code end
+
+If you want to remove some js logic (for example preloader) you have to remove all the code between "something code start" and "something code end" comments.
+
+Sometimes you have to also remove some of the HTML code to disable specific functionality. Example:
+
+In js/custom.js (or js/custom.min.js) file:
+
+//preloader code start
+var preloader = $('.loader-overlay');
+if(preloader.length) {
+	preloader.fadeOut(1000, function () {
+		//$(this).remove();
+	});
+}
+//preloader code end
+
+In HTML file:
+
+<div class="loader-overlay">
+	<div class="loader">
+		<div class="loader-icon">
+			<span class="icon icon-arrows-glide"></span>
+		</div>
+		<h3 class="loader-text">Loading</h3>
+	</div>
+</div>
+
+If you want to remove preloader (when document is loading), you have to remove all the code between "preloader code start" and "preloader code end" comments. You have to also remove the div.loader-overlay element (this one above in HTML file) with all his children elements.
+
+There are also the few plugins included in project, which are described below. If you want to modify them please check the specific page with documentation:
+
+## JQUERY (MIT license)
+
+jQuery 3.1.0 - http://jquery.com/download/
+
+## JQUERY PARALLAX (MIT license)
+
+Plugin used for background animations. More info here: https://github.com/IanLunn/jQuery-Parallax
+
+## LIGHTBOX (Creative Commons Attribution 2.5 License)
+
+Lightbox 2.7.1 - http://lokeshdhakar.com/projects/lightbox2/
+
+## MODERNIZR (MIT license)
+
+Modernizr is a JavaScript library that detects HTML5 and CSS3 features in the user’s browser. http://modernizr.com/
+
+## SKROLLR (MIT license)
+
+This plugin allows you to animate any CSS property of any element depending on the horizontal scrollbar position. You can use the HTML5 data attributes to define multiple sets of styles (we call each of them keyframe) and skrollr interpolates between them. For details please see the official documentation: https://github.com/Prinzhorn/skrollr
+
+In package you can find the pages without animations (for example: index-default-no-animation.html, index-legal-no-animation.html etc.), but if you want to remove skrollr logic manually you can do it in that way:
+
+1. Remove class="skrollr" and data-skrollr="true" from <body> element. Example:
+
+<body class="skrollr" data-skrollr="true">...</body> --> <body>...</body>
+
+2. It is enought for disabling skrollr logic but there is a good practice to make some clean up in a HTML code.
+
+3. Remove all the data elements connected with skrollr plugin, for example:
+
+<span class="plus" data-100p-top="transform[swing]:scale(0.2);opacity[swing]:0" data-75p-top="transform[swing]:scale(1);opacity[swing]:1">+</span> --> <span class="plus">+</span>
+
+<h1 class="hero-header" data-150="transform[swing]:translateX(0px);opacity[swing]:1" data-550="transform[swing]:translateX(-25px);opacity[swing]:0">Jessica <strong class="main-color">Smith</strong></h1> --> <h1 class="hero-header">Jessica <strong class="main-color">Smith</strong></h1>
+
+4. You can find more specific information at: https://github.com/Prinzhorn/skrollr
+
+## IMAGES
+
+Images used in this template are in Creative Common License:
+
+https://unsplash.com/photos/wnShDP37vB4
+https://www.pexels.com/photo/fashion-people-girl-model-39678/
+https://unsplash.com/photos/xII7efH1G6o
+https://unsplash.com/photos/rM7fqrIQb94
+https://unsplash.com/photos/vw3Ahg4x1tY
+https://unsplash.com/photos/QeVmJxZOv3k
+https://www.pexels.com/photo/business-signing-writing-writer-24193/
+https://unsplash.com/photos/-9UpyUuEqzM
+https://www.pexels.com/photo/food-vegetables-kitchen-eat-53517/
+https://pixabay.com/pl/sexy-sklep-z-bielizn%C4%85-biustonosz-1175374/
+https://unsplash.com/photos/2ogkxH66ljU
+https://pixabay.com/pl/zach%C3%B3d-s%C5%82o%C5%84ca-niebo-chmury-sylwetka-691155/
+https://pixabay.com/pl/kolory-salon-fryzjerski-ci%C4%99cie-1097123/
+https://www.pexels.com/photo/clinic-doctor-health-hospital-4154/
+https://unsplash.com/photos/qaoNLVMb4lw
+https://pixabay.com/pl/wszech%C5%9Bwiat-osoby-silhouette-1044107/
+https://www.pexels.com/photo/doctor-surgeon-hospital-34983/
+https://pixabay.com/pl/pi%C4%99kno-kosmetyki-kwiaty-makija%C5%BC-1584709/
+https://www.pexels.com/photo/food-salad-restaurant-person-5317/
+https://www.pexels.com/photo/man-sunglasses-young-face-45882/
+https://www.pexels.com/photo/man-wearing-eyeglasses-41115/
+https://pixabay.com/pl/moda-kobieta-odzie%C5%BC-kobiet-sta%C5%82y-1623092/
+https://pixabay.com/pl/moda-kobieta-odzie%C5%BC-kobiet-sta%C5%82y-1623085/
+https://freerangestock.com/photos/33105/a-young-businessman-in-a-suit-isolated-on-a-white-background.html
+
+## LOGOS
+
+Company logos used in this template are free to use under the license: http://www.logologo.com/license-agreement.php
+
+
+## GOOGLE MAPS
+
+Outside includes an elegant, stylish google maps.
+
+The skins used in template are from:
+
+* https://snazzymaps.com/style/38/shades-of-grey (Common Creative license)
+* https://snazzymaps.com/style/151/ultra-light-with-labels (Common Creative license)
+
+## THIRD-PARTY ASSETS
+
+Font Awesome (MIT license) - http://fortawesome.github.io/Font-Awesome/
+
+Linea: a free outline iconset (CCBY license) -  http://linea.io/
+
+Orbitron Font (Open Font License) - https://fonts.google.com/specimen/Orbitron
+
+Lato Font (Open Font License) - https://fonts.google.com/specimen/Lato
+
+jQuery 3.1.0 (MIT license) - http://jquery.com/download/
+
+jQuery Parallax (MIT license) - https://github.com/IanLunn/jQuery-Parallax
+
+Lightbox 2.7.1 (Creative Commons Attribution 2.5 License) - http://lokeshdhakar.com/projects/lightbox2/
+
+Modernizr (MIT license) - http://modernizr.com/
+
+skrollr (MIT License) - https://github.com/Prinzhorn/skrollr
