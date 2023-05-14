@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Lora:400,700");
+/**
+ * Template Name: Marvel - HTML Template for Product Promotion
+ * Author: rustheme
+ */
+/* Body */
+body {
+	font-family: 'Poppins', Arial, serif;
+	font-weight: 300;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: 'Poppins', Arial, serif;
+}
+
+/* Navigation */
+.main-nav,
+.btn,
+.blog-entry-wrapper .custom-quote .source {
+	font-family: 'Poppins', Arial, serif;
+}
+
+/* Serif */
+.blog-entry-wrapper .custom-quote,
+.section-story .belife,
+.header h1.logo {
+	font-family: 'Lora', Times, serif;
+}
+
+/*# sourceMappingURL=maps/fonts-2.css.map */

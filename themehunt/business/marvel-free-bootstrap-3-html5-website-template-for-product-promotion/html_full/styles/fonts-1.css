@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css?family=Archivo+Black:400,700");
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Lora:400,700");
+/**
+ * Template Name: Marvel - HTML Template for Product Promotion
+ * Author: rustheme
+ */
+body {
+	font-family: 'Lora', Times, serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: 'Archivo Black', Arial, sans-serif;
+	font-weight: 400;
+}
+
+.main-nav,
+.btn {
+	font-family: Poppins, Arial, sans-serif;
+}
+
+.section-promo .title {
+	font-weight: 400;
+}
+
+.section-faq .panel .panel-title .panel-toggle {
+	vertical-align: top;
+}
+
+/*# sourceMappingURL=maps/fonts-1.css.map */

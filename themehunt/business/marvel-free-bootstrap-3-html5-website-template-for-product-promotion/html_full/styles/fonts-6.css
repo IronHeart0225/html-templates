@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Mono:400,700");
+@import url("https://fonts.googleapis.com/css?family=Inconsolata:300,400,600,700");
+/**
+ * Template Name: Marvel - HTML Template for Product Promotion
+ * Author: rustheme
+ */
+body {
+	font-family: 'Inconsolata', Arial, sans-serif;
+	font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: 'Fira Mono', Arial, sans-serif;
+	font-weight: 400;
+	letter-spacing: -.005em;
+}
+
+.main-nav,
+.btn {
+	font-family: 'Fira Mono', Arial, sans-serif;
+	font-weight: 600;
+}
+
+.section-promo .title {
+	font-weight: 400;
+}
+
+/*# sourceMappingURL=maps/fonts-6.css.map */

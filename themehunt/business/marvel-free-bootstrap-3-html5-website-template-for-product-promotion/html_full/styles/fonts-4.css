@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css?family=Cardo:400,700");
+@import url("https://fonts.googleapis.com/css?family=Pt-Serif:300,400,500,600,700");
+/**
+ * Template Name: Marvel - HTML Template for Product Promotion
+ * Author: rustheme
+ */
+body {
+	font-family: 'Pt Serif', Times, serif;
+	font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: 'Cardo', Times, serif;
+	font-weight: 700;
+}
+
+.main-nav,
+.btn {
+	font-family: 'Cardo', Times, serif;
+	font-weight: 600;
+}
+
+/*# sourceMappingURL=maps/fonts-4.css.map */

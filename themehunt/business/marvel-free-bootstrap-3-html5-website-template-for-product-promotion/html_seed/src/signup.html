@@ -1,0 +1,64 @@
+<!-- Set document title - see "_layouts/document.html" -->
+{% set document_title = "Signup" %}
+{% set active_page = "signup" %}
+
+<!-- Set classes of `body` tag - see "_layouts/document.html" -->
+{% set body_class = "signup-page access-page has-full-screen-bg" %}
+
+<!--	Extend page's "header" block (see "_layouts/header.html"). This approach allows us to include different headers (if created) or not include header on selected pages -->
+{% extends "_layouts/header-centered.html" %}
+
+<!-- Extend page's "content" block (see "_layouts/document.html") -->
+{% extends "_layouts/page.html" %}
+
+<!-- Content -->
+{% block content %}
+
+<div class="bg-img bg-img-full-height bg-overlay" style="background-image: url({{ img_path }}backgrounds/background-4.jpg);"></div>
+
+<!-- Signup Section --> 
+<section class="signup-section section-access section">
+	<div class="container">
+		<div class="row">
+			<div class="form-box col-md-offset-2 col-sm-offset-0 xs-offset-0 col-xs-12 col-md-8">
+				<div class="form-box-inner">
+					<h2 class="title text-center">Sign up to Marvel</h2>
+					<p class="intro text-center">It only takes 2 minutes!</p>
+					<div class="row">
+						<div class="form-container col-xs-12 col-md-5">
+							<form class="signup-form">
+								<div class="form-group email">
+									<label class="sr-only" for="signup-email">Your email</label>
+									<input id="signup-email" type="email" class="form-control login-email" placeholder="Your email">
+								</div><!-- .form-group -->
+								<div class="form-group password">
+									<label class="sr-only" for="signup-password">Your password</label>
+									<input id="signup-password" type="password" class="form-control login-password" placeholder="Password">
+								</div><!-- .form-group -->
+								<button type="submit" class="btn btn-block btn-cta-primary">Sign up</button>
+								<p class="note">By signing up, you agree to our terms of services and privacy policy.</p>
+								<p class="lead">Already have an account? <a class="login-link" id="login-link" href="login.html">Log in</a></p>
+							</form>
+						</div><!-- .form-container -->
+						<div class="social-btns col-md-offset-1 col-sm-offset-0 col-sm-offset-0 col-xs-12 col-md-5">
+							<div class="divider"><span>Or</span></div>
+							<ul class="list-unstyled social-login">
+								<li><button class="twitter-btn btn" type="button"><i class="fa fa-twitter"></i>Sign up with Twitter</button></li>
+								<li><button class="facebook-btn btn" type="button"><i class="fa fa-facebook"></i>Sign up with Facebook</button></li>
+								<li><button class="github-btn btn" type="button"><i class="fa fa-github-alt"></i>Sign up with Github</button></li>
+								<li><button class="google-btn btn" type="button"><i class="fa fa-google-plus"></i>Sign up with Google</button></li>
+							</ul>
+							<p class="note">Don't worry, we won't post anything without your permission.</p>
+						</div><!-- .social-login -->
+					</div><!-- .row -->
+				</div><!-- .form-box-inner -->
+			</div><!-- .form-box -->
+		</div><!-- .row -->
+	</div><!-- .container -->
+</section><!-- .signup-section -->
+
+{% endblock %}
+<!-- End content -->
+
+<!--	Extend page's "footer" block (see "_layouts/footer.html"). This approach allows us to include different footers (if created) or not include footer on selected pages -->
+{% extends "_layouts/footer.html" %}

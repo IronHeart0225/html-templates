@@ -1,0 +1,81 @@
+{% extends "_layouts/document.html" %}
+
+{% block header %}
+
+{#
+Here you can list your navbar nav items with these parameters: ['href', 'slug', 'title', 'subnav']
+Subnav is array of items with these parameters: ['href', 'slug', 'title'].
+Slugs are used to set active pages or open sub-nav on selected pages.
+#}
+
+{% set menu = [
+	['', 'blog_category', 'Categories',
+		[
+			['blog-category.html', 'blog_category_3', 'Business'],
+			['blog-category.html.html', 'blog_category_2', 'Industry'],
+			['blog-category.html.html', 'blog_category_1', 'Tech'],
+			['blog-category.html.html', 'blog_category_0', 'Startup']
+		]
+	],
+	['', 'blog_archive', 'Archives',
+		[
+			['blog-archive.html', 'blog_archive_2017_11', 'November 2017 (3)'],
+			['blog-archive.html', 'blog_archive_2017_10', 'October 2017 (2)'],
+			['blog-archive.html', 'blog_archive_2017_09', 'September 2017 (6)'],
+			['blog-archive.html', 'blog_archive_2017_08', 'August 2017 (4)']
+		]
+	]
+] %}
+
+<header class="header header-blog">  
+	<div class="container">       
+		<h1 class="logo">
+			<a href="blog.html">Marvel <span class="sub">Blog</span></a>
+		</h1><!-- .logo -->
+		<nav class="main-nav navbar-right" role="navigation">
+			<div class="navbar-header">
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button><!-- .nav-toggle -->
+			</div><!-- .navbar-header -->
+			<div id="navbar-collapse" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					{% for href, slug, title, subnav in menu -%}
+						{% if subnav %}
+							<li class="nav-item dropdown{% if slug == open_subnav %} active{% endif %}">
+								<a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">{{ title | e }} <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									{% for href, slug, title in subnav %}
+										<li{% if slug == active_page %} class="active"{% endif %}>
+											<a href="{{ href | e }}">{{ title | e }}</a>
+										</li>
+									{% endfor %}
+								</ul>
+							</li>
+						{% else %}
+							<li{% if slug == active_page %} class="active"{% endif %}>
+								<a href="{{ href | e }}">{{ title | e }}</a>
+							</li>
+						{% endif %}
+					{%- endfor %}
+					<li class="nav-item nav-item-main-site last"><a href="index.html">Back to main site</a></li>
+				</ul><!-- .nav -->
+
+				<div class="searchbox-container">
+					<form class="searchbox">
+						<label class="sr-only" for="search-form">Search</label>
+						<input id="search-form" class="form-control searchbox-input" placeholder="Search the blog..." type="search" value="" name="search-form" />
+						<input class="searchbox-submit" type="submit" value="&#8594;" />
+						<i class="fa fa-search searchbox-icon"></i>
+					</form>
+				</div><!-- .searchbox-container -->                                                
+
+			</div><!-- .navabr-collapse -->
+		</nav><!-- .main-nav -->
+	</div><!-- .container -->
+</header><!-- .header -->
+
+{% endblock %}

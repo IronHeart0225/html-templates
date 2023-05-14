@@ -1,0 +1,79 @@
+{% set css_path = path + css_path %}
+{% set js_path = path + js_path %}
+{% set img_path = path + img_path %}
+
+<!DOCTYPE html>
+<html class="app-ui" lang="en-US">
+	<head>
+		<!-- Meta -->
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=10" />		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+		<!-- Document title -->
+		<title>{{ document_title | safe }} | Marvel</title>
+
+		<meta name="description" content="Marvel - HTML Template for Product Promotion" />
+
+		<!-- Favicons -->
+		<link rel="apple-touch-icon" href="{{ img_path }}favicons/apple-touch-icon.png" />
+		<link rel="icon" href="{{ img_path }}favicons/favicon.ico" />
+
+		<!-- Google fonts / Icons -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+		<!-- jQuery -->
+		<script src="vendor/jquery/jquery-2.2.4.min.js"></script>
+
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="vendor/flickity/flickity.min.css" />
+		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" id="css-font-awesome" href="vendor/font-awesome/css/font-awesome.min.css" />
+
+		{# This block can be used in templates pages for adding scripts to < head > tag #}
+		{% block scripts_head %}{% endblock %}
+
+		<link rel="stylesheet" id="css-styles" href="{{ css_path }}style.css" />
+		<link rel="stylesheet" id="css-fonts" href="{{ css_path }}fonts-1.css" />
+		<!-- End Stylesheets -->
+	</head>
+
+	<body class="{{ body_class }}">
+
+		<div class="layout-canvas">
+			<div class="layout-container">
+
+				{# Header #}
+				{% block header %}{% endblock %}
+
+				{# Content #}
+
+					{# Page content #}
+					{% block page_layout %}{% endblock %}
+
+				{# Footer #}
+				{% block footer %}{% endblock %}
+
+			</div><!-- .layout-container -->
+		</div><!-- .layout-canvas -->
+
+		{# Site modal #}
+		{% include "_layouts/modal.html" %}
+
+		<!-- Javascript -->
+		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+		<script src="vendor/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
+		<script src="vendor/flickity/flickity.pkgd.min.js"></script>
+		<script src="vendor/froogaloop2/froogaloop2.min.js"></script>
+		<script src="vendor/inview/jquery.inview.min.js"></script>
+		<script src="vendor/masonry/masonry.pkgd.min.js"></script>
+		<script src="vendor/velocity/velocity.min.js"></script>
+		<script src="vendor/velocity/velocity.ui.min.js"></script>
+		<script src="vendor/waypoints/jquery.waypoints.min.js"></script>
+
+		{# This block can be used on templates pages to add scripts before closing `body` tag #}
+		{% block scripts_footer %}{% endblock %}
+
+		<script src="{{ js_path }}main.js"></script>
+	</body>
+</html>

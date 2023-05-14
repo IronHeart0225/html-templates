@@ -1,0 +1,33 @@
+{
+  "name": "marvel",
+  "version": "1.0.0",
+  "description": "HTML Template for Product Promotion",
+  "main": "gulpfile.js",
+  "scripts": {
+    "postinstall": "bower install",
+    "test": "test"
+  },
+  "author": "rustheme",
+  "license": "BSD-Protection",
+  "devDependencies": {
+    "autoprefixer": "latest",
+    "browser-sync": "latest",
+    "cssnano": "^3.7.5",
+    "gulp": "latest",
+    "gulp-changed": "latest",
+    "gulp-cheerio": "latest",
+    "gulp-clean-css": "latest",
+    "gulp-concat": "latest",
+    "gulp-data": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-jsoncombine": "latest",
+    "gulp-load-plugins": "latest",
+    "gulp-nunjucks-api": "latest",
+    "gulp-postcss": "latest",
+    "gulp-prettify": "latest",
+    "gulp-sass": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-uglify": "latest",
+    "main-bower-files": "^2.13.1"
+  }
+}

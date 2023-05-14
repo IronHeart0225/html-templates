@@ -1,0 +1,80 @@
+<!-- Set document title - see "_layouts/document.html" -->
+{% set document_title = "Blog - Category" %}
+{% set active_page = "blog_category" %}
+{% set open_subnav = "blog_category" %}
+
+<!-- Set classes of `body` tag - see "_layouts/document.html" -->
+{% set body_class = "blog-page blog-category-page" %}
+
+<!--	Extend page's "header" block (see "_layouts/header.html"). This approach allows us to include different headers (if created) or not include header on selected pages -->
+{% extends "_layouts/header-blog.html" %}
+
+<!-- Extend page's "content" block (see "_layouts/document.html") -->
+{% extends "_layouts/page.html" %}
+
+<!-- Content -->
+{% block content %}
+
+<!-- Blog list -->
+<div class="blog blog-category container">
+	<h2 class="page-title text-center">Category: Tech</h2>
+	<div class="row">
+		<div class="blog-list blog-list-list-style col-md-offset-1 col-md-10">
+
+		{# Blog posts loop #}
+		{% for post in blog_posts %}
+
+			<article class="post">
+				<div class="post-inner row">
+					<div class="col-md-4">
+						<figure class="post-thumb">
+							<a href="blog-single.html">
+								<img class="img-responsive" src="{{ post.image_sm }}" alt="" />
+							</a>
+						</figure><!-- .post-thumb -->
+					</div>
+
+					<div class="content col-md-8">
+						<h3 class="post-title"><a href="blog-single.html">{{ post.title }}</a></h3>
+						<div class="meta">
+							<ul class="meta-list list-inline">
+								<li class="post-time">{{ [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20] | random }} September, 2017</li>
+								<li class="post-author"> by <a href="#">{{ post.author }}</a></li>
+								<li class="post-comments-link">
+									<a href="blog-single.html#comment-area"><i class="material-icons">chat_bubble</i>{{ [1,2,3,4,5,6,7,8,9,10] | random }}</a>
+								</li>
+							</ul><!-- .meta-list -->
+						</div><!--meta -->
+						<div class="post-entry">
+							<p>{{ post.summary }}</p>
+							<a class="read-more" href="blog-single.html">Read more <i class="material-icons">chevron_right</i></a>
+						</div>
+					</div><!-- .content -->
+				</div><!-- .post-inner -->
+			</article><!-- .post -->
+
+		{% endfor %}
+
+		</div><!-- .blog-list -->
+	</div><!-- .row -->
+
+	<div class="pagination-container text-center">
+		<ul class="pagination">
+			<li class="disabled"><a href="#">&laquo;</a></li>
+			<li class="active"><a href="#">1<span class="sr-only">(current)</span></a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">&raquo;</a></li>
+		</ul><!-- .pagination -->
+	</div><!-- .pagination-container -->
+</div><!-- .blog -->
+
+{% endblock %}
+<!-- End content -->
+
+<!-- Add this block if you want to add custom js to the footer, before closing </body> -->
+{% block scripts_footer %}
+<script src="{{ js_path }}blog.js"></script>
+{% endblock %}
+
+<!--	Extend page's "footer" block (see "_layouts/footer.html"). This approach allows us to include different footers (if created) or not include footer on selected pages -->
+{% extends "_layouts/footer.html" %}

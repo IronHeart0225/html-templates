@@ -1,0 +1,125 @@
+<!-- Set document title - see "_layouts/document.html" -->
+{% set document_title = "Blog" %}
+{% set active_page = "blog" %}
+
+<!-- Set classes of `body` tag - see "_layouts/document.html" -->
+{% set body_class = "blog-page" %}
+
+<!--	Extend page's "header" block (see "_layouts/header.html"). This approach allows us to include different headers (if created) or not include header on selected pages -->
+{% extends "_layouts/header-blog.html" %}
+
+<!-- Extend page's "content" block (see "_layouts/document.html") -->
+{% extends "_layouts/page.html" %}
+
+<!-- Content -->
+{% block content %}
+
+<div class="blog">
+	<!-- Begin Featured posts slider -->
+	<section class="featured-blog-posts">
+		<!-- Flickity HTML init. For more info please refer to Flickity Documentation: http://flickity.metafizzy.co -->
+		<div class="carousel flickity--dots-inner" data-flickity>
+
+			<div class="carousel-cell bg-img bg-overlay" style="background-image: url({{ img_path }}backgrounds/background-3.jpg);">
+				<a href="blog-single.html">
+					<div class="container">
+						<div class="carousel-caption">
+							<h2>Powerful design prototyping tools</h2>
+							<p>Tackling, local solutions inspire social change care metrics challenges...</p>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="carousel-cell bg-img bg-overlay" style="background-image: url({{ img_path }}backgrounds/background-4.jpg);">
+				<a href="blog-single.html">
+					<div class="container">
+						<div class="carousel-caption">
+							<h2>Digital agency rebels</h2>
+							<p>Tackling, local solutions inspire social change care metrics challenges...</p>
+						</div>
+					</div>
+				</a>
+			</div>
+
+		</div>
+	</section>
+	<!-- End featured posts slider -->
+
+	<!-- BLOG LIST --> 
+	<div class="container">
+		<div class="row">
+			<div id="blog-masonry" class="blog-list blog-list-card-style">
+				{# Blog posts loop #}
+				{% for post in blog_posts %}
+				<article class="post hentry col-md-4 col-sm-6">
+					<div class="post-inner">
+						<figure class="post-thumb">
+							<a href="blog-single.html">
+								<img class="img-responsive" src="{{ post.image_sm }}" alt="" />
+							</a>                                
+						</figure><!-- .post-thumb -->
+						<div class="content">
+							<h3 class="post-title"><a href="blog-single.html">{{ post.title }}</a></h3>
+							<ul class="meta-list list-inline">                                       
+								<li class="post-time post_date date updated">{{ post.updated }}</li>
+								<li class="post-author"> by <a href="#">{{ post.author }}</a></li>
+								<li class="post-comments-link">
+									<a href="blog-single.html#comment-area"><i class="material-icons">chat_bubble</i>8</a>
+								</li>
+							</ul><!-- .meta-list -->
+
+							<div class="post-entry">
+								<p>{{ post.summary }}</p>
+								<a class="read-more" href="blog-single.html">Read more <i class="material-icons">chevron_right</i></a>
+							</div>
+						</div><!-- .content -->
+					</div><!-- .post-inner -->
+				</article>
+				<!-- #post-## -->
+				{% endfor %}
+				
+			</div><!-- .blog-list -->  
+		</div><!-- .row -->
+		<div class="pagination-container text-center">
+			<ul class="pagination">
+				<li class="disabled"><a href="#">&laquo;</a></li>
+				<li class="active"><a href="#">1<span class="sr-only">(current)</span></a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">&raquo;</a></li>
+			</ul><!-- .pagination -->
+		</div><!-- .pagination-container -->
+	</div>
+
+</div><!-- .blog -->
+
+<!-- Video Modal  -->
+<div class="modal modal-video" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 id="videoModalLabel" class="modal-title sr-only">Video Tour</h4>
+			</div>
+			<div class="modal-body">
+				<div class="video-container">
+					<iframe src="//player.vimeo.com/video/28872840?color=ffffff&amp;wmode=transparent" width="720" height="405" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+				</div><!-- .video-container -->
+			</div><!-- .modal-body -->
+		</div><!-- .modal-content -->
+	</div><!-- .modal-dialog -->
+</div><!-- .modal -->
+
+{% endblock %}
+<!-- End content -->
+
+<!-- Add this block if you want to add custom js to the footer, before closing </body> -->
+{% block scripts_footer %}
+<script src="{{ js_path }}blog.js"></script>
+{% endblock %}
+
+<!--	Extend page's "footer" block (see "_layouts/footer.html"). This approach allows us to include different footers (if created) or not include footer on selected pages -->
+{% extends "_layouts/footer.html" %}

@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,700");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+/**
+ * Template Name: Marvel - HTML Template for Product Promotion
+ * Author: rustheme
+ */
+body {
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: 'Oswald', Arial, sans-serif;
+	font-weight: 400;
+	letter-spacing: 0;
+}
+
+.main-nav,
+.btn {
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-weight: 600;
+}
+
+.section-promo .title {
+	font-weight: 400;
+}
+
+/*# sourceMappingURL=maps/fonts-5.css.map */
